@@ -1,0 +1,5 @@
+nonebot_plugin_songpicker2.egg-info
+.vscode
+build
+dist
+__pycache__
