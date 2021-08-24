@@ -1,0 +1,37 @@
+{
+    "statement": [
+        {
+            "id": 1,
+            "content": "{name}晚安，记得做个美梦哟~"
+        },
+        {
+            "id": 2,
+            "content": "{name}晚安，那么我们明天再见啦~"
+        },
+        {
+            "id": 3,
+            "content": "晚安{name}~"
+        }
+    ],
+    "unable_to_trigger": "清醒时间太短，不能晚安。",
+    "triggered": "已经晚安过啦！快去睡觉！",
+    "suffix": "今天是第{number}个睡觉的哟~",
+    "working_hours": [
+        {
+            "id": 1,
+            "content": "今天工作学习了 {hour} 小时 {minute} 分钟 {second} 秒。快去睡觉吧~"
+        },
+        {
+            "id": 2,
+            "content": "今天清醒了 {hour} 小时 {minute} 分钟 {second} 秒呢。"
+        },
+        {
+            "id": 3,
+            "content": "今天工作学习了 {hour} 小时 {minute} 分钟 {second} 秒。辛苦啦辛苦啦~"
+        },
+        {
+            "id": 4,
+            "content": "今天工作学习了 {hour} 小时 {minute} 分钟 {second} 秒。今天过得开心吗？"
+        }
+    ]
+}

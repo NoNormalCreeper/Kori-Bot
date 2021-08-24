@@ -1,0 +1,30 @@
+{
+    "statement": [
+        {
+            "id": 1,
+            "content": "{name}早安~今天也是元气满满的一天呢！"
+        },
+        {
+            "id": 2,
+            "content": "{name}早安喵呜~"
+        },
+        {
+            "id": 3,
+            "content": "早上好呀{name}！"
+        }
+    ],
+    "unable_to_trigger": "睡眠时间太短，不能早安。",
+    "triggered": "已经早安过啦！",
+    "suffix": "今天是第{number}个起床的哟~",
+    "sleeping_time": [
+        {
+            "id": 1,
+            "content": "主人昨晚睡了 {hour} 小时 {minute} 分钟 {second} 秒www"
+        },
+        {
+            "id": 2,
+            "content": "主人昨晚足足睡了 {hour} 小时 {minute} 分钟 {second} 秒。看起来充分休息了嘛~"
+        }
+    ],
+    "too_little_sleep": "主人昨晚竟然只睡了 {hour} 小时 {minute} 分钟 {second} 秒。要早些休息哟~"
+}
