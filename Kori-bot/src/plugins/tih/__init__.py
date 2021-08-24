@@ -37,8 +37,8 @@ async def tih_handle(bot: Bot, event: Event, state: T_State):
 
     await tih.send(result)
 
-    print('2',333)
-    print(('2',333))
-    print('2'+333)
-    print(('2'+333))
+    # print('2',333)
+    # print(('2',333))
+    # print('2'+333)
+    # print(('2'+333))
     
