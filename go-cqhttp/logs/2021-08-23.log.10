@@ -1,0 +1,79 @@
+[2021-08-23 13:40:18] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 13:40:24] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:7536->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 13:41:08] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 13:41:14] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:3181->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 13:42:18] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 13:42:24] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:9636->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 13:43:14] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 13:43:19] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:10254->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 13:43:59] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 13:44:04] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:13187->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 13:44:29] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 13:44:34] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:12610->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 13:44:40] [WARNING]: 转换CQ码 ({"type": "image", "data": {"file": "file:///pics/809625.svg", "type": null, "cache": "true", "proxy": "true", "timeout": null}}) 到MiraiGo Element时出现错误: file not found 将忽略本段CQ码. 
+[2021-08-23 13:44:40] [WARNING]: 好友消息发送失败: 消息为空. 
+[2021-08-23 13:45:47] [WARNING]: 转换CQ码 ({"type": "image", "data": {"file": "file:///pics/382655.svg", "type": null, "cache": "true", "proxy": "true", "timeout": null}}) 到MiraiGo Element时出现错误: file not found 将忽略本段CQ码. 
+[2021-08-23 13:45:47] [WARNING]: 好友消息发送失败: 消息为空. 
+[2021-08-23 13:46:09] [WARNING]: 转换CQ码 ({"type": "image", "data": {"file": "file:///pics/439450.svg", "type": null, "cache": "true", "proxy": "true", "timeout": null}}) 到MiraiGo Element时出现错误: file not found 将忽略本段CQ码. 
+[2021-08-23 13:46:09] [WARNING]: 好友消息发送失败: 消息为空. 
+[2021-08-23 13:54:02] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 13:54:09] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:6635->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 14:36:40] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 14:36:44] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:14804->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 14:37:30] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 14:37:34] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:14410->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 14:39:01] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 14:39:09] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:4263->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 14:39:52] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 14:39:59] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:11833->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 14:40:36] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 14:40:44] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:9721->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 14:51:49] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 14:51:54] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:11455->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 14:53:02] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 14:53:09] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:9204->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 14:54:07] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 14:54:11] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:4891->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:01:07] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:01:09] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:6961->127.0.0.1:9165: wsasend: An established connection was aborted by the software in your host machine. 
+[2021-08-23 15:04:12] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:04:19] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:9253->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:04:58] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:05:04] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:6004->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:11:38] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:11:44] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:1608->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:13:43] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:13:49] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:3148->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:14:10] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:14:14] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:12319->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:15:15] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:15:19] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:14516->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:16:01] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:16:09] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:1982->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:22:46] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:22:49] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:8628->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:23:59] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:24:04] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:6095->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:25:24] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:25:29] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:2935->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:27:34] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:27:39] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:11258->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:28:16] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:28:24] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:7113->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:30:35] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:30:39] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:4061->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:31:31] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:31:39] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:5131->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:31:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:31:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:31:54] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:31:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:32:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:32:09] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:32:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:32:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:32:24] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:32:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 15:32:53] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:32:59] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:12842->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 15:33:26] [WARNING]: 群消息发送失败: 账号可能被风控. 

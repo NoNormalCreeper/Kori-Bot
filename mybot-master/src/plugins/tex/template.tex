@@ -1,0 +1,24 @@
+\documentclass[border={{border}}pt{{', varwidth=20cm' if multi_line}}]{standalone}
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{xcolor}
+\usepackage{ulem}
+
+\begin{document}
+{% if multi_line %}
+    \begin{equation*}
+        {{equation}}
+    \end{equation*}
+{% else %}
+    $\displaystyle
+        {{equation}}
+    $
+{% endif %}
+\end{document}

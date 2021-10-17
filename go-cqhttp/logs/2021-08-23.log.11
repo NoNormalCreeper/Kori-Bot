@@ -1,0 +1,4 @@
+[2021-08-23 15:35:59] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 15:36:00] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:4142->127.0.0.1:9165: wsasend: An established connection was aborted by the software in your host machine. 
+[2021-08-23 15:36:30] [WARNING]: 群消息发送失败: 账号可能被风控. 
+[2021-08-23 15:36:51] [WARNING]: 群消息发送失败: 账号可能被风控. 

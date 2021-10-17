@@ -1,0 +1,45 @@
+[2021-08-23 21:52:52] [WARNING]: 虚拟设备信息不存在, 将自动生成随机设备. 
+[2021-08-23 21:52:58] [ERROR]: Protocol -> exchange_emp error: 16 
+[2021-08-23 21:52:58] [WARNING]: 恢复会话失败: exchange_emp failed , 尝试使用正常流程登录. 
+[2021-08-23 22:21:30] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 22:21:35] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:14247->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 22:31:19] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 22:31:25] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:9604->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 22:51:10] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 22:51:15] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:2483->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 22:55:32] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 22:55:35] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:7648->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 22:57:09] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 22:57:15] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:5956->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 23:13:17] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 23:13:20] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:13851->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 23:13:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:13:30] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:13:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:13:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:13:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:13:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:13:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:14:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:15:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:16:44] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 23:16:50] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:10829->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 23:18:24] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 23:18:30] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:12688->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 23:18:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:18:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-08-23 23:27:47] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 23:27:50] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:3608->127.0.0.1:9165: use of closed network connection 
+[2021-08-23 23:28:12] [WARNING]: 监听反向WS API时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2021-08-23 23:28:15] [WARNING]: 向WS服务器 127.0.0.1:9165 推送Event时出现错误: write tcp 127.0.0.1:13080->127.0.0.1:9165: use of closed network connection 

@@ -7,8 +7,8 @@ help = on_command('2help', aliases={'帮助'}, priority=11)
 
 
 @help.handle()
-async def _(bot: Bot, event: Event, state: T_State):
-    plugin_name = str(event.get_message()).strip()
+
+    plugin_name = str(event.getasync def _(bot: Bot, event: Event, state: T_State):_message()).strip()
     group_id = str(event.group_id) if isinstance(event, GroupMessageEvent) else '0'
     help_msg = ''
     if plugin_name:
