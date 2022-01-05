@@ -410,3 +410,13 @@
 21:21:32.808040 table@remove removed @104
 21:21:32.809043 table@remove removed @100
 21:21:32.809043 table@remove removed @99
+=============== Oct 24, 2021 (CST) ===============
+16:20:56.218600 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:20:56.219348 version@stat F·[0 1] S·610KiB[0B 610KiB] Sc·[0.00 0.01]
+16:20:56.219348 db@open opening
+16:20:56.219911 journal@recovery F·1
+16:20:56.219911 journal@recovery recovering @107
+16:20:56.222951 memdb@flush created L0@110 N·172 S·23KiB "\x03W\xcb\xd0,v3644":"\xfe\xd5\xe7C,v3585"
+16:20:56.223495 version@stat F·[1 1] S·633KiB[23KiB 610KiB] Sc·[0.25 0.01]
+16:20:56.230764 db@janitor F·4 G·0
+16:20:56.230764 db@open done T·11.4158ms

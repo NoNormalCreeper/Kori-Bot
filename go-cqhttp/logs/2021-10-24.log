@@ -1,0 +1,8 @@
+[2021-10-24 16:20:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-10-24 16:21:03] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-10-24 16:21:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-10-24 16:21:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connectex: No connection could be made because the target machine actively refused it. 
+[2021-10-24 17:04:43] [ERROR]: Protocol -> unexpected disconnect: read tcp 192.168.0.123:14615->113.96.13.87:8080: wsarecv: An established connection was aborted by the software in your host machine. 
+[2021-10-24 17:04:43] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 109.244.128.213:8080: connectex: A socket operation was attempted to an unreachable network. 
+[2021-10-24 17:04:43] [ERROR]: Protocol -> connect server error: dial tcp error: dial tcp 109.244.128.213:8080: connectex: A socket operation was attempted to an unreachable network. 
+[2021-10-24 17:04:43] [WARNING]: Bot已离线: connection dropped by server. 
