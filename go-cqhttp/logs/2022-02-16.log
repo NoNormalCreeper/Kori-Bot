@@ -1,0 +1,510 @@
+[2022-02-16 15:06:00] [WARNING]: 恢复会话失败: exchange_emp failed: 15 , 尝试使用正常流程登录. 
+[2022-02-16 15:08:09] [WARNING]: 账号密码未配置, 将使用二维码登录. 
+[2022-02-16 15:08:09] [WARNING]: 将在 5秒 后继续. 
+[2022-02-16 15:08:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:08:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:08:36] [ERROR]: Protocol -> test long message server response latency error: Get "https://ssl.htdata.qq.com": dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 15:08:36] [ERROR]: Protocol -> test long message server latency error: failed to connect to server during quality test: dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 15:08:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:08:38] [ERROR]: 错误: 长消息服务器延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 15:08:38] [ERROR]: 错误: 长消息服务器响应延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 15:08:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:08:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:08:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:08:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:08:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:08:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:08:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:09:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:13:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:13:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:13:58] [ERROR]: Protocol -> test long message server response latency error: Get "https://ssl.htdata.qq.com": dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 15:13:58] [ERROR]: Protocol -> test long message server latency error: failed to connect to server during quality test: dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 15:13:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:00] [ERROR]: 错误: 长消息服务器延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 15:14:00] [ERROR]: 错误: 长消息服务器响应延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 15:14:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:14:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:15:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:16:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:17:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:18:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 15:52:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:33] [ERROR]: Protocol -> test long message server response latency error: Get "https://ssl.htdata.qq.com": dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 15:52:33] [ERROR]: Protocol -> test long message server latency error: failed to connect to server during quality test: dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 15:52:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:35] [ERROR]: 错误: 长消息服务器延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 15:52:35] [ERROR]: 错误: 长消息服务器响应延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 15:52:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:52:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:53:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:54:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:55:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:56:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:57:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:58:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 15:59:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:04] [ERROR]: Protocol -> test long message server response latency error: Get "https://ssl.htdata.qq.com": dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 16:00:04] [ERROR]: Protocol -> test long message server latency error: failed to connect to server during quality test: dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 16:00:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:06] [ERROR]: 错误: 长消息服务器延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 16:00:06] [ERROR]: 错误: 长消息服务器响应延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 16:00:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:00:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:01:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:39] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:42] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:45] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:48] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:54] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:02:57] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:00] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:03] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:09] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:12] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:15] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:18] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:24] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:27] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:30] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:33] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:39] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:42] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:45] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:48] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:54] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:03:57] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:00] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:03] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:09] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:12] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:15] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:18] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:24] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:27] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:30] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:33] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:39] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:42] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:45] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:48] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:54] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:04:57] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:00] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:03] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:09] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:12] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:15] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:18] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:24] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:27] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:30] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:33] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:39] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:42] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:45] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:48] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:51] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:54] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:05:57] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:00] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:03] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:06] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:09] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:12] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:15] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:18] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:21] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:24] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:27] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:30] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:33] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:06:36] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws/ 时出现错误: websocket: bad handshake 
+[2022-02-16 16:07:00] [FATAL]: listen tcp 127.0.0.1:6700: bind: address already in use 
+[2022-02-16 16:11:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:28] [ERROR]: Protocol -> test long message server response latency error: Get "https://ssl.htdata.qq.com": dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 16:11:28] [ERROR]: Protocol -> test long message server latency error: failed to connect to server during quality test: dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 16:11:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:30] [ERROR]: 错误: 长消息服务器延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 16:11:30] [ERROR]: 错误: 长消息服务器响应延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 16:11:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:11:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:11] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:14] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:17] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:20] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:23] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:26] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:29] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:32] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:35] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:38] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:41] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:44] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:47] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:50] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:53] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:56] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:12:59] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:13:02] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:13:05] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:13:08] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/cqhttp/ws 时出现错误: websocket: bad handshake 
+[2022-02-16 16:15:39] [ERROR]: Protocol -> test long message server response latency error: Get "https://ssl.htdata.qq.com": dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 16:15:39] [ERROR]: Protocol -> test long message server latency error: failed to connect to server during quality test: dial tcp 0.0.0.1:443: connect: invalid argument 
+[2022-02-16 16:15:41] [ERROR]: 错误: 长消息服务器延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 16:15:41] [ERROR]: 错误: 长消息服务器响应延迟测试失败, 可能导致无法接收/发送长消息的情况, 请检查本地网络状态. 如果您使用的腾讯云服务器, 请修改DNS到114.114.114.114 
+[2022-02-16 17:22:49] [WARNING]: 监听反向WS Universal时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2022-02-16 17:22:54] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:43740->127.0.0.1:9165: use of closed network connection 
+[2022-02-16 17:27:09] [WARNING]: 监听反向WS Universal时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2022-02-16 17:27:14] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:50254->127.0.0.1:9165: use of closed network connection 
+[2022-02-16 17:29:39] [WARNING]: 监听反向WS Universal时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2022-02-16 17:29:44] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:50630->127.0.0.1:9165: use of closed network connection 
+[2022-02-16 17:43:46] [WARNING]: 监听反向WS Universal时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2022-02-16 17:43:54] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:50864->127.0.0.1:9165: use of closed network connection 
+[2022-02-16 17:45:26] [WARNING]: 监听反向WS Universal时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2022-02-16 17:45:34] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:52238->127.0.0.1:9165: use of closed network connection 
+[2022-02-16 17:48:13] [WARNING]: 监听反向WS Universal时出现错误: websocket: close 1006 (abnormal closure): unexpected EOF 
+[2022-02-16 17:48:19] [WARNING]: 向反向WS Universal服务器推送 Event 时出现错误: write tcp 127.0.0.1:52384->127.0.0.1:9165: use of closed network connection 
+[2022-02-16 17:48:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:48:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:52] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:55] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:49:58] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:01] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:04] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:07] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:10] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:13] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:16] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:19] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:22] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:25] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:28] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:31] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:34] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:37] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:40] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:43] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:46] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 
+[2022-02-16 17:50:49] [WARNING]: 连接到反向WebSocket Universal服务器 ws://127.0.0.1:9165/onebot/v11/ws/ 时出现错误: dial tcp 127.0.0.1:9165: connect: connection refused 

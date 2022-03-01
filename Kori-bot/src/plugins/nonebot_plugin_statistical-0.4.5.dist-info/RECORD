@@ -1,0 +1,14 @@
+nonebot_plugin_statistical-0.4.5.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+nonebot_plugin_statistical-0.4.5.dist-info/LICENSE,sha256=XKaiuohn4oZXOEaDU04h0giOOBUJoLeq1bzoNBgmCT4,1065
+nonebot_plugin_statistical-0.4.5.dist-info/METADATA,sha256=81AfpCr-D47XFS7C8nsK1os5leTzcRab0vJApgnSAcE,729
+nonebot_plugin_statistical-0.4.5.dist-info/RECORD,,
+nonebot_plugin_statistical-0.4.5.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nonebot_plugin_statistical-0.4.5.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+nonebot_plugin_statistical/__init__.py,sha256=tv7Cvy7bkzO61iK9_OHm3iltBZt0One6pcdBBH_fCl8,93
+nonebot_plugin_statistical/__pycache__/__init__.cpython-38.pyc,,
+nonebot_plugin_statistical/__pycache__/config.cpython-38.pyc,,
+nonebot_plugin_statistical/__pycache__/statistical_handle.cpython-38.pyc,,
+nonebot_plugin_statistical/__pycache__/statistical_hook.cpython-38.pyc,,
+nonebot_plugin_statistical/config.py,sha256=Jo2foFYl1_n-pyGWMj7pG4gt3N8LbKO29EMfTBUqbHA,10878
+nonebot_plugin_statistical/statistical_handle.py,sha256=ACmlOJNadGMZIESA9kqdZlA3AKntGwiimW0KBcKqjfk,11724
+nonebot_plugin_statistical/statistical_hook.py,sha256=h_qKB6mqQe7BPaYvP83T82x87ks-quzRSqd9wAsAJ10,6538

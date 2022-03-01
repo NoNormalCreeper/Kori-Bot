@@ -1,0 +1,19 @@
+nonebot_plugin_logo-0.2.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+nonebot_plugin_logo-0.2.0.dist-info/LICENSE,sha256=Y46u2BV5EbnQLp5EIx5YRLcHcCiB7sY06At5fiA6PiM,1063
+nonebot_plugin_logo-0.2.0.dist-info/METADATA,sha256=cUUFBHMJJigjPvwqMFkIgtq-0VbfpoWOB97KHxvlP7A,715
+nonebot_plugin_logo-0.2.0.dist-info/RECORD,,
+nonebot_plugin_logo-0.2.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nonebot_plugin_logo-0.2.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+nonebot_plugin_logo/__init__.py,sha256=MoK49F2blW05pE9IPfy2ReTL2q0TEGoduRUcoikR9VI,1763
+nonebot_plugin_logo/__pycache__/__init__.cpython-38.pyc,,
+nonebot_plugin_logo/__pycache__/data_source.cpython-38.pyc,,
+nonebot_plugin_logo/data_source.py,sha256=EoJXSDLZFsZ72CMuwxkJd_5QBdTlKucv3o9M4Po8CYI,3426
+nonebot_plugin_logo/templates/5000choyen.html,sha256=vBTWvxI3C3Qpsu3aV4XDxFH-3H4CY19aUtTJXni9ILQ,8366
+nonebot_plugin_logo/templates/douyin.html,sha256=pLA3ffm8eIuvwPcC5UR-UyzZILIiWAZ9uI28tLWUV5c,5545
+nonebot_plugin_logo/templates/fonts/NotoSansSC-Regular.otf,sha256=Y_2ttHwhGXFw882mxg6Y5IG4oeso5fRBAtpRvsF9Ejs,8481960
+nonebot_plugin_logo/templates/fonts/NotoSerifSC-Regular.otf,sha256=ZggFQaERp6MReXAElgE6rEtkpTzEH1cL0hwmKMdeRig,11214568
+nonebot_plugin_logo/templates/fonts/Product Sans Regular.ttf,sha256=s0y7cddbhOtJJfUeBQJJ9l-z41UBM6ugpMFhxoIK7II,41116
+nonebot_plugin_logo/templates/google.html,sha256=qZigrr6LKExwpVsZFiw-_-8edmaSdkVNZm7TxguwU-M,1018
+nonebot_plugin_logo/templates/images/corner.png,sha256=7VzkO6FVygAY0-gVE1-e0peN7TNqFlQaJqtrbpjk0Fw,3340
+nonebot_plugin_logo/templates/pornhub.html,sha256=c6ZocOVL9BP9g3R0aA4wytB1V3Dvt_ALL0QD9kJ9MXo,953
+nonebot_plugin_logo/templates/youtube.html,sha256=1QcLpbRFQLVH8jRmTlnraE08Y0-ZnEJ521M-1FjVTCc,2185

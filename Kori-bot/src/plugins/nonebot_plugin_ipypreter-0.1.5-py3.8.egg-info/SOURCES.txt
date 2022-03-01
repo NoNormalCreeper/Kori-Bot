@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+nonebot-plugin-ipypreter/__init__.py
+nonebot-plugin-ipypreter/exceptions.py
+nonebot-plugin-ipypreter/models.py
+nonebot-plugin-ipypreter/store.db
+nonebot_plugin_ipypreter.egg-info/PKG-INFO
+nonebot_plugin_ipypreter.egg-info/SOURCES.txt
+nonebot_plugin_ipypreter.egg-info/dependency_links.txt
+nonebot_plugin_ipypreter.egg-info/requires.txt
+nonebot_plugin_ipypreter.egg-info/top_level.txt

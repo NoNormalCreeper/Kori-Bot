@@ -1,0 +1,138 @@
+{
+    "277620613": {
+        "2560359315": {
+            "user_id": "2560359315",
+            "group_id": "277620613",
+            "nickname": "不正常的小苦力怕",
+            "gold": 9999999,
+            "make_gold": 65,
+            "lose_gold": 10,
+            "win_count": 0,
+            "lose_count": 1,
+            "is_sign": false
+        },
+        "1020936395": {
+            "user_id": "1020936395",
+            "group_id": "277620613",
+            "nickname": "Science Student",
+            "gold": 98,
+            "make_gold": 98,
+            "lose_gold": 0,
+            "win_count": 0,
+            "lose_count": 0,
+            "is_sign": false
+        },
+        "871389797": {
+            "user_id": "871389797",
+            "group_id": "277620613",
+            "nickname": "愛",
+            "gold": 70,
+            "make_gold": 70,
+            "lose_gold": 0,
+            "win_count": 1,
+            "lose_count": 0,
+            "is_sign": false
+        }
+    },
+    "937760225": {
+        "2560359315": {
+            "user_id": "2560359315",
+            "group_id": "937760225",
+            "nickname": "李铭远",
+            "gold": 454,
+            "make_gold": 502,
+            "lose_gold": 168,
+            "win_count": 19,
+            "lose_count": 17,
+            "is_sign": true
+        },
+        "2316809418": {
+            "user_id": "2316809418",
+            "group_id": "937760225",
+            "nickname": "魏楚萌",
+            "gold": 143,
+            "make_gold": 303,
+            "lose_gold": 146,
+            "win_count": 13,
+            "lose_count": 10,
+            "is_sign": false
+        },
+        "963046537": {
+            "user_id": "963046537",
+            "group_id": "937760225",
+            "nickname": "蔡华博(Q群弟位)",
+            "gold": 35,
+            "make_gold": 388,
+            "lose_gold": 142,
+            "win_count": 9,
+            "lose_count": 13,
+            "is_sign": true
+        },
+        "1834580024": {
+            "user_id": "1834580024",
+            "group_id": "937760225",
+            "nickname": "景蕾",
+            "gold": 164,
+            "make_gold": 189,
+            "lose_gold": 25,
+            "win_count": 2,
+            "lose_count": 2,
+            "is_sign": false
+        },
+        "2095652005": {
+            "user_id": "2095652005",
+            "group_id": "937760225",
+            "nickname": "梁坤元",
+            "gold": 180,
+            "make_gold": 220,
+            "lose_gold": 40,
+            "win_count": 1,
+            "lose_count": 2,
+            "is_sign": false
+        },
+        "2548226969": {
+            "user_id": "2548226969",
+            "group_id": "937760225",
+            "nickname": "李思逸",
+            "gold": 224,
+            "make_gold": 224,
+            "lose_gold": 0,
+            "win_count": 0,
+            "lose_count": 0,
+            "is_sign": false
+        },
+        "2082049330": {
+            "user_id": "2082049330",
+            "group_id": "937760225",
+            "nickname": "李麒麟",
+            "gold": 70,
+            "make_gold": 70,
+            "lose_gold": 0,
+            "win_count": 0,
+            "lose_count": 0,
+            "is_sign": false
+        },
+        "1935200918": {
+            "user_id": "1935200918",
+            "group_id": "937760225",
+            "nickname": "张恒嘉",
+            "gold": 76,
+            "make_gold": 76,
+            "lose_gold": 0,
+            "win_count": 0,
+            "lose_count": 0,
+            "is_sign": false
+        },
+        "1617678696": {
+            "user_id": "1617678696",
+            "group_id": "937760225",
+            "nickname": "蒋国臻",
+            "gold": 55,
+            "make_gold": 56,
+            "lose_gold": 0,
+            "win_count": 0,
+            "lose_count": 0,
+            "is_sign": true
+        }
+    }
+}

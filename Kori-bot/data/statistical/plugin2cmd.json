@@ -1,0 +1,77 @@
+{
+    "white_list": [],
+    "<module 'nonebot.plugins.echo' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot\/plugins\/echo.py'>": {
+        "cmd": []
+    },
+    "<module 'nonebot_plugin_heweather' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_heweather\/__init__.py'>": {
+        "cmd": []
+    },
+    "<module 'src.plugins.saying' from '.\/src\/plugins\/saying\/__init__.py'>": {
+        "cmd": [
+            "\/saying"
+        ]
+    },
+    "<module 'random_cat_gif' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/random_cat_gif\/__init__.py'>": {
+        "cmd": []
+    },
+    "<module 'nonebot_plugin_wordcloud' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_wordcloud\/__init__.py'>": {
+        "cmd": []
+    },
+    "<module 'src.plugins.text2pic' from '.\/src\/plugins\/text2pic\/__init__.py'>": {
+        "cmd": []
+    },
+    "<module 'src.plugins.help' from '.\/src\/plugins\/help.py'>": {
+        "cmd": [
+            "\/help"
+        ]
+    },
+    "<module 'src.plugins.nonebot_plugin_songpicker2' from '.\/src\/plugins\/nonebot_plugin_songpicker2\/__init__.py'>": {
+        "cmd": []
+    },
+    "<module 'nonebot_plugin_analysis_bilibili' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_analysis_bilibili\/__init__.py'>": {
+        "cmd": []
+    },
+    "<module 'nonebot_plugin_repeater' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_repeater\/__init__.py'>": {
+        "cmd": [
+            ,
+                "\/ping",
+                "\/help",
+                "\/saying"
+            ]
+        },
+        "<module 'nonebot_plugin_withdraw' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_withdraw\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'nonebot_plugin_emojimix' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_emojimix\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'nonebot_plugin_chess' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_chess\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'nonebot_plugin_petpet' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_petpet\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'nonebot_plugin_remake' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_remake\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'nonebot_plugin_caiyunai' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_caiyunai\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'nonebot_plugin_morning' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_morning\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'nonebot_plugin_fortune' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_fortune\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'nonebot_plugin_code' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_code\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'nonebot_plugin_russian' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_russian\/__init__.py'>": {
+            "cmd": []
+        },
+        "<module 'src.plugins.ping' from '.\/src\/plugins\/ping.py'>": {
+            "cmd": [
+                "\/ping"
+            ]
+        }
+    }

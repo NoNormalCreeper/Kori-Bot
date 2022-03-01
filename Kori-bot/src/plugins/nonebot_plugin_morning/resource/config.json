@@ -1,0 +1,32 @@
+{
+    "morning": {
+        "get_up_intime": {
+            "enable": true,
+            "early_time": 4,
+            "late_time": 16
+        },
+        "multi_get_up": {
+            "enable": true,
+            "interval": 6
+        },
+        "super_get_up": {
+            "enable": true,
+            "interval": 3
+        }
+    },
+    "night": {
+        "sleep_intime": {
+            "enable": true,
+            "early_time": 16,
+            "late_time": 8
+        },
+        "good_sleep": {
+            "enable": true,
+            "interval": 6
+        },
+        "deep_sleep": {
+            "enable": true,
+            "interval": 3
+        }
+    }
+}

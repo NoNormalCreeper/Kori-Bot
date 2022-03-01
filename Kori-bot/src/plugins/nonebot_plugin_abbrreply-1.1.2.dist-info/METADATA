@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-abbrreply
+Version: 1.1.2
+Summary: 缩写查询器
+Home-page: https://github.com/anlen123/nonebot_plugin_abbrreply
+Author: anlen123
+Author-email: 1761512493@qq.com
+Maintainer: anlen123
+Maintainer-email: 1761512493@qq.com
+License: UNKNOWN
+Platform: all
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: nonebot-adapter-onebot (<3.0.0,>=2.0.0-beta.1)
+Requires-Dist: nonebot2 (<3.0.0,>=2.0.0-beta.1)
+
+<!--
+ * @Author         : anlen123
+ * @Date           : 2021-03-01 00:00:00
+ * @LastEditors    : anlen123
+ * @LastEditTime   : 2021-03-01 00:00:00
+ * @Description    : None
+ * @GitHub         : https://github.com/anlen123/nonebot_plugin_abbrreply
+-->
+
+<p align="center">
+  <a href="https://v2.nonebot.dev/"><img src="https://v2.nonebot.dev/logo.png" width="200" height="200" alt="nonebot"></a>
+</p>
+
+<div align="center">
+
+# nonebot_plugin_abbrreply
+
+_✨ NoneBot 短句回复 查看插件 ✨_
+
+</div>
+
+<p align="center">
+  <a href="https://raw.githubusercontent.com/cscs181/QQ-Github-Bot/master/LICENSE">
+    <img src="https://img.shields.io/github/license/cscs181/QQ-Github-Bot.svg" alt="license">
+  </a>
+  <a href="https://pypi.python.org/pypi/nonebot-plugin-status">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-status.svg" alt="pypi">
+  </a>
+  <img src="https://img.shields.io/badge/python-3.7+-blue.svg" alt="python">
+</p>
+
+## 使用方式
+sx lsp
+
+缩写 lsp
+
+lsp
+
+['老色批', '恋尸癖', '老山炮', 'Lovesick Puppies（游戏名称）']
+
+## 安装
+pip install nonebot_plugin_abbrreply
+
+## 使用
+nonebot.load_plugin('nonebot_plugin_abbrreply')
+
+
+# 已适配nonebot beta版本
+
+

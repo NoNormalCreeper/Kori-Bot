@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-chatrecorder
+Version: 0.1.5
+Summary: 适用于 Nonebot2 的聊天记录插件
+Home-page: https://github.com/MeetWq/nonebot-plugin-chatrecorder
+License: MIT
+Author: meetwq
+Author-email: meetwq@gmail.com
+Requires-Python: >=3.7.3,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: nonebot-adapter-onebot (>=2.0.0-beta.1,<3.0.0)
+Requires-Dist: nonebot-plugin-datastore (>=0.3.0,<0.4.0)
+Requires-Dist: nonebot2 (>=2.0.0-beta.1,<3.0.0)
+Requires-Dist: sqlmodel (>=0.0.6,<0.0.7)
+Requires-Dist: typing-extensions (>=3.10.0,<5.0.0)
+Project-URL: Repository, https://github.com/MeetWq/nonebot-plugin-chatrecorder
+Description-Content-Type: text/markdown
+
+## nonebot-plugin-chatrecorder
+
+适用于 [Nonebot2](https://github.com/nonebot/nonebot2) 的聊天记录插件。
+
+
+### 安装
+
+- 使用 nb-cli
+
+```
+nb plugin install nonebot_plugin_chatrecorder
+```
+
+- 使用 pip
+
+```
+pip install nonebot_plugin_chatrecorder
+```
+
+
+### 配置
+
+插件依赖 [nonebot-plugin-datastore](https://github.com/he0119/nonebot-plugin-datastore) 插件
+
+需要在配置文件中添加：
+
+```
+datastore_enable_database=true
+```
+
+插件会记录机器人收到的消息，可以添加以下配置选择是否记录机器人发出的消息（默认为 `true`）；如果协议端开启了自身消息上报则需设置为 `false` 以避免重复
+
+```
+chatrecorder_record_send_msg=true
+```
+
+消息记录文件存放在 nonebot-plugin-datastore 插件设置的数据目录；同时插件会将消息中 base64 形式的图片、语音等存成文件，放置在 nonebot-plugin-datastore 插件设置的缓存目录，避免消息记录文件体积过大
+
+
+### 使用
+
+示例：
+
+```python
+from datetime import datetime, timedelta
+from nonebot_plugin_chatrecorder import get_message_records
+from nonebot.adapters.onebot.v11 import GroupMessageEvent
+
+@matcher.handle()
+def handle(event: GroupMessageEvent):
+    # 获取当前群内成员 '12345' 和 '54321' 1天之内的消息
+    msgs = await get_message_records(
+        user_ids=['12345', '54321'],
+        group_ids=[event.group_id],
+        time_start=datetime.utcnow() - timedelta(days=1),
+    )
+```
+
+详细参数及说明见代码注释
+
+
+### TODO
+
+ - 咕?
+ - 咕咕咕！
+

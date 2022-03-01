@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-apscheduler
+Version: 0.1.2
+Summary: APScheduler Support for NoneBot2
+License: MIT
+Author: yanyongyu
+Author-email: yanyongyu_1@126.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: apscheduler (>=3.7.0,<4.0.0)
+Requires-Dist: nonebot2 (>=2.0.0-alpha.8,<3.0.0)

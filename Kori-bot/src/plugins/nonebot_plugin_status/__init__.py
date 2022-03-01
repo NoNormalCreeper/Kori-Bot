@@ -4,30 +4,45 @@
 @Author         : yanyongyu
 @Date           : 2020-09-18 00:00:13
 @LastEditors    : yanyongyu
-@LastEditTime   : 2021-03-16 17:05:58
+@LastEditTime   : 2022-01-13 21:01:33
 @Description    : None
 @GitHub         : https://github.com/yanyongyu
 """
 __author__ = "yanyongyu"
 
-from nonebot.typing import T_State
 from nonebot.matcher import Matcher
-from nonebot.adapters import Bot, Event
 from nonebot.permission import SUPERUSER
-from nonebot import get_driver, on_command, on_notice, on_message
-from nonebot.adapters.cqhttp import PrivateMessageEvent, PokeNotifyEvent
-
+from nonebot import on_notice, get_driver, on_command, on_message
+import io
+from nonebot_plugin_htmlrender import (
+    text_to_pic,
+    md_to_pic,
+    template_to_pic,
+    get_new_page,
+)
+from nonebot import on_command
+from nonebot.adapters.onebot.v11 import Bot, MessageEvent, MessageSegment
+from nonebot.params import Arg, CommandArg, ArgPlainText
+from PIL import Image
+from nonebot.adapters import Message
 from .config import Config
-from .data_source import cpu_status, per_cpu_status, memory_status, disk_usage
+from .data_source import cpu_status, disk_usage, memory_status, per_cpu_status, md_to_pic
 
 global_config = get_driver().config
 status_config = Config(**global_config.dict())
 
-command = on_command("状态", priority=10)
+command = on_command(
+    "状态",
+    permission=(status_config.server_status_only_superusers or None) and SUPERUSER,
+    priority=10,
+)
 
 
 @command.handle()
-async def server_status(bot: Bot, matcher: Matcher):
+async def server_status(matcher: Matcher):
+    from pathlib import Path
+    from PIL import Image
+
     data = []
 
     if status_config.server_status_cpu:
@@ -46,22 +61,34 @@ async def server_status(bot: Bot, matcher: Matcher):
         for k, v in disk_usage().items():
             data.append(f"  {k}: {int(v.percent):02d}%")
 
-    await matcher.send(message="\n".join(data))
+    pic = await md_to_pic(md=data)
+    a = Image.open(io.BytesIO(pic))
+    a.save("md2pic.png", format="PNG")
+    await matcher.send(MessageSegment.image(pic))
+    # await matcher.send(message="\n".join(data))
 
 
-async def _group_poke(bot: Bot, event: Event, state: T_State) -> bool:
-    return isinstance(event, PokeNotifyEvent) and str(
-        event.user_id) in global_config.superusers and event.is_tome()
+try:
+    from nonebot.adapters.onebot.v11 import PokeNotifyEvent, PrivateMessageEvent
+except ImportError:
+    pass
+else:
 
+    async def _group_poke(event: PokeNotifyEvent) -> bool:
+        return event.is_tome() and (
+            not status_config.server_status_only_superusers
+            or str(event.user_id) in global_config.superusers
+        )
 
-group_poke = on_notice(_group_poke, priority=10, block=True)
-group_poke.handle()(server_status)
+    group_poke = on_notice(_group_poke, priority=10, block=True)
+    group_poke.handle()(server_status)
 
+    async def _poke(event: PrivateMessageEvent) -> bool:
+        return event.sub_type == "friend" and event.message[0].type == "poke"
 
-async def _poke(bot: Bot, event: Event, state: T_State) -> bool:
-    return (isinstance(event, PrivateMessageEvent) and
-            event.sub_type == "friend" and event.message[0].type == "poke")
-
-
-poke = on_message(_poke, permission=SUPERUSER, priority=10)
-poke.handle()(server_status)
+    poke = on_message(
+        _poke,
+        permission=(status_config.server_status_only_superusers or None) and SUPERUSER,
+        priority=10,
+    )
+    poke.handle()(server_status)

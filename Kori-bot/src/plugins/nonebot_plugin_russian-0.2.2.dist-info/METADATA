@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-russian
+Version: 0.2.2
+Summary: Nonebot2插件 俄罗斯轮盘
+License: MIT
+Author: HibiKier
+Author-email: 775757368@qq.com
+Requires-Python: >=3.7.3,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: nonebot-adapter-onebot (>=2.0.0-beta.1,<3.0.0)
+Requires-Dist: nonebot-plugin-apscheduler (>=0.1.2,<0.2.0)
+Requires-Dist: nonebot2 (>=2.0.0-beta.1,<3.0.0)
+Requires-Dist: ujson (>=4.0.0)
