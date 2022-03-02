@@ -5,5 +5,5 @@ from pathlib import Path
 
 class Config(BaseModel, extra=Extra.ignore):
     max_bet_gold: int = 1000
-    sign_gold: Tuple[int, int] = (1, 100)
+    sign_gold: Tuple[int, int] = (1, 60)
     russian_path: Path = Path()

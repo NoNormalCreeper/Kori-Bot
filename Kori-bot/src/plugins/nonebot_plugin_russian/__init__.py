@@ -11,6 +11,7 @@ from nonebot.params import Depends, CommandArg, State
 from .utils import is_number, get_message_at
 from nonebot.log import logger
 from .data_source import russian_manager, max_bet_gold
+from .fx import f
 # from .lottery import *
 import random
 
@@ -55,6 +56,10 @@ record = on_command("我的战绩", permission=GROUP, priority=5, block=True)
 
 lottery = on_command("lottery", aliases={}, permission=GROUP, priority=5, block=True)
 
+addmoney = on_command("addmoney", aliases={}, priority=5, block=True)
+
+fx = on_command("fx", aliases={}, permission=GROUP, priority=5, block=True)
+
 russian_rank = on_command(
     "胜场排行",
     aliases={"金币排行", "胜利排行", "败场排行", "失败排行", "欧洲人排行", "慈善家排行"},
@@ -68,6 +73,8 @@ my_gold = on_command("我的金币", permission=GROUP, priority=5, block=True)
 dap = on_command("dap", aliases={}, permission=GROUP, priority=5, block=True)
 
 lottery = on_command("lottery", aliases={}, permission=GROUP, priority=5, block=True)
+
+pay = on_command("pay", aliases={}, permission=GROUP, priority=5, block=True)
 
 @sign.handle()
 async def _(event: GroupMessageEvent):
@@ -313,13 +320,66 @@ async def _(event: GroupMessageEvent, arg: Message = CommandArg(), state: T_Stat
                 logger.info("{0} won {1} coins from lottery tickets.".format(event.user_id, won_gold))
                 f.write("0")
             else:
-                msg += "😐 But you were not luck enough to win...\n💰 Current bonus pool: {0} coins".format(award_gold+spent_gold)
+                msg += "😐 But you were not lucky enough to win...\n💰 Current bonus pool: {0} coins".format(award_gold+spent_gold)
                 f.write(str(award_gold+spent_gold))
     else:
         msg = "You don't have enough coins!"
     await lottery.send(message=msg, at_sender=True)
 
-    
+@pay.handle()
+async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), state: T_State = State()):
+    sender = event.user_id
+    group_id = event.group_id
+    arg = arg.extract_plain_text().split(' ')
+    transfer_money = arg[1]
+    if arg[0]:
+        receiver = arg.data["qq"]
+    else:
+        pay.finish("Pay to who? Air?")
+    at_ = state["at"][0]
+    at_player_name = await bot.get_group_member_info(
+            group_id=event.group_id, user_id=int(at_)
+        )
+    at_player_name = (
+            at_player_name["card"]
+            if at_player_name["card"]
+            else at_player_name["nickname"]
+        )
+    if russian_manager.get_user_data(event)["gold"] > transfer_money:
+        russian_manager._waste_data_handle(sender, group_id, transfer_money)
+        russian_manager._earn_data_handle(receiver, group_id, transfer_money)
+        await pay.send(" successfully paid {0} coins to {1} !".format(transfer_money, at_player_name), at_sender=True)
+    else:
+        await pay.send(" You don't have enough money!", at_sender=True)
+
+@addmoney.handle()
+async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), state: T_State = State()):
+    if str(event.user_id) in ["2560359315"]:
+        args = arg.extract_plain_text().split(' ')
+        russian_manager._earn_data_handle(int(args[0]), event.group_id, int(args[1]))
+        await addmoney.send("Successfully add {0} coins for {1}.".format(args[1], args[0]))
+    else:
+        await addmoney.send("😅 You are not superuser.")
+
+
+@fx.handle()
+async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), state: T_State = State()):
+    arg = arg.extract_plain_text().strip()
+    x = int(arg) if arg else 50
+    if x > 0 and x <= 500:
+        tmp = f(x)
+        y = tmp[0]
+        msg = '\n'+tmp[1]
+        msg += '\n💰 Your {0} coins have become {1} coins!'.format(x,y)
+        russian_manager._waste_data_handle(event.user_id, event.group_id, x)
+        russian_manager._earn_data_handle(event.user_id, event.group_id, y)
+        if russian_manager.get_user_data(event)["gold"] < 0:
+            msg += '\n⚠ You have less than 0 coin now!'
+        logger.info("{0}'s {1} -> {2} ".format(event.user_id, x, y))
+        await fx.send(msg, at_sender=True)
+    else:
+        await fx.send("Range error!")
+
 
 # 重置每日签到
 @scheduler.scheduled_job(
