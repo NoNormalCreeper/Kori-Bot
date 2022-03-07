@@ -650,11 +650,11 @@ class RussianManager:
             f.seek(0)
             history_money_per_stock = f.read().split('\n')
             money_per_stock = float(history_money_per_stock[-1])
-        money_per_stock = round(money_per_stock) * 1000
-        money_per_stock /= 1000
+        money_per_stock = round(money_per_stock * 100)
+        money_per_stock /= 100
         percent = (money_per_stock - float(history_money_per_stock[0])) / float(history_money_per_stock[0]) * 100
-        percent = round(percent) * 1000
-        percent /= 1000
+        percent = round(percent * 100)
+        percent /= 100
         percent = str(percent) + '%'
         return {
             "money_per_stock": money_per_stock,
