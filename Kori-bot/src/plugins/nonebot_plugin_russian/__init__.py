@@ -5,13 +5,16 @@ from nonebot.adapters.onebot.v11 import (
     GroupMessageEvent,
     MessageSegment,
     Message,
+    Event
 )
+from nonebot.matcher import Matcher
 from nonebot.typing import T_State
-from nonebot.params import Depends, CommandArg, State
+from nonebot.params import Depends, CommandArg, State, Arg, ArgPlainText
 from .utils import is_number, get_message_at
 from nonebot.log import logger
 from .data_source import russian_manager, max_bet_gold
 from .fx import f
+from .poem import check, getQuestion
 # from .lottery import *
 import random
 
@@ -60,6 +63,8 @@ addmoney = on_command("addmoney", aliases={}, priority=5, block=True)
 
 fx = on_command("fx", aliases={}, permission=GROUP, priority=5, block=True)
 
+stock = on_command("stock", aliases={}, permission=GROUP, priority=5, block=True)
+
 russian_rank = on_command(
     "胜场排行",
     aliases={"金币排行", "胜利排行", "败场排行", "失败排行", "欧洲人排行", "慈善家排行"},
@@ -75,6 +80,10 @@ dap = on_command("dap", aliases={}, permission=GROUP, priority=5, block=True)
 lottery = on_command("lottery", aliases={}, permission=GROUP, priority=5, block=True)
 
 pay = on_command("pay", aliases={}, permission=GROUP, priority=5, block=True)
+
+poem = on_command("poem", aliases={}, permission=GROUP, priority=5, block=True)
+
+# answer = on_regex("[0-4]+", permission=GROUP, priority=5)
 
 @sign.handle()
 async def _(event: GroupMessageEvent):
@@ -290,9 +299,9 @@ async def _(event: GroupMessageEvent, arg: Message = CommandArg(), state: T_Stat
     if str(event.group_id) in ban_groups:
         await lottery.finish("😓 This function is BANNED in this group by admin.")
     
-    possibility = 0.04
+    possibility = 0.03
     msg = ""
-    gold_per_ticket = 20
+    gold_per_ticket = 50
     user_gold = russian_manager.get_user_data(event)["gold"]
     arg = arg.extract_plain_text()
     award_path = data_source.russian_path / "data" / "russian" / "award.txt"
@@ -364,6 +373,7 @@ async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), sta
 
 @fx.handle()
 async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), state: T_State = State()):
+    await fx.finish("😓 This function is BANNED in this group by admin.")
     arg = arg.extract_plain_text().strip()
     x = int(arg) if arg else 50
     if x > 0 and x <= 500:
@@ -379,6 +389,106 @@ async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), sta
         await fx.send(msg, at_sender=True)
     else:
         await fx.send("Range error!")
+
+
+@poem.handle()
+async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
+    question = getQuestion(event.user_id)
+    msg = '\n'+question
+    args = args.extract_plain_text()
+    if args:    
+        matcher.set_arg("answer", args)     # never run
+    await poem.send(msg, at_sender=True)
+
+# @answer.handle()
+# async def _(bot: Bot, event: GroupMessageEvent, state: T_State = State()):
+#     user_answer = event.raw_message
+#     user_answer = user_answer.strip()
+#     if check(user_answer):
+#         award = random.randint(5,15)
+#         russian_manager._earn_data_handle(event.user_id, event.group_id, award)
+
+
+@poem.got("ans", prompt="Waiting for answer...")
+async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answer: str = ArgPlainText("ans")):
+    answer = answer.strip()
+    # answer = state["answer"]
+    award = random.randint(2,30)
+    if check(answer, event.user_id):
+        russian_manager._earn_data_handle(event.user_id, event.group_id, award)
+        msg = "\n✔ You earned {0} coins.".format(award)
+    else:
+        russian_manager._waste_data_handle(event.user_id, event.group_id, award)
+        msg = "\n❌ {0} coins for punishment.".format(award)
+    await poem.send(msg, at_sender=True)
+
+
+@stock.handle()
+async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
+    args = args.extract_plain_text()
+    args = args.strip().split()
+    user_id = event.user_id
+    group_id = event.group_id
+    money_per_stock = russian_manager._check_stock_handle()["money_per_stock"]
+    percent = russian_manager._check_stock_handle()["percent"]
+    if args:
+        if args[0] == "buy":
+            try:
+                number = args[1]
+            except:
+                number = 1
+            number = int(number)
+            if number*money_per_stock <= russian_manager.get_user_data(event)["gold"]:
+                russian_manager._buy_stock_handle(user_id, group_id, number)
+                await stock.finish(
+                    "\n🧾 Successfully bought {0} shares using {3} coins.\nYou have {4} shares now.\n{5} Current stock: {1} coins,  {2}".format(
+                    number, money_per_stock, percent, number*money_per_stock, russian_manager.get_user_data(event)["stock"], ('🟥' if ('-' not in percent) else '🟩')),
+                    at_sender=True
+                    )
+            else:
+                await stock.finish("\n😦 You don't have enough money!", at_sender=True)
+        elif args[0] == "sell":
+            try:
+                number = args[1]
+            except:
+                number = 1
+            number = int(number)
+            if number <= russian_manager.get_user_data(event)["stock"]:
+                russian_manager._sell_stock_handle(user_id, group_id, number)
+                await stock.finish(
+                    "\n🧾 Successfully sold {0} shares earning {3} coins.\nYou have {4} shares left now.\n{5} Current stock: {1} coins,  {2}".format(
+                    number, money_per_stock, percent, number*money_per_stock, russian_manager.get_user_data(event)["stock"], ('🟥' if ('-' in percent) else '🟩')),
+                    at_sender=True
+                    )
+            else:
+                await stock.finish("\n😦 You don't have enough shares!", at_sender=True)
+        elif args[0] == "me":
+            await stock.finish("\nYou have {0} shares now.".format(russian_manager.get_user_data(event)["stock"]), at_sender=True)
+        elif args[0] == "price":
+            await stock.finish("{2} Current stock: {0} coins,  {1}".format(
+                    money_per_stock, percent, ('🟥' if ('-' not in percent) else '🟩')),
+                    )
+    else:
+        await stock.finish("{2} Current stock: {0} coins,  {1}".format(
+                    money_per_stock, percent, ('🟥' if ('-' not in percent) else '🟩')),
+                    )
+
+@scheduler.scheduled_job(
+    "cron",
+    hour="8-22",
+    minute="*",
+    second="*/30"
+)
+async def change_price():
+    russian_manager._price_change_handle()
+
+@scheduler.scheduled_job(
+    "cron",
+    hour=7,
+    minute=59,
+)
+async def start_stock():
+    russian_manager._start_stock_handle()
 
 
 # 重置每日签到

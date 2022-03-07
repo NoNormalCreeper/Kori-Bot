@@ -25,6 +25,7 @@ bot_name = list(global_config.nickname)[0] if global_config.nickname else "本�
 # 最大赌注
 max_bet_gold = russian_config.max_bet_gold
 russian_path = russian_config.russian_path
+price_path = russian_path / "data" / "russian" / "stock_price.txt"
 
 russian_config = Config.parse_obj(nonebot.get_driver().config.dict())
 max_bet_gold = russian_config.max_bet_gold
@@ -513,7 +514,24 @@ class RussianManager:
                 "win_count": 0,
                 "lose_count": 0,
                 "is_sign": False,
+                "stock": 0
             }
+        try:
+            self._player_data[group_id][user_id]["stock"] += 0
+        except:     # to init the "stock" data
+            self._player_data[group_id][user_id] = {
+                "user_id": self._player_data[group_id][user_id]["user_id"],
+                "group_id": self._player_data[group_id][user_id]["group_id"],
+                "nickname": self._player_data[group_id][user_id]["nickname"],
+                "gold": self._player_data[group_id][user_id]["gold"],
+                "make_gold": self._player_data[group_id][user_id]["make_gold"],
+                "lose_gold": self._player_data[group_id][user_id]["lose_gold"],
+                "win_count": self._player_data[group_id][user_id]["win_count"],
+                "lose_count": self._player_data[group_id][user_id]["lose_count"],
+                "is_sign": self._player_data[group_id][user_id]["is_sign"],
+                "stock": 0 
+            }
+
 
     async def end_game(self, bot: Bot, event: GroupMessageEvent):
         """
@@ -604,7 +622,8 @@ class RussianManager:
         user_id = str(user_id)
         group_id = str(group_id)
         self._player_data[group_id][user_id]["gold"] -= money
-    
+        self.save()
+
     def _earn_data_handle(
         self,
         user_id: int,
@@ -614,6 +633,68 @@ class RussianManager:
         user_id = str(user_id)
         group_id = str(group_id)
         self._player_data[group_id][user_id]["gold"] += money
+        self.save()
+
+    def _start_stock_handle(self):
+        with open(price_path, 'a+') as f:
+            f.seek(0)
+            history_money_per_stock = f.read().split('\n')
+            money_per_stock = history_money_per_stock[-1]
+            f.seek(0)
+            f.truncate()
+            f.seek(0)
+            f.write(money_per_stock)
+
+    def _check_stock_handle(self):
+        with open(price_path, 'a+') as f:
+            f.seek(0)
+            history_money_per_stock = f.read().split('\n')
+            money_per_stock = float(history_money_per_stock[-1])
+        money_per_stock = round(money_per_stock) * 1000
+        money_per_stock /= 1000
+        percent = (money_per_stock - float(history_money_per_stock[0])) / float(history_money_per_stock[0]) * 100
+        percent = round(percent) * 1000
+        percent /= 1000
+        percent = str(percent) + '%'
+        return {
+            "money_per_stock": money_per_stock,
+            "percent": percent
+        }
+
+    def _price_change_handle(self):
+        range = random.randint(3,20)
+        delta = random.randint(-(range*1000), (range*1000)) / 1000
+        with open(price_path, 'a+') as f:
+            update_price = float(self._check_stock_handle()["money_per_stock"])+delta
+            if update_price < 0:
+                update_price = 0
+            f.write('\n' + str(update_price))
+        
+    def _buy_stock_handle(
+        self,
+        user_id: int,
+        group_id: int,
+        number: int
+    ):
+        user_id = str(user_id)
+        group_id = str(group_id)
+        money_per_stock = self._check_stock_handle()["money_per_stock"]
+        self._waste_data_handle(user_id, group_id, round(number * money_per_stock))
+        self._player_data[group_id][user_id]["stock"] += number
+        self.save()
+
+    def _sell_stock_handle(
+        self,
+        user_id: int,
+        group_id: int,
+        number: int
+    ):
+        user_id = str(user_id)
+        group_id = str(group_id)
+        money_per_stock = self._check_stock_handle()["money_per_stock"]
+        self._earn_data_handle(user_id, group_id, round(number * money_per_stock))
+        self._player_data[group_id][user_id]["stock"] -= number
+        self.save()
 
 
 russian_manager = RussianManager()
