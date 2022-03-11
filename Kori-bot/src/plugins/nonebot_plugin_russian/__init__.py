@@ -17,6 +17,8 @@ from .fx import f
 from .poem import check, getQuestion
 # from .lottery import *
 import random
+from .math_question import *
+from .words import *
 
 
 __zx_plugin_name__ = "俄罗斯轮盘"
@@ -65,6 +67,10 @@ fx = on_command("fx", aliases={}, permission=GROUP, priority=5, block=True)
 
 stock = on_command("stock", aliases={}, permission=GROUP, priority=5, block=True)
 
+math = on_command("math", aliases={"口算"}, permission=GROUP, priority=5, block=True)
+
+word = on_command("word", aliases={}, permission=GROUP, priority=5, block=True)
+
 russian_rank = on_command(
     "胜场排行",
     aliases={"金币排行", "胜利排行", "败场排行", "失败排行", "欧洲人排行", "慈善家排行"},
@@ -73,7 +79,7 @@ russian_rank = on_command(
     block=True,
 )
 
-my_gold = on_command("我的金币", permission=GROUP, priority=5, block=True)
+my_gold = on_command("我的金币", aliases={"mycoin"}, permission=GROUP, priority=5, block=True)
 
 dap = on_command("dap", aliases={}, permission=GROUP, priority=5, block=True)
 
@@ -423,6 +429,60 @@ async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answ
     await poem.send(msg, at_sender=True)
 
 
+@math.handle()
+async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
+    question = getMathQuestion(event.user_id)
+    msg = '\n'+question
+    args = args.extract_plain_text()
+    if args:    
+        matcher.set_arg("answer", args)     # never run
+    await math.send(msg, at_sender=True)
+
+@math.got("ans", prompt="Waiting for answer...")
+async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answer: str = ArgPlainText("ans")):
+    answer = answer.strip().replace(' ', '')
+    # answer = state["answer"]
+    try:
+        answer = int(answer)
+        answer = str(answer)
+    except:
+        await math.reject("Please input a number!")
+    award = random.randint(2,60)
+    responce = checkMathAnswer(event.user_id, answer)
+    if not responce:
+        russian_manager._earn_data_handle(event.user_id, event.group_id, award)
+        msg = "\n✔ You earned {0} coins.".format(award)
+    else:
+        russian_manager._waste_data_handle(event.user_id, event.group_id, award)
+        msg = "\n❌ {0} coins for punishment.\nThe right answer is {1}.".format(award, responce)
+    await math.send(msg, at_sender=True)
+
+@word.handle()
+async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
+    question = getWordQuestion(event.user_id)
+    msg = '\n'+question
+    args = args.extract_plain_text()
+    if args:    
+        matcher.set_arg("answer", args)     # never run
+    await word.send(msg, at_sender=True)
+
+@word.got("ans", prompt="Waiting for answer...")
+async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answer: str = ArgPlainText("ans")):
+    answer = answer.strip().replace(' ', '')
+    # answer = state["answer"]
+    if answer.upper() not in ['A','B','C','D']:
+        await word.reject("Please input a right letter!")
+    award = random.randint(2,20)
+    responce = checkWordAnswer(event.user_id, answer)
+    if not responce:
+        russian_manager._earn_data_handle(event.user_id, event.group_id, award)
+        msg = "\n✔ You earned {0} coins.".format(award)
+    else:
+        russian_manager._waste_data_handle(event.user_id, event.group_id, award)
+        msg = "\n❌ {0} coins for punishment.\nThe right answer is {1}.".format(award, responce)
+    await word.send(msg, at_sender=True)
+
+
 @stock.handle()
 async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
     args = args.extract_plain_text()
@@ -475,7 +535,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
 
 @scheduler.scheduled_job(
     "cron",
-    hour="8-22",
+    hour="8-21",    # 08:00:00 - 21:59:30
     minute="*",
     second="*/30"
 )

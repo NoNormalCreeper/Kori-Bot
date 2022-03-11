@@ -8,7 +8,7 @@ import random
 import time
 import os
 from .config import Config
-
+# import json
 try:
     import ujson as json
 except ModuleNotFoundError:
@@ -29,7 +29,7 @@ price_path = russian_path / "data" / "russian" / "stock_price.txt"
 
 russian_config = Config.parse_obj(nonebot.get_driver().config.dict())
 max_bet_gold = russian_config.max_bet_gold
-
+# max_bet_gold = 100000
 
 async def rank(player_data: dict, group_id: int, type_: str) -> str:
     """
@@ -649,7 +649,10 @@ class RussianManager:
         with open(price_path, 'a+') as f:
             f.seek(0)
             history_money_per_stock = f.read().split('\n')
-            money_per_stock = float(history_money_per_stock[-1])
+        if '' in history_money_per_stock:
+            history_money_per_stock.remove('')
+        money_per_stock = history_money_per_stock[-1]
+        money_per_stock = float(money_per_stock)
         money_per_stock = round(money_per_stock * 100)
         money_per_stock /= 100
         percent = (money_per_stock - float(history_money_per_stock[0])) / float(history_money_per_stock[0]) * 100
@@ -666,8 +669,8 @@ class RussianManager:
         delta = random.randint(-(range*1000), (range*1000)) / 1000
         with open(price_path, 'a+') as f:
             update_price = float(self._check_stock_handle()["money_per_stock"])+delta
-            if update_price < 0:
-                update_price = 0
+            if update_price < 0.01:
+                update_price = 0.02
             f.write('\n' + str(update_price))
         
     def _buy_stock_handle(
