@@ -8,6 +8,8 @@ import json
 
 saying = on_command("saying", aliases={'一言'})
 
+tih = on_command("tih")
+
 types = {'a':'动画',
           'b':'漫画',
           'c':'游戏',
@@ -40,3 +42,19 @@ async def handle(bot: Bot, event: Event, matcher: Matcher):
     # await saying.send(result)
     # await saying.finish(Message(result))
     await saying.send(result)
+
+
+@tih.handle()   # Today in history
+async def _(bot: Bot, event: Event, matcher: Matcher):
+    try:
+        resp = requests.get("https://api.iyk0.com/lishi")
+    except:
+        await tih.finish("Error!")
+    content = resp.text
+    content = content.replace(" ", "").replace("\n", "")
+    c = json.loads(content)
+    c = c[content[2:8]]
+    msg = "历史上的今天: \n"
+    for i in c:
+        msg += "{0}的今天, {1}\n".format(i['year'], i['title'])
+    await tih.send(msg)
