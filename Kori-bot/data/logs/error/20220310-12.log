@@ -1,0 +1,2035 @@
+[36mATRI[0m | 03-10 12:10:05 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f9113a66040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f91142ec4f0>
+         │    └ <function MultiCommand.invoke at 0x7f9113a6a0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f911bbd9370>
+           │               │       │       └ <function Command.invoke at 0x7f9113a66af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f911bbd9370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f910a9919d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f911bbd9370>
+           │   │      │    └ <function run at 0x7f910aabc8b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f9113a628b0>
+           └ <click.core.Context object at 0x7f911bbd9370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f910aaab670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f911bc19940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f911bd48430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f911192a790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f9111924310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f910a29f9a0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f91119241f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f910a29f9a0>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f9111924280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f910a29f9a0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f911bc19940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f911bd48430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-10 12:11:41 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f8cc56ab040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f8cc5f314f0>
+         │    └ <function MultiCommand.invoke at 0x7f8cc56af0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f8ccd81e370>
+           │               │       │       └ <function Command.invoke at 0x7f8cc56abaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f8ccd81e370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f8cbc5d69d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f8ccd81e370>
+           │   │      │    └ <function run at 0x7f8cbc7018b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f8cc56a78b0>
+           └ <click.core.Context object at 0x7f8ccd81e370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f8cbc6f0670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f8ccd85f940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f8ccd98d430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f8cc356f790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f8cc3569310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f8cbbee49a0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f8cc35691f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f8cbbee49a0>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f8cc3569280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f8cbbee49a0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f8ccd85f940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f8ccd98d430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-10 12:14:27 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f66f18d3040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f66f21594f0>
+         │    └ <function MultiCommand.invoke at 0x7f66f18d70d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f66f9a46370>
+           │               │       │       └ <function Command.invoke at 0x7f66f18d3af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f66f9a46370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f66e87fe9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f66f9a46370>
+           │   │      │    └ <function run at 0x7f66e89298b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f66f18cf8b0>
+           └ <click.core.Context object at 0x7f66f9a46370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f66e8918670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f66f9a87940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f66f9bb5430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f66ef797790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f66ef791310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f66e810da00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f66ef7911f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f66e810da00>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f66ef791280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f66e810da00>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f66f9a87940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f66f9bb5430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-10 20:35:10 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-1114154' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa26caf10>
+          │            │        │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': [MessageSegment(type='text', data={'text': 'sell ...
+          │            │        │    └ GroupMessageEvent(time=1646915704, self_id=507346814, post_type='message', sub_type='normal', user_id=2548226969, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-1114154' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa26caf10>
+          │       │   │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': [MessageSegment(type='text', data={'text': 'sell ...
+          │       │   │    └ GroupMessageEvent(time=1646915704, self_id=507346814, post_type='message', sub_type='normal', user_id=2548226969, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-1114154' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa26caf10>
+          │    │          │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': [MessageSegment(type='text', data={'text': 'sell ...
+          │    │          │    └ GroupMessageEvent(time=1646915704, self_id=507346814, post_type='message', sub_type='normal', user_id=2548226969, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _ at 0x7faaa26f3550>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>, 'event': GroupMessageEvent(time=1646915704, self_id=5...
+                 │    └ <function _ at 0x7faaa26f3550>
+                 └ <Dependent call=<function _ at 0x7faaa26f3550>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 518, in _
+    await stock.finish(
+          │     └ <classmethod object at 0x7fab10589a90>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {'at_sender': True}
+          │   │    └ '\n🧾 Successfully sold 1 shares earning 232.02 coins.\nYou have 0 shares left now.\n🟥 Current stock: 232.02 coins,  -11.95%'
+          │   └ <classmethod object at 0x7fab10589a30>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {'at_sender': True}
+                 │   │          │              └ '\n🧾 Successfully sold 1 shares earning 232.02 coins.\nYou have 0 shares left now.\n🟥 Current stock: 232.02 coins,  -11.95%'
+                 │   │          └ GroupMessageEvent(time=1646915704, self_id=507346814, post_type='message', sub_type='normal', user_id=2548226969, message_typ...
+                 │   └ <function Bot.send at 0x7fab0e390b80>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {'at_sender': True}
+                 │    │                      │     │      └ '\n🧾 Successfully sold 1 shares earning 232.02 coins.\nYou have 0 shares left now.\n🟥 Current stock: 232.02 coins,  -11.95%'
+                 │    │                      │     └ GroupMessageEvent(time=1646915704, self_id=507346814, post_type='message', sub_type='normal', user_id=2548226969, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 2548226969, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 2548226969, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 413}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 2548226969, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 413}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 413}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-10 23:08:37 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=0, temp=True> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function Matcher.got.<locals>._key_getter at 0x7fab0d1a45e0>: <Task finished name='Task-1447774' coro=<Matcher.got.<locals>...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa033a3d0>
+          │            │        │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │            │        │    └ GroupMessageEvent(time=1646924916, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=0, temp=True>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function Matcher.got.<locals>._key_getter at 0x7fab0d1a45e0>: <Task finished name='Task-1447774' coro=<Matcher.got.<locals>...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa033a3d0>
+          │       │   │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │       │   │    └ GroupMessageEvent(time=1646924916, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=0, temp=True>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function Matcher.got.<locals>._key_getter at 0x7fab0d1a45e0>: <Task finished name='Task-1447774' coro=<Matcher.got.<locals>...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa033a3d0>
+          │    │          │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │    │          │    └ GroupMessageEvent(time=1646924916, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=0, temp=True>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function handle_songNum at 0x7fab0d1a4790>, params=[ModelField(name='bot', type=Bot, required=True), ModelFi...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>, 'event': GroupMessageEvent(time=1646924916, self_id=5...
+                 │    └ <function handle_songNum at 0x7fab0d1a4790>
+                 └ <Dependent call=<function handle_songNum at 0x7fab0d1a4790>, params=[ModelField(name='bot', type=Bot, required=True), ModelFi...
+
+  File "./src/plugins/nonebot_plugin_songpicker2/__init__.py", line 77, in handle_songNum
+    loop.create_task(async_recall(bot, event_id))
+    │    │           │            │    └ 0
+    │    │           │            └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+    │    │           └ <staticmethod object at 0x7fab0d1c5490>
+    │    └ <method 'create_task' of 'uvloop.loop.Loop' objects>
+    └ <uvloop.Loop running=True closed=False debug=False>
+
+TypeError: 'staticmethod' object is not callable
+[36mATRI[0m | 03-11 07:09:22 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2377639' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa85f52940>
+          │            │        │    │      └ {'_prefix': {'command': ('早',), 'raw_command': '/早', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646953757, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2377639' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa85f52940>
+          │       │   │    │      └ {'_prefix': {'command': ('早',), 'raw_command': '/早', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646953757, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2377639' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa85f52940>
+          │    │          │    │      └ {'_prefix': {'command': ('早',), 'raw_command': '/早', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646953757, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function good_morning at 0x7fab0c9d7550>, params=[ModelField(name='bot', type=Bot, required=True), ModelFiel...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>, 'event': GroupMessageEvent(time=1646953757, self_id=5...
+                 │    └ <function good_morning at 0x7fab0c9d7550>
+                 └ <Dependent call=<function good_morning at 0x7fab0c9d7550>, params=[ModelField(name='bot', type=Bot, required=True), ModelFiel...
+
+  File "./src/plugins/nonebot_plugin_morning/__init__.py", line 61, in good_morning
+    await morning.finish(message=msg, at_sender=True)
+          │       │              └ '早安成功！你的睡眠时长为7时52分17秒，\n你是今天第1个起床的少女！'
+          │       └ <classmethod object at 0x7fab10589a90>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {'at_sender': True}
+          │   │    └ '早安成功！你的睡眠时长为7时52分17秒，\n你是今天第1个起床的少女！'
+          │   └ <classmethod object at 0x7fab10589a30>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {'at_sender': True}
+                 │   │          │              └ '早安成功！你的睡眠时长为7时52分17秒，\n你是今天第1个起床的少女！'
+                 │   │          └ GroupMessageEvent(time=1646953757, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+                 │   └ <function Bot.send at 0x7fab0e390b80>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {'at_sender': True}
+                 │    │                      │     │      └ '早安成功！你的睡眠时长为7时52分17秒，\n你是今天第1个起床的少女！'
+                 │    │                      │     └ GroupMessageEvent(time=1646953757, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 1617678696, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '16...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 1617678696, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '16...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 471}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 1617678696, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '16...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 471}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 471}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-11 07:10:16 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2380013' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa0326430>
+          │            │        │    │      └ {'_prefix': {'command': ('早',), 'raw_command': '！早', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646953810, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2380013' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa0326430>
+          │       │   │    │      └ {'_prefix': {'command': ('早',), 'raw_command': '！早', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646953810, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2380013' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa0326430>
+          │    │          │    │      └ {'_prefix': {'command': ('早',), 'raw_command': '！早', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646953810, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function good_morning at 0x7fab0c9d7550>, params=[ModelField(name='bot', type=Bot, required=True), ModelFiel...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>, 'event': GroupMessageEvent(time=1646953810, self_id=5...
+                 │    └ <function good_morning at 0x7fab0c9d7550>
+                 └ <Dependent call=<function good_morning at 0x7fab0c9d7550>, params=[ModelField(name='bot', type=Bot, required=True), ModelFiel...
+
+  File "./src/plugins/nonebot_plugin_morning/__init__.py", line 61, in good_morning
+    await morning.finish(message=msg, at_sender=True)
+          │       │              └ '早安成功！你的睡眠时长为7时53分10秒，\n你是今天第2个起床的少女！'
+          │       └ <classmethod object at 0x7fab10589a90>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {'at_sender': True}
+          │   │    └ '早安成功！你的睡眠时长为7时53分10秒，\n你是今天第2个起床的少女！'
+          │   └ <classmethod object at 0x7fab10589a30>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {'at_sender': True}
+                 │   │          │              └ '早安成功！你的睡眠时长为7时53分10秒，\n你是今天第2个起床的少女！'
+                 │   │          └ GroupMessageEvent(time=1646953810, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+                 │   └ <function Bot.send at 0x7fab0e390b80>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {'at_sender': True}
+                 │    │                      │     │      └ '早安成功！你的睡眠时长为7时53分10秒，\n你是今天第2个起床的少女！'
+                 │    │                      │     └ GroupMessageEvent(time=1646953810, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 1617678696, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '16...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 1617678696, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '16...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 476}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 1617678696, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '16...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 476}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 476}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-11 07:10:32 | ERROR nonebot >> Running matcher <Matcher from src.plugins.ping, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2380898' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa26a6460>
+          │            │        │    │      └ {'_prefix': {'command': ('ping',), 'raw_command': '！ping', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646953827, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from src.plugins.ping, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2380898' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa26a6460>
+          │       │   │    │      └ {'_prefix': {'command': ('ping',), 'raw_command': '！ping', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646953827, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from src.plugins.ping, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2380898' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa26a6460>
+          │    │          │    │      └ {'_prefix': {'command': ('ping',), 'raw_command': '！ping', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646953827, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from src.plugins.ping, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function ping_handle at 0x7faaa619e5e0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>, 'event': GroupMessageEvent(time=1646953827, self_id=5...
+                 │    └ <function ping_handle at 0x7faaa619e5e0>
+                 └ <Dependent call=<function ping_handle at 0x7faaa619e5e0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField...
+
+  File "./src/plugins/ping.py", line 15, in ping_handle
+    await ping.send(result)
+          │    │    └ 'Pong!   (149 ms)'
+          │    └ <classmethod object at 0x7fab10589a30>
+          └ <Matcher from src.plugins.ping, type=message, priority=1, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {}
+                 │   │          │              └ 'Pong!   (149 ms)'
+                 │   │          └ GroupMessageEvent(time=1646953827, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+                 │   └ <function Bot.send at 0x7fab0e390b80>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {}
+                 │    │                      │     │      └ 'Pong!   (149 ms)'
+                 │    │                      │     └ GroupMessageEvent(time=1646953827, self_id=507346814, post_type='message', sub_type='normal', user_id=1617678696, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 1617678696, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 1617678696, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 478}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 1617678696, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 478}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 478}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-11 07:29:47 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2418214' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa26cafa0>
+          │            │        │    │      └ {'_prefix': {'command': ('早安',), 'raw_command': '/早安', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646954982, self_id=507346814, post_type='message', sub_type='normal', user_id=963046537, message_type...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2418214' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa26cafa0>
+          │       │   │    │      └ {'_prefix': {'command': ('早安',), 'raw_command': '/早安', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646954982, self_id=507346814, post_type='message', sub_type='normal', user_id=963046537, message_type...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2418214' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa26cafa0>
+          │    │          │    │      └ {'_prefix': {'command': ('早安',), 'raw_command': '/早安', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646954982, self_id=507346814, post_type='message', sub_type='normal', user_id=963046537, message_type...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function good_morning at 0x7fab0c9d7550>, params=[ModelField(name='bot', type=Bot, required=True), ModelFiel...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>, 'event': GroupMessageEvent(time=1646954982, self_id=5...
+                 │    └ <function good_morning at 0x7fab0c9d7550>
+                 └ <Dependent call=<function good_morning at 0x7fab0c9d7550>, params=[ModelField(name='bot', type=Bot, required=True), ModelFiel...
+
+  File "./src/plugins/nonebot_plugin_morning/__init__.py", line 61, in good_morning
+    await morning.finish(message=msg, at_sender=True)
+          │       │              └ '早安成功！你的睡眠时长为8时37分6秒，\n你是今天第3个起床的少年！'
+          │       └ <classmethod object at 0x7fab10589a90>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {'at_sender': True}
+          │   │    └ '早安成功！你的睡眠时长为8时37分6秒，\n你是今天第3个起床的少年！'
+          │   └ <classmethod object at 0x7fab10589a30>
+          └ <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {'at_sender': True}
+                 │   │          │              └ '早安成功！你的睡眠时长为8时37分6秒，\n你是今天第3个起床的少年！'
+                 │   │          └ GroupMessageEvent(time=1646954982, self_id=507346814, post_type='message', sub_type='normal', user_id=963046537, message_type...
+                 │   └ <function Bot.send at 0x7fab0e390b80>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {'at_sender': True}
+                 │    │                      │     │      └ '早安成功！你的睡眠时长为8时37分6秒，\n你是今天第3个起床的少年！'
+                 │    │                      │     └ GroupMessageEvent(time=1646954982, self_id=507346814, post_type='message', sub_type='normal', user_id=963046537, message_type...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 963046537, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '963...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 963046537, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '963...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 489}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 963046537, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '963...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 489}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 489}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-11 07:30:07 | ERROR apscheduler >> Job "read60s (trigger: cron[hour='7', minute='30'], next run at: 2022-03-12 07:30:00 CST)" raised an exception
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+> File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=0 name=read60s)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=0 name=read60s)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=0 name=read60s)>
+
+  File "./src/plugins/nonebot_plugin_read_60s/__init__.py", line 27, in read60s
+    await nonebot.get_bot().send_group_msg(group_id=qq_group, message=Message(msg))# MessageEvent可以使用CQ发图片
+          │       │                                 │                 │       └ '今日60S读世界已送达\n[CQ:image,file=https://img02.sogoucdn.com/app/a/200692/621_2941_feedback_24b3c5d66e954455901f1c457eed80a1.png]'
+          │       │                                 │                 └ <class 'nonebot.adapters.onebot.v11.message.Message'>
+          │       │                                 └ 277620613
+          │       └ <function get_bot at 0x7fab10552670>
+          └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'group_id': 277620613, 'message': [MessageSegment(type='text', data={'text': '今日60S读世界已送达\n'}), MessageSegment(type='image',...
+                                  └ 'send_group_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 491}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'group_id': 277620613, 'message': [MessageSegment(type='text', data={'text': '今日60S读世界已送达\n'}), MessageSegment(type='image',...
+                   │    │       │         │     └ 'send_group_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 491}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 491}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-11 07:32:35 | ERROR nonebot >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2424435' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa85f61160>
+          │            │        │    │      └ {'_prefix': {'command': ('抽老婆',), 'raw_command': '/抽老婆', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646955150, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from 老婆, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2424435' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa85f61160>
+          │       │   │    │      └ {'_prefix': {'command': ('抽老婆',), 'raw_command': '/抽老婆', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646955150, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2424435' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa85f61160>
+          │    │          │    │      └ {'_prefix': {'command': ('抽老婆',), 'raw_command': '/抽老婆', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646955150, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _get_wife at 0x7faaa26f3a60>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(n...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>, 'event': GroupMessageEvent(time=1646955150, self_id=5...
+                 │    └ <function _get_wife at 0x7faaa26f3a60>
+                 └ <Dependent call=<function _get_wife at 0x7faaa26f3a60>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(n...
+
+  File "./src/plugins/wife/__init__.py", line 72, in _get_wife
+    await get_wife.finish("你已经有对象了哦~（")
+          │        └ <classmethod object at 0x7fab10589a90>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {}
+          │   │    └ '你已经有对象了哦~（'
+          │   └ <classmethod object at 0x7fab10589a30>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {}
+                 │   │          │              └ '你已经有对象了哦~（'
+                 │   │          └ GroupMessageEvent(time=1646955150, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+                 │   └ <function Bot.send at 0x7fab0e390b80>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {}
+                 │    │                      │     │      └ '你已经有对象了哦~（'
+                 │    │                      │     └ GroupMessageEvent(time=1646955150, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 2775300054, 'group_id': 958866763, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 2775300054, 'group_id': 958866763, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 492}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 2775300054, 'group_id': 958866763, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 492}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 492}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-11 07:33:15 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2425955' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa0bcbfd0>
+          │            │        │    │      └ {'_prefix': {'command': ('抽签',), 'raw_command': '/抽签', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646955189, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2425955' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa0bcbfd0>
+          │       │   │    │      └ {'_prefix': {'command': ('抽签',), 'raw_command': '/抽签', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646955189, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2425955' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faaa0bcbfd0>
+          │    │          │    │      └ {'_prefix': {'command': ('抽签',), 'raw_command': '/抽签', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646955189, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _ at 0x7faaa2c03d30>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>, 'event': GroupMessageEvent(time=1646955189, self_id=5...
+                 │    └ <function _ at 0x7faaa2c03d30>
+                 └ <Dependent call=<function _ at 0x7faaa2c03d30>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "./src/plugins/nonebot_plugin_fortune/__init__.py", line 59, in _
+    await divine.finish(message=msg, at_sender=True)
+          │      │              └ [MessageSegment(type='text', data={'text': '✨今日运势✨\n'}), MessageSegment(type='image', data={'file': 'file:////usr/local/pytho...
+          │      └ <classmethod object at 0x7fab10589a90>
+          └ <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {'at_sender': True}
+          │   │    └ [MessageSegment(type='text', data={'text': '✨今日运势✨\n'}), MessageSegment(type='image', data={'file': 'file:////usr/local/pytho...
+          │   └ <classmethod object at 0x7fab10589a30>
+          └ <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {'at_sender': True}
+                 │   │          │              └ [MessageSegment(type='text', data={'text': '✨今日运势✨\n'}), MessageSegment(type='image', data={'file': 'file:////usr/local/pytho...
+                 │   │          └ GroupMessageEvent(time=1646955189, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+                 │   └ <function Bot.send at 0x7fab0e390b80>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {'at_sender': True}
+                 │    │                      │     │      └ [MessageSegment(type='text', data={'text': '✨今日运势✨\n'}), MessageSegment(type='image', data={'file': 'file:////usr/local/pytho...
+                 │    │                      │     └ GroupMessageEvent(time=1646955189, self_id=507346814, post_type='message', sub_type='normal', user_id=2775300054, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 2775300054, 'group_id': 958866763, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '27...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 2775300054, 'group_id': 958866763, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '27...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 494}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 2775300054, 'group_id': 958866763, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '27...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 494}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 494}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-11 07:43:43 | ERROR nonebot >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2445948' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa9bfc5280>
+          │            │        │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │            │        │    └ GroupMessageEvent(time=1646955816, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from 老婆, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2445948' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa9bfc5280>
+          │       │   │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │       │   │    └ GroupMessageEvent(time=1646955816, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2445948' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa9bfc5280>
+          │    │          │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │    │          │    └ GroupMessageEvent(time=1646955816, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _tietie_superuser at 0x7faaa27251f0>, params=[ModelField(name='event', type=MessageEvent, required=...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'event': GroupMessageEvent(time=1646955816, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, m...
+                 │    └ <function _tietie_superuser at 0x7faaa27251f0>
+                 └ <Dependent call=<function _tietie_superuser at 0x7faaa27251f0>, params=[ModelField(name='event', type=MessageEvent, required=...
+
+  File "./src/plugins/wife/__init__.py", line 34, in _tietie_superuser
+    await tietie_superuser.finish(Message(result))
+          │                │      │       └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='image', data={'file': 'https://cdn.jsdelivr.net/g...
+          │                │      └ <class 'nonebot.adapters.onebot.v11.message.Message'>
+          │                └ <classmethod object at 0x7fab10589a90>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {}
+          │   │    └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='image', data={'file': 'https://cdn.jsdelivr.net/g...
+          │   └ <classmethod object at 0x7fab10589a30>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {}
+                 │   │          │              └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='image', data={'file': 'https://cdn.jsdelivr.net/g...
+                 │   │          └ GroupMessageEvent(time=1646955816, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+                 │   └ <function Bot.send at 0x7fab0e390b80>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {}
+                 │    │                      │     │      └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='image', data={'file': 'https://cdn.jsdelivr.net/g...
+                 │    │                      │     └ GroupMessageEvent(time=1646955816, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 2560359315, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 2560359315, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 496}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 2560359315, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 496}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 496}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-11 07:43:44 | ERROR nonebot >> Running matcher <Matcher from src.plugins.ping, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fab17423040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fab17ca94f0>
+         │    └ <function MultiCommand.invoke at 0x7fab174270d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fab1f596370>
+           │               │       │       └ <function Command.invoke at 0x7fab17423af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fab1f596370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fab0e34e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fab1f596370>
+           │   │      │    └ <function run at 0x7fab0e4798b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fab1741f8b0>
+           └ <click.core.Context object at 0x7fab1f596370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fab0e468670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fab10552940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fab105524c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fab0e274670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fab0e274a60>
+    └ <uvicorn.server.Server object at 0x7faaa2738460>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fab0e274af0>
+           │       │   └ <uvicorn.server.Server object at 0x7faaa2738460>
+           │       └ <function run at 0x7fab13cab430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7faaa26b3040>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2446205' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa85f43cd0>
+          │            │        │    │      └ {'_prefix': {'command': ('ping',), 'raw_command': '/ping', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646955818, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │            └ <Matcher from src.plugins.ping, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7fab0e390670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2446205' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa85f43cd0>
+          │       │   │    │      └ {'_prefix': {'command': ('ping',), 'raw_command': '/ping', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646955818, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │       └ <function Matcher.run at 0x7fab1058fb80>
+          └ <Matcher from src.plugins.ping, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7fab10513040>: <Task finished name='Task-2446205' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7faa85f43cd0>
+          │    │          │    │      └ {'_prefix': {'command': ('ping',), 'raw_command': '/ping', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646955818, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+          │    └ <function Matcher.simple_run at 0x7fab1058faf0>
+          └ <Matcher from src.plugins.ping, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function ping_handle at 0x7faaa619e5e0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>, 'event': GroupMessageEvent(time=1646955818, self_id=5...
+                 │    └ <function ping_handle at 0x7faaa619e5e0>
+                 └ <Dependent call=<function ping_handle at 0x7faaa619e5e0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField...
+
+  File "./src/plugins/ping.py", line 15, in ping_handle
+    await ping.send(result)
+          │    │    └ 'Pong!   (325 ms)'
+          │    └ <classmethod object at 0x7fab10589a30>
+          └ <Matcher from src.plugins.ping, type=message, priority=1, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {}
+                 │   │          │              └ 'Pong!   (325 ms)'
+                 │   │          └ GroupMessageEvent(time=1646955818, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+                 │   └ <function Bot.send at 0x7fab0e390b80>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {}
+                 │    │                      │     │      └ 'Pong!   (325 ms)'
+                 │    │                      │     └ GroupMessageEvent(time=1646955818, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 2560359315, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 2560359315, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 497}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 2560359315, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+                   │    │       └ <function Adapter._call_api at 0x7fab0e390f70>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7fab0e47e8e0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7faaa1c4fa00>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7fab0e4225e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 497}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 497}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>

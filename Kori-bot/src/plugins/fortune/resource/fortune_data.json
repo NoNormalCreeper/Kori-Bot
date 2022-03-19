@@ -27,7 +27,7 @@
             "user_id": "2560359315",
             "group_id": "958866763",
             "nickname": "不正常的小苦力怕",
-            "is_divined": true,
+            "is_divined": false,
             "img_path": ""
         },
         "2804129672": {
@@ -97,19 +97,57 @@
             "user_id": "2662698016",
             "group_id": "958866763",
             "nickname": "2662698016",
-            "is_divined": true
+            "is_divined": false,
+            "img_path": ""
         },
         "441192521": {
             "user_id": "441192521",
             "group_id": "958866763",
             "nickname": "HUAWEI BRQ-AN00",
-            "is_divined": true
+            "is_divined": false,
+            "img_path": ""
         },
         "1942739232": {
             "user_id": "1942739232",
             "group_id": "958866763",
             "nickname": "swag",
-            "is_divined": true
+            "is_divined": false,
+            "img_path": ""
+        },
+        "191556446": {
+            "user_id": "191556446",
+            "group_id": "958866763",
+            "nickname": "奋斗",
+            "is_divined": false,
+            "img_path": ""
+        },
+        "2921968485": {
+            "user_id": "2921968485",
+            "group_id": "958866763",
+            "nickname": "Aunna",
+            "is_divined": false,
+            "img_path": ""
+        },
+        "1011529127": {
+            "user_id": "1011529127",
+            "group_id": "958866763",
+            "nickname": "До свидания",
+            "is_divined": true,
+            "img_path": ""
+        },
+        "2662956980": {
+            "user_id": "2662956980",
+            "group_id": "958866763",
+            "nickname": "燕戏☭竹林",
+            "is_divined": false,
+            "img_path": ""
+        },
+        "1394026378": {
+            "user_id": "1394026378",
+            "group_id": "958866763",
+            "nickname": "。。 ，",
+            "is_divined": true,
+            "img_path": ""
         }
     },
     "937760225": {
@@ -124,7 +162,7 @@
             "user_id": "2095652005",
             "group_id": "937760225",
             "nickname": "梁坤元",
-            "is_divined": true,
+            "is_divined": false,
             "img_path": ""
         },
         "963046537": {
@@ -138,14 +176,14 @@
             "user_id": "1774148881",
             "group_id": "937760225",
             "nickname": "唐赟鹏",
-            "is_divined": true,
+            "is_divined": false,
             "img_path": ""
         },
         "2548226969": {
             "user_id": "2548226969",
             "group_id": "937760225",
             "nickname": "李思逸",
-            "is_divined": true,
+            "is_divined": false,
             "img_path": ""
         },
         "1935200918": {
@@ -159,14 +197,14 @@
             "user_id": "2082049330",
             "group_id": "937760225",
             "nickname": "李麒麟",
-            "is_divined": true,
+            "is_divined": false,
             "img_path": ""
         },
         "1617678696": {
             "user_id": "1617678696",
             "group_id": "937760225",
             "nickname": "蒋国臻",
-            "is_divined": true,
+            "is_divined": false,
             "img_path": ""
         },
         "2316809418": {
@@ -180,7 +218,7 @@
             "user_id": "1834580024",
             "group_id": "937760225",
             "nickname": "景蕾",
-            "is_divined": true,
+            "is_divined": false,
             "img_path": ""
         }
     },

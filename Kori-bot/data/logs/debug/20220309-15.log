@@ -1,0 +1,903 @@
+[36mATRI[0m | 03-09 15:57:24 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:24 | SUCCESS plugin.manager >> Succeeded to import "chat"
+[36mATRI[0m | 03-09 15:57:24 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chess"
+[36mATRI[0m | 03-09 15:57:24 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_code"
+[36mATRI[0m | 03-09 15:57:24 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_withdraw"
+[36mATRI[0m | 03-09 15:57:24 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_caiyunai"
+[36mATRI[0m | 03-09 15:57:24 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_htmlrender"
+[36mATRI[0m | 03-09 15:57:24 | SUCCESS plugin.manager >> Succeeded to import "saying"
+[36mATRI[0m | 03-09 15:57:24 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f4d91395040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f4d91c1b4f0>
+         │    └ <function MultiCommand.invoke at 0x7f4d913990d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f4d99508370>
+           │               │       │       └ <function Command.invoke at 0x7f4d91395af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f4d99508370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f4d882bf9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f4d99508370>
+           │   │      │    └ <function run at 0x7f4d883eb8b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f4d913918b0>
+           └ <click.core.Context object at 0x7f4d99508370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f4d883da670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f4d99548940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f4d99677430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f4d8f259790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f4d8f253310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f4d87bcf7f0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f4d8f2531f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f4d87bcf7f0>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f4d8f253280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f4d87bcf7f0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f4d99548940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f4d99677430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-09 15:57:25 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_localstore"
+[36mATRI[0m | 03-09 15:57:25 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_wordcloud"
+[36mATRI[0m | 03-09 15:57:25 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_abbrreply"
+[36mATRI[0m | 03-09 15:57:26 | SUCCESS plugin.manager >> Succeeded to import "wolfram"
+[36mATRI[0m | 03-09 15:57:26 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_roll"
+[36mATRI[0m | 03-09 15:57:26 | SUCCESS plugin.manager >> Succeeded to import "test"
+[36mATRI[0m | 03-09 15:57:26 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'Kori', 'bot'} command_start={'！', '/', '!'} command_sep={'.', ' '} session_expire_timeout=datetime.timedelta(seconds=120) pretty_derby_flag=True statistical_path='data/statistical/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' read_qq_groups=[277620613, 937760225, 958866763] fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' vtuber_flag=True einstein_flag=True statistical_black_priority=[] debug='True' azure_flag=True liqingge_flag=True dir='~/Project/Kori-Bot/Kori-Bot' genshin_flag=True sweet_illusion_flag=True read_qq_friends=[0, 0] morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_black_model=['nonebot_plugin_repeater'] touhou_old_flag=False server_status_per_cpu='True' eating_limit=5 granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' http_port=5700 dc4_flag=False setu_cd=180 environment='prod' server_status_only_superusers='False' groups_id=[] what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' max_bet_fold=10000 proxies_http='http://127.0.0.1:20171' onmyoji_flag=True repeater_minlen=1 sakura_flag=True hoshizora_flag=True punishing_flag=True pcr_flag=True asoul_flag=True qweather_apitype=0 arknights_flag=True touhou_flag=True
+[36mATRI[0m | 03-09 15:57:26 | INFO src >> plugin_config:plugin_setting='default' pretty_derby_flag=True log_level='INFO' statistical_path='data/statistical/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' read_qq_groups=[277620613, 937760225, 958866763] fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' host=IPv4Address('127.0.0.1') command_start={'！', '/', '!'} vtuber_flag=True port=9165 superusers={'2560359315'} einstein_flag=True statistical_black_priority=[] nickname={'Kori Bot', 'Kori', 'bot'} api_timeout=30.0 debug='True' azure_flag=True liqingge_flag=True dir='~/Project/Kori-Bot/Kori-Bot' genshin_flag=True sweet_illusion_flag=True read_qq_friends=[0, 0] morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_black_model=['nonebot_plugin_repeater'] touhou_old_flag=False server_status_per_cpu='True' eating_limit=5 granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' http_port=5700 dc4_flag=False setu_cd=180 command_sep={'.', ' '} environment='prod' server_status_only_superusers='False' groups_id=[] what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' max_bet_fold=10000 proxies_http='http://127.0.0.1:20171' session_expire_timeout=datetime.timedelta(seconds=120) onmyoji_flag=True driver='~fastapi' repeater_minlen=1 sakura_flag=True hoshizora_flag=True punishing_flag=True pcr_flag=True asoul_flag=True qweather_apitype=0 arknights_flag=True touhou_flag=True
+[36mATRI[0m | 03-09 15:57:26 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-09 15:57:26 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:26 | SUCCESS plugin.manager >> Succeeded to import "whitenight_from_feiyucans_space"
+[36mATRI[0m | 03-09 15:57:26 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'Kori', 'bot'} command_start={'！', '/', '!'} command_sep={'.', ' '} session_expire_timeout=datetime.timedelta(seconds=120) pretty_derby_flag=True statistical_path='data/statistical/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' read_qq_groups=[277620613, 937760225, 958866763] fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' vtuber_flag=True einstein_flag=True statistical_black_priority=[] debug='True' azure_flag=True liqingge_flag=True dir='~/Project/Kori-Bot/Kori-Bot' genshin_flag=True sweet_illusion_flag=True read_qq_friends=[0, 0] morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_black_model=['nonebot_plugin_repeater'] touhou_old_flag=False server_status_per_cpu='True' eating_limit=5 granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' http_port=5700 dc4_flag=False setu_cd=180 environment='prod' server_status_only_superusers='False' groups_id=[] what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' max_bet_fold=10000 proxies_http='http://127.0.0.1:20171' onmyoji_flag=True repeater_minlen=1 sakura_flag=True hoshizora_flag=True punishing_flag=True pcr_flag=True asoul_flag=True qweather_apitype=0 arknights_flag=True touhou_flag=True
+[36mATRI[0m | 03-09 15:57:26 | INFO src >> plugin_config:plugin_setting='default' pretty_derby_flag=True log_level='INFO' statistical_path='data/statistical/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' read_qq_groups=[277620613, 937760225, 958866763] fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' host=IPv4Address('127.0.0.1') command_start={'！', '/', '!'} vtuber_flag=True port=9165 superusers={'2560359315'} einstein_flag=True statistical_black_priority=[] nickname={'Kori Bot', 'Kori', 'bot'} api_timeout=30.0 debug='True' azure_flag=True liqingge_flag=True dir='~/Project/Kori-Bot/Kori-Bot' genshin_flag=True sweet_illusion_flag=True read_qq_friends=[0, 0] morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_black_model=['nonebot_plugin_repeater'] touhou_old_flag=False server_status_per_cpu='True' eating_limit=5 granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' http_port=5700 dc4_flag=False setu_cd=180 command_sep={'.', ' '} environment='prod' server_status_only_superusers='False' groups_id=[] what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' max_bet_fold=10000 proxies_http='http://127.0.0.1:20171' session_expire_timeout=datetime.timedelta(seconds=120) onmyoji_flag=True driver='~fastapi' repeater_minlen=1 sakura_flag=True hoshizora_flag=True punishing_flag=True pcr_flag=True asoul_flag=True qweather_apitype=0 arknights_flag=True touhou_flag=True
+[36mATRI[0m | 03-09 15:57:26 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-09 15:57:26 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:26 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_read_60s"
+[36mATRI[0m | 03-09 15:57:26 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_repeater"
+[36mATRI[0m | 03-09 15:57:26 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_analysis_bilibili"
+[36mATRI[0m | 03-09 15:57:26 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_heweather"
+[36mATRI[0m | 03-09 15:57:26 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:26 | SUCCESS plugin.manager >> Succeeded to import "atri_plugin_status"
+[36mATRI[0m | 03-09 15:57:28 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_memes"
+[36mATRI[0m | 03-09 15:57:28 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_remake"
+[36mATRI[0m | 03-09 15:57:28 | SUCCESS plugin.manager >> Succeeded to import "ping"
+[36mATRI[0m | 03-09 15:57:28 | SUCCESS plugin.manager >> Succeeded to import "ATRI"
+[36mATRI[0m | 03-09 15:57:28 | SUCCESS plugin.manager >> Succeeded to import "ATRI-2"
+[36mATRI[0m | 03-09 15:57:28 | SUCCESS plugin.manager >> Succeeded to import "help"
+[36mATRI[0m | 03-09 15:57:28 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_emojimix"
+[36mATRI[0m | 03-09 15:57:28 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:28 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_fortune"
+[36mATRI[0m | 03-09 15:57:29 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_logo"
+[36mATRI[0m | 03-09 15:57:29 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'Kori', 'bot'} command_start={'！', '/', '!'} command_sep={'.', ' '} session_expire_timeout=datetime.timedelta(seconds=120) pretty_derby_flag=True statistical_path='data/statistical/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' read_qq_groups=[277620613, 937760225, 958866763] fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' vtuber_flag=True einstein_flag=True statistical_black_priority=[] debug='True' azure_flag=True liqingge_flag=True dir='~/Project/Kori-Bot/Kori-Bot' genshin_flag=True sweet_illusion_flag=True read_qq_friends=[0, 0] morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_black_model=['nonebot_plugin_repeater'] touhou_old_flag=False server_status_per_cpu='True' eating_limit=5 granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' http_port=5700 dc4_flag=False setu_cd=180 environment='prod' server_status_only_superusers='False' groups_id=[] what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' max_bet_fold=10000 proxies_http='http://127.0.0.1:20171' onmyoji_flag=True repeater_minlen=1 sakura_flag=True hoshizora_flag=True punishing_flag=True pcr_flag=True asoul_flag=True qweather_apitype=0 arknights_flag=True touhou_flag=True
+[36mATRI[0m | 03-09 15:57:29 | INFO src >> plugin_config:plugin_setting='default' pretty_derby_flag=True log_level='INFO' statistical_path='data/statistical/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' read_qq_groups=[277620613, 937760225, 958866763] fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' host=IPv4Address('127.0.0.1') command_start={'！', '/', '!'} vtuber_flag=True port=9165 superusers={'2560359315'} einstein_flag=True statistical_black_priority=[] nickname={'Kori Bot', 'Kori', 'bot'} api_timeout=30.0 debug='True' azure_flag=True liqingge_flag=True dir='~/Project/Kori-Bot/Kori-Bot' genshin_flag=True sweet_illusion_flag=True read_qq_friends=[0, 0] morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_black_model=['nonebot_plugin_repeater'] touhou_old_flag=False server_status_per_cpu='True' eating_limit=5 granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' http_port=5700 dc4_flag=False setu_cd=180 command_sep={'.', ' '} environment='prod' server_status_only_superusers='False' groups_id=[] what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' max_bet_fold=10000 proxies_http='http://127.0.0.1:20171' session_expire_timeout=datetime.timedelta(seconds=120) onmyoji_flag=True driver='~fastapi' repeater_minlen=1 sakura_flag=True hoshizora_flag=True punishing_flag=True pcr_flag=True asoul_flag=True qweather_apitype=0 arknights_flag=True touhou_flag=True
+[36mATRI[0m | 03-09 15:57:29 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-09 15:57:29 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:29 | SUCCESS plugin.manager >> Succeeded to import "memes_from_feiyucans_space"
+[36mATRI[0m | 03-09 15:57:29 | SUCCESS plugin.manager >> Succeeded to import "admin_tools"
+[36mATRI[0m | 03-09 15:57:30 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_petpet"
+[36mATRI[0m | 03-09 15:57:30 | SUCCESS plugin.manager >> Succeeded to import "text2pic"
+[36mATRI[0m | 03-09 15:57:30 | SUCCESS plugin.manager >> Succeeded to import "wife"
+[36mATRI[0m | 03-09 15:57:30 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_localstore"
+[36mATRI[0m | 03-09 15:57:31 | WARNING nonebot >> Duplicated prefix rule "！lottery"
+[36mATRI[0m | 03-09 15:57:31 | WARNING nonebot >> Duplicated prefix rule "/lottery"
+[36mATRI[0m | 03-09 15:57:31 | WARNING nonebot >> Duplicated prefix rule "!lottery"
+[36mATRI[0m | 03-09 15:57:31 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:31 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:31 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:31 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_russian"
+[36mATRI[0m | 03-09 15:57:38 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:38 | SUCCESS plugin.manager >> Succeeded to import "atri_setu"
+[36mATRI[0m | 03-09 15:57:38 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chatrecorder"
+[36mATRI[0m | 03-09 15:57:38 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:38 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_todo"
+[36mATRI[0m | 03-09 15:57:38 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:57:38 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_epicfree"
+[36mATRI[0m | 03-09 15:57:38 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_apscheduler"
+[36mATRI[0m | 03-09 15:57:38 | SUCCESS plugin.manager >> Succeeded to import "trigger_memes_from_feiyucans_space"
+[36mATRI[0m | 03-09 15:57:39 | SUCCESS plugin.manager >> Succeeded to import "cp"
+[36mATRI[0m | 03-09 15:57:39 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_datastore"
+[36mATRI[0m | 03-09 15:57:39 | SUCCESS nonebot >> Running NoneBot...
+[36mATRI[0m | 03-09 15:57:39 | DEBUG nonebot.internal.driver.driver >> Loaded adapters: OneBot V11
+[36mATRI[0m | 03-09 15:57:39 | INFO uvicorn >> Started server process [18826]
+[36mATRI[0m | 03-09 15:57:39 | INFO uvicorn >> Waiting for application startup.
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "time_for_breakfast" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "time_for_lunch" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "time_for_snack" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "time_for_dinner" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "time_for_midnight" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "whitenight" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "read60s" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "memesfeiyu" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "change_price" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "start_stock" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "weeklyEpic" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-09 15:57:39 | INFO src >> Scheduler Started
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "闲聊词库检查更新" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "状态检查" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Added job "涩批诱捕器" to job store "default"
+[36mATRI[0m | 03-09 15:57:39 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-09 15:57:39 | INFO ATRI >> Scheduler Started.
+[36mATRI[0m | 03-09 15:57:39 | DEBUG apscheduler.schedulers.base >> Looking for jobs to run
+[36mATRI[0m | 03-09 15:57:39 | DEBUG apscheduler.schedulers.base >> Next wakeup is due at 2022-03-09 15:58:00+08:00 (in 20.885442 seconds)
+[36mATRI[0m | 03-09 15:57:39 | DEBUG apscheduler.schedulers.base >> Looking for jobs to run
+[36mATRI[0m | 03-09 15:57:39 | DEBUG apscheduler.schedulers.base >> Next wakeup is due at 2022-03-09 16:07:26.470390+08:00 (in 587.355209 seconds)
+[36mATRI[0m | 03-09 15:57:40 | INFO nonebot_plugin_htmlrender >> Browser Started.
+[36mATRI[0m | 03-09 15:57:40 | INFO src >> Browser Started.
+[36mATRI[0m | 03-09 15:57:41 | INFO nonebot_plugin_datastore >> 数据库初始化完成
+[36mATRI[0m | 03-09 15:57:41 | INFO src >> 数据库初始化完成
+[36mATRI[0m | 03-09 15:57:41 | INFO uvicorn >> Application startup complete.
+[36mATRI[0m | 03-09 15:57:41 | INFO uvicorn >> Uvicorn running on http://127.0.0.1:9165 (Press CTRL+C to quit)
+[36mATRI[0m | 03-09 15:57:43 | INFO uvicorn >> ('127.0.0.1', 51452) - "WebSocket /onebot/v11/ws/" [accepted]
+[36mATRI[0m | 03-09 15:57:43 | INFO nonebot >> OneBot V11 | Bot 507346814 connected
+[36mATRI[0m | 03-09 15:57:43 | INFO websockets >> connection open
+[36mATRI[0m | 03-09 15:57:43 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.LifecycleMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:57:43 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.LifecycleMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:57:43 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:57:43 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:57:47 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:57:47 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:57:52 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:57:52 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:57:57 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:57:57 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:00 | DEBUG apscheduler.schedulers.base >> Looking for jobs to run
+[36mATRI[0m | 03-09 15:58:00 | DEBUG apscheduler.schedulers.base >> Next wakeup is due at 2022-03-09 15:58:30+08:00 (in 29.999534 seconds)
+[36mATRI[0m | 03-09 15:58:00 | INFO apscheduler >> Running job "change_price (trigger: cron[hour='8-21', minute='*', second='*/30'], next run at: 2022-03-09 15:58:30 CST)" (scheduled at 2022-03-09 15:58:00+08:00)
+[36mATRI[0m | 03-09 15:58:00 | INFO apscheduler >> Job "change_price (trigger: cron[hour='8-21', minute='*', second='*/30'], next run at: 2022-03-09 15:58:30 CST)" executed successfully
+[36mATRI[0m | 03-09 15:58:00 | INFO apscheduler >> Running job "_ (trigger: cron[minute='*'], next run at: 2022-03-09 15:59:00 CST)" (scheduled at 2022-03-09 15:58:00+08:00)
+[36mATRI[0m | 03-09 15:58:00 | INFO apscheduler >> Job "_ (trigger: cron[minute='*'], next run at: 2022-03-09 15:59:00 CST)" executed successfully
+[36mATRI[0m | 03-09 15:58:02 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:02 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:07 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:07 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:12 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:12 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:12 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 726232620 from 2560359315@[群:937760225] "!stock"
+[36mATRI[0m | 03-09 15:58:12 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 15:58:12 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:12 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:12 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7f4d670275e0>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:12 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:12 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:12 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7f4d1cc38310>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:12 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:12 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:13 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:13 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:13 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 15:58:13 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 15:58:13 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:13 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:13 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b310>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='args', type=Message, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:13 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:13 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:13 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:13 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 15:58:13 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:58:17 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:17 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:22 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:22 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:23 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2079832658 from 2560359315@[群:277620613] "!math"
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 15:58:23 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7f4d670275e0>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:23 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7f4d1cc38310>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:23 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:23 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 15:58:23 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b160>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='args', type=Message, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b280>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:23 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:24 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:24 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:24 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 15:58:24 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:58:27 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:27 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:30 | DEBUG apscheduler.schedulers.base >> Looking for jobs to run
+[36mATRI[0m | 03-09 15:58:30 | DEBUG apscheduler.schedulers.base >> Next wakeup is due at 2022-03-09 15:59:00+08:00 (in 29.997955 seconds)
+[36mATRI[0m | 03-09 15:58:30 | INFO apscheduler >> Running job "change_price (trigger: cron[hour='8-21', minute='*', second='*/30'], next run at: 2022-03-09 15:59:00 CST)" (scheduled at 2022-03-09 15:58:30+08:00)
+[36mATRI[0m | 03-09 15:58:30 | INFO apscheduler >> Job "change_price (trigger: cron[hour='8-21', minute='*', second='*/30'], next run at: 2022-03-09 15:59:00 CST)" executed successfully
+[36mATRI[0m | 03-09 15:58:32 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:32 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:36 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1429030602 from 2560359315@[群:277620613] "947"
+[36mATRI[0m | 03-09 15:58:36 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 15:58:36 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 15:58:36 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 15:58:36 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b280>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:36 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:36 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:36 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-09 15:58:36 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 15:58:36 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:58:37 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:37 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:42 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:42 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:43 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1155323930 from 2560359315@[群:277620613] "!mycoin"
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 15:58:43 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7f4d670275e0>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:43 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7f4d1cc38310>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:43 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:43 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 15:58:43 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66eeeb80>, params=[ModelField(name='event', type=GroupMessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:43 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 870049932 from 1020936395@[群:277620613] "!math"
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 15:58:43 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7f4d1cc38310>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:43 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 15:58:43 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b160>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='args', type=Message, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:43 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:44 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:44 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:44 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b280>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:44 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:44 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:44 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 15:58:44 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:58:44 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:44 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:44 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 15:58:44 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:58:47 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:47 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:48 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 884354197 from 2560359315@[群:277620613] "!math"
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 15:58:48 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7f4d670275e0>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:48 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7f4d1cc38310>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:48 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:48 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 15:58:48 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b160>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='args', type=Message, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:58:48 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:49 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:49 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b280>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:49 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:49 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:49 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 15:58:49 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 15:58:49 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:58:52 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:52 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:56 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1278637961 from 1020936395@[群:277620613] "671"
+[36mATRI[0m | 03-09 15:58:56 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 15:58:56 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 15:58:56 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 15:58:56 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b280>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:56 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:56 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:56 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-09 15:58:56 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 15:58:56 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:58:57 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:57 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:58:57 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1573382491 from 2560359315@[群:277620613] "100"
+[36mATRI[0m | 03-09 15:58:57 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 15:58:57 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 15:58:57 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 15:58:57 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66f3b280>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:58:57 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:58:57 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:58:57 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-09 15:58:57 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 15:58:57 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:59:00 | DEBUG apscheduler.schedulers.base >> Looking for jobs to run
+[36mATRI[0m | 03-09 15:59:00 | DEBUG apscheduler.schedulers.base >> Next wakeup is due at 2022-03-09 15:59:30+08:00 (in 29.998821 seconds)
+[36mATRI[0m | 03-09 15:59:00 | INFO apscheduler >> Running job "change_price (trigger: cron[hour='8-21', minute='*', second='*/30'], next run at: 2022-03-09 15:59:30 CST)" (scheduled at 2022-03-09 15:59:00+08:00)
+[36mATRI[0m | 03-09 15:59:00 | INFO apscheduler >> Job "change_price (trigger: cron[hour='8-21', minute='*', second='*/30'], next run at: 2022-03-09 15:59:30 CST)" executed successfully
+[36mATRI[0m | 03-09 15:59:00 | INFO apscheduler >> Running job "_ (trigger: cron[minute='*'], next run at: 2022-03-09 16:00:00 CST)" (scheduled at 2022-03-09 15:59:00+08:00)
+[36mATRI[0m | 03-09 15:59:00 | INFO apscheduler >> Job "_ (trigger: cron[minute='*'], next run at: 2022-03-09 16:00:00 CST)" executed successfully
+[36mATRI[0m | 03-09 15:59:02 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:02 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:04 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1264300946 from 2560359315@[群:277620613] "!mycoin"
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 15:59:04 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7f4d670275e0>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:59:04 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7f4d1cc38310>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:59:04 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:59:04 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 15:59:04 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7f4d66eeeb80>, params=[ModelField(name='event', type=GroupMessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 15:59:04 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 15:59:04 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:59:07 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:07 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:12 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:12 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:17 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:17 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:22 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:22 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:27 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:27 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:30 | DEBUG apscheduler.schedulers.base >> Looking for jobs to run
+[36mATRI[0m | 03-09 15:59:30 | DEBUG apscheduler.schedulers.base >> Next wakeup is due at 2022-03-09 16:00:00+08:00 (in 29.998526 seconds)
+[36mATRI[0m | 03-09 15:59:30 | INFO apscheduler >> Running job "change_price (trigger: cron[hour='8-21', minute='*', second='*/30'], next run at: 2022-03-09 16:00:00 CST)" (scheduled at 2022-03-09 15:59:30+08:00)
+[36mATRI[0m | 03-09 15:59:30 | INFO apscheduler >> Job "change_price (trigger: cron[hour='8-21', minute='*', second='*/30'], next run at: 2022-03-09 16:00:00 CST)" executed successfully
+[36mATRI[0m | 03-09 15:59:32 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:32 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:37 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:37 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:38 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1521102146 from 2560359315@[群:277620613] "目前只有加减法"
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 15:59:38 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7f4d670275e0>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 15:59:38 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7f4d1cc38310>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:59:38 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:59:38 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 8...
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 10...
+[36mATRI[0m | 03-09 15:59:38 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function repeater at 0x7f4d679b7670>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=GroupMessageEvent, required=True), ModelField(name='state', type=Mapping[Any, Any], required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 15:59:38 | DEBUG src.plugins.nonebot_plugin_repeater >> 目前只有加减法
+[36mATRI[0m | 03-09 15:59:38 | DEBUG src.plugins.nonebot_plugin_repeater >> Normal
+[36mATRI[0m | 03-09 15:59:38 | DEBUG src.plugins.nonebot_plugin_repeater >> None
+[36mATRI[0m | 03-09 15:59:38 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 11...
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 12...
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 13...
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Checking for matchers in priority 15...
+[36mATRI[0m | 03-09 15:59:38 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 15:59:42 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:42 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 15:59:42 | INFO uvicorn >> Shutting down
+[36mATRI[0m | 03-09 15:59:42 | WARNING nonebot >> OneBot V11 | WebSocket for Bot 507346814 closed by peer
+[36mATRI[0m | 03-09 15:59:42 | INFO websockets >> connection closed
+[36mATRI[0m | 03-09 15:59:43 | INFO uvicorn >> Waiting for application shutdown.
+[36mATRI[0m | 03-09 15:59:43 | INFO nonebot_plugin_htmlrender >> Browser Stoped.
+[36mATRI[0m | 03-09 15:59:43 | INFO src >> Browser Stoped.
+[36mATRI[0m | 03-09 15:59:43 | INFO uvicorn >> Application shutdown complete.
+[36mATRI[0m | 03-09 15:59:43 | INFO uvicorn >> Finished server process [18826]
+[36mATRI[0m | 03-09 15:59:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-09 15:59:52 | SUCCESS plugin.manager >> Succeeded to import "atri_setu"
+[36mATRI[0m | 03-09 15:59:53 | SUCCESS plugin.manager >> Succeeded to import "saying"
+[36mATRI[0m | 03-09 15:59:53 | SUCCESS plugin.manager >> Succeeded to import "help"
+[36mATRI[0m | 03-09 15:59:53 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_withdraw"
+[36mATRI[0m | 03-09 15:59:55 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_apscheduler"
+[36mATRI[0m | 03-09 15:59:55 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_morning"
+[36mATRI[0m | 03-09 15:59:55 | SUCCESS plugin.manager >> Succeeded to import "wife"
+[36mATRI[0m | 03-09 15:59:55 | SUCCESS plugin.manager >> Succeeded to import "wolfram"
+[36mATRI[0m | 03-09 15:59:56 | SUCCESS plugin.manager >> Succeeded to import "ping"
+[36mATRI[0m | 03-09 15:59:56 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_analysis_bilibili"
+[36mATRI[0m | 03-09 15:59:59 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_memes"
+[36mATRI[0m | 03-09 15:59:59 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'bot', 'Kori'} command_start={'！', '!', '/'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) groups_id=[] punishing_flag=True granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' server_status_per_cpu='True' vtuber_flag=True max_bet_fold=10000 statistical_path='data/statistical/' touhou_old_flag=False debug='True' fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' qweather_apitype=0 genshin_flag=True onmyoji_flag=True eating_limit=5 dir='~/Project/Kori-Bot/Kori-Bot' dc4_flag=False statistical_black_model=['nonebot_plugin_repeater'] azure_flag=True hoshizora_flag=True statistical_black_priority=[] proxies_http='http://127.0.0.1:20171' morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' arknights_flag=True einstein_flag=True asoul_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] pretty_derby_flag=True read_qq_groups=[277620613, 937760225, 958866763] repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' sakura_flag=True environment='prod' pcr_flag=True server_status_only_superusers='False' setu_cd=180 http_port=5700 touhou_flag=True liqingge_flag=True read_qq_friends=[0, 0] sweet_illusion_flag=True
+[36mATRI[0m | 03-09 15:59:59 | INFO src >> plugin_config:plugin_setting='default' groups_id=[] punishing_flag=True granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' server_status_per_cpu='True' vtuber_flag=True command_sep={' ', '.'} max_bet_fold=10000 statistical_path='data/statistical/' touhou_old_flag=False session_expire_timeout=datetime.timedelta(seconds=120) host=IPv4Address('127.0.0.1') debug='True' fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' qweather_apitype=0 log_level='INFO' genshin_flag=True onmyoji_flag=True eating_limit=5 dir='~/Project/Kori-Bot/Kori-Bot' dc4_flag=False statistical_black_model=['nonebot_plugin_repeater'] azure_flag=True hoshizora_flag=True statistical_black_priority=[] port=9165 proxies_http='http://127.0.0.1:20171' morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' arknights_flag=True einstein_flag=True command_start={'！', '/', '!'} asoul_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] pretty_derby_flag=True read_qq_groups=[277620613, 937760225, 958866763] repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' sakura_flag=True driver='~fastapi' environment='prod' pcr_flag=True api_timeout=30.0 superusers={'2560359315'} server_status_only_superusers='False' setu_cd=180 http_port=5700 nickname={'bot', 'Kori', 'Kori Bot'} touhou_flag=True liqingge_flag=True read_qq_friends=[0, 0] sweet_illusion_flag=True
+[36mATRI[0m | 03-09 15:59:59 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-09 15:59:59 | SUCCESS plugin.manager >> Succeeded to import "memes_from_feiyucans_space"
+[36mATRI[0m | 03-09 15:59:59 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_songpicker2"
+[36mATRI[0m | 03-09 15:59:59 | SUCCESS plugin.manager >> Succeeded to import "test"
+[36mATRI[0m | 03-09 16:00:01 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chess"
+[36mATRI[0m | 03-09 16:00:01 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_apscheduler"
+[36mATRI[0m | 03-09 16:00:05 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_petpet"
+[36mATRI[0m | 03-09 16:00:05 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_abbrreply"
+[36mATRI[0m | 03-09 16:00:05 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_localstore"
+[36mATRI[0m | 03-09 16:00:05 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chatrecorder"
+[36mATRI[0m | 03-09 16:00:06 | SUCCESS plugin.manager >> Succeeded to import "text2pic"
+[36mATRI[0m | 03-09 16:00:06 | SUCCESS plugin.manager >> Succeeded to import "admin_tools"
+[36mATRI[0m | 03-09 16:00:10 | WARNING nonebot >> Duplicated prefix rule "！lottery"
+[36mATRI[0m | 03-09 16:00:10 | WARNING nonebot >> Duplicated prefix rule "!lottery"
+[36mATRI[0m | 03-09 16:00:10 | WARNING nonebot >> Duplicated prefix rule "/lottery"
+[36mATRI[0m | 03-09 16:00:10 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_russian"
+[36mATRI[0m | 03-09 16:00:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_epicfree"
+[36mATRI[0m | 03-09 16:00:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_htmlrender"
+[36mATRI[0m | 03-09 16:00:11 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'bot', 'Kori'} command_start={'！', '!', '/'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) groups_id=[] punishing_flag=True granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' server_status_per_cpu='True' vtuber_flag=True max_bet_fold=10000 statistical_path='data/statistical/' touhou_old_flag=False debug='True' fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' qweather_apitype=0 genshin_flag=True onmyoji_flag=True eating_limit=5 dir='~/Project/Kori-Bot/Kori-Bot' dc4_flag=False statistical_black_model=['nonebot_plugin_repeater'] azure_flag=True hoshizora_flag=True statistical_black_priority=[] proxies_http='http://127.0.0.1:20171' morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' arknights_flag=True einstein_flag=True asoul_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] pretty_derby_flag=True read_qq_groups=[277620613, 937760225, 958866763] repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' sakura_flag=True environment='prod' pcr_flag=True server_status_only_superusers='False' setu_cd=180 http_port=5700 touhou_flag=True liqingge_flag=True read_qq_friends=[0, 0] sweet_illusion_flag=True
+[36mATRI[0m | 03-09 16:00:11 | INFO src >> plugin_config:plugin_setting='default' groups_id=[] punishing_flag=True granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' server_status_per_cpu='True' vtuber_flag=True command_sep={' ', '.'} max_bet_fold=10000 statistical_path='data/statistical/' touhou_old_flag=False session_expire_timeout=datetime.timedelta(seconds=120) host=IPv4Address('127.0.0.1') debug='True' fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' qweather_apitype=0 log_level='INFO' genshin_flag=True onmyoji_flag=True eating_limit=5 dir='~/Project/Kori-Bot/Kori-Bot' dc4_flag=False statistical_black_model=['nonebot_plugin_repeater'] azure_flag=True hoshizora_flag=True statistical_black_priority=[] port=9165 proxies_http='http://127.0.0.1:20171' morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' arknights_flag=True einstein_flag=True command_start={'！', '/', '!'} asoul_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] pretty_derby_flag=True read_qq_groups=[277620613, 937760225, 958866763] repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' sakura_flag=True driver='~fastapi' environment='prod' pcr_flag=True api_timeout=30.0 superusers={'2560359315'} server_status_only_superusers='False' setu_cd=180 http_port=5700 nickname={'bot', 'Kori', 'Kori Bot'} touhou_flag=True liqingge_flag=True read_qq_friends=[0, 0] sweet_illusion_flag=True
+[36mATRI[0m | 03-09 16:00:11 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-09 16:00:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_read_60s"
+[36mATRI[0m | 03-09 16:00:11 | SUCCESS plugin.manager >> Succeeded to import "chat"
+[36mATRI[0m | 03-09 16:00:11 | SUCCESS plugin.manager >> Succeeded to import "atri_plugin_status"
+[36mATRI[0m | 03-09 16:00:11 | SUCCESS plugin.manager >> Succeeded to import "trigger_memes_from_feiyucans_space"
+[36mATRI[0m | 03-09 16:00:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_datastore"
+[36mATRI[0m | 03-09 16:00:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_remake"
+[36mATRI[0m | 03-09 16:00:12 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_wordcloud"
+[36mATRI[0m | 03-09 16:00:12 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_code"
+[36mATRI[0m | 03-09 16:00:12 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_emojimix"
+[36mATRI[0m | 03-09 16:00:12 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_biliav"
+[36mATRI[0m | 03-09 16:00:14 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_fortune"
+[36mATRI[0m | 03-09 16:00:14 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fb2a0863040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fb2a10e94f0>
+         │    └ <function MultiCommand.invoke at 0x7fb2a08670d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fb2a89d6370>
+           │               │       │       └ <function Command.invoke at 0x7fb2a0863af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fb2a89d6370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fb29778e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fb2a89d6370>
+           │   │      │    └ <function run at 0x7fb2978b98b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fb2a085f8b0>
+           └ <click.core.Context object at 0x7fb2a89d6370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fb2978a8670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fb2a8a17940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fb2a8b45430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fb29e727790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fb29e721310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fb29709d8e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fb29e7211f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fb29709d8e0>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7fb29e721280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fb29709d8e0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fb2a8a17940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7fb2a8b45430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-09 16:00:14 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_localstore"
+[36mATRI[0m | 03-09 16:00:14 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_heweather"
+[36mATRI[0m | 03-09 16:00:14 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_roll"
+[36mATRI[0m | 03-09 16:00:15 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_logo"
+[36mATRI[0m | 03-09 16:00:16 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_what2eat-2"
+[36mATRI[0m | 03-09 16:00:16 | SUCCESS plugin.manager >> Succeeded to import "ATRI"
+[36mATRI[0m | 03-09 16:00:16 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_todo"
+[36mATRI[0m | 03-09 16:00:16 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'bot', 'Kori'} command_start={'！', '!', '/'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) groups_id=[] punishing_flag=True granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' server_status_per_cpu='True' vtuber_flag=True max_bet_fold=10000 statistical_path='data/statistical/' touhou_old_flag=False debug='True' fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' qweather_apitype=0 genshin_flag=True onmyoji_flag=True eating_limit=5 dir='~/Project/Kori-Bot/Kori-Bot' dc4_flag=False statistical_black_model=['nonebot_plugin_repeater'] azure_flag=True hoshizora_flag=True statistical_black_priority=[] proxies_http='http://127.0.0.1:20171' morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' arknights_flag=True einstein_flag=True asoul_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] pretty_derby_flag=True read_qq_groups=[277620613, 937760225, 958866763] repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' sakura_flag=True environment='prod' pcr_flag=True server_status_only_superusers='False' setu_cd=180 http_port=5700 touhou_flag=True liqingge_flag=True read_qq_friends=[0, 0] sweet_illusion_flag=True
+[36mATRI[0m | 03-09 16:00:16 | INFO src >> plugin_config:plugin_setting='default' groups_id=[] punishing_flag=True granblue_fantasy_flag=True caiyunai_apikey='62142754f02461188d58b88f' server_status_per_cpu='True' vtuber_flag=True command_sep={' ', '.'} max_bet_fold=10000 statistical_path='data/statistical/' touhou_old_flag=False session_expire_timeout=datetime.timedelta(seconds=120) host=IPv4Address('127.0.0.1') debug='True' fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' qweather_apitype=0 log_level='INFO' genshin_flag=True onmyoji_flag=True eating_limit=5 dir='~/Project/Kori-Bot/Kori-Bot' dc4_flag=False statistical_black_model=['nonebot_plugin_repeater'] azure_flag=True hoshizora_flag=True statistical_black_priority=[] port=9165 proxies_http='http://127.0.0.1:20171' morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' arknights_flag=True einstein_flag=True command_start={'！', '/', '!'} asoul_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] pretty_derby_flag=True read_qq_groups=[277620613, 937760225, 958866763] repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' sakura_flag=True driver='~fastapi' environment='prod' pcr_flag=True api_timeout=30.0 superusers={'2560359315'} server_status_only_superusers='False' setu_cd=180 http_port=5700 nickname={'bot', 'Kori', 'Kori Bot'} touhou_flag=True liqingge_flag=True read_qq_friends=[0, 0] sweet_illusion_flag=True
+[36mATRI[0m | 03-09 16:00:16 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-09 16:00:16 | SUCCESS plugin.manager >> Succeeded to import "whitenight_from_feiyucans_space"
+[36mATRI[0m | 03-09 16:00:16 | SUCCESS plugin.manager >> Succeeded to import "cp"
+[36mATRI[0m | 03-09 16:00:17 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_repeater"
+[36mATRI[0m | 03-09 16:00:17 | SUCCESS plugin.manager >> Succeeded to import "ATRI-2"
+[36mATRI[0m | 03-09 16:00:17 | SUCCESS nonebot >> Running NoneBot...
+[36mATRI[0m | 03-09 16:00:17 | DEBUG nonebot.internal.driver.driver >> Loaded adapters: OneBot V11
+[36mATRI[0m | 03-09 16:00:17 | INFO uvicorn >> Started server process [20091]
+[36mATRI[0m | 03-09 16:00:17 | INFO uvicorn >> Waiting for application startup.
+[36mATRI[0m | 03-09 16:00:17 | INFO nonebot_plugin_htmlrender >> Browser Started.
+[36mATRI[0m | 03-09 16:00:17 | INFO ATRI >> Scheduler Started.
+[36mATRI[0m | 03-09 16:00:17 | INFO src >> Scheduler Started
+[36mATRI[0m | 03-09 16:00:17 | INFO nonebot_plugin_datastore >> 数据库初始化完成
+[36mATRI[0m | 03-09 16:00:18 | INFO src >> Browser Started.
+[36mATRI[0m | 03-09 16:00:18 | INFO src >> 数据库初始化完成
+[36mATRI[0m | 03-09 16:00:18 | INFO uvicorn >> Application startup complete.
+[36mATRI[0m | 03-09 16:00:18 | INFO uvicorn >> Uvicorn running on http://127.0.0.1:9165 (Press CTRL+C to quit)
+[36mATRI[0m | 03-09 16:00:20 | INFO uvicorn >> ('127.0.0.1', 51824) - "WebSocket /onebot/v11/ws/" [accepted]
+[36mATRI[0m | 03-09 16:00:20 | INFO nonebot >> OneBot V11 | Bot 507346814 connected
+[36mATRI[0m | 03-09 16:00:20 | INFO websockets >> connection open
+[36mATRI[0m | 03-09 16:00:20 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 766320084 from 1020936395@[群:277620613] "!math"
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 16:00:20 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7fb231b1f3a0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:20 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 16:00:20 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e0d0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='args', type=Message, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.LifecycleMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.LifecycleMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e1f0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:20 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 16:00:20 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:22 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1729832012 from 2560359315@[群:277620613] "!math"
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 16:00:22 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7fb231b1f3a0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:22 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:22 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7fb2319a3310>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:22 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -270275806 from 1020936395@[群:277620613] "”"
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 16:00:22 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e1f0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:00:22 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:23 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:23 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 16:00:23 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e0d0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='args', type=Message, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e1f0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:00:23 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:24 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:24 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:24 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 16:00:24 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:00:27 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:27 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:30 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1904705153 from 2560359315@[群:277620613] "1952"
+[36mATRI[0m | 03-09 16:00:30 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 16:00:30 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 16:00:30 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 16:00:30 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e1f0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:00:30 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:30 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:30 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-09 16:00:30 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 16:00:30 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:00:32 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:32 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:37 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:37 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:42 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:42 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:45 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1774234746 from 2560359315@[群:277620613] "还能加哪种计算呢"
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 16:00:45 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7fb231b1f3a0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:45 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:45 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7fb2319a3310>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:00:45 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 8...
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 10...
+[36mATRI[0m | 03-09 16:00:45 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function repeater at 0x7fb22bb14820>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=GroupMessageEvent, required=True), ModelField(name='state', type=Mapping[Any, Any], required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:45 | DEBUG src.plugins.nonebot_plugin_repeater >> 还能加哪种计算呢
+[36mATRI[0m | 03-09 16:00:45 | DEBUG src.plugins.nonebot_plugin_repeater >> Normal
+[36mATRI[0m | 03-09 16:00:45 | DEBUG src.plugins.nonebot_plugin_repeater >> None
+[36mATRI[0m | 03-09 16:00:45 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 11...
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 12...
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 13...
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Checking for matchers in priority 15...
+[36mATRI[0m | 03-09 16:00:45 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:00:47 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:47 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:49 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -516398320 from 2560359315@[群:277620613] "!math"
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 16:00:49 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7fb231b1f3a0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:49 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:49 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7fb2319a3310>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:00:49 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 16:00:49 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e0d0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='args', type=Message, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e1f0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:49 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 16:00:49 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:00:52 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:52 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:56 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1878100953 from 2560359315@[群:277620613] "445"
+[36mATRI[0m | 03-09 16:00:56 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 16:00:56 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 16:00:56 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 16:00:56 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e1f0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:00:56 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:56 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:56 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-09 16:00:56 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 16:00:56 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:00:57 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1304412266 from 963046537@[群:937760225] "!stock"
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 16:00:57 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7fb231b1f3a0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:57 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 16:00:57 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e280>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='args', type=Message, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:00:57 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 16:00:57 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:01:01 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2037240084 from 2560359315@[群:277620613] "!math"
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.message >> Checking for matchers in priority 1...
+[36mATRI[0m | 03-09 16:01:01 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.message >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _setu_catcher at 0x7fb231b1f3a0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=MessageEvent, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:01:01 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:01:01 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.message >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _tietie_superuser at 0x7fb2319a3310>, params=[ModelField(name='event', type=MessageEvent, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:01:01 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.message >> Checking for matchers in priority 2...
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.message >> Checking for matchers in priority 5...
+[36mATRI[0m | 03-09 16:01:01 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e0d0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='args', type=Message, required=True)], parameterless=[]>
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e1f0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:01:01 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 16:01:01 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:01:02 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:02 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:07 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:07 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:09 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 530284374 from 2560359315@[群:277620613] "17701"
+[36mATRI[0m | 03-09 16:01:09 | DEBUG nonebot.message >> Checking for matchers in priority 0...
+[36mATRI[0m | 03-09 16:01:09 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 16:01:09 | DEBUG nonebot.message >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-09 16:01:09 | DEBUG nonebot.internal.matcher >> Running handler <Dependent call=<function _ at 0x7fb22f76e1f0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='event', type=Event, required=True), ModelField(name='matcher', type=Matcher, required=True), ModelField(name='ans', type=Message, required=True), ModelField(name='answer', type=str, required=True)], parameterless=[DependParam()]>
+[36mATRI[0m | 03-09 16:01:09 | DEBUG nonebot.utils >> OneBot V11 | Calling API send_msg
+[36mATRI[0m | 03-09 16:01:09 | DEBUG nonebot.internal.adapter.bot >> Running CalledAPI hooks...
+[36mATRI[0m | 03-09 16:01:09 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-09 16:01:09 | DEBUG nonebot.message >> Stop event propagation
+[36mATRI[0m | 03-09 16:01:09 | DEBUG nonebot.message >> Running PostProcessors...
+[36mATRI[0m | 03-09 16:01:12 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:12 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:17 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:17 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:22 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:22 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:27 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:27 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:32 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:32 | DEBUG nonebot.internal.params >> Event type <class 'nonebot.adapters.onebot.v11.event.HeartbeatMetaEvent'> not match annotation MessageEvent, ignored
+[36mATRI[0m | 03-09 16:01:35 | INFO uvicorn >> Shutting down
+[36mATRI[0m | 03-09 16:01:35 | WARNING nonebot >> OneBot V11 | WebSocket for Bot 507346814 closed by peer
+[36mATRI[0m | 03-09 16:01:35 | INFO websockets >> connection closed
+[36mATRI[0m | 03-09 16:01:35 | INFO uvicorn >> Waiting for application shutdown.
+[36mATRI[0m | 03-09 16:01:35 | INFO nonebot_plugin_htmlrender >> Browser Stoped.
+[36mATRI[0m | 03-09 16:01:35 | INFO src >> Browser Stoped.
+[36mATRI[0m | 03-09 16:01:35 | INFO uvicorn >> Application shutdown complete.
+[36mATRI[0m | 03-09 16:01:35 | INFO uvicorn >> Finished server process [20091]

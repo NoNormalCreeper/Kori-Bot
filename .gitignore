@@ -1,0 +1,14 @@
+go-cqhttp/*
+go-cqhttp-2/*
+go-cqhttp-3/*
+.vscode/*
+__pycache__/*
+reference/*
+Kori-Bot/data/*
+Kori-Bot/test001/*
+Kori-Bot/__pycache__/*
+Kori-Bot/src/disabled/*
+Kori-Bot/src/disabled/__pycache__/*
+Kori-Bot/src/plugins/__pycache__/*
+Kori-Bot/src/plugins/*/__pycache__/*
+*.pyc

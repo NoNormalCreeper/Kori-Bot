@@ -1,0 +1,791 @@
+[36mATRI[0m | 03-04 02:15:58 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:15:58 | SUCCESS plugin.manager >> Succeeded to import "atri_plugin_status"
+[36mATRI[0m | 03-04 02:15:58 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_logo"
+[36mATRI[0m | 03-04 02:15:59 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:15:59 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_morning"
+[36mATRI[0m | 03-04 02:15:59 | SUCCESS plugin.manager >> Succeeded to import "help"
+[36mATRI[0m | 03-04 02:15:59 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_wordcloud"
+[36mATRI[0m | 03-04 02:15:59 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_code"
+[36mATRI[0m | 03-04 02:15:59 | SUCCESS plugin.manager >> Succeeded to import "ATRI-2"
+[36mATRI[0m | 03-04 02:15:59 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f95dedb9040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f95df63f3d0>
+         │    └ <function MultiCommand.invoke at 0x7f95dedbd0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f95e6f2c250>
+           │               │       │       └ <function Command.invoke at 0x7f95dedb9af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f95e6f2c250>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f95d5ce5940>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f95e6f2c250>
+           │   │      │    └ <function run at 0x7f95d5e0f820>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f95dedb58b0>
+           └ <click.core.Context object at 0x7f95e6f2c250>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f95d5dff5e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f95e6f6c940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f95e709b430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f95dcc7b700>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f95dcc75280>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f95d55f4670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f95dcc75160>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f95d55f4670>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f95dcc751f0>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f95d55f4670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f95e6f6c940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f95e709b430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-04 02:16:00 | SUCCESS plugin.manager >> Succeeded to import "text2pic"
+[36mATRI[0m | 03-04 02:16:00 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_withdraw"
+[36mATRI[0m | 03-04 02:16:00 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:00 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_fortune"
+[36mATRI[0m | 03-04 02:16:00 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_repeater"
+[36mATRI[0m | 03-04 02:16:00 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_biliav"
+[36mATRI[0m | 03-04 02:16:00 | SUCCESS plugin.manager >> Succeeded to import "wife"
+[36mATRI[0m | 03-04 02:16:00 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_datastore"
+[36mATRI[0m | 03-04 02:16:04 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:04 | SUCCESS plugin.manager >> Succeeded to import "atri_setu"
+[36mATRI[0m | 03-04 02:16:05 | SUCCESS plugin.manager >> Succeeded to import "cp"
+[36mATRI[0m | 03-04 02:16:05 | SUCCESS plugin.manager >> Succeeded to import "trigger_memes_from_feiyucans_space"
+[36mATRI[0m | 03-04 02:16:05 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'bot', 'Kori', 'Kori Bot'} command_start={'/', '!', '！'} command_sep={'.', ' '} session_expire_timeout=datetime.timedelta(seconds=120) eating_limit=5 proxies_http='http://127.0.0.1:20171' touhou_flag=True liqingge_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_path='data/statistical/' touhou_old_flag=False environment='prod' read_qq_friends=[0, 0] dc4_flag=False debug='True' repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' asoul_flag=True fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' arknights_flag=True sweet_illusion_flag=True groups_id=[] punishing_flag=True caiyunai_apikey='62142754f02461188d58b88f' pcr_flag=True azure_flag=True server_status_only_superusers='False' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] statistical_black_priority=[] dir='~/Project/Kori-Bot/Kori-Bot' onmyoji_flag=True einstein_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' statistical_black_model=['nonebot_plugin_repeater'] granblue_fantasy_flag=True sakura_flag=True pretty_derby_flag=True hoshizora_flag=True server_status_per_cpu='True' vtuber_flag=True read_qq_groups=[277620613, 937760225, 958866763] genshin_flag=True setu_cd=180 qweather_apitype=0
+[36mATRI[0m | 03-04 02:16:05 | INFO src >> plugin_config:plugin_setting='default' eating_limit=5 proxies_http='http://127.0.0.1:20171' touhou_flag=True liqingge_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_path='data/statistical/' touhou_old_flag=False host=IPv4Address('127.0.0.1') environment='prod' read_qq_friends=[0, 0] dc4_flag=False debug='True' repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' asoul_flag=True session_expire_timeout=datetime.timedelta(seconds=120) fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' arknights_flag=True api_timeout=30.0 sweet_illusion_flag=True groups_id=[] superusers={'2560359315'} driver='~fastapi' punishing_flag=True caiyunai_apikey='62142754f02461188d58b88f' pcr_flag=True azure_flag=True server_status_only_superusers='False' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] command_start={'/', '!', '！'} statistical_black_priority=[] dir='~/Project/Kori-Bot/Kori-Bot' onmyoji_flag=True einstein_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' nickname={'bot', 'Kori', 'Kori Bot'} log_level='INFO' statistical_black_model=['nonebot_plugin_repeater'] granblue_fantasy_flag=True sakura_flag=True command_sep={'.', ' '} pretty_derby_flag=True hoshizora_flag=True port=9165 server_status_per_cpu='True' vtuber_flag=True read_qq_groups=[277620613, 937760225, 958866763] genshin_flag=True setu_cd=180 qweather_apitype=0
+[36mATRI[0m | 03-04 02:16:05 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-04 02:16:05 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:05 | SUCCESS plugin.manager >> Succeeded to import "memes_from_feiyucans_space"
+[36mATRI[0m | 03-04 02:16:05 | SUCCESS plugin.manager >> Succeeded to import "saying"
+[36mATRI[0m | 03-04 02:16:08 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_memes"
+[36mATRI[0m | 03-04 02:16:09 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_emojimix"
+[36mATRI[0m | 03-04 02:16:09 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:09 | SUCCESS plugin.manager >> Succeeded to import "chat"
+[36mATRI[0m | 03-04 02:16:09 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_analysis_bilibili"
+[36mATRI[0m | 03-04 02:16:10 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:10 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:10 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:10 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:10 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:10 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:10 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_what2eat-2"
+[36mATRI[0m | 03-04 02:16:11 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_epicfree"
+[36mATRI[0m | 03-04 02:16:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_abbrreply"
+[36mATRI[0m | 03-04 02:16:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_songpicker2"
+[36mATRI[0m | 03-04 02:16:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_roll"
+[36mATRI[0m | 03-04 02:16:11 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_remake"
+[36mATRI[0m | 03-04 02:16:15 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_petpet"
+[36mATRI[0m | 03-04 02:16:17 | WARNING nonebot >> Duplicated prefix rule "/lottery"
+[36mATRI[0m | 03-04 02:16:17 | WARNING nonebot >> Duplicated prefix rule "!lottery"
+[36mATRI[0m | 03-04 02:16:17 | WARNING nonebot >> Duplicated prefix rule "！lottery"
+[36mATRI[0m | 03-04 02:16:17 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:17 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_russian"
+[36mATRI[0m | 03-04 02:16:17 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'bot', 'Kori', 'Kori Bot'} command_start={'/', '!', '！'} command_sep={'.', ' '} session_expire_timeout=datetime.timedelta(seconds=120) eating_limit=5 proxies_http='http://127.0.0.1:20171' touhou_flag=True liqingge_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_path='data/statistical/' touhou_old_flag=False environment='prod' read_qq_friends=[0, 0] dc4_flag=False debug='True' repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' asoul_flag=True fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' arknights_flag=True sweet_illusion_flag=True groups_id=[] punishing_flag=True caiyunai_apikey='62142754f02461188d58b88f' pcr_flag=True azure_flag=True server_status_only_superusers='False' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] statistical_black_priority=[] dir='~/Project/Kori-Bot/Kori-Bot' onmyoji_flag=True einstein_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' statistical_black_model=['nonebot_plugin_repeater'] granblue_fantasy_flag=True sakura_flag=True pretty_derby_flag=True hoshizora_flag=True server_status_per_cpu='True' vtuber_flag=True read_qq_groups=[277620613, 937760225, 958866763] genshin_flag=True setu_cd=180 qweather_apitype=0
+[36mATRI[0m | 03-04 02:16:17 | INFO src >> plugin_config:plugin_setting='default' eating_limit=5 proxies_http='http://127.0.0.1:20171' touhou_flag=True liqingge_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_path='data/statistical/' touhou_old_flag=False host=IPv4Address('127.0.0.1') environment='prod' read_qq_friends=[0, 0] dc4_flag=False debug='True' repeater_minlen=1 what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' asoul_flag=True session_expire_timeout=datetime.timedelta(seconds=120) fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' arknights_flag=True api_timeout=30.0 sweet_illusion_flag=True groups_id=[] superusers={'2560359315'} driver='~fastapi' punishing_flag=True caiyunai_apikey='62142754f02461188d58b88f' pcr_flag=True azure_flag=True server_status_only_superusers='False' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] command_start={'/', '!', '！'} statistical_black_priority=[] dir='~/Project/Kori-Bot/Kori-Bot' onmyoji_flag=True einstein_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' nickname={'bot', 'Kori', 'Kori Bot'} log_level='INFO' statistical_black_model=['nonebot_plugin_repeater'] granblue_fantasy_flag=True sakura_flag=True command_sep={'.', ' '} pretty_derby_flag=True hoshizora_flag=True port=9165 server_status_per_cpu='True' vtuber_flag=True read_qq_groups=[277620613, 937760225, 958866763] genshin_flag=True setu_cd=180 qweather_apitype=0
+[36mATRI[0m | 03-04 02:16:17 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-04 02:16:17 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:16:17 | SUCCESS plugin.manager >> Succeeded to import "whitenight_from_feiyucans_space"
+[36mATRI[0m | 03-04 02:16:18 | SUCCESS plugin.manager >> Succeeded to import "test"
+[36mATRI[0m | 03-04 02:16:18 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_caiyunai"
+[36mATRI[0m | 03-04 02:16:18 | SUCCESS plugin.manager >> Succeeded to import "ATRI"
+[36mATRI[0m | 03-04 02:16:18 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_localstore"
+[36mATRI[0m | 03-04 02:16:18 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_apscheduler"
+[36mATRI[0m | 03-04 02:16:19 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chess"
+[36mATRI[0m | 03-04 02:16:19 | SUCCESS nonebot >> Running NoneBot...
+[36mATRI[0m | 03-04 02:16:19 | INFO uvicorn >> Started server process [26156]
+[36mATRI[0m | 03-04 02:16:19 | INFO uvicorn >> Waiting for application startup.
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "read60s" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "memesfeiyu" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "time_for_breakfast" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "time_for_lunch" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "time_for_snack" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "time_for_dinner" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "time_for_midnight" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "weeklyEpic" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Added job "whitenight" to job store "default"
+[36mATRI[0m | 03-04 02:16:19 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-04 02:16:19 | INFO src >> Scheduler Started
+[36mATRI[0m | 03-04 02:16:20 | INFO src >> Browser Started.
+[36mATRI[0m | 03-04 02:16:21 | INFO nonebot_plugin_htmlrender >> Browser Started.
+[36mATRI[0m | 03-04 02:16:21 | INFO nonebot_plugin_datastore >> 数据库初始化完成
+[36mATRI[0m | 03-04 02:16:21 | INFO apscheduler >> Added job "状态检查" to job store "default"
+[36mATRI[0m | 03-04 02:16:21 | INFO apscheduler >> Added job "涩批诱捕器" to job store "default"
+[36mATRI[0m | 03-04 02:16:21 | INFO apscheduler >> Added job "闲聊词库检查更新" to job store "default"
+[36mATRI[0m | 03-04 02:16:21 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-04 02:16:21 | INFO ATRI >> Scheduler Started.
+[36mATRI[0m | 03-04 02:16:21 | INFO src >> 数据库初始化完成
+[36mATRI[0m | 03-04 02:16:21 | INFO uvicorn >> Application startup complete.
+[36mATRI[0m | 03-04 02:16:21 | INFO uvicorn >> Uvicorn running on http://127.0.0.1:9165 (Press CTRL+C to quit)
+[36mATRI[0m | 03-04 02:16:24 | INFO uvicorn >> ('127.0.0.1', 53584) - "WebSocket /onebot/v11/ws/" [accepted]
+[36mATRI[0m | 03-04 02:16:24 | INFO nonebot >> OneBot V11 | Bot 507346814 connected
+[36mATRI[0m | 03-04 02:16:24 | INFO websockets >> connection open
+[36mATRI[0m | 03-04 02:16:36 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -752340543 from 2560359315@[群:277620613] "/setu"
+[36mATRI[0m | 03-04 02:16:36 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:16:36 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:16:36 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:16:36 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:16:37 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:16:42 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:16:48 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -733612584 from 2560359315@[群:277620613] "/setu"
+[36mATRI[0m | 03-04 02:16:48 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:16:48 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:16:48 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:16:48 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:16:48 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:16:48 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:16:59 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1469500904 from 2560359315@[群:798891715] "/setu"
+[36mATRI[0m | 03-04 02:16:59 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:16:59 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:16:59 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:16:59 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:16:59 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:16:59 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:18:17 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1555905202 from 2560359315@[群:277620613] "来点萝莉的涩图"
+[36mATRI[0m | 03-04 02:18:17 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:18:17 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:18:17 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:18:17 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:18:17 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:18:25 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:18:36 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1426814619 from 2560359315@[群:277620613] "嗯了"
+[36mATRI[0m | 03-04 02:18:36 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-04 02:18:36 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-04 02:20:25 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1895673196 from 2560359315@[群:277620613] "/setu"
+[36mATRI[0m | 03-04 02:20:25 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:20:25 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:20:25 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:20:25 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:20:25 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:20:30 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:20:35 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2005952883 from 2560359315@[群:277620613] "不够涩"
+[36mATRI[0m | 03-04 02:20:35 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-04 02:20:36 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-04 02:20:48 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1717696417 from 2560359315@[群:277620613] "[CQ:image,file=13580f13a863118dba20ef71156a58f4.image,url=https://gchat.qpic.cn/gchatpic_new/2560359315/4167620613-3159720005-13580F13A863118DBA20EF71156A58F4/0?term=3,subType=0]"
+[36mATRI[0m | 03-04 02:20:48 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:20:48 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:20:48 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:20:48 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:20:48 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 02:20:48 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 02:20:55 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -153163216 from 2560359315@[群:277620613] "涩图嗅探"
+[36mATRI[0m | 03-04 02:20:55 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:20:55 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:20:55 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:20:55 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:20:55 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 02:20:55 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 02:21:07 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2116429146 from 2560359315@[群:277620613] "涩图嗅探"
+[36mATRI[0m | 03-04 02:21:07 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:21:07 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:21:07 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:21:07 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:21:07 | INFO nonebot >> Event will be handled by <Matcher from 闲聊, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 02:21:08 | INFO nonebot >> Matcher <Matcher from 闲聊, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 02:22:11 | INFO uvicorn >> Shutting down
+[36mATRI[0m | 03-04 02:22:11 | WARNING nonebot >> OneBot V11 | WebSocket for Bot 507346814 closed by peer
+[36mATRI[0m | 03-04 02:22:11 | INFO websockets >> connection closed
+[36mATRI[0m | 03-04 02:22:11 | INFO uvicorn >> Waiting for application shutdown.
+[36mATRI[0m | 03-04 02:22:11 | INFO src >> Browser Stoped.
+[36mATRI[0m | 03-04 02:22:11 | INFO nonebot_plugin_htmlrender >> Browser Stoped.
+[36mATRI[0m | 03-04 02:22:11 | INFO uvicorn >> Application shutdown complete.
+[36mATRI[0m | 03-04 02:22:11 | INFO uvicorn >> Finished server process [26156]
+[36mATRI[0m | 03-04 02:22:18 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:18 | SUCCESS plugin.manager >> Succeeded to import "chat"
+[36mATRI[0m | 03-04 02:22:18 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_abbrreply"
+[36mATRI[0m | 03-04 02:22:18 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:18 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_fortune"
+[36mATRI[0m | 03-04 02:22:18 | SUCCESS plugin.manager >> Succeeded to import "saying"
+[36mATRI[0m | 03-04 02:22:18 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f40e0876040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f40e10fc3d0>
+         │    └ <function MultiCommand.invoke at 0x7f40e087a0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f40e89e9250>
+           │               │       │       └ <function Command.invoke at 0x7f40e0876af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f40e89e9250>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f40d77a2940>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f40e89e9250>
+           │   │      │    └ <function run at 0x7f40d78cd820>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f40e08728b0>
+           └ <click.core.Context object at 0x7f40e89e9250>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f40d78bd5e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f40e8a29940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f40e8b58430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f40de739700>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f40de732280>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f40d70b2580>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f40de732160>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f40d70b2580>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f40de7321f0>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f40d70b2580>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f40e8a29940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f40e8b58430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-04 02:22:18 | SUCCESS plugin.manager >> Succeeded to import "ATRI"
+[36mATRI[0m | 03-04 02:22:18 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:18 | SUCCESS plugin.manager >> Succeeded to import "atri_plugin_status"
+[36mATRI[0m | 03-04 02:22:18 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_roll"
+[36mATRI[0m | 03-04 02:22:18 | SUCCESS plugin.manager >> Succeeded to import "text2pic"
+[36mATRI[0m | 03-04 02:22:19 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_petpet"
+[36mATRI[0m | 03-04 02:22:19 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'Kori', 'bot'} command_start={'！', '!', '/'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) dc4_flag=False pretty_derby_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' punishing_flag=True sakura_flag=True asoul_flag=True eating_limit=5 touhou_flag=True touhou_old_flag=False read_qq_friends=[0, 0] server_status_only_superusers='False' sweet_illusion_flag=True caiyunai_apikey='62142754f02461188d58b88f' read_qq_groups=[277620613, 937760225, 958866763] hoshizora_flag=True qweather_apitype=0 debug='True' dir='~/Project/Kori-Bot/Kori-Bot' statistical_path='data/statistical/' repeater_minlen=1 pcr_flag=True server_status_per_cpu='True' genshin_flag=True onmyoji_flag=True arknights_flag=True liqingge_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' einstein_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] proxies_http='http://127.0.0.1:20171' statistical_black_priority=[] groups_id=[] azure_flag=True setu_cd=180 fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' vtuber_flag=True granblue_fantasy_flag=True statistical_black_model=['nonebot_plugin_repeater'] environment='prod'
+[36mATRI[0m | 03-04 02:22:19 | INFO src >> plugin_config:plugin_setting='default' host=IPv4Address('127.0.0.1') dc4_flag=False pretty_derby_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' punishing_flag=True sakura_flag=True eating_limit=5 touhou_flag=True asoul_flag=True touhou_old_flag=False environment='prod' command_sep={' ', '.'} read_qq_friends=[0, 0] server_status_only_superusers='False' sweet_illusion_flag=True caiyunai_apikey='62142754f02461188d58b88f' read_qq_groups=[277620613, 937760225, 958866763] hoshizora_flag=True log_level='INFO' nickname={'Kori Bot', 'Kori', 'bot'} qweather_apitype=0 debug='True' api_timeout=30.0 dir='~/Project/Kori-Bot/Kori-Bot' statistical_path='data/statistical/' repeater_minlen=1 pcr_flag=True server_status_per_cpu='True' port=9165 genshin_flag=True onmyoji_flag=True arknights_flag=True liqingge_flag=True session_expire_timeout=datetime.timedelta(seconds=120) morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' einstein_flag=True superusers={'2560359315'} what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] proxies_http='http://127.0.0.1:20171' statistical_black_priority=[] groups_id=[] azure_flag=True setu_cd=180 fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' vtuber_flag=True granblue_fantasy_flag=True statistical_black_model=['nonebot_plugin_repeater'] driver='~fastapi' command_start={'!', '！', '/'}
+[36mATRI[0m | 03-04 02:22:19 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-04 02:22:19 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:19 | SUCCESS plugin.manager >> Succeeded to import "memes_from_feiyucans_space"
+[36mATRI[0m | 03-04 02:22:19 | SUCCESS plugin.manager >> Succeeded to import "ATRI-2"
+[36mATRI[0m | 03-04 02:22:20 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:20 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_morning"
+[36mATRI[0m | 03-04 02:22:20 | WARNING nonebot >> Duplicated prefix rule "！lottery"
+[36mATRI[0m | 03-04 02:22:20 | WARNING nonebot >> Duplicated prefix rule "!lottery"
+[36mATRI[0m | 03-04 02:22:20 | WARNING nonebot >> Duplicated prefix rule "/lottery"
+[36mATRI[0m | 03-04 02:22:21 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:21 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_russian"
+[36mATRI[0m | 03-04 02:22:21 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_biliav"
+[36mATRI[0m | 03-04 02:22:21 | SUCCESS plugin.manager >> Succeeded to import "test"
+[36mATRI[0m | 03-04 02:22:21 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_wordcloud"
+[36mATRI[0m | 03-04 02:22:21 | SUCCESS plugin.manager >> Succeeded to import "wife"
+[36mATRI[0m | 03-04 02:22:21 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:21 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_epicfree"
+[36mATRI[0m | 03-04 02:22:21 | SUCCESS plugin.manager >> Succeeded to import "cp"
+[36mATRI[0m | 03-04 02:22:25 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:25 | SUCCESS plugin.manager >> Succeeded to import "atri_setu"
+[36mATRI[0m | 03-04 02:22:26 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_logo"
+[36mATRI[0m | 03-04 02:22:27 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chess"
+[36mATRI[0m | 03-04 02:22:27 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_datastore"
+[36mATRI[0m | 03-04 02:22:27 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_code"
+[36mATRI[0m | 03-04 02:22:28 | SUCCESS plugin.manager >> Succeeded to import "ping"
+[36mATRI[0m | 03-04 02:22:28 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'Kori', 'bot'} command_start={'！', '!', '/'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) dc4_flag=False pretty_derby_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' punishing_flag=True sakura_flag=True asoul_flag=True eating_limit=5 touhou_flag=True touhou_old_flag=False read_qq_friends=[0, 0] server_status_only_superusers='False' sweet_illusion_flag=True caiyunai_apikey='62142754f02461188d58b88f' read_qq_groups=[277620613, 937760225, 958866763] hoshizora_flag=True qweather_apitype=0 debug='True' dir='~/Project/Kori-Bot/Kori-Bot' statistical_path='data/statistical/' repeater_minlen=1 pcr_flag=True server_status_per_cpu='True' genshin_flag=True onmyoji_flag=True arknights_flag=True liqingge_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' einstein_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] proxies_http='http://127.0.0.1:20171' statistical_black_priority=[] groups_id=[] azure_flag=True setu_cd=180 fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' vtuber_flag=True granblue_fantasy_flag=True statistical_black_model=['nonebot_plugin_repeater'] environment='prod'
+[36mATRI[0m | 03-04 02:22:28 | INFO src >> plugin_config:plugin_setting='default' host=IPv4Address('127.0.0.1') dc4_flag=False pretty_derby_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' punishing_flag=True sakura_flag=True eating_limit=5 touhou_flag=True asoul_flag=True touhou_old_flag=False environment='prod' command_sep={' ', '.'} read_qq_friends=[0, 0] server_status_only_superusers='False' sweet_illusion_flag=True caiyunai_apikey='62142754f02461188d58b88f' read_qq_groups=[277620613, 937760225, 958866763] hoshizora_flag=True log_level='INFO' nickname={'Kori Bot', 'Kori', 'bot'} qweather_apitype=0 debug='True' api_timeout=30.0 dir='~/Project/Kori-Bot/Kori-Bot' statistical_path='data/statistical/' repeater_minlen=1 pcr_flag=True server_status_per_cpu='True' port=9165 genshin_flag=True onmyoji_flag=True arknights_flag=True liqingge_flag=True session_expire_timeout=datetime.timedelta(seconds=120) morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' einstein_flag=True superusers={'2560359315'} what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] proxies_http='http://127.0.0.1:20171' statistical_black_priority=[] groups_id=[] azure_flag=True setu_cd=180 fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' vtuber_flag=True granblue_fantasy_flag=True statistical_black_model=['nonebot_plugin_repeater'] driver='~fastapi' command_start={'!', '！', '/'}
+[36mATRI[0m | 03-04 02:22:28 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-04 02:22:28 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:28 | SUCCESS plugin.manager >> Succeeded to import "whitenight_from_feiyucans_space"
+[36mATRI[0m | 03-04 02:22:28 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'Kori', 'bot'} command_start={'！', '!', '/'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) dc4_flag=False pretty_derby_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' punishing_flag=True sakura_flag=True asoul_flag=True eating_limit=5 touhou_flag=True touhou_old_flag=False read_qq_friends=[0, 0] server_status_only_superusers='False' sweet_illusion_flag=True caiyunai_apikey='62142754f02461188d58b88f' read_qq_groups=[277620613, 937760225, 958866763] hoshizora_flag=True qweather_apitype=0 debug='True' dir='~/Project/Kori-Bot/Kori-Bot' statistical_path='data/statistical/' repeater_minlen=1 pcr_flag=True server_status_per_cpu='True' genshin_flag=True onmyoji_flag=True arknights_flag=True liqingge_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' einstein_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] proxies_http='http://127.0.0.1:20171' statistical_black_priority=[] groups_id=[] azure_flag=True setu_cd=180 fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' vtuber_flag=True granblue_fantasy_flag=True statistical_black_model=['nonebot_plugin_repeater'] environment='prod'
+[36mATRI[0m | 03-04 02:22:28 | INFO src >> plugin_config:plugin_setting='default' host=IPv4Address('127.0.0.1') dc4_flag=False pretty_derby_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' punishing_flag=True sakura_flag=True eating_limit=5 touhou_flag=True asoul_flag=True touhou_old_flag=False environment='prod' command_sep={' ', '.'} read_qq_friends=[0, 0] server_status_only_superusers='False' sweet_illusion_flag=True caiyunai_apikey='62142754f02461188d58b88f' read_qq_groups=[277620613, 937760225, 958866763] hoshizora_flag=True log_level='INFO' nickname={'Kori Bot', 'Kori', 'bot'} qweather_apitype=0 debug='True' api_timeout=30.0 dir='~/Project/Kori-Bot/Kori-Bot' statistical_path='data/statistical/' repeater_minlen=1 pcr_flag=True server_status_per_cpu='True' port=9165 genshin_flag=True onmyoji_flag=True arknights_flag=True liqingge_flag=True session_expire_timeout=datetime.timedelta(seconds=120) morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' einstein_flag=True superusers={'2560359315'} what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] proxies_http='http://127.0.0.1:20171' statistical_black_priority=[] groups_id=[] azure_flag=True setu_cd=180 fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' vtuber_flag=True granblue_fantasy_flag=True statistical_black_model=['nonebot_plugin_repeater'] driver='~fastapi' command_start={'!', '！', '/'}
+[36mATRI[0m | 03-04 02:22:28 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-04 02:22:28 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:28 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_read_60s"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 02:22:29 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_what2eat-2"
+[36mATRI[0m | 03-04 02:22:29 | SUCCESS nonebot >> Running NoneBot...
+[36mATRI[0m | 03-04 02:22:29 | INFO uvicorn >> Started server process [28063]
+[36mATRI[0m | 03-04 02:22:29 | INFO uvicorn >> Waiting for application startup.
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "memesfeiyu" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "weeklyEpic" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "whitenight" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "read60s" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "time_for_breakfast" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "time_for_lunch" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "time_for_snack" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "time_for_dinner" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Added job "time_for_midnight" to job store "default"
+[36mATRI[0m | 03-04 02:22:29 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-04 02:22:29 | INFO src >> Scheduler Started
+[36mATRI[0m | 03-04 02:22:29 | INFO nonebot_plugin_htmlrender >> Browser Started.
+[36mATRI[0m | 03-04 02:22:29 | INFO nonebot_plugin_datastore >> 数据库初始化完成
+[36mATRI[0m | 03-04 02:22:30 | INFO src >> Browser Started.
+[36mATRI[0m | 03-04 02:22:30 | INFO apscheduler >> Added job "闲聊词库检查更新" to job store "default"
+[36mATRI[0m | 03-04 02:22:30 | INFO apscheduler >> Added job "状态检查" to job store "default"
+[36mATRI[0m | 03-04 02:22:30 | INFO apscheduler >> Added job "涩批诱捕器" to job store "default"
+[36mATRI[0m | 03-04 02:22:30 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-04 02:22:30 | INFO ATRI >> Scheduler Started.
+[36mATRI[0m | 03-04 02:22:30 | INFO src >> 数据库初始化完成
+[36mATRI[0m | 03-04 02:22:30 | INFO uvicorn >> Application startup complete.
+[36mATRI[0m | 03-04 02:22:30 | INFO uvicorn >> Uvicorn running on http://127.0.0.1:9165 (Press CTRL+C to quit)
+[36mATRI[0m | 03-04 02:22:32 | INFO uvicorn >> ('127.0.0.1', 54068) - "WebSocket /onebot/v11/ws/" [accepted]
+[36mATRI[0m | 03-04 02:22:32 | INFO nonebot >> OneBot V11 | Bot 507346814 connected
+[36mATRI[0m | 03-04 02:22:32 | INFO websockets >> connection open
+[36mATRI[0m | 03-04 02:22:32 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1776720939 from 2560359315@[群:277620613] "/涩图嗅探"
+[36mATRI[0m | 03-04 02:22:32 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:22:32 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:22:32 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:22:33 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:22:33 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 02:22:33 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 02:22:57 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2014774009 from 2560359315@[群:277620613] "来一张Minecraft的涩图"
+[36mATRI[0m | 03-04 02:22:57 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:22:57 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:22:57 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:22:57 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:22:57 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 02:22:57 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 02:23:15 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -428632230 from 2560359315@[群:277620613] "/setu"
+[36mATRI[0m | 03-04 02:23:15 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:23:15 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:23:15 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:23:15 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:23:15 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:23:26 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:23:36 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -272245903 from 2560359315@[群:277620613] "hso"
+[36mATRI[0m | 03-04 02:23:36 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-04 02:23:36 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-04 02:24:28 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1836239135 from 2560359315@[群:937760225] "/晚安"
+[36mATRI[0m | 03-04 02:24:28 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:24:28 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:24:28 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:24:28 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:24:28 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 02:24:28 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 02:24:28 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+[36mATRI[0m | 03-04 02:24:28 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False> running complete
+[36mATRI[0m | 03-04 02:25:09 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1369455228 from 2560359315@[群:277620613] "/晚安"
+[36mATRI[0m | 03-04 02:25:09 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:25:09 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 02:25:09 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:25:09 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 02:25:09 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 02:25:09 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 02:25:09 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+[36mATRI[0m | 03-04 02:25:09 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False> running complete
+[36mATRI[0m | 03-04 02:32:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 02:42:18 CST)" (scheduled at 2022-03-04 02:32:18.609680+08:00)
+[36mATRI[0m | 03-04 02:32:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 02:32:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 02:32:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 02:42:18 CST)" executed successfully
+[36mATRI[0m | 03-04 02:42:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 02:52:18 CST)" (scheduled at 2022-03-04 02:42:18.609680+08:00)
+[36mATRI[0m | 03-04 02:42:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 02:42:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 02:42:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 02:52:18 CST)" executed successfully
+[36mATRI[0m | 03-04 02:52:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:02:18 CST)" (scheduled at 2022-03-04 02:52:18.609680+08:00)
+[36mATRI[0m | 03-04 02:52:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 02:52:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 02:52:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:02:18 CST)" executed successfully
+[36mATRI[0m | 03-04 03:02:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:12:18 CST)" (scheduled at 2022-03-04 03:02:18.609680+08:00)
+[36mATRI[0m | 03-04 03:02:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 03:02:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 03:02:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:12:18 CST)" executed successfully
+[36mATRI[0m | 03-04 03:12:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:22:18 CST)" (scheduled at 2022-03-04 03:12:18.609680+08:00)
+[36mATRI[0m | 03-04 03:12:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 03:12:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 03:12:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:22:18 CST)" executed successfully
+[36mATRI[0m | 03-04 03:22:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:32:18 CST)" (scheduled at 2022-03-04 03:22:18.609680+08:00)
+[36mATRI[0m | 03-04 03:22:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 03:22:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 03:22:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:32:18 CST)" executed successfully
+[36mATRI[0m | 03-04 03:22:25 | INFO apscheduler >> Running job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 04:22:25 CST)" (scheduled at 2022-03-04 03:22:25.304233+08:00)
+[36mATRI[0m | 03-04 03:22:25 | INFO apscheduler >> Job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 04:22:25 CST)" executed successfully
+[36mATRI[0m | 03-04 03:32:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:42:18 CST)" (scheduled at 2022-03-04 03:32:18.609680+08:00)
+[36mATRI[0m | 03-04 03:32:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 03:32:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 03:32:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:42:18 CST)" executed successfully
+[36mATRI[0m | 03-04 03:42:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:52:18 CST)" (scheduled at 2022-03-04 03:42:18.609680+08:00)
+[36mATRI[0m | 03-04 03:42:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 03:42:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 03:42:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 03:52:18 CST)" executed successfully
+[36mATRI[0m | 03-04 03:52:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:02:18 CST)" (scheduled at 2022-03-04 03:52:18.609680+08:00)
+[36mATRI[0m | 03-04 03:52:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 03:52:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 03:52:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:02:18 CST)" executed successfully
+[36mATRI[0m | 03-04 04:00:00 | INFO apscheduler >> Running job "_ (trigger: cron[hour='*/4', minute='0'], next run at: 2022-03-04 08:00:00 CST)" (scheduled at 2022-03-04 04:00:00+08:00)
+[36mATRI[0m | 03-04 04:00:00 | INFO src >> 每日轮盘签到重置成功...
+[36mATRI[0m | 03-04 04:00:00 | INFO apscheduler >> Job "_ (trigger: cron[hour='*/4', minute='0'], next run at: 2022-03-04 08:00:00 CST)" executed successfully
+[36mATRI[0m | 03-04 04:02:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:12:18 CST)" (scheduled at 2022-03-04 04:02:18.609680+08:00)
+[36mATRI[0m | 03-04 04:02:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 04:02:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 04:02:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:12:18 CST)" executed successfully
+[36mATRI[0m | 03-04 04:12:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:22:18 CST)" (scheduled at 2022-03-04 04:12:18.609680+08:00)
+[36mATRI[0m | 03-04 04:12:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 04:12:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 04:12:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:22:18 CST)" executed successfully
+[36mATRI[0m | 03-04 04:22:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:32:18 CST)" (scheduled at 2022-03-04 04:22:18.609680+08:00)
+[36mATRI[0m | 03-04 04:22:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 04:22:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 04:22:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:32:18 CST)" executed successfully
+[36mATRI[0m | 03-04 04:22:25 | INFO apscheduler >> Running job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 05:22:25 CST)" (scheduled at 2022-03-04 04:22:25.304233+08:00)
+[36mATRI[0m | 03-04 04:22:25 | INFO apscheduler >> Job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 05:22:25 CST)" executed successfully
+[36mATRI[0m | 03-04 04:32:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:42:18 CST)" (scheduled at 2022-03-04 04:32:18.609680+08:00)
+[36mATRI[0m | 03-04 04:32:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 04:32:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 04:32:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:42:18 CST)" executed successfully
+[36mATRI[0m | 03-04 04:42:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:52:18 CST)" (scheduled at 2022-03-04 04:42:18.609680+08:00)
+[36mATRI[0m | 03-04 04:42:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 04:42:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 04:42:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 04:52:18 CST)" executed successfully
+[36mATRI[0m | 03-04 04:52:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:02:18 CST)" (scheduled at 2022-03-04 04:52:18.609680+08:00)
+[36mATRI[0m | 03-04 04:52:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 04:52:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 04:52:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:02:18 CST)" executed successfully
+[36mATRI[0m | 03-04 05:02:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:12:18 CST)" (scheduled at 2022-03-04 05:02:18.609680+08:00)
+[36mATRI[0m | 03-04 05:02:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 05:02:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 05:02:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:12:18 CST)" executed successfully
+[36mATRI[0m | 03-04 05:12:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:22:18 CST)" (scheduled at 2022-03-04 05:12:18.609680+08:00)
+[36mATRI[0m | 03-04 05:12:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 05:12:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 05:12:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:22:18 CST)" executed successfully
+[36mATRI[0m | 03-04 05:22:18 | INFO apscheduler >> Running job "闲聊词库检查更新 (trigger: interval[3:00:00], next run at: 2022-03-04 08:22:18 CST)" (scheduled at 2022-03-04 05:22:18.050707+08:00)
+[36mATRI[0m | 03-04 05:22:18 | INFO src >> 更新闲聊词库ing...
+[36mATRI[0m | 03-04 05:22:18 | INFO src >> 闲聊词库更新完成
+[36mATRI[0m | 03-04 05:22:18 | INFO apscheduler >> Job "闲聊词库检查更新 (trigger: interval[3:00:00], next run at: 2022-03-04 08:22:18 CST)" executed successfully
+[36mATRI[0m | 03-04 05:22:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:32:18 CST)" (scheduled at 2022-03-04 05:22:18.609680+08:00)
+[36mATRI[0m | 03-04 05:22:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 05:22:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 05:22:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:32:18 CST)" executed successfully
+[36mATRI[0m | 03-04 05:22:25 | INFO apscheduler >> Running job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 06:22:25 CST)" (scheduled at 2022-03-04 05:22:25.304233+08:00)
+[36mATRI[0m | 03-04 05:22:25 | INFO apscheduler >> Job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 06:22:25 CST)" executed successfully
+[36mATRI[0m | 03-04 05:32:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:42:18 CST)" (scheduled at 2022-03-04 05:32:18.609680+08:00)
+[36mATRI[0m | 03-04 05:32:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 05:32:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 05:32:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:42:18 CST)" executed successfully
+[36mATRI[0m | 03-04 05:42:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:52:18 CST)" (scheduled at 2022-03-04 05:42:18.609680+08:00)
+[36mATRI[0m | 03-04 05:42:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 05:42:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 05:42:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 05:52:18 CST)" executed successfully
+[36mATRI[0m | 03-04 05:52:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:02:18 CST)" (scheduled at 2022-03-04 05:52:18.609680+08:00)
+[36mATRI[0m | 03-04 05:52:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 05:52:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 05:52:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:02:18 CST)" executed successfully
+[36mATRI[0m | 03-04 06:00:00 | INFO apscheduler >> Running job "_ (trigger: cron[hour='6,11,17,22', minute='0'], next run at: 2022-03-04 11:00:00 CST)" (scheduled at 2022-03-04 06:00:00+08:00)
+[36mATRI[0m | 03-04 06:00:00 | INFO src >> 今天吃什么次数已刷新
+[36mATRI[0m | 03-04 06:00:00 | INFO apscheduler >> Job "_ (trigger: cron[hour='6,11,17,22', minute='0'], next run at: 2022-03-04 11:00:00 CST)" executed successfully
+[36mATRI[0m | 03-04 06:02:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:12:18 CST)" (scheduled at 2022-03-04 06:02:18.609680+08:00)
+[36mATRI[0m | 03-04 06:02:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 06:02:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 06:02:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:12:18 CST)" executed successfully
+[36mATRI[0m | 03-04 06:12:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:22:18 CST)" (scheduled at 2022-03-04 06:12:18.609680+08:00)
+[36mATRI[0m | 03-04 06:12:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 06:12:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 06:12:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:22:18 CST)" executed successfully
+[36mATRI[0m | 03-04 06:22:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:32:18 CST)" (scheduled at 2022-03-04 06:22:18.609680+08:00)
+[36mATRI[0m | 03-04 06:22:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 06:22:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 06:22:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:32:18 CST)" executed successfully
+[36mATRI[0m | 03-04 06:22:25 | INFO apscheduler >> Running job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 07:22:25 CST)" (scheduled at 2022-03-04 06:22:25.304233+08:00)
+[36mATRI[0m | 03-04 06:22:25 | INFO apscheduler >> Job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 07:22:25 CST)" executed successfully
+[36mATRI[0m | 03-04 06:32:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:42:18 CST)" (scheduled at 2022-03-04 06:32:18.609680+08:00)
+[36mATRI[0m | 03-04 06:32:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 06:32:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 06:32:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:42:18 CST)" executed successfully
+[36mATRI[0m | 03-04 06:42:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:52:18 CST)" (scheduled at 2022-03-04 06:42:18.609680+08:00)
+[36mATRI[0m | 03-04 06:42:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 06:42:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 06:42:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 06:52:18 CST)" executed successfully
+[36mATRI[0m | 03-04 06:52:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:02:18 CST)" (scheduled at 2022-03-04 06:52:18.609680+08:00)
+[36mATRI[0m | 03-04 06:52:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 06:52:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 06:52:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:02:18 CST)" executed successfully
+[36mATRI[0m | 03-04 06:52:50 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1079092392 from 1020936395@[群:277620613] "/おはよう"
+[36mATRI[0m | 03-04 06:52:50 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 06:52:50 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 06:52:50 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 06:52:50 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 06:52:50 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+[36mATRI[0m | 03-04 06:52:51 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False> running complete
+[36mATRI[0m | 03-04 07:00:00 | INFO apscheduler >> Running job "time_for_breakfast (trigger: cron[hour='7', minute='0'], next run at: 2022-03-05 07:00:00 CST)" (scheduled at 2022-03-04 07:00:00+08:00)
+[36mATRI[0m | 03-04 07:00:00 | INFO apscheduler >> Job "time_for_breakfast (trigger: cron[hour='7', minute='0'], next run at: 2022-03-05 07:00:00 CST)" executed successfully
+[36mATRI[0m | 03-04 07:02:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:12:18 CST)" (scheduled at 2022-03-04 07:02:18.609680+08:00)
+[36mATRI[0m | 03-04 07:02:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 07:02:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 07:02:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:12:18 CST)" executed successfully
+[36mATRI[0m | 03-04 07:12:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:22:18 CST)" (scheduled at 2022-03-04 07:12:18.609680+08:00)
+[36mATRI[0m | 03-04 07:12:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 07:12:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 07:12:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:22:18 CST)" executed successfully
+[36mATRI[0m | 03-04 07:17:09 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1966414824 from 2560359315@[群:937760225] "/早"
+[36mATRI[0m | 03-04 07:17:09 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:17:09 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:17:09 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:17:12 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:17:12 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 07:17:12 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 07:17:12 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+[36mATRI[0m | 03-04 07:17:12 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False> running complete
+[36mATRI[0m | 03-04 07:20:00 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1605398902 from 2775300054@[群:958866763] "/抽签"
+[36mATRI[0m | 03-04 07:20:00 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:20:00 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:20:00 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False>
+[36mATRI[0m | 03-04 07:20:00 | INFO src >> User 2775300054 | Group 958866763 占卜了今日运势
+[36mATRI[0m | 03-04 07:20:01 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False> running complete
+[36mATRI[0m | 03-04 07:22:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:32:18 CST)" (scheduled at 2022-03-04 07:22:18.609680+08:00)
+[36mATRI[0m | 03-04 07:22:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 07:22:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 07:22:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:32:18 CST)" executed successfully
+[36mATRI[0m | 03-04 07:22:25 | INFO apscheduler >> Running job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 08:22:25 CST)" (scheduled at 2022-03-04 07:22:25.304233+08:00)
+[36mATRI[0m | 03-04 07:22:25 | INFO apscheduler >> Job "涩批诱捕器 (trigger: interval[1:00:00], next run at: 2022-03-04 08:22:25 CST)" executed successfully
+[36mATRI[0m | 03-04 07:29:55 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 67308753 from 1617678696@[群:937760225] "！早"
+[36mATRI[0m | 03-04 07:29:55 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:29:55 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:29:55 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 07:29:55 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 07:29:55 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+[36mATRI[0m | 03-04 07:29:55 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False> running complete
+[36mATRI[0m | 03-04 07:30:00 | INFO apscheduler >> Running job "read60s (trigger: cron[hour='7', minute='30'], next run at: 2022-03-05 07:30:00 CST)" (scheduled at 2022-03-04 07:30:00+08:00)
+[36mATRI[0m | 03-04 07:30:02 | INFO apscheduler >> Job "read60s (trigger: cron[hour='7', minute='30'], next run at: 2022-03-05 07:30:00 CST)" executed successfully
+[36mATRI[0m | 03-04 07:30:24 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1704486542 from 1617678696@[群:937760225] "！轮盘签到"
+[36mATRI[0m | 03-04 07:30:24 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:30:24 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:30:24 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 07:30:24 | INFO src >> USER 1617678696 | GROUP 937760225 获取 33 金币
+[36mATRI[0m | 03-04 07:30:24 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:06 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1953101918 from 963046537@[群:937760225] "属于是"
+[36mATRI[0m | 03-04 07:32:06 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:32:06 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:06 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 07:32:06 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:08 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -455678513 from 963046537@[群:937760225] "/早安"
+[36mATRI[0m | 03-04 07:32:08 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:32:08 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:08 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 07:32:08 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:08 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False>
+[36mATRI[0m | 03-04 07:32:09 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_morning, type=message, priority=11, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:13 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1521681606 from 963046537@[群:937760225] "我的小号"
+[36mATRI[0m | 03-04 07:32:13 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:32:13 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:13 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 07:32:13 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:18 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:42:18 CST)" (scheduled at 2022-03-04 07:32:18.609680+08:00)
+[36mATRI[0m | 03-04 07:32:18 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 07:32:19 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 07:32:19 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 07:42:18 CST)" executed successfully
+[36mATRI[0m | 03-04 07:32:19 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -766784596 from 963046537@[群:937760225] "你真的好惨"
+[36mATRI[0m | 03-04 07:32:19 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:32:19 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:19 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 07:32:19 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:21 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1262656022 from 963046537@[群:937760225] "[CQ:image,file=0379636bddb00222a599adaf2a4d74e3.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2866639907-0379636BDDB00222A599ADAF2A4D74E3/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 07:32:21 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:32:26 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:26 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 07:32:26 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:28 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1011198592 from 963046537@[群:937760225] "/抽签"
+[36mATRI[0m | 03-04 07:32:28 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:32:28 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:28 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False>
+[36mATRI[0m | 03-04 07:32:28 | INFO src >> User 963046537 | Group 937760225 占卜了今日运势
+[36mATRI[0m | 03-04 07:32:29 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:34 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -718925899 from 963046537@[群:937760225] "/轮盘签到"
+[36mATRI[0m | 03-04 07:32:34 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:32:34 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:32:34 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 07:32:34 | INFO src >> USER 963046537 | GROUP 937760225 获取 32 金币
+[36mATRI[0m | 03-04 07:32:34 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 07:35:24 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 992505497 from 2560359315@[群:937760225] "/抽签"
+[36mATRI[0m | 03-04 07:35:24 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:35:24 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:35:24 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:35:24 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:35:24 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False>
+[36mATRI[0m | 03-04 07:35:24 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False> running complete
+[36mATRI[0m | 03-04 07:35:28 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1135097221 from 2560359315@[群:937760225] "/轮盘签到"
+[36mATRI[0m | 03-04 07:35:28 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:35:28 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:35:28 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:35:28 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:35:28 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 07:35:28 | INFO src >> USER 2560359315 | GROUP 937760225 获取 59 金币
+[36mATRI[0m | 03-04 07:35:28 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 07:36:44 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -802850299 from 2560359315@[群:958866763] "/抽签"
+[36mATRI[0m | 03-04 07:36:44 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:36:44 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:36:44 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:36:44 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:36:44 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False>
+[36mATRI[0m | 03-04 07:36:44 | INFO src >> User 2560359315 | Group 958866763 占卜了今日运势
+[36mATRI[0m | 03-04 07:36:45 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_fortune, type=message, priority=8, temp=False> running complete
+[36mATRI[0m | 03-04 07:37:07 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -566939381 from 2560359315@[群:277620613] "/来点萝莉的涩图"
+[36mATRI[0m | 03-04 07:37:07 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:37:07 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:37:07 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:37:07 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:37:07 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 07:37:15 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 07:37:23 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -679248608 from 2560359315@[群:277620613] "就这？"
+[36mATRI[0m | 03-04 07:37:23 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-04 07:37:23 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-04 07:41:10 | INFO uvicorn >> Shutting down
+[36mATRI[0m | 03-04 07:41:10 | WARNING nonebot >> OneBot V11 | WebSocket for Bot 507346814 closed by peer
+[36mATRI[0m | 03-04 07:41:10 | INFO websockets >> connection closed
+[36mATRI[0m | 03-04 07:41:10 | INFO uvicorn >> Waiting for application shutdown.
+[36mATRI[0m | 03-04 07:41:10 | INFO nonebot_plugin_htmlrender >> Browser Stoped.
+[36mATRI[0m | 03-04 07:41:10 | INFO src >> Browser Stoped.
+[36mATRI[0m | 03-04 07:41:10 | INFO uvicorn >> Application shutdown complete.
+[36mATRI[0m | 03-04 07:41:10 | INFO uvicorn >> Finished server process [28063]

@@ -1,0 +1,27 @@
+{
+    "service": "\u95f2\u804a",
+    "docs": "\n\u597d\u50cf\u6709\u70b9\u6da9\uff1f\n",
+    "cmd_list": {
+        "\u6587\u7231-onmsg": {
+            "type": "message",
+            "docs": "\u95f2\u804a\uff08\u6587\u7231",
+            "aliases": []
+        },
+        "\u53eb\u6211": {
+            "type": "command",
+            "docs": "\u66f4\u6539\u95f2\u804a\uff08\u6587\u7231\uff09\u65f6\u7684\u79f0\u547c",
+            "aliases": [
+                "\u6211\u662f"
+            ]
+        },
+        "\u8bf4": {
+            "type": "command",
+            "docs": "\u522b\u4eba\u8ba9\u6211\u8bf4\u5565\u5c31\u8bf4\u5565\uff08",
+            "aliases": []
+        }
+    },
+    "enabled": true,
+    "only_admin": false,
+    "disable_user": [],
+    "disable_group": []
+}

@@ -1,0 +1,6 @@
+{
+    "track_id": "mEwGOrqx",
+    "prompt": "Unknown ERROR->ValueError",
+    "time": "2022-03-07 21:42:05",
+    "content": "Traceback (most recent call last):\n  File \"/usr/local/python3/lib/python3.8/site-packages/ATRI/exceptions.py\", line 102, in _track_error\n    raise exception\n  File \"/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py\", line 202, in _run_matcher\n    await matcher.run(bot, event, state, stack, dependency_cache)\n  File \"/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py\", line 668, in run\n    await self.simple_run(bot, event, state, stack, dependency_cache)\n  File \"/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py\", line 635, in simple_run\n    await handler(\n  File \"/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py\", line 92, in __call__\n    return await self.call(**values)\n  File \"./src/plugins/nonebot_plugin_russian/__init__.py\", line 455, in _\n    number = int(number)\nValueError: invalid literal for int() with base 10: '0.1'\n"
+}
