@@ -1,0 +1,725 @@
+[36mATRI[0m | 03-12 23:15:16 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:16 | SUCCESS plugin.manager >> Succeeded to import "atri_plugin_status"
+[36mATRI[0m | 03-12 23:15:16 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_biliav"
+[36mATRI[0m | 03-12 23:15:22 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:22 | SUCCESS plugin.manager >> Succeeded to import "atri_setu"
+[36mATRI[0m | 03-12 23:15:22 | SUCCESS plugin.manager >> Succeeded to import "ATRI"
+[36mATRI[0m | 03-12 23:15:25 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_petpet"
+[36mATRI[0m | 03-12 23:15:27 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:27 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:27 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:27 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:27 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:27 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:27 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_what2eat-2"
+[36mATRI[0m | 03-12 23:15:30 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_memes"
+[36mATRI[0m | 03-12 23:15:30 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_analysis_bilibili"
+[36mATRI[0m | 03-12 23:15:30 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_localstore"
+[36mATRI[0m | 03-12 23:15:31 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_wordcloud"
+[36mATRI[0m | 03-12 23:15:31 | SUCCESS plugin.manager >> Succeeded to import "admin_tools"
+[36mATRI[0m | 03-12 23:15:32 | SUCCESS plugin.manager >> Succeeded to import "text2pic"
+[36mATRI[0m | 03-12 23:15:34 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:34 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_morning"
+[36mATRI[0m | 03-12 23:15:34 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_localstore"
+[36mATRI[0m | 03-12 23:15:34 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:34 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_todo"
+[36mATRI[0m | 03-12 23:15:34 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_songpicker2"
+[36mATRI[0m | 03-12 23:15:35 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:35 | SUCCESS plugin.manager >> Succeeded to import "chat"
+[36mATRI[0m | 03-12 23:15:35 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori', 'Kori Bot', 'bot'} command_start={'!', '！', '/'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) read_qq_friends=[0, 0] max_bet_fold=10000 dir='~/Project/Kori-Bot/Kori-Bot' touhou_flag=True qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' liqingge_flag=True azure_flag=True granblue_fantasy_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' touhou_old_flag=False einstein_flag=True pretty_derby_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' genshin_flag=True caiyunai_apikey='62142754f02461188d58b88f' dc4_flag=False statistical_black_model=['nonebot_plugin_repeater'] pcr_flag=True server_status_per_cpu='True' vtuber_flag=True setu_cd=180 sweet_illusion_flag=True punishing_flag=True server_status_only_superusers='False' qweather_apitype=0 statistical_black_priority=[] debug='True' http_port=5700 read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' statistical_path='data/statistical/' sakura_flag=True environment='prod' repeater_minlen=1 hoshizora_flag=True read_qq_groups=[277620613, 937760225, 958866763] onmyoji_flag=True eating_limit=5 asoul_flag=True groups_id=[] proxies_http='http://127.0.0.1:20171' arknights_flag=True
+[36mATRI[0m | 03-12 23:15:35 | INFO src >> plugin_config:plugin_setting='default' session_expire_timeout=datetime.timedelta(seconds=120) read_qq_friends=[0, 0] max_bet_fold=10000 dir='~/Project/Kori-Bot/Kori-Bot' touhou_flag=True command_start={'!', '！', '/'} log_level='INFO' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' liqingge_flag=True azure_flag=True granblue_fantasy_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' touhou_old_flag=False einstein_flag=True pretty_derby_flag=True nickname={'Kori', 'Kori Bot', 'bot'} morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' genshin_flag=True superusers={'2560359315'} caiyunai_apikey='62142754f02461188d58b88f' dc4_flag=False command_sep={' ', '.'} statistical_black_model=['nonebot_plugin_repeater'] pcr_flag=True server_status_per_cpu='True' vtuber_flag=True setu_cd=180 sweet_illusion_flag=True punishing_flag=True driver='~fastapi' host=IPv4Address('127.0.0.1') server_status_only_superusers='False' qweather_apitype=0 statistical_black_priority=[] debug='True' api_timeout=30.0 http_port=5700 read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' statistical_path='data/statistical/' sakura_flag=True environment='prod' repeater_minlen=1 hoshizora_flag=True read_qq_groups=[277620613, 937760225, 958866763] onmyoji_flag=True port=9165 eating_limit=5 asoul_flag=True groups_id=[] proxies_http='http://127.0.0.1:20171' arknights_flag=True
+[36mATRI[0m | 03-12 23:15:35 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-12 23:15:35 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:35 | SUCCESS plugin.manager >> Succeeded to import "whitenight_from_feiyucans_space"
+[36mATRI[0m | 03-12 23:15:35 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_emojimix"
+[36mATRI[0m | 03-12 23:15:35 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_apscheduler"
+[36mATRI[0m | 03-12 23:15:35 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_heweather"
+[36mATRI[0m | 03-12 23:15:35 | SUCCESS plugin.manager >> Succeeded to import "ATRI-2"
+[36mATRI[0m | 03-12 23:15:35 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_withdraw"
+[36mATRI[0m | 03-12 23:15:36 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_roll"
+[36mATRI[0m | 03-12 23:15:36 | SUCCESS plugin.manager >> Succeeded to import "wife"
+[36mATRI[0m | 03-12 23:15:36 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_datastore"
+[36mATRI[0m | 03-12 23:15:36 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_caiyunai"
+[36mATRI[0m | 03-12 23:15:36 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_repeater"
+[36mATRI[0m | 03-12 23:15:36 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:15:36 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_epicfree"
+[36mATRI[0m | 03-12 23:15:36 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chatrecorder"
+[36mATRI[0m | 03-12 23:15:36 | SUCCESS nonebot >> Running NoneBot...
+[36mATRI[0m | 03-12 23:15:36 | INFO uvicorn >> Started server process [20988]
+[36mATRI[0m | 03-12 23:15:36 | INFO uvicorn >> Waiting for application startup.
+[36mATRI[0m | 03-12 23:15:39 | INFO src >> Browser Started.
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "memesfeiyu" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "change_price" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "start_stock" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "read60s" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "time_for_breakfast" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "time_for_lunch" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "time_for_snack" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "time_for_dinner" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "time_for_midnight" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "whitenight" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Added job "weeklyEpic" to job store "default"
+[36mATRI[0m | 03-12 23:15:39 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-12 23:15:39 | INFO src >> Scheduler Started
+[36mATRI[0m | 03-12 23:15:47 | INFO nonebot_plugin_htmlrender >> Browser Started.
+[36mATRI[0m | 03-12 23:15:47 | INFO apscheduler >> Added job "状态检查" to job store "default"
+[36mATRI[0m | 03-12 23:15:47 | INFO apscheduler >> Added job "涩批诱捕器" to job store "default"
+[36mATRI[0m | 03-12 23:15:47 | INFO apscheduler >> Added job "闲聊词库检查更新" to job store "default"
+[36mATRI[0m | 03-12 23:15:47 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-12 23:15:47 | INFO ATRI >> Scheduler Started.
+[36mATRI[0m | 03-12 23:15:48 | INFO nonebot_plugin_datastore >> 数据库初始化完成
+[36mATRI[0m | 03-12 23:15:48 | INFO src >> 数据库初始化完成
+[36mATRI[0m | 03-12 23:15:48 | INFO uvicorn >> Application startup complete.
+[36mATRI[0m | 03-12 23:15:48 | INFO uvicorn >> Uvicorn running on http://127.0.0.1:9165 (Press CTRL+C to quit)
+[36mATRI[0m | 03-12 23:15:49 | INFO uvicorn >> ('127.0.0.1', 48930) - "WebSocket /onebot/v11/ws/" [accepted]
+[36mATRI[0m | 03-12 23:15:49 | INFO nonebot >> OneBot V11 | Bot 507346814 connected
+[36mATRI[0m | 03-12 23:15:49 | INFO websockets >> connection open
+[36mATRI[0m | 03-12 23:15:49 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1703419646 from 2560359315@[群:277620613] "贴贴"
+[36mATRI[0m | 03-12 23:15:49 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:15:49 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:15:49 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:15:54 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:15:54 | ERROR nonebot >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f233dd7d040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f233e6034f0>
+         │    └ <function MultiCommand.invoke at 0x7f233dd810d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f2345ef0370>
+           │               │       │       └ <function Command.invoke at 0x7f233dd7daf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f2345ef0370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f2334ca8a60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f2345ef0370>
+           │   │      │    └ <function run at 0x7f2334dd3940>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f233dd798b0>
+           └ <click.core.Context object at 0x7f2345ef0370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f2334dc4700>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f2336ec99d0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f2336ec9550>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f2334bcf700>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f2334bcfaf0>
+    └ <uvicorn.server.Server object at 0x7f22c9022670>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f2334bcfb80>
+           │       │   └ <uvicorn.server.Server object at 0x7f22c9022670>
+           │       └ <function run at 0x7f233a6054c0>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f22c8c26340>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7f2336e6d0d0>: <Task finished name='Task-261' coro=<_event_to_me() done, defined at /usr/local/p...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7f22c853d1c0>
+          │            │        │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │            │        │    └ GroupMessageEvent(time=1647098149, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f22c85e3e80>
+          │            └ <Matcher from 老婆, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7f2334ce9700>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7f2336e6d0d0>: <Task finished name='Task-261' coro=<_event_to_me() done, defined at /usr/local/p...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7f22c853d1c0>
+          │       │   │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │       │   │    └ GroupMessageEvent(time=1647098149, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f22c85e3e80>
+          │       └ <function Matcher.run at 0x7f2336ee9c10>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7f2336e6d0d0>: <Task finished name='Task-261' coro=<_event_to_me() done, defined at /usr/local/p...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7f22c853d1c0>
+          │    │          │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │    │          │    └ GroupMessageEvent(time=1647098149, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f22c85e3e80>
+          │    └ <function Matcher.simple_run at 0x7f2336ee9b80>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _tietie_superuser at 0x7f22c9080940>, params=[ModelField(name='event', type=MessageEvent, required=...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'event': GroupMessageEvent(time=1647098149, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, m...
+                 │    └ <function _tietie_superuser at 0x7f22c9080940>
+                 └ <Dependent call=<function _tietie_superuser at 0x7f22c9080940>, params=[ModelField(name='event', type=MessageEvent, required=...
+
+  File "./src/plugins/wife/__init__.py", line 34, in _tietie_superuser
+    await tietie_superuser.finish(Message(result))
+          │                │      │       └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='text', data={'text': 'mua！'})]
+          │                │      └ <class 'nonebot.adapters.onebot.v11.message.Message'>
+          │                └ <classmethod object at 0x7f2336ee5c40>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {}
+          │   │    └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='text', data={'text': 'mua！'})]
+          │   └ <classmethod object at 0x7f2336ee5be0>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {}
+                 │   │          │              └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='text', data={'text': 'mua！'})]
+                 │   │          └ GroupMessageEvent(time=1647098149, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+                 │   └ <function Bot.send at 0x7f2334ce9c10>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f22c85e3e80>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {}
+                 │    │                      │     │      └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='text', data={'text': 'mua！'})]
+                 │    │                      │     └ GroupMessageEvent(time=1647098149, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f22c85e3e80>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f22c85e3e80>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 2560359315, 'group_id': 277620613, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f22c85e3e80>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 2560359315, 'group_id': 277620613, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 1}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 2560359315, 'group_id': 277620613, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f22c85e3e80>
+                   │    │       └ <function Adapter._call_api at 0x7f2334cf7040>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7f2334ddb850>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f22c85e3e80>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7f2334d7d670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 1}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqhttp...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 1}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-12 23:15:55 | INFO nonebot >> Event will be handled by <Matcher from 闲聊, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-12 23:15:55 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1849080215 from 2969146364@[群:2222191] "[CQ:at,qq=3082098949] 手艺人？"
+[36mATRI[0m | 03-12 23:15:55 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:15:55 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:15:55 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:15:55 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:15:58 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1019695856 from 2969146364@[群:2222191] "[CQ:image,file=7de130791d0bae481a914bd2ab4f7265.image,url=https://gchat.qpic.cn/gchatpic_new/2969146364/204222191-3153433160-7DE130791D0BAE481A914BD2AB4F7265/0?term=3,subType=7]"
+[36mATRI[0m | 03-12 23:15:58 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:15:58 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:15:58 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:15:58 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:16:00 | INFO apscheduler >> Running job "_ (trigger: cron[minute='*'], next run at: 2022-03-12 23:17:00 CST)" (scheduled at 2022-03-12 23:16:00+08:00)
+[36mATRI[0m | 03-12 23:16:00 | INFO apscheduler >> Job "_ (trigger: cron[minute='*'], next run at: 2022-03-12 23:17:00 CST)" executed successfully
+[36mATRI[0m | 03-12 23:16:00 | INFO nonebot >> Matcher <Matcher from 闲聊, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-12 23:16:02 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -58634428 from 2560359315@[群:277620613] "真要换号了"
+[36mATRI[0m | 03-12 23:16:02 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:16:02 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:16:02 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:16:02 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:16:02 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:16:02 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:16:04 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1954119726 from 2560359315@[群:277620613] "超"
+[36mATRI[0m | 03-12 23:16:04 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:16:04 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:16:04 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:16:04 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:16:04 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:16:04 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:16:09 | INFO uvicorn >> Shutting down
+[36mATRI[0m | 03-12 23:16:09 | WARNING nonebot >> OneBot V11 | WebSocket for Bot 507346814 closed by peer
+[36mATRI[0m | 03-12 23:16:09 | INFO websockets >> connection closed
+[36mATRI[0m | 03-12 23:16:09 | INFO uvicorn >> Waiting for application shutdown.
+[36mATRI[0m | 03-12 23:16:09 | INFO src >> Browser Stoped.
+[36mATRI[0m | 03-12 23:16:09 | INFO nonebot_plugin_htmlrender >> Browser Stoped.
+[36mATRI[0m | 03-12 23:16:09 | INFO uvicorn >> Application shutdown complete.
+[36mATRI[0m | 03-12 23:16:09 | INFO uvicorn >> Finished server process [20988]
+[36mATRI[0m | 03-12 23:16:50 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:16:50 | SUCCESS plugin.manager >> Succeeded to import "atri_plugin_status"
+[36mATRI[0m | 03-12 23:16:50 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-12 23:16:50 | SUCCESS plugin.manager >> Succeeded to import "chat"
+[36mATRI[0m | 03-12 23:16:50 | SUCCESS plugin.manager >> Succeeded to import "test"
+[36mATRI[0m | 03-12 23:16:50 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_apscheduler"
+[36mATRI[0m | 03-12 23:16:50 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_todo"
+[36mATRI[0m | 03-12 23:16:50 | SUCCESS plugin.manager >> Succeeded to import "text2pic"
+[36mATRI[0m | 03-12 23:16:50 | SUCCESS plugin.manager >> Succeeded to import "saying"
+[36mATRI[0m | 03-12 23:16:51 | WARNING nonebot >> Duplicated prefix rule "！lottery"
+[36mATRI[0m | 03-12 23:16:51 | WARNING nonebot >> Duplicated prefix rule "/lottery"
+[36mATRI[0m | 03-12 23:16:51 | WARNING nonebot >> Duplicated prefix rule "!lottery"
+[36mATRI[0m | 03-12 23:16:51 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_russian"
+[36mATRI[0m | 03-12 23:16:51 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_remake"
+[36mATRI[0m | 03-12 23:16:51 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_datastore"
+[36mATRI[0m | 03-12 23:16:51 | SUCCESS plugin.manager >> Succeeded to import "ATRI-2"
+[36mATRI[0m | 03-12 23:16:52 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_fortune"
+[36mATRI[0m | 03-12 23:16:52 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_logo"
+[36mATRI[0m | 03-12 23:16:53 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_petpet"
+[36mATRI[0m | 03-12 23:16:53 | SUCCESS plugin.manager >> Succeeded to import "wolfram"
+[36mATRI[0m | 03-12 23:16:53 | SUCCESS plugin.manager >> Succeeded to import "trigger_memes_from_feiyucans_space"
+[36mATRI[0m | 03-12 23:16:53 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_epicfree"
+[36mATRI[0m | 03-12 23:16:54 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_morning"
+[36mATRI[0m | 03-12 23:16:54 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_analysis_bilibili"
+[36mATRI[0m | 03-12 23:16:54 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9166 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'bot', 'Kori'} command_start={'！', '/', '!'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) caiyunai_apikey='62142754f02461188d58b88f' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' sweet_illusion_flag=True server_status_per_cpu='True' hoshizora_flag=True dc4_flag=False statistical_black_priority=[] touhou_old_flag=False eating_limit=5 arknights_flag=True debug='True' statistical_path='data/statistical/' genshin_flag=True repeater_minlen=1 http_port=5701 read_qq_friends=[0, 0] granblue_fantasy_flag=True liqingge_flag=True azure_flag=True pretty_derby_flag=True groups_id=[] read_qq_groups=[277620613, 937760225, 958866763] onmyoji_flag=True setu_cd=180 asoul_flag=True punishing_flag=True qweather_apitype=0 touhou_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] vtuber_flag=True fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' einstein_flag=True environment='prod' max_bet_fold=10000 pcr_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' dir='~/Project/Kori-Bot/Kori-Bot' sakura_flag=True statistical_black_model=['nonebot_plugin_repeater'] server_status_only_superusers='False' morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' proxies_http='http://127.0.0.1:20171'
+[36mATRI[0m | 03-12 23:16:54 | INFO src >> plugin_config:plugin_setting='default' caiyunai_apikey='62142754f02461188d58b88f' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' sweet_illusion_flag=True server_status_per_cpu='True' log_level='INFO' hoshizora_flag=True api_timeout=30.0 dc4_flag=False statistical_black_priority=[] command_start={'！', '/', '!'} touhou_old_flag=False eating_limit=5 driver='~fastapi' arknights_flag=True debug='True' statistical_path='data/statistical/' genshin_flag=True repeater_minlen=1 http_port=5701 read_qq_friends=[0, 0] granblue_fantasy_flag=True liqingge_flag=True session_expire_timeout=datetime.timedelta(seconds=120) azure_flag=True pretty_derby_flag=True host=IPv4Address('127.0.0.1') groups_id=[] read_qq_groups=[277620613, 937760225, 958866763] superusers={'2560359315'} onmyoji_flag=True setu_cd=180 asoul_flag=True punishing_flag=True qweather_apitype=0 touhou_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] nickname={'Kori Bot', 'bot', 'Kori'} vtuber_flag=True fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' einstein_flag=True environment='prod' command_sep={' ', '.'} max_bet_fold=10000 pcr_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' dir='~/Project/Kori-Bot/Kori-Bot' sakura_flag=True statistical_black_model=['nonebot_plugin_repeater'] server_status_only_superusers='False' port=9166 morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' proxies_http='http://127.0.0.1:20171'
+[36mATRI[0m | 03-12 23:16:54 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-12 23:16:54 | SUCCESS plugin.manager >> Succeeded to import "memes_from_feiyucans_space"
+[36mATRI[0m | 03-12 23:16:54 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9166 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'bot', 'Kori'} command_start={'！', '/', '!'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) caiyunai_apikey='62142754f02461188d58b88f' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' sweet_illusion_flag=True server_status_per_cpu='True' hoshizora_flag=True dc4_flag=False statistical_black_priority=[] touhou_old_flag=False eating_limit=5 arknights_flag=True debug='True' statistical_path='data/statistical/' genshin_flag=True repeater_minlen=1 http_port=5701 read_qq_friends=[0, 0] granblue_fantasy_flag=True liqingge_flag=True azure_flag=True pretty_derby_flag=True groups_id=[] read_qq_groups=[277620613, 937760225, 958866763] onmyoji_flag=True setu_cd=180 asoul_flag=True punishing_flag=True qweather_apitype=0 touhou_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] vtuber_flag=True fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' einstein_flag=True environment='prod' max_bet_fold=10000 pcr_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' dir='~/Project/Kori-Bot/Kori-Bot' sakura_flag=True statistical_black_model=['nonebot_plugin_repeater'] server_status_only_superusers='False' morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' proxies_http='http://127.0.0.1:20171'
+[36mATRI[0m | 03-12 23:16:54 | INFO src >> plugin_config:plugin_setting='default' caiyunai_apikey='62142754f02461188d58b88f' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' sweet_illusion_flag=True server_status_per_cpu='True' log_level='INFO' hoshizora_flag=True api_timeout=30.0 dc4_flag=False statistical_black_priority=[] command_start={'！', '/', '!'} touhou_old_flag=False eating_limit=5 driver='~fastapi' arknights_flag=True debug='True' statistical_path='data/statistical/' genshin_flag=True repeater_minlen=1 http_port=5701 read_qq_friends=[0, 0] granblue_fantasy_flag=True liqingge_flag=True session_expire_timeout=datetime.timedelta(seconds=120) azure_flag=True pretty_derby_flag=True host=IPv4Address('127.0.0.1') groups_id=[] read_qq_groups=[277620613, 937760225, 958866763] superusers={'2560359315'} onmyoji_flag=True setu_cd=180 asoul_flag=True punishing_flag=True qweather_apitype=0 touhou_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] nickname={'Kori Bot', 'bot', 'Kori'} vtuber_flag=True fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' einstein_flag=True environment='prod' command_sep={' ', '.'} max_bet_fold=10000 pcr_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' dir='~/Project/Kori-Bot/Kori-Bot' sakura_flag=True statistical_black_model=['nonebot_plugin_repeater'] server_status_only_superusers='False' port=9166 morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' proxies_http='http://127.0.0.1:20171'
+[36mATRI[0m | 03-12 23:16:54 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-12 23:16:54 | SUCCESS plugin.manager >> Succeeded to import "whitenight_from_feiyucans_space"
+[36mATRI[0m | 03-12 23:16:54 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_caiyunai"
+[36mATRI[0m | 03-12 23:16:54 | SUCCESS plugin.manager >> Succeeded to import "ping"
+[36mATRI[0m | 03-12 23:16:54 | SUCCESS plugin.manager >> Succeeded to import "help"
+[36mATRI[0m | 03-12 23:16:54 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_abbrreply"
+[36mATRI[0m | 03-12 23:16:54 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_songpicker2"
+[36mATRI[0m | 03-12 23:16:55 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_what2eat-2"
+[36mATRI[0m | 03-12 23:16:55 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chess"
+[36mATRI[0m | 03-12 23:16:55 | SUCCESS plugin.manager >> Succeeded to import "wife"
+[36mATRI[0m | 03-12 23:16:55 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_biliav"
+[36mATRI[0m | 03-12 23:16:55 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_roll"
+[36mATRI[0m | 03-12 23:16:55 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_htmlrender"
+[36mATRI[0m | 03-12 23:16:55 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9166 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori Bot', 'bot', 'Kori'} command_start={'！', '/', '!'} command_sep={' ', '.'} session_expire_timeout=datetime.timedelta(seconds=120) caiyunai_apikey='62142754f02461188d58b88f' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' sweet_illusion_flag=True server_status_per_cpu='True' hoshizora_flag=True dc4_flag=False statistical_black_priority=[] touhou_old_flag=False eating_limit=5 arknights_flag=True debug='True' statistical_path='data/statistical/' genshin_flag=True repeater_minlen=1 http_port=5701 read_qq_friends=[0, 0] granblue_fantasy_flag=True liqingge_flag=True azure_flag=True pretty_derby_flag=True groups_id=[] read_qq_groups=[277620613, 937760225, 958866763] onmyoji_flag=True setu_cd=180 asoul_flag=True punishing_flag=True qweather_apitype=0 touhou_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] vtuber_flag=True fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' einstein_flag=True environment='prod' max_bet_fold=10000 pcr_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' dir='~/Project/Kori-Bot/Kori-Bot' sakura_flag=True statistical_black_model=['nonebot_plugin_repeater'] server_status_only_superusers='False' morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' proxies_http='http://127.0.0.1:20171'
+[36mATRI[0m | 03-12 23:16:55 | INFO src >> plugin_config:plugin_setting='default' caiyunai_apikey='62142754f02461188d58b88f' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' sweet_illusion_flag=True server_status_per_cpu='True' log_level='INFO' hoshizora_flag=True api_timeout=30.0 dc4_flag=False statistical_black_priority=[] command_start={'！', '/', '!'} touhou_old_flag=False eating_limit=5 driver='~fastapi' arknights_flag=True debug='True' statistical_path='data/statistical/' genshin_flag=True repeater_minlen=1 http_port=5701 read_qq_friends=[0, 0] granblue_fantasy_flag=True liqingge_flag=True session_expire_timeout=datetime.timedelta(seconds=120) azure_flag=True pretty_derby_flag=True host=IPv4Address('127.0.0.1') groups_id=[] read_qq_groups=[277620613, 937760225, 958866763] superusers={'2560359315'} onmyoji_flag=True setu_cd=180 asoul_flag=True punishing_flag=True qweather_apitype=0 touhou_flag=True read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] nickname={'Kori Bot', 'bot', 'Kori'} vtuber_flag=True fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' einstein_flag=True environment='prod' command_sep={' ', '.'} max_bet_fold=10000 pcr_flag=True what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' dir='~/Project/Kori-Bot/Kori-Bot' sakura_flag=True statistical_black_model=['nonebot_plugin_repeater'] server_status_only_superusers='False' port=9166 morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' proxies_http='http://127.0.0.1:20171'
+[36mATRI[0m | 03-12 23:16:55 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-12 23:16:55 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_read_60s"
+[36mATRI[0m | 03-12 23:16:55 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chatrecorder"
+[36mATRI[0m | 03-12 23:17:02 | SUCCESS plugin.manager >> Succeeded to import "atri_setu"
+[36mATRI[0m | 03-12 23:17:02 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_withdraw"
+[36mATRI[0m | 03-12 23:17:02 | SUCCESS nonebot >> Running NoneBot...
+[36mATRI[0m | 03-12 23:17:02 | INFO uvicorn >> Started server process [21606]
+[36mATRI[0m | 03-12 23:17:02 | INFO uvicorn >> Waiting for application startup.
+[36mATRI[0m | 03-12 23:17:04 | INFO nonebot_plugin_htmlrender >> Browser Started.
+[36mATRI[0m | 03-12 23:17:04 | INFO nonebot_plugin_datastore >> 数据库初始化完成
+[36mATRI[0m | 03-12 23:17:04 | INFO ATRI >> Scheduler Started.
+[36mATRI[0m | 03-12 23:17:04 | INFO src >> Scheduler Started
+[36mATRI[0m | 03-12 23:17:04 | INFO src >> 数据库初始化完成
+[36mATRI[0m | 03-12 23:17:06 | INFO src >> Browser Started.
+[36mATRI[0m | 03-12 23:17:06 | INFO uvicorn >> Application startup complete.
+[36mATRI[0m | 03-12 23:17:06 | INFO uvicorn >> Uvicorn running on http://127.0.0.1:9166 (Press CTRL+C to quit)
+[36mATRI[0m | 03-12 23:17:08 | INFO uvicorn >> ('127.0.0.1', 52346) - "WebSocket /onebot/v11/ws/" [accepted]
+[36mATRI[0m | 03-12 23:17:08 | INFO nonebot >> OneBot V11 | Bot 2019189905 connected
+[36mATRI[0m | 03-12 23:17:08 | INFO websockets >> connection open
+[36mATRI[0m | 03-12 23:17:16 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message 1816023765 from 2560359315@[群:277620613] "贴贴！"
+[36mATRI[0m | 03-12 23:17:16 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:17:16 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:17:16 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:22 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:22 | ERROR nonebot >> Running matcher <Matcher from 老婆, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f1d6ce68040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f1d6d6ee4f0>
+         │    └ <function MultiCommand.invoke at 0x7f1d6ce6c0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f1d74fdb370>
+           │               │       │       └ <function Command.invoke at 0x7f1d6ce68af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f1d74fdb370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f1d63d93a60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f1d74fdb370>
+           │   │      │    └ <function run at 0x7f1d63ebf940>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f1d6ce648b0>
+           └ <click.core.Context object at 0x7f1d74fdb370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f1d63eaf700>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f1d65fb49d0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f1d65fb4550>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f1d63cba700>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f1d63cbaaf0>
+    └ <uvicorn.server.Server object at 0x7f1cf85d0040>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f1d63cbab80>
+           │       │   └ <uvicorn.server.Server object at 0x7f1cf85d0040>
+           │       └ <function run at 0x7f1d696ef4c0>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f1cf85d91c0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _command at 0x7f1d65f581f0>: <Task finished name='Task-418' coro=<_command() done, defined at /usr/local/python3/l...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7f1cf7b72cd0>
+          │            │        │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │            │        │    └ GroupMessageEvent(time=1647098236, self_id=2019189905, post_type='message', sub_type='normal', user_id=2560359315, message_ty...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+          │            └ <Matcher from 老婆, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7f1d63dd4700>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _command at 0x7f1d65f581f0>: <Task finished name='Task-418' coro=<_command() done, defined at /usr/local/python3/l...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7f1cf7b72cd0>
+          │       │   │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │       │   │    └ GroupMessageEvent(time=1647098236, self_id=2019189905, post_type='message', sub_type='normal', user_id=2560359315, message_ty...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+          │       └ <function Matcher.run at 0x7f1d65fd4c10>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _command at 0x7f1d65f581f0>: <Task finished name='Task-418' coro=<_command() done, defined at /usr/local/python3/l...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7f1cf7b72cd0>
+          │    │          │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │    │          │    └ GroupMessageEvent(time=1647098236, self_id=2019189905, post_type='message', sub_type='normal', user_id=2560359315, message_ty...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+          │    └ <function Matcher.simple_run at 0x7f1d65fd4b80>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _tietie_superuser at 0x7f1d467d80d0>, params=[ModelField(name='event', type=MessageEvent, required=...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'event': GroupMessageEvent(time=1647098236, self_id=2019189905, post_type='message', sub_type='normal', user_id=2560359315, ...
+                 │    └ <function _tietie_superuser at 0x7f1d467d80d0>
+                 └ <Dependent call=<function _tietie_superuser at 0x7f1d467d80d0>, params=[ModelField(name='event', type=MessageEvent, required=...
+
+  File "./src/plugins/wife/__init__.py", line 34, in _tietie_superuser
+    await tietie_superuser.finish(Message(result))
+          │                │      │       └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='text', data={'text': 'mua！'})]
+          │                │      └ <class 'nonebot.adapters.onebot.v11.message.Message'>
+          │                └ <classmethod object at 0x7f1d65fcfc40>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {}
+          │   │    └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='text', data={'text': 'mua！'})]
+          │   └ <classmethod object at 0x7f1d65fcfbe0>
+          └ <Matcher from 老婆, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {}
+                 │   │          │              └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='text', data={'text': 'mua！'})]
+                 │   │          └ GroupMessageEvent(time=1647098236, self_id=2019189905, post_type='message', sub_type='normal', user_id=2560359315, message_ty...
+                 │   └ <function Bot.send at 0x7f1d63dd4c10>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {}
+                 │    │                      │     │      └ [MessageSegment(type='at', data={'qq': '2560359315'}), MessageSegment(type='text', data={'text': 'mua！'})]
+                 │    │                      │     └ GroupMessageEvent(time=1647098236, self_id=2019189905, post_type='message', sub_type='normal', user_id=2560359315, message_ty...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 2560359315, 'group_id': 277620613, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 2560359315, 'group_id': 277620613, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                                  └ 'send_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 1}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 2560359315, 'group_id': 277620613, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+                   │    │       └ <function Adapter._call_api at 0x7f1d63de2040>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7f1d63ec57f0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7f1d63e68670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 1}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqhttp...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 1}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+[36mATRI[0m | 03-12 23:17:22 | INFO nonebot >> Event will be handled by <Matcher from 闲聊, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-12 23:17:26 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message -975029489 from 2560359315@[群:277620613] "我草"
+[36mATRI[0m | 03-12 23:17:26 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:17:26 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:17:26 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:26 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:26 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:17:26 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:28 | INFO nonebot >> Matcher <Matcher from 闲聊, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:32 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message -1293612135 from 2560359315@[群:277620613] "新号也被风控了"
+[36mATRI[0m | 03-12 23:17:32 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:17:32 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:17:32 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:32 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:32 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:17:32 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:36 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message 736909859 from 2560359315@[群:277620613] "[CQ:image,file=8b5fcc322b8df2deb29de0446a581d3e.image,url=https://gchat.qpic.cn/gchatpic_new/2560359315/4167620613-2217445227-8B5FCC322B8DF2DEB29DE0446A581D3E/0?term=3,subType=1]"
+[36mATRI[0m | 03-12 23:17:36 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:17:36 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:17:36 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:41 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:41 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:17:41 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:58 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message 1558932149 from 1020936395@[群:277620613] "新注册的是会风控"
+[36mATRI[0m | 03-12 23:17:58 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:17:58 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:17:58 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:17:58 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:16 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message -1030750442 from 2560359315@[群:277620613] "对"
+[36mATRI[0m | 03-12 23:18:16 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:18:16 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:18:16 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:16 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:16 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:18:16 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:18 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message -1249325184 from 2560359315@[群:277620613] "多挂几天"
+[36mATRI[0m | 03-12 23:18:18 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:18:18 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:18:18 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:18 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:18 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:18:18 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:26 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message 746692154 from 2560359315@[群:277620613] "对哦，我还没去找回我那个账号"
+[36mATRI[0m | 03-12 23:18:26 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:18:26 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:18:26 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:26 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:26 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:18:26 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:29 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message 1535553196 from 1020936395@[群:277620613] "反正我当时过了一阵要我实名"
+[36mATRI[0m | 03-12 23:18:29 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:18:29 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:29 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:18:29 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:35 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message -1136753749 from 1020936395@[群:277620613] "我那个号…"
+[36mATRI[0m | 03-12 23:18:35 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:18:35 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:35 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:18:35 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:49 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message -1409402152 from 1020936395@[群:277620613] "草"
+[36mATRI[0m | 03-12 23:18:50 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:18:50 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:18:50 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:18:50 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:19:10 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message 1173380084 from 1020936395@[群:277620613] "我只不过最近注册了一个新号而已😂"
+[36mATRI[0m | 03-12 23:19:10 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:19:10 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:19:10 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:19:10 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:19:15 | WARNING nonebot >> OneBot V11 | Error when getting message reply info: <ActionFailed data=None, echo={'seq': 4}, msg=MSG_NOT_FOUND, retcode=100, status=failed, wording=消息不存在>
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f1d6ce68040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f1d6d6ee4f0>
+         │    └ <function MultiCommand.invoke at 0x7f1d6ce6c0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f1d74fdb370>
+           │               │       │       └ <function Command.invoke at 0x7f1d6ce68af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f1d74fdb370>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f1d63d93a60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f1d74fdb370>
+           │   │      │    └ <function run at 0x7f1d63ebf940>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f1d6ce648b0>
+           └ <click.core.Context object at 0x7f1d74fdb370>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f1d63eaf700>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f1d65fb49d0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f1d65fb4550>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f1d63cba700>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f1d63cbaaf0>
+    └ <uvicorn.server.Server object at 0x7f1cf85d0040>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f1d63cbab80>
+           │       │   └ <uvicorn.server.Server object at 0x7f1cf85d0040>
+           │       └ <function run at 0x7f1d696ef4c0>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f1cf85d91c0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 212, in handle_event
+    await _check_reply(self, event)
+          │            │     └ GroupMessageEvent(time=1647098354, self_id=2019189905, post_type='message', sub_type='normal', user_id=1020936395, message_ty...
+          │            └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+          └ <function _check_reply at 0x7f1d63dd4040>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 31, in _check_reply
+    event.reply = Reply.parse_obj(await bot.get_msg(message_id=msg_seg.data["id"]))
+    │     │       │     │               │                      │       └ {'id': '855075682'}
+    │     │       │     │               │                      └ MessageSegment(type='reply', data={'id': '855075682'})
+    │     │       │     │               └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+    │     │       │     └ <classmethod object at 0x7f1d69bbe880>
+    │     │       └ <class 'nonebot.adapters.onebot.v11.event.Reply'>
+    │     └ None
+    └ GroupMessageEvent(time=1647098354, self_id=2019189905, post_type='message', sub_type='normal', user_id=1020936395, message_ty...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'message_id': '855075682'}
+                                  └ 'get_msg'
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 4}, msg=MSG_NOT_FOUND, retcode=100, status=failed, wording=消息不存在>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'message_id': '855075682'}
+                   │    │       │         │     └ 'get_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+                   │    │       └ <function Adapter._call_api at 0x7f1d63de2040>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7f1d63ec57f0>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f1cf7b728e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7f1d63e68670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 4}, 'msg': 'MSG_NOT_FOUND', 'retcode': 100, 'status': 'failed', 'wording': '消息不存在'}
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 4}, msg=MSG_NOT_FOUND, retcode=100, status=failed, wording=消息不存在>
+[36mATRI[0m | 03-12 23:19:15 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message -611004841 from 1020936395@[群:277620613] "[CQ:reply,id=855075682][CQ:at,qq=2019189905] [CQ:at,qq=2019189905] 233333333"
+[36mATRI[0m | 03-12 23:19:15 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:19:15 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:19:15 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:19:15 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:19:38 | SUCCESS nonebot >> ONEBOT V11 2019189905 | [message.group.normal]: Message -1399587135 from 1020936395@[群:277620613] "[CQ:at,qq=2560359315] 我那个号感觉很玄…"
+[36mATRI[0m | 03-12 23:19:38 | INFO nonebot >> Event will be handled by <Matcher from 涩图, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-12 23:19:38 | INFO nonebot >> Matcher <Matcher from 涩图, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-12 23:19:38 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-12 23:19:38 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-12 23:26:50 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-12 23:26:51 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-12 23:30:42 | WARNING nonebot >> OneBot V11 | WebSocket for Bot 2019189905 closed by peer
+[36mATRI[0m | 03-12 23:30:42 | INFO websockets >> connection closed
+[36mATRI[0m | 03-12 23:36:50 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-12 23:36:51 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-12 23:41:31 | INFO uvicorn >> ('127.0.0.1', 58566) - "WebSocket /onebot/v11/ws/" [accepted]
+[36mATRI[0m | 03-12 23:41:31 | INFO nonebot >> OneBot V11 | Bot 3098828791 connected
+[36mATRI[0m | 03-12 23:41:31 | INFO websockets >> connection open
+[36mATRI[0m | 03-12 23:42:06 | INFO uvicorn >> Shutting down
+[36mATRI[0m | 03-12 23:42:06 | WARNING nonebot >> OneBot V11 | WebSocket for Bot 3098828791 closed by peer
+[36mATRI[0m | 03-12 23:42:06 | INFO websockets >> connection closed
+[36mATRI[0m | 03-12 23:42:06 | INFO uvicorn >> Waiting for application shutdown.
+[36mATRI[0m | 03-12 23:42:07 | INFO nonebot_plugin_htmlrender >> Browser Stoped.
+[36mATRI[0m | 03-12 23:42:07 | INFO src >> Browser Stoped.
+[36mATRI[0m | 03-12 23:42:07 | INFO uvicorn >> Application shutdown complete.
+[36mATRI[0m | 03-12 23:42:07 | INFO uvicorn >> Finished server process [21606]

@@ -10,7 +10,7 @@ async def _ping():
     await ping.finish(IsSurvive.ping())
 
 
-status = IsSurvive().on_command("/status", "查看运行资源占用")
+status = IsSurvive().on_command("/status", "查看运行资源占用", aliases={"status"})
 
 
 @status.handle()

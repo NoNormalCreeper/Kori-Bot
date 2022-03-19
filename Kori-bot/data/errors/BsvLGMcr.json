@@ -1,0 +1,6 @@
+{
+    "track_id": "BsvLGMcr",
+    "prompt": "Unknown ERROR->FileNotFoundError",
+    "time": "2022-03-16 02:45:55",
+    "content": "Traceback (most recent call last):\n  File \"/root/Projects/Kori-Bot/Kori-bot/./ATRI/exceptions.py\", line 102, in _track_error\n    raise exception\n  File \"/usr/local/lib/python3.8/dist-packages/nonebot/message.py\", line 202, in _run_matcher\n    await matcher.run(bot, event, state, stack, dependency_cache)\n  File \"/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py\", line 668, in run\n    await self.simple_run(bot, event, state, stack, dependency_cache)\n  File \"/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py\", line 635, in simple_run\n    await handler(\n  File \"/usr/local/lib/python3.8/dist-packages/nonebot/dependencies/__init__.py\", line 92, in __call__\n    return await self.call(**values)\n  File \"/root/Projects/Kori-Bot/Kori-bot/./src/plugins/russian/__init__.py\", line 462, in _\n    question = getWordQuestion(event.user_id)\n  File \"/root/Projects/Kori-Bot/Kori-bot/./src/plugins/russian/words.py\", line 34, in getWordQuestion\n    with open(wordlist_path, 'r') as f:\nFileNotFoundError: [Errno 2] No such file or directory: '/root/Projects/Kori-Bot/Kori-bot/src/plugin/russian/wordlist_CE.json'\n"
+}

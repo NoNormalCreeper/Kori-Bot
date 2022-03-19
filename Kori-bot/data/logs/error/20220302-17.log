@@ -1,0 +1,603 @@
+[36mATRI[0m | 03-02 17:29:17 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f83b0248040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f83b83bc130>
+         │    └ <function MultiCommand.invoke at 0x7f83b024c0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f83b83c1ca0>
+           │               │       │       └ <function Command.invoke at 0x7f83b0248af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f83b83c1ca0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f83b0a95a60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f83b83c1ca0>
+           │   │      │    └ <function run at 0x7f83a72955e0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f83b04c58b0>
+           └ <click.core.Context object at 0x7f83b83c1ca0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f83a72843a0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f83b83fc8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f83b852b430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f83ae0c43a0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f83ae0b5ee0>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f83a6a77c10>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f83ae0b5dc0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f83a6a77c10>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f83ae0b5e50>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f83a6a77c10>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f83b83fc8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f83b852b430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-02 17:29:46 | ERROR plugin.manager >> Failed to import "whitenight_from_feiyucans_space"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fb76640a040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fb76e57e130>
+         │    └ <function MultiCommand.invoke at 0x7fb76640e0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fb76e583ca0>
+           │               │       │       └ <function Command.invoke at 0x7fb76640aaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fb76e583ca0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fb766c57a60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fb76e583ca0>
+           │   │      │    └ <function run at 0x7fb75d4565e0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fb7666868b0>
+           └ <click.core.Context object at 0x7fb76e583ca0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fb75d4453a0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fb76e5be8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fb76e6ed430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fb7642863a0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fb764278ee0>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fb75cc3b940>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fb764278dc0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fb75cc3b940>
+                  │    │           │         └ 'whitenight_from_feiyucans_space'
+                  │    │           └ 'whitenight_from_feiyucans_space'
+                  │    └ <function PluginManager.load_plugin at 0x7fb764278e50>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fb75cc3b940>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fb76e5be8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.whitenight_from_feiyucans_space'
+           │          └ <function _gcd_import at 0x7fb76e6ed430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.whitenight_from_feiyucans_space' from './src/plugins/whitenight_from_feiyucans_space/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/whitenight_from_feiyucans_space/__init__.py", line 78, in <module>
+    scheduler.add_job(whitenight, "cron", hour=22, minute=30, id=146487)
+    │         │       └ <function whitenight at 0x7fb73c7c65e0>
+    │         └ <function BaseScheduler.add_job at 0x7fb75c171ca0>
+    └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fb75c158df0>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 439, in add_job
+    job = Job(self, **job_kwargs)
+          │   │       └ {'trigger': <CronTrigger (hour='22', minute='30', timezone='Asia/Shanghai')>, 'executor': 'default', 'func': <function whiten...
+          │   └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fb75c158df0>
+          └ <class 'apscheduler.job.Job'>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/job.py", line 49, in __init__
+    self._modify(id=id or uuid4().hex, **kwargs)
+    │    │          │     │              └ {'trigger': <CronTrigger (hour='22', minute='30', timezone='Asia/Shanghai')>, 'executor': 'default', 'func': <function whiten...
+    │    │          │     └ <function uuid4 at 0x7fb763a28f70>
+    │    │          └ 146487
+    │    └ <function Job._modify at 0x7fb75c171700>
+    └ <unprintable Job object>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/job.py", line 150, in _modify
+    raise TypeError("id must be a nonempty string")
+
+TypeError: id must be a nonempty string
+[36mATRI[0m | 03-02 17:31:21 | ERROR plugin.manager >> Failed to import "whitenight_from_feiyucans_space"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f20490bb040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f205122f130>
+         │    └ <function MultiCommand.invoke at 0x7f20490bf0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f2051234ca0>
+           │               │       │       └ <function Command.invoke at 0x7f20490bbaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f2051234ca0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f2049908a60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f2051234ca0>
+           │   │      │    └ <function run at 0x7f20401075e0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f20493388b0>
+           └ <click.core.Context object at 0x7f2051234ca0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f20400f73a0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f205126f8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f205139e430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f2046f373a0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f2046f29ee0>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f203f8ec880>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f2046f29dc0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f203f8ec880>
+                  │    │           │         └ 'whitenight_from_feiyucans_space'
+                  │    │           └ 'whitenight_from_feiyucans_space'
+                  │    └ <function PluginManager.load_plugin at 0x7f2046f29e50>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f203f8ec880>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f205126f8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.whitenight_from_feiyucans_space'
+           │          └ <function _gcd_import at 0x7f205139e430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.whitenight_from_feiyucans_space' from './src/plugins/whitenight_from_feiyucans_space/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/whitenight_from_feiyucans_space/__init__.py", line 78, in <module>
+    scheduler.add_job(whitenight, "cron", hour=22, minute=30, id=146487)
+    │         │       └ <function whitenight at 0x7f201fb1ae50>
+    │         └ <function BaseScheduler.add_job at 0x7f203ed941f0>
+    └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7f203f05bc40>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 439, in add_job
+    job = Job(self, **job_kwargs)
+          │   │       └ {'trigger': <CronTrigger (hour='22', minute='30', timezone='Asia/Shanghai')>, 'executor': 'default', 'func': <function whiten...
+          │   └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7f203f05bc40>
+          └ <class 'apscheduler.job.Job'>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/job.py", line 49, in __init__
+    self._modify(id=id or uuid4().hex, **kwargs)
+    │    │          │     │              └ {'trigger': <CronTrigger (hour='22', minute='30', timezone='Asia/Shanghai')>, 'executor': 'default', 'func': <function whiten...
+    │    │          │     └ <function uuid4 at 0x7f20466d9f70>
+    │    │          └ 146487
+    │    └ <function Job._modify at 0x7f203edf28b0>
+    └ <unprintable Job object>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/job.py", line 150, in _modify
+    raise TypeError("id must be a nonempty string")
+
+TypeError: id must be a nonempty string
+[36mATRI[0m | 03-02 17:31:23 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f20490bb040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f205122f130>
+         │    └ <function MultiCommand.invoke at 0x7f20490bf0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f2051234ca0>
+           │               │       │       └ <function Command.invoke at 0x7f20490bbaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f2051234ca0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f2049908a60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f2051234ca0>
+           │   │      │    └ <function run at 0x7f20401075e0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f20493388b0>
+           └ <click.core.Context object at 0x7f2051234ca0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f20400f73a0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f205126f8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f205139e430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f2046f373a0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f2046f29ee0>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f203f8ec880>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f2046f29dc0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f203f8ec880>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f2046f29e50>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f203f8ec880>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f205126f8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f205139e430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-02 17:32:15 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f3e9eb0b040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f3ea6c7f130>
+         │    └ <function MultiCommand.invoke at 0x7f3e9eb0f0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f3ea6c84ca0>
+           │               │       │       └ <function Command.invoke at 0x7f3e9eb0baf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f3ea6c84ca0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f3e9f358a60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f3ea6c84ca0>
+           │   │      │    └ <function run at 0x7f3e95b575e0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f3e9ed888b0>
+           └ <click.core.Context object at 0x7f3ea6c84ca0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f3e95b473a0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f3ea6cbf8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f3ea6dee430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f3e9c9873a0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f3e9c978ee0>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f3e9533ab50>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f3e9c978dc0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f3e9533ab50>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f3e9c978e50>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f3e9533ab50>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f3ea6cbf8b0>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f3ea6dee430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value

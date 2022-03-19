@@ -1,0 +1,2108 @@
+[36mATRI[0m | 03-04 17:42:17 | ERROR plugin.manager >> Failed to import "nonebot_plugin_russian"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f81787ff040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f81790853a0>
+         │    └ <function MultiCommand.invoke at 0x7f81788030d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f8180972220>
+           │               │       │       └ <function Command.invoke at 0x7f81787ffaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f8180972220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f816f72a9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f8180972220>
+           │   │      │    └ <function run at 0x7f816f8558b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f81787fb8b0>
+           └ <click.core.Context object at 0x7f8180972220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f816f844670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f81809b2940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f8180ae1430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f81766c2790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f81766bd310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f816f0397c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f81766bd1f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f816f0397c0>
+                  │    │           │         └ 'nonebot_plugin_russian'
+                  │    │           └ 'nonebot_plugin_russian'
+                  │    └ <function PluginManager.load_plugin at 0x7f81766bd280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f816f0397c0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f81809b2940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_russian'
+           │          └ <function _gcd_import at 0x7f8180ae1430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_russian' from './src/plugins/nonebot_plugin_russian/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 15, in <module>
+    from .data_source import russian_manager, max_bet_gold
+
+  File "./src/plugins/nonebot_plugin_russian/data_source.py", line 28, in <module>
+    price_path = data_source.russian_path / "data" / "russian" / "stock_price.txt"
+
+NameError: name 'data_source' is not defined
+[36mATRI[0m | 03-04 17:42:29 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f81787ff040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f81790853a0>
+         │    └ <function MultiCommand.invoke at 0x7f81788030d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f8180972220>
+           │               │       │       └ <function Command.invoke at 0x7f81787ffaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f8180972220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f816f72a9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f8180972220>
+           │   │      │    └ <function run at 0x7f816f8558b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f81787fb8b0>
+           └ <click.core.Context object at 0x7f8180972220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f816f844670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f81809b2940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f8180ae1430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f81766c2790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f81766bd310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f816f0397c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f81766bd1f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f816f0397c0>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f81766bd280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f816f0397c0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f81809b2940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f8180ae1430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-04 17:44:44 | ERROR plugin.manager >> Failed to import "nonebot_plugin_russian"
+Traceback (most recent call last):
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 901, in _create_plugin_instance
+    plugin_cls = class_container[alias]
+                 │               └ 'corn'
+                 └ {'cron': <class 'apscheduler.triggers.cron.CronTrigger'>, 'interval': <class 'apscheduler.triggers.interval.IntervalTrigger'>}
+
+KeyError: 'corn'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f2d8c9db040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f2d8d2613a0>
+         │    └ <function MultiCommand.invoke at 0x7f2d8c9df0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f2d94b4e220>
+           │               │       │       └ <function Command.invoke at 0x7f2d8c9dbaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f2d94b4e220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f2d839079d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f2d94b4e220>
+           │   │      │    └ <function run at 0x7f2d83a318b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f2d8c9d78b0>
+           └ <click.core.Context object at 0x7f2d94b4e220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f2d83a20670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f2d94b8e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f2d94cbd430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f2d8a89e790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f2d8a899310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f2d83215790>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f2d8a8991f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f2d83215790>
+                  │    │           │         └ 'nonebot_plugin_russian'
+                  │    │           └ 'nonebot_plugin_russian'
+                  │    └ <function PluginManager.load_plugin at 0x7f2d8a899280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f2d83215790>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f2d94b8e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_russian'
+           │          └ <function _gcd_import at 0x7f2d94cbd430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_russian' from './src/plugins/nonebot_plugin_russian/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 475, in <module>
+    async def _():
+              └ <function _ at 0x7f2d1b2a2820>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 471, in inner
+    self.add_job(func, trigger, args, kwargs, id, name, misfire_grace_time, coalesce,
+    │    │       │     │        │     │       │   │     │                   └ <undefined>
+    │    │       │     │        │     │       │   │     └ <undefined>
+    │    │       │     │        │     │       │   └ None
+    │    │       │     │        │     │       └ None
+    │    │       │     │        │     └ None
+    │    │       │     │        └ None
+    │    │       │     └ 'corn'
+    │    │       └ <function _ at 0x7f2d1b2a2940>
+    │    └ <function BaseScheduler.add_job at 0x7f2d6907a4c0>
+    └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7f2d69080430>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 425, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+               │    │               │        └ {'hour': '8-22', 'minute': '*/1', 'timezone': _PytzShimTimezone(backports.zoneinfo.ZoneInfo(key='Asia/Shanghai'), 'Asia/Shang...
+               │    │               └ 'corn'
+               │    └ <function BaseScheduler._create_trigger at 0x7f2d69092160>
+               └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7f2d69080430>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 926, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+           │    │                                  │        └ {'hour': '8-22', 'minute': '*/1', 'timezone': _PytzShimTimezone(backports.zoneinfo.ZoneInfo(key='Asia/Shanghai'), 'Asia/Shang...
+           │    │                                  └ 'corn'
+           │    └ <function BaseScheduler._create_plugin_instance at 0x7f2d690920d0>
+           └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7f2d69080430>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 909, in _create_plugin_instance
+    raise LookupError('No {0} by the name "{1}" was found'.format(type_, alias))
+                                                                  │      └ 'corn'
+                                                                  └ 'trigger'
+
+LookupError: No trigger by the name "corn" was found
+[36mATRI[0m | 03-04 17:44:53 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f2d8c9db040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f2d8d2613a0>
+         │    └ <function MultiCommand.invoke at 0x7f2d8c9df0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f2d94b4e220>
+           │               │       │       └ <function Command.invoke at 0x7f2d8c9dbaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f2d94b4e220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f2d839079d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f2d94b4e220>
+           │   │      │    └ <function run at 0x7f2d83a318b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f2d8c9d78b0>
+           └ <click.core.Context object at 0x7f2d94b4e220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f2d83a20670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f2d94b8e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f2d94cbd430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f2d8a89e790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f2d8a899310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f2d83215790>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f2d8a8991f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f2d83215790>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f2d8a899280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f2d83215790>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f2d94b8e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7f2d94cbd430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-04 17:44:59 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f2d8c9db040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f2d8d2613a0>
+         │    └ <function MultiCommand.invoke at 0x7f2d8c9df0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f2d94b4e220>
+           │               │       │       └ <function Command.invoke at 0x7f2d8c9dbaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f2d94b4e220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f2d839079d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f2d94b4e220>
+           │   │      │    └ <function run at 0x7f2d83a318b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f2d8c9d78b0>
+           └ <click.core.Context object at 0x7f2d94b4e220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f2d83a20670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f2d85b0a940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f2d85b0a4c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f2d8382c670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f2d8382ca60>
+    └ <uvicorn.server.Server object at 0x7f2d180e9fa0>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f2d8382caf0>
+           │       │   └ <uvicorn.server.Server object at 0x7f2d180e9fa0>
+           │       └ <function run at 0x7f2d89262430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f2d180d2640>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7f2d85aca040>: <Task finished name='Task-611' coro=<_event_to_me() done, defined at /usr/local/p...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7f2d16da7850>
+          │            │        │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646387059, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f2d16da7340>
+          │            └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+          └ <function _run_matcher at 0x7f2d83948670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7f2d85aca040>: <Task finished name='Task-611' coro=<_event_to_me() done, defined at /usr/local/p...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7f2d16da7850>
+          │       │   │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646387059, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f2d16da7340>
+          │       └ <function Matcher.run at 0x7f2d85b46b80>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7f2d85aca040>: <Task finished name='Task-611' coro=<_event_to_me() done, defined at /usr/local/p...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7f2d16da7850>
+          │    │          │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646387059, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f2d16da7340>
+          │    └ <function Matcher.simple_run at 0x7f2d85b46af0>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _ at 0x7f2d1b2a2820>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f2d16da7340>, 'event': GroupMessageEvent(time=1646387059, self_id=5...
+                 │    └ <function _ at 0x7f2d1b2a2820>
+                 └ <Dependent call=<function _ at 0x7f2d1b2a2820>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 432, in _
+    money_per_stock = russian_manager._check_stock_handle()["money_per_stock"]
+                      │               └ <function RussianManager._check_stock_handle at 0x7f2d1b447790>
+                      └ <src.plugins.nonebot_plugin_russian.data_source.RussianManager object at 0x7f2d1b472f40>
+
+TypeError: _check_stock_handle() takes 0 positional arguments but 1 was given
+[36mATRI[0m | 03-04 17:47:30 | ERROR plugin.manager >> Failed to import "nonebot_plugin_russian"
+Traceback (most recent call last):
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 901, in _create_plugin_instance
+    plugin_cls = class_container[alias]
+                 │               └ 'corn'
+                 └ {'interval': <class 'apscheduler.triggers.interval.IntervalTrigger'>, 'cron': <class 'apscheduler.triggers.cron.CronTrigger'>}
+
+KeyError: 'corn'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fe8a93bb040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fe8a0411f40>
+         │    └ <function MultiCommand.invoke at 0x7fe8a93bf0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fe8b15896d0>
+           │               │       │       └ <function Command.invoke at 0x7fe8a93bbaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fe8b15896d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fe8a02e69d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fe8b15896d0>
+           │   │      │    └ <function run at 0x7fe8a04108b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fe8a93b78b0>
+           └ <click.core.Context object at 0x7fe8b15896d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fe8a0400670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fe8b156e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fe8b169d430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fe8a727d790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fe8a7278310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fe89fbf56d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fe8a72781f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fe89fbf56d0>
+                  │    │           │         └ 'nonebot_plugin_russian'
+                  │    │           └ 'nonebot_plugin_russian'
+                  │    └ <function PluginManager.load_plugin at 0x7fe8a7278280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fe89fbf56d0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fe8b156e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_russian'
+           │          └ <function _gcd_import at 0x7fe8b169d430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_russian' from './src/plugins/nonebot_plugin_russian/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 475, in <module>
+    async def _():
+              └ <function _ at 0x7fe83a5063a0>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 471, in inner
+    self.add_job(func, trigger, args, kwargs, id, name, misfire_grace_time, coalesce,
+    │    │       │     │        │     │       │   │     │                   └ <undefined>
+    │    │       │     │        │     │       │   │     └ <undefined>
+    │    │       │     │        │     │       │   └ None
+    │    │       │     │        │     │       └ None
+    │    │       │     │        │     └ None
+    │    │       │     │        └ None
+    │    │       │     └ 'corn'
+    │    │       └ <function _ at 0x7fe83a5064c0>
+    │    └ <function BaseScheduler.add_job at 0x7fe89c4ec0d0>
+    └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fe83a5eb490>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 425, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+               │    │               │        └ {'hour': '8-22', 'minute': '*/1', 'timezone': _PytzShimTimezone(backports.zoneinfo.ZoneInfo(key='Asia/Shanghai'), 'Asia/Shang...
+               │    │               └ 'corn'
+               │    └ <function BaseScheduler._create_trigger at 0x7fe89c4ecd30>
+               └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fe83a5eb490>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 926, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+           │    │                                  │        └ {'hour': '8-22', 'minute': '*/1', 'timezone': _PytzShimTimezone(backports.zoneinfo.ZoneInfo(key='Asia/Shanghai'), 'Asia/Shang...
+           │    │                                  └ 'corn'
+           │    └ <function BaseScheduler._create_plugin_instance at 0x7fe89c4ecca0>
+           └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fe83a5eb490>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 909, in _create_plugin_instance
+    raise LookupError('No {0} by the name "{1}" was found'.format(type_, alias))
+                                                                  │      └ 'corn'
+                                                                  └ 'trigger'
+
+LookupError: No trigger by the name "corn" was found
+[36mATRI[0m | 03-04 17:47:51 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fe8a93bb040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fe8a0411f40>
+         │    └ <function MultiCommand.invoke at 0x7fe8a93bf0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fe8b15896d0>
+           │               │       │       └ <function Command.invoke at 0x7fe8a93bbaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fe8b15896d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fe8a02e69d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fe8b15896d0>
+           │   │      │    └ <function run at 0x7fe8a04108b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fe8a93b78b0>
+           └ <click.core.Context object at 0x7fe8b15896d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fe8a0400670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fe8b156e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fe8b169d430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fe8a727d790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fe8a7278310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fe89fbf56d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fe8a72781f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fe89fbf56d0>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7fe8a7278280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fe89fbf56d0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fe8b156e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7fe8b169d430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-04 17:50:50 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f987a35d040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f98713b3f10>
+         │    └ <function MultiCommand.invoke at 0x7f987a3610d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f988252b6d0>
+           │               │       │       └ <function Command.invoke at 0x7f987a35daf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f988252b6d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f98712899d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f988252b6d0>
+           │   │      │    └ <function run at 0x7f98713b28b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f987a3598b0>
+           └ <click.core.Context object at 0x7f988252b6d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f98713a2670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f987348c940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f987348c4c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f98711ae670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f98711aea60>
+    └ <uvicorn.server.Server object at 0x7f9805f9a7f0>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f98711aeaf0>
+           │       │   └ <uvicorn.server.Server object at 0x7f9805f9a7f0>
+           │       └ <function run at 0x7f9876be4430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f9805f24840>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7f987344c040>: <Task finished name='Task-1179' coro=<_event_to_me() done, defined at /usr/local/...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7f980441e2b0>
+          │            │        │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646387450, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f9804c6c0a0>
+          │            └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+          └ <function _run_matcher at 0x7f98712ca670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7f987344c040>: <Task finished name='Task-1179' coro=<_event_to_me() done, defined at /usr/local/...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7f980441e2b0>
+          │       │   │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646387450, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f9804c6c0a0>
+          │       └ <function Matcher.run at 0x7f98734c8b80>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7f987344c040>: <Task finished name='Task-1179' coro=<_event_to_me() done, defined at /usr/local/...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7f980441e2b0>
+          │    │          │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646387450, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f9804c6c0a0>
+          │    └ <function Matcher.simple_run at 0x7f98734c8af0>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _ at 0x7f98663988b0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f9804c6c0a0>, 'event': GroupMessageEvent(time=1646387450, self_id=5...
+                 │    └ <function _ at 0x7f98663988b0>
+                 └ <Dependent call=<function _ at 0x7f98663988b0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 432, in _
+    money_per_stock = russian_manager._check_stock_handle()["money_per_stock"]
+                      │               └ <function RussianManager._check_stock_handle at 0x7f986641e700>
+                      └ <src.plugins.nonebot_plugin_russian.data_source.RussianManager object at 0x7f9866410a60>
+
+TypeError: _check_stock_handle() takes 0 positional arguments but 1 was given
+[36mATRI[0m | 03-04 17:54:11 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f987a35d040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f98713b3f10>
+         │    └ <function MultiCommand.invoke at 0x7f987a3610d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f988252b6d0>
+           │               │       │       └ <function Command.invoke at 0x7f987a35daf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f988252b6d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f98712899d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f988252b6d0>
+           │   │      │    └ <function run at 0x7f98713b28b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f987a3598b0>
+           └ <click.core.Context object at 0x7f988252b6d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f98713a2670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f987348c940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f987348c4c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f98711ae670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f98711aea60>
+    └ <uvicorn.server.Server object at 0x7f9805f9a7f0>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f98711aeaf0>
+           │       │   └ <uvicorn.server.Server object at 0x7f9805f9a7f0>
+           │       └ <function run at 0x7f9876be4430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f9805f24840>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7f987344c040>: <Task finished name='Task-9781' coro=<_event_to_me() done, defined at /usr/local/...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7f9804071790>
+          │            │        │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': [MessageSegment(type='text', data={'text': 'me'})]}}
+          │            │        │    └ GroupMessageEvent(time=1646387651, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f9804c6c0a0>
+          │            └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+          └ <function _run_matcher at 0x7f98712ca670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7f987344c040>: <Task finished name='Task-9781' coro=<_event_to_me() done, defined at /usr/local/...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7f9804071790>
+          │       │   │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': [MessageSegment(type='text', data={'text': 'me'})]}}
+          │       │   │    └ GroupMessageEvent(time=1646387651, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f9804c6c0a0>
+          │       └ <function Matcher.run at 0x7f98734c8b80>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7f987344c040>: <Task finished name='Task-9781' coro=<_event_to_me() done, defined at /usr/local/...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7f9804071790>
+          │    │          │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': [MessageSegment(type='text', data={'text': 'me'})]}}
+          │    │          │    └ GroupMessageEvent(time=1646387651, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f9804c6c0a0>
+          │    └ <function Matcher.simple_run at 0x7f98734c8af0>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _ at 0x7f98663988b0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f9804c6c0a0>, 'event': GroupMessageEvent(time=1646387651, self_id=5...
+                 │    └ <function _ at 0x7f98663988b0>
+                 └ <Dependent call=<function _ at 0x7f98663988b0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 432, in _
+    money_per_stock = russian_manager._check_stock_handle()["money_per_stock"]
+                      │               └ <function RussianManager._check_stock_handle at 0x7f986641e700>
+                      └ <src.plugins.nonebot_plugin_russian.data_source.RussianManager object at 0x7f9866410a60>
+
+TypeError: _check_stock_handle() takes 0 positional arguments but 1 was given
+[36mATRI[0m | 03-04 17:56:13 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fb8b875d040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fb8af7b4ee0>
+         │    └ <function MultiCommand.invoke at 0x7fb8b87610d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fb8c092b6d0>
+           │               │       │       └ <function Command.invoke at 0x7fb8b875daf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fb8c092b6d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fb8af6889d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fb8c092b6d0>
+           │   │      │    └ <function run at 0x7fb8af7b28b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fb8b87598b0>
+           └ <click.core.Context object at 0x7fb8c092b6d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fb8af7a2670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fb8c0910940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fb8c0a3f430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fb8b6620790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fb8b661b310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fb8aef97670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fb8b661b1f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fb8aef97670>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7fb8b661b280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fb8aef97670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fb8c0910940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7fb8c0a3f430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-04 17:56:28 | ERROR plugin.manager >> Failed to import "nonebot_plugin_russian"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fb8b875d040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fb8af7b4ee0>
+         │    └ <function MultiCommand.invoke at 0x7fb8b87610d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fb8c092b6d0>
+           │               │       │       └ <function Command.invoke at 0x7fb8b875daf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fb8c092b6d0>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fb8af6889d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fb8c092b6d0>
+           │   │      │    └ <function run at 0x7fb8af7b28b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fb8b87598b0>
+           └ <click.core.Context object at 0x7fb8c092b6d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fb8af7a2670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fb8c0910940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fb8c0a3f430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fb8b6620790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fb8b661b310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fb8aef97670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fb8b661b1f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fb8aef97670>
+                  │    │           │         └ 'nonebot_plugin_russian'
+                  │    │           └ 'nonebot_plugin_russian'
+                  │    └ <function PluginManager.load_plugin at 0x7fb8b661b280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fb8aef97670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fb8c0910940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_russian'
+           │          └ <function _gcd_import at 0x7fb8c0a3f430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_russian' from './src/plugins/nonebot_plugin_russian/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 470, in <module>
+    @scheduler.scheduled_job(
+     │         └ <function BaseScheduler.scheduled_job at 0x7fb8add8b700>
+     └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fb8add1b580>
+
+TypeError: scheduled_job() missing 1 required positional argument: 'trigger'
+[36mATRI[0m | 03-04 17:58:13 | ERROR plugin.manager >> Failed to import "nonebot_plugin_statistical"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fa097545040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fa097dcb3a0>
+         │    └ <function MultiCommand.invoke at 0x7fa0975490d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fa09f78ca60>
+           │               │       │       └ <function Command.invoke at 0x7fa097545af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fa09f78ca60>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fa08e4719d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fa09f78ca60>
+           │   │      │    └ <function run at 0x7fa08e59a8b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fa0975418b0>
+           └ <click.core.Context object at 0x7fa09f78ca60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fa08e589670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fa09f6f8940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fa09f827430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fa095408790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fa095403310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fa08dd804f0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fa0954031f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fa08dd804f0>
+                  │    │           │         └ 'nonebot_plugin_statistical'
+                  │    │           └ 'nonebot_plugin_statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7fa095403280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fa08dd804f0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fa09f6f8940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_statistical'
+           │          └ <function _gcd_import at 0x7fa09f827430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_statistical' from './src/plugins/nonebot_plugin_statistical/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "./src/plugins/nonebot_plugin_statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "./src/plugins/nonebot_plugin_statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/python3/lib/python3.8/site-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-04 17:58:16 | ERROR plugin.manager >> Failed to import "nonebot_plugin_russian"
+Traceback (most recent call last):
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 901, in _create_plugin_instance
+    plugin_cls = class_container[alias]
+                 │               └ 'corn'
+                 └ {'cron': <class 'apscheduler.triggers.cron.CronTrigger'>, 'interval': <class 'apscheduler.triggers.interval.IntervalTrigger'>}
+
+KeyError: 'corn'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fa097545040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fa097dcb3a0>
+         │    └ <function MultiCommand.invoke at 0x7fa0975490d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fa09f78ca60>
+           │               │       │       └ <function Command.invoke at 0x7fa097545af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fa09f78ca60>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fa08e4719d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fa09f78ca60>
+           │   │      │    └ <function run at 0x7fa08e59a8b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fa0975418b0>
+           └ <click.core.Context object at 0x7fa09f78ca60>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fa08e589670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fa09f6f8940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fa09f827430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fa095408790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fa095403310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fa08dd804f0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fa0954031f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fa08dd804f0>
+                  │    │           │         └ 'nonebot_plugin_russian'
+                  │    │           └ 'nonebot_plugin_russian'
+                  │    └ <function PluginManager.load_plugin at 0x7fa095403280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fa08dd804f0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fa09f6f8940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_russian'
+           │          └ <function _gcd_import at 0x7fa09f827430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_russian' from './src/plugins/nonebot_plugin_russian/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 475, in <module>
+    async def _():
+              └ <function _ at 0x7fa025f66040>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 471, in inner
+    self.add_job(func, trigger, args, kwargs, id, name, misfire_grace_time, coalesce,
+    │    │       │     │        │     │       │   │     │                   └ <undefined>
+    │    │       │     │        │     │       │   │     └ <undefined>
+    │    │       │     │        │     │       │   └ None
+    │    │       │     │        │     │       └ None
+    │    │       │     │        │     └ None
+    │    │       │     │        └ None
+    │    │       │     └ 'corn'
+    │    │       └ <function _ at 0x7fa025f66160>
+    │    └ <function BaseScheduler.add_job at 0x7fa08d256f70>
+    └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fa08d26ab80>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 425, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+               │    │               │        └ {'hour': '8-22', 'minute': '*/1', 'timezone': _PytzShimTimezone(backports.zoneinfo.ZoneInfo(key='Asia/Shanghai'), 'Asia/Shang...
+               │    │               └ 'corn'
+               │    └ <function BaseScheduler._create_trigger at 0x7fa08d27ac10>
+               └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fa08d26ab80>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 926, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+           │    │                                  │        └ {'hour': '8-22', 'minute': '*/1', 'timezone': _PytzShimTimezone(backports.zoneinfo.ZoneInfo(key='Asia/Shanghai'), 'Asia/Shang...
+           │    │                                  └ 'corn'
+           │    └ <function BaseScheduler._create_plugin_instance at 0x7fa08d27ab80>
+           └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fa08d26ab80>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 909, in _create_plugin_instance
+    raise LookupError('No {0} by the name "{1}" was found'.format(type_, alias))
+                                                                  │      └ 'corn'
+                                                                  └ 'trigger'
+
+LookupError: No trigger by the name "corn" was found
+[36mATRI[0m | 03-04 17:59:49 | ERROR plugin.manager >> Failed to import "nonebot_plugin_russian"
+Traceback (most recent call last):
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 901, in _create_plugin_instance
+    plugin_cls = class_container[alias]
+                 │               └ 'corn'
+                 └ {'cron': <class 'apscheduler.triggers.cron.CronTrigger'>, 'interval': <class 'apscheduler.triggers.interval.IntervalTrigger'>}
+
+KeyError: 'corn'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fa60a165040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fa60a9eb3a0>
+         │    └ <function MultiCommand.invoke at 0x7fa60a1690d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fa6122d8220>
+           │               │       │       └ <function Command.invoke at 0x7fa60a165af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fa6122d8220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fa6010919d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fa6122d8220>
+           │   │      │    └ <function run at 0x7fa6011ba8b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fa60a1618b0>
+           └ <click.core.Context object at 0x7fa6122d8220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fa6011aa670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fa612318940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fa612447430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fa608028790>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fa608023310>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fa60099e9d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fa6080231f0>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fa60099e9d0>
+                  │    │           │         └ 'nonebot_plugin_russian'
+                  │    │           └ 'nonebot_plugin_russian'
+                  │    └ <function PluginManager.load_plugin at 0x7fa608023280>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fa60099e9d0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fa612318940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.nonebot_plugin_russian'
+           │          └ <function _gcd_import at 0x7fa612447430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.nonebot_plugin_russian' from './src/plugins/nonebot_plugin_russian/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 475, in <module>
+    async def _():
+              └ <function _ at 0x7fa5989d5430>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 471, in inner
+    self.add_job(func, trigger, args, kwargs, id, name, misfire_grace_time, coalesce,
+    │    │       │     │        │     │       │   │     │                   └ <undefined>
+    │    │       │     │        │     │       │   │     └ <undefined>
+    │    │       │     │        │     │       │   └ None
+    │    │       │     │        │     │       └ None
+    │    │       │     │        │     └ None
+    │    │       │     │        └ None
+    │    │       │     └ 'corn'
+    │    │       └ <function _ at 0x7fa5989d5550>
+    │    └ <function BaseScheduler.add_job at 0x7fa5f80c68b0>
+    └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fa5f834dc70>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 425, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+               │    │               │        └ {'hour': '8-22', 'minute': '*/1', 'timezone': _PytzShimTimezone(backports.zoneinfo.ZoneInfo(key='Asia/Shanghai'), 'Asia/Shang...
+               │    │               └ 'corn'
+               │    └ <function BaseScheduler._create_trigger at 0x7fa5f80e6550>
+               └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fa5f834dc70>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 926, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+           │    │                                  │        └ {'hour': '8-22', 'minute': '*/1', 'timezone': _PytzShimTimezone(backports.zoneinfo.ZoneInfo(key='Asia/Shanghai'), 'Asia/Shang...
+           │    │                                  └ 'corn'
+           │    └ <function BaseScheduler._create_plugin_instance at 0x7fa5f80e64c0>
+           └ <apscheduler.schedulers.asyncio.AsyncIOScheduler object at 0x7fa5f834dc70>
+  File "/usr/local/python3/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 909, in _create_plugin_instance
+    raise LookupError('No {0} by the name "{1}" was found'.format(type_, alias))
+                                                                  │      └ 'corn'
+                                                                  └ 'trigger'
+
+LookupError: No trigger by the name "corn" was found
+[36mATRI[0m | 03-04 18:00:33 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fa60a165040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fa60a9eb3a0>
+         │    └ <function MultiCommand.invoke at 0x7fa60a1690d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fa6122d8220>
+           │               │       │       └ <function Command.invoke at 0x7fa60a165af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fa6122d8220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fa6010919d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fa6122d8220>
+           │   │      │    └ <function run at 0x7fa6011ba8b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fa60a1618b0>
+           └ <click.core.Context object at 0x7fa6122d8220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fa6011aa670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fa603294940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fa6032944c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fa600fb6670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fa600fb6a60>
+    └ <uvicorn.server.Server object at 0x7fa5989d2760>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fa600fb6af0>
+           │       │   └ <uvicorn.server.Server object at 0x7fa5989d2760>
+           │       └ <function run at 0x7fa6069ec430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7fa5957ed3c0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _command at 0x7fa603254160>: <Task finished name='Task-1621' coro=<_command() done, defined at /usr/local/python3/...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7fa594530040>
+          │            │        │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': []}}
+          │            │        │    └ GroupMessageEvent(time=1646388032, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>
+          │            └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+          └ <function _run_matcher at 0x7fa6010d2670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _command at 0x7fa603254160>: <Task finished name='Task-1621' coro=<_command() done, defined at /usr/local/python3/...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7fa594530040>
+          │       │   │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': []}}
+          │       │   │    └ GroupMessageEvent(time=1646388032, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>
+          │       └ <function Matcher.run at 0x7fa6032d0b80>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _command at 0x7fa603254160>: <Task finished name='Task-1621' coro=<_command() done, defined at /usr/local/python3/...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7fa594530040>
+          │    │          │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '/stock', 'command_arg': []}}
+          │    │          │    └ GroupMessageEvent(time=1646388032, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>
+          │    └ <function Matcher.simple_run at 0x7fa6032d0af0>
+          └ <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _ at 0x7fa5989d5430>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>, 'event': GroupMessageEvent(time=1646388032, self_id=5...
+                 │    └ <function _ at 0x7fa5989d5430>
+                 └ <Dependent call=<function _ at 0x7fa5989d5430>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "./src/plugins/nonebot_plugin_russian/__init__.py", line 432, in _
+    money_per_stock = russian_manager._check_stock_handle(self)["money_per_stock"]
+                      │               └ <function RussianManager._check_stock_handle at 0x7fa5989fff70>
+                      └ <src.plugins.nonebot_plugin_russian.data_source.RussianManager object at 0x7fa5989f7910>
+
+NameError: name 'self' is not defined
+[36mATRI[0m | 03-04 19:12:16 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fa60a165040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fa60a9eb3a0>
+         │    └ <function MultiCommand.invoke at 0x7fa60a1690d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fa6122d8220>
+           │               │       │       └ <function Command.invoke at 0x7fa60a165af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fa6122d8220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fa6010919d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fa6122d8220>
+           │   │      │    └ <function run at 0x7fa6011ba8b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fa60a1618b0>
+           └ <click.core.Context object at 0x7fa6122d8220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fa6011aa670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fa603294940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fa6032944c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fa600fb6670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fa600fb6a60>
+    └ <uvicorn.server.Server object at 0x7fa5989d2760>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fa600fb6af0>
+           │       │   └ <uvicorn.server.Server object at 0x7fa5989d2760>
+           │       └ <function run at 0x7fa6069ec430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7fa5957ed3c0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _command at 0x7fa603254160>: <Task finished name='Task-149621' coro=<_command() done, defined at /usr/local/python...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7fa59445a520>
+          │            │        │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │            │        │    └ GroupMessageEvent(time=1646392335, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>
+          │            └ <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+          └ <function _run_matcher at 0x7fa6010d2670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _command at 0x7fa603254160>: <Task finished name='Task-149621' coro=<_command() done, defined at /usr/local/python...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7fa59445a520>
+          │       │   │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │       │   │    └ GroupMessageEvent(time=1646392335, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>
+          │       └ <function Matcher.run at 0x7fa6032d0b80>
+          └ <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _command at 0x7fa603254160>: <Task finished name='Task-149621' coro=<_command() done, defined at /usr/local/python...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7fa59445a520>
+          │    │          │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │    │          │    └ GroupMessageEvent(time=1646392335, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>
+          │    └ <function Matcher.simple_run at 0x7fa6032d0af0>
+          └ <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function repeater at 0x7fa5e7217430>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(na...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>, 'event': GroupMessageEvent(time=1646392335, self_id=5...
+                 │    └ <function repeater at 0x7fa5e7217430>
+                 └ <Dependent call=<function repeater at 0x7fa5e7217430>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(na...
+
+  File "./src/plugins/nonebot_plugin_repeater/__init__.py", line 35, in repeater
+    mt = messageType(str(event.message))
+         │               │     └ [MessageSegment(type='text', data={'text': ''})]
+         │               └ GroupMessageEvent(time=1646392335, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+         └ <function messageType at 0x7fa5e7217280>
+
+  File "./src/plugins/nonebot_plugin_repeater/__init__.py", line 17, in messageType
+    if message[0] == "[":
+       └ ''
+
+IndexError: string index out of range
+[36mATRI[0m | 03-05 08:08:09 | ERROR src >> 组织 Epic 订阅消息错误：<class 'AttributeError'>
+'NoneType' object has no attribute 'replace'
+[36mATRI[0m | 03-05 15:03:37 | ERROR src >> 组织 Epic 订阅消息错误：<class 'AttributeError'>
+'NoneType' object has no attribute 'replace'
+[36mATRI[0m | 03-06 14:31:38 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fa60a165040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fa60a9eb3a0>
+         │    └ <function MultiCommand.invoke at 0x7fa60a1690d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fa6122d8220>
+           │               │       │       └ <function Command.invoke at 0x7fa60a165af0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fa6122d8220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fa6010919d0>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fa6122d8220>
+           │   │      │    └ <function run at 0x7fa6011ba8b0>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fa60a1618b0>
+           └ <click.core.Context object at 0x7fa6122d8220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fa6011aa670>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fa603294940>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fa6032944c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fa600fb6670>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fa600fb6a60>
+    └ <uvicorn.server.Server object at 0x7fa5989d2760>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fa600fb6af0>
+           │       │   └ <uvicorn.server.Server object at 0x7fa5989d2760>
+           │       └ <function run at 0x7fa6069ec430>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7fa5957ed3c0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _command at 0x7fa603254160>: <Task finished name='Task-5206945' coro=<_command() done, defined at /usr/local/pytho...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7fa57441d9d0>
+          │            │        │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │            │        │    └ GroupMessageEvent(time=1646548298, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>
+          │            └ <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+          └ <function _run_matcher at 0x7fa6010d2670>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _command at 0x7fa603254160>: <Task finished name='Task-5206945' coro=<_command() done, defined at /usr/local/pytho...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7fa57441d9d0>
+          │       │   │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │       │   │    └ GroupMessageEvent(time=1646548298, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>
+          │       └ <function Matcher.run at 0x7fa6032d0b80>
+          └ <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _command at 0x7fa603254160>: <Task finished name='Task-5206945' coro=<_command() done, defined at /usr/local/pytho...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7fa57441d9d0>
+          │    │          │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │    │          │    └ GroupMessageEvent(time=1646548298, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>
+          │    └ <function Matcher.simple_run at 0x7fa6032d0af0>
+          └ <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function repeater at 0x7fa5e7217430>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(na...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fa594d59f40>, 'event': GroupMessageEvent(time=1646548298, self_id=5...
+                 │    └ <function repeater at 0x7fa5e7217430>
+                 └ <Dependent call=<function repeater at 0x7fa5e7217430>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(na...
+
+  File "./src/plugins/nonebot_plugin_repeater/__init__.py", line 35, in repeater
+    mt = messageType(str(event.message))
+         │               │     └ [MessageSegment(type='text', data={'text': ''})]
+         │               └ GroupMessageEvent(time=1646548298, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+         └ <function messageType at 0x7fa5e7217280>
+
+  File "./src/plugins/nonebot_plugin_repeater/__init__.py", line 17, in messageType
+    if message[0] == "[":
+       └ ''
+
+IndexError: string index out of range

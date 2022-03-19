@@ -33,7 +33,6 @@
     },
     "<module 'nonebot_plugin_repeater' from '\/usr\/local\/python3\/lib\/python3.8\/site-packages\/nonebot_plugin_repeater\/__init__.py'>": {
         "cmd": [
-            ,
                 "\/ping",
                 "\/help",
                 "\/saying"

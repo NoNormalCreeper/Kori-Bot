@@ -1,0 +1,999 @@
+[36mATRI[0m | 03-16 10:27:52 | ERROR plugin.manager >> Failed to import "statistical"
+Traceback (most recent call last):
+
+  File "/usr/local/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f5689847f70>
+           └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f5689abfb20>
+         │    └ <function MultiCommand.invoke at 0x7f5689851040>
+         └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f5689ab6130>
+           │               │       │       └ <function Command.invoke at 0x7f568984da60>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f5689ab6130>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f5689a68dc0>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f5689ab6130>
+           │   │      │    └ <function run at 0x7f5686ab5160>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f5689847820>
+           └ <click.core.Context object at 0x7f5689ab6130>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f5686a92b80>
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7f5689b2b8b0>
+             └ <module 'importlib' from '/usr/lib/python3.8/importlib/__init__.py'>
+
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7f5689c5a430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7f568956d430>
+    └ <module 'nonebot' from '/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7f568955df70>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7f5685843190>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7f568955de50>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7f5685843190>
+                  │    │           │         └ 'statistical'
+                  │    │           └ 'statistical'
+                  │    └ <function PluginManager.load_plugin at 0x7f568955dee0>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7f5685843190>
+
+> File "/usr/local/lib/python3.8/dist-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7f5689b2b8b0>
+             └ <module 'importlib' from '/usr/lib/python3.8/importlib/__init__.py'>
+
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.statistical'
+           │          └ <function _gcd_import at 0x7f5689c5a430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.statistical' from '/root/Projects/Kori-Bot/Kori-bot/./src/plugins/statistical/__init__.py'>
+
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./src/plugins/statistical/__init__.py", line 1, in <module>
+    from .statistical_hook import *
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./src/plugins/statistical/statistical_hook.py", line 7, in <module>
+    from .config import save_data, get_prefix_group_count_dict, get_prefix_user_count_dict, \
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./src/plugins/statistical/config.py", line 149, in <module>
+    plugin2cmd: dict = json.load(f)
+                       │    │    └ <_io.TextIOWrapper name='/root/Projects/Kori-Bot/Kori-bot/data/statistical/plugin2cmd.json' mode='r' encoding='utf8'>
+                       │    └ <built-in function load>
+                       └ <module 'ujson' from '/usr/local/lib/python3.8/dist-packages/ujson.cpython-38-x86_64-linux-gnu.so'>
+
+ValueError: Expected object or value
+[36mATRI[0m | 03-16 13:32:27 | ERROR nonebot >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/local/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f5689847f70>
+           └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f5689abfb20>
+         │    └ <function MultiCommand.invoke at 0x7f5689851040>
+         └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f5689ab6130>
+           │               │       │       └ <function Command.invoke at 0x7f568984da60>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f5689ab6130>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f5689a68dc0>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f5689ab6130>
+           │   │      │    └ <function run at 0x7f5686ab5160>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f5689847820>
+           └ <click.core.Context object at 0x7f5689ab6130>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f5686a92b80>
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f5687cb6550>
+    └ <module 'nonebot' from '/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f5687cb60d0>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f5685ec5940>
+    └ <module 'uvicorn' from '/usr/local/lib/python3.8/dist-packages/uvicorn/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f5685ec5430>
+    └ <uvicorn.server.Server object at 0x7f5611a02460>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f5685ec54c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f5611a02460>
+           │       └ <function run at 0x7f5688b8bd30>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f5611a98b40>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7f5687cd6dc0>: <Task finished name='Task-515129' coro=<_event_to_me() done, defined at /usr/loca...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7f5662c718b0>
+          │            │        │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │            │        │    └ GroupMessageEvent(time=1647408586, self_id=507346814, post_type='message', sub_type='normal', user_id=695007502, message_type...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │            └ <Matcher from 涩图, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7f5686d45f70>
+
+> File "/usr/local/lib/python3.8/dist-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7f5687cd6dc0>: <Task finished name='Task-515129' coro=<_event_to_me() done, defined at /usr/loca...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7f5662c718b0>
+          │       │   │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │       │   │    └ GroupMessageEvent(time=1647408586, self_id=507346814, post_type='message', sub_type='normal', user_id=695007502, message_type...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │       └ <function Matcher.run at 0x7f5687cd6940>
+          └ <Matcher from 涩图, type=message, priority=1, temp=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7f5687cd6dc0>: <Task finished name='Task-515129' coro=<_event_to_me() done, defined at /usr/loca...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7f5662c718b0>
+          │    │          │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │    │          │    └ GroupMessageEvent(time=1647408586, self_id=507346814, post_type='message', sub_type='normal', user_id=695007502, message_type...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │    └ <function Matcher.simple_run at 0x7f5687cd68b0>
+          └ <Matcher from 涩图, type=message, priority=1, temp=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _setu_catcher at 0x7f56158ad4c0>, params=[ModelField(name='bot', type=Bot, required=True), ModelFie...
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>, 'event': GroupMessageEvent(time=1647408586, self_id=5...
+                 │    └ <function _setu_catcher at 0x7f56158ad4c0>
+                 └ <Dependent call=<function _setu_catcher at 0x7f56158ad4c0>, params=[ModelField(name='bot', type=Bot, required=True), ModelFie...
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./src/plugins/atri_setu/__init__.py", line 120, in _setu_catcher
+    await bot.send_private_msg(user_id=superuser, message=s_repo)
+          │                            │                  └ '涩图来咧！\n[CQ:image,file=https://gchat.qpic.cn/gchatpic_new/695007502/895076651-2655532781-0CE1732E0F56245E1C15F8D91BDC7F0B/0?t...
+          │                            └ '2560359315'
+          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': '2560359315', 'message': '涩图来咧！\n[CQ:image,file=https://gchat.qpic.cn/gchatpic_new/695007502/895076651-2655532781...
+                                  └ 'send_private_msg'
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <NetWorkError message=WebSocket API call timeout>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': '2560359315', 'message': '涩图来咧！\n[CQ:image,file=https://gchat.qpic.cn/gchatpic_new/695007502/895076651-2655532781...
+                   │    │       │         │     └ 'send_private_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+                   │    │       └ <function Adapter._call_api at 0x7f5686d76790>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7f5686c7f100>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/adapter.py", line 108, in _call_api
+    await ResultStore.fetch(bot.self_id, seq, self.config.api_timeout)
+          │           │     │   │        │    │    └ <property object at 0x7f56881ce860>
+          │           │     │   │        │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7f5686c7f100>
+          │           │     │   │        └ 64
+          │           │     │   └ '507346814'
+          │           │     └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │           └ <classmethod object at 0x7f5686ab6df0>
+          └ <class 'nonebot.adapters.onebot.v11.utils.ResultStore'>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/utils.py", line 113, in fetch
+    raise NetworkError("WebSocket API call timeout") from None
+          └ <class 'nonebot.adapters.onebot.v11.exception.NetworkError'>
+
+nonebot.adapters.onebot.v11.exception.NetworkError: <NetWorkError message=WebSocket API call timeout>
+[36mATRI[0m | 03-16 14:27:14 | ERROR nonebot >> Running matcher <Matcher from 涩图, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/local/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f5689847f70>
+           └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f5689abfb20>
+         │    └ <function MultiCommand.invoke at 0x7f5689851040>
+         └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f5689ab6130>
+           │               │       │       └ <function Command.invoke at 0x7f568984da60>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f5689ab6130>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f5689a68dc0>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f5689ab6130>
+           │   │      │    └ <function run at 0x7f5686ab5160>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f5689847820>
+           └ <click.core.Context object at 0x7f5689ab6130>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f5686a92b80>
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f5687cb6550>
+    └ <module 'nonebot' from '/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f5687cb60d0>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f5685ec5940>
+    └ <module 'uvicorn' from '/usr/local/lib/python3.8/dist-packages/uvicorn/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f5685ec5430>
+    └ <uvicorn.server.Server object at 0x7f5611a02460>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f5685ec54c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f5611a02460>
+           │       └ <function run at 0x7f5688b8bd30>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f5611a98b40>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7f5687cd6dc0>: <Task finished name='Task-654812' coro=<_event_to_me() done, defined at /usr/loca...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7f560066cc10>
+          │            │        │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │            │        │    └ GroupMessageEvent(time=1647411782, self_id=507346814, post_type='message', sub_type='normal', user_id=695007502, message_type...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │            └ <Matcher from 涩图, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7f5686d45f70>
+
+> File "/usr/local/lib/python3.8/dist-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7f5687cd6dc0>: <Task finished name='Task-654812' coro=<_event_to_me() done, defined at /usr/loca...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7f560066cc10>
+          │       │   │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │       │   │    └ GroupMessageEvent(time=1647411782, self_id=507346814, post_type='message', sub_type='normal', user_id=695007502, message_type...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │       └ <function Matcher.run at 0x7f5687cd6940>
+          └ <Matcher from 涩图, type=message, priority=1, temp=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7f5687cd6dc0>: <Task finished name='Task-654812' coro=<_event_to_me() done, defined at /usr/loca...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7f560066cc10>
+          │    │          │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}}
+          │    │          │    └ GroupMessageEvent(time=1647411782, self_id=507346814, post_type='message', sub_type='normal', user_id=695007502, message_type...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │    └ <function Matcher.simple_run at 0x7f5687cd68b0>
+          └ <Matcher from 涩图, type=message, priority=1, temp=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _setu_catcher at 0x7f56158ad4c0>, params=[ModelField(name='bot', type=Bot, required=True), ModelFie...
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>, 'event': GroupMessageEvent(time=1647411782, self_id=5...
+                 │    └ <function _setu_catcher at 0x7f56158ad4c0>
+                 └ <Dependent call=<function _setu_catcher at 0x7f56158ad4c0>, params=[ModelField(name='bot', type=Bot, required=True), ModelFie...
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./src/plugins/atri_setu/__init__.py", line 120, in _setu_catcher
+    await bot.send_private_msg(user_id=superuser, message=s_repo)
+          │                            │                  └ '涩图来咧！\n[CQ:image,file=https://gchat.qpic.cn/gchatpic_new/695007502/895076651-2762853306-003C6C54B3D7F46419F970B1CAFDD1F1/0?t...
+          │                            └ '2560359315'
+          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': '2560359315', 'message': '涩图来咧！\n[CQ:image,file=https://gchat.qpic.cn/gchatpic_new/695007502/895076651-2762853306...
+                                  └ 'send_private_msg'
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <NetWorkError message=WebSocket API call timeout>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': '2560359315', 'message': '涩图来咧！\n[CQ:image,file=https://gchat.qpic.cn/gchatpic_new/695007502/895076651-2762853306...
+                   │    │       │         │     └ 'send_private_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+                   │    │       └ <function Adapter._call_api at 0x7f5686d76790>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7f5686c7f100>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/adapter.py", line 108, in _call_api
+    await ResultStore.fetch(bot.self_id, seq, self.config.api_timeout)
+          │           │     │   │        │    │    └ <property object at 0x7f56881ce860>
+          │           │     │   │        │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7f5686c7f100>
+          │           │     │   │        └ 96
+          │           │     │   └ '507346814'
+          │           │     └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │           └ <classmethod object at 0x7f5686ab6df0>
+          └ <class 'nonebot.adapters.onebot.v11.utils.ResultStore'>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/utils.py", line 113, in fetch
+    raise NetworkError("WebSocket API call timeout") from None
+          └ <class 'nonebot.adapters.onebot.v11.exception.NetworkError'>
+
+nonebot.adapters.onebot.v11.exception.NetworkError: <NetWorkError message=WebSocket API call timeout>
+[36mATRI[0m | 03-16 15:00:01 | ERROR apscheduler >> Job "update (trigger: cron[hour='*/1', minute='0', second='0'], next run at: 2022-03-16 16:00:00 CST)" raised an exception
+Traceback (most recent call last):
+
+  File "/usr/local/lib/python3.8/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       │    └ <function HTTPConnectionPool._make_request at 0x7f5687601c10>
+                       └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x7f56007344c0>
+
+  File "/usr/local/lib/python3.8/dist-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+    │    │              └ <urllib3.connection.HTTPSConnection object at 0x7f560062d9d0>
+    │    └ <function HTTPSConnectionPool._validate_conn at 0x7f5687602160>
+    └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x7f56007344c0>
+
+  File "/usr/local/lib/python3.8/dist-packages/urllib3/connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+    │    └ <function HTTPSConnection.connect at 0x7f56875e2af0>
+    └ <urllib3.connection.HTTPSConnection object at 0x7f560062d9d0>
+
+  File "/usr/local/lib/python3.8/dist-packages/urllib3/connection.py", line 416, in connect
+    self.sock = ssl_wrap_socket(
+    │    │      └ <function ssl_wrap_socket at 0x7f56875db5e0>
+    │    └ None
+    └ <urllib3.connection.HTTPSConnection object at 0x7f560062d9d0>
+
+  File "/usr/local/lib/python3.8/dist-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+               └ <function _ssl_wrap_socket_impl at 0x7f56875db790>
+
+  File "/usr/local/lib/python3.8/dist-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           │           │           │                     └ 'view.inews.qq.com'
+           │           │           └ <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>
+           │           └ <function SSLContext.wrap_socket at 0x7f5688724b80>
+           └ <ssl.SSLContext object at 0x7f56007389c0>
+
+  File "/usr/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+           │    │               └ <classmethod object at 0x7f5688723df0>
+           │    └ <class 'ssl.SSLSocket'>
+           └ <ssl.SSLContext object at 0x7f56007389c0>
+  File "/usr/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+    │    └ <function SSLSocket.do_handshake at 0x7f568872ba60>
+    └ <ssl.SSLSocket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>
+  File "/usr/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+    │    └ None
+    └ <ssl.SSLSocket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6>
+
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1131)
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/local/lib/python3.8/dist-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x7f5687601e50>
+           └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x7f56007344c0>
+
+  File "/usr/local/lib/python3.8/dist-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x7f5687637c10>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+
+  File "/usr/local/lib/python3.8/dist-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+          │             │      │    │        │             └ 'unknown'
+          │             │      │    │        └ <class 'urllib3.exceptions.ResponseError'>
+          │             │      │    └ SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)'))
+          │             │      └ '/g2/getOnsInfo?name=disease_h5'
+          │             └ <urllib3.connectionpool.HTTPSConnectionPool object at 0x7f56007344c0>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='view.inews.qq.com', port=443): Max retries exceeded with url: /g2/getOnsInfo?name=disease_h5 (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/local/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f5689847f70>
+           └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f5689abfb20>
+         │    └ <function MultiCommand.invoke at 0x7f5689851040>
+         └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f5689ab6130>
+           │               │       │       └ <function Command.invoke at 0x7f568984da60>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f5689ab6130>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f5689a68dc0>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f5689ab6130>
+           │   │      │    └ <function run at 0x7f5686ab5160>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f5689847820>
+           └ <click.core.Context object at 0x7f5689ab6130>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f5686a92b80>
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f5687cb6550>
+    └ <module 'nonebot' from '/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f5687cb60d0>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f5685ec5940>
+    └ <module 'uvicorn' from '/usr/local/lib/python3.8/dist-packages/uvicorn/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f5685ec5430>
+    └ <uvicorn.server.Server object at 0x7f5611a02460>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f5685ec54c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f5611a02460>
+           │       └ <function run at 0x7f5688b8bd30>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f5611a98b40>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+> File "/usr/local/lib/python3.8/dist-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=f36cc550bd074c0a9f991c6640f3f243 name=update)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=f36cc550bd074c0a9f991c6640f3f243 name=update)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=f36cc550bd074c0a9f991c6640f3f243 name=update)>
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./src/plugins/nonebot_plugin_covid19_news/__init__.py", line 95, in update
+    if NewsBot.update_data():
+       │       └ <function NewsData.update_data at 0x7f5611c02ee0>
+       └ <src.plugins.nonebot_plugin_covid19_news.tools.NewsData object at 0x7f5615690a90>
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./src/plugins/nonebot_plugin_covid19_news/tools.py", line 79, in update_data
+    res = requests.get(url).json()
+          │        │   └ 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5'
+          │        └ <function get at 0x7f56874c73a0>
+          └ <module 'requests' from '/usr/local/lib/python3.8/dist-packages/requests/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+           │              │           │         └ {}
+           │              │           └ None
+           │              └ 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5'
+           └ <function request at 0x7f568750d790>
+
+  File "/usr/local/lib/python3.8/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'params': None}
+           │       │              │           └ 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5'
+           │       │              └ 'get'
+           │       └ <function Session.request at 0x7f56874c9af0>
+           └ <requests.sessions.Session object at 0x7f560073a820>
+
+  File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': None, 'allow_redirects': True, 'verify': True, 'proxies': OrderedDict(), 'stream': False, 'cert': None}
+           │    │    └ <PreparedRequest [GET]>
+           │    └ <function Session.send at 0x7f56874c9f70>
+           └ <requests.sessions.Session object at 0x7f560073a820>
+
+  File "/usr/local/lib/python3.8/dist-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': None, 'verify': True, 'proxies': OrderedDict(), 'stream': False, 'cert': None}
+        │       │    └ <PreparedRequest [GET]>
+        │       └ <function HTTPAdapter.send at 0x7f56874c9430>
+        └ <requests.adapters.HTTPAdapter object at 0x7f5600731ac0>
+
+  File "/usr/local/lib/python3.8/dist-packages/requests/adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+          │                   └ <PreparedRequest [GET]>
+          └ <class 'requests.exceptions.SSLError'>
+
+requests.exceptions.SSLError: HTTPSConnectionPool(host='view.inews.qq.com', port=443): Max retries exceeded with url: /g2/getOnsInfo?name=disease_h5 (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+[36mATRI[0m | 03-16 15:12:00 | ERROR nonebot >> Running matcher <Matcher from src.plugins.russian, type=message, priority=0, temp=True> failed.
+Traceback (most recent call last):
+
+  File "/usr/local/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f5689847f70>
+           └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f5689abfb20>
+         │    └ <function MultiCommand.invoke at 0x7f5689851040>
+         └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f5689ab6130>
+           │               │       │       └ <function Command.invoke at 0x7f568984da60>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f5689ab6130>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f5689a68dc0>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f5689ab6130>
+           │   │      │    └ <function run at 0x7f5686ab5160>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f5689847820>
+           └ <click.core.Context object at 0x7f5689ab6130>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f5686a92b80>
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f5687cb6550>
+    └ <module 'nonebot' from '/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f5687cb60d0>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f5685ec5940>
+    └ <module 'uvicorn' from '/usr/local/lib/python3.8/dist-packages/uvicorn/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f5685ec5430>
+    └ <uvicorn.server.Server object at 0x7f5611a02460>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f5685ec54c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f5611a02460>
+           │       └ <function run at 0x7f5688b8bd30>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f5611a98b40>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function Matcher.got.<locals>._key_getter at 0x7f5682294d30>: <Task finished name='Task-867575' coro=<Matcher.got.<locals>....
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7f5663520910>
+          │            │        │    │      └ {'_prefix': {'command': ('装弹',), 'raw_command': '/装弹', 'command_arg': [MessageSegment(type='text', data={'text': '2 2000 @蔡华博...
+          │            │        │    └ GroupMessageEvent(time=1647414720, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │            └ <Matcher from src.plugins.russian, type=message, priority=0, temp=True>
+          └ <function _run_matcher at 0x7f5686d45f70>
+
+> File "/usr/local/lib/python3.8/dist-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function Matcher.got.<locals>._key_getter at 0x7f5682294d30>: <Task finished name='Task-867575' coro=<Matcher.got.<locals>....
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7f5663520910>
+          │       │   │    │      └ {'_prefix': {'command': ('装弹',), 'raw_command': '/装弹', 'command_arg': [MessageSegment(type='text', data={'text': '2 2000 @蔡华博...
+          │       │   │    └ GroupMessageEvent(time=1647414720, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │       └ <function Matcher.run at 0x7f5687cd6940>
+          └ <Matcher from src.plugins.russian, type=message, priority=0, temp=True>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function Matcher.got.<locals>._key_getter at 0x7f5682294d30>: <Task finished name='Task-867575' coro=<Matcher.got.<locals>....
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7f5663520910>
+          │    │          │    │      └ {'_prefix': {'command': ('装弹',), 'raw_command': '/装弹', 'command_arg': [MessageSegment(type='text', data={'text': '2 2000 @蔡华博...
+          │    │          │    └ GroupMessageEvent(time=1647414720, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │    └ <function Matcher.simple_run at 0x7f5687cd68b0>
+          └ <Matcher from src.plugins.russian, type=message, priority=0, temp=True>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _ at 0x7f5682294ee0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>, 'event': GroupMessageEvent(time=1647414720, self_id=5...
+                 │    └ <function _ at 0x7f5682294ee0>
+                 └ <Dependent call=<function _ at 0x7f5682294ee0>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./src/plugins/russian/__init__.py", line 179, in _
+    if bullet_num < 0 or bullet_num > 6:
+       │                 └ [MessageSegment(type='text', data={'text': '/装弹 2 2000 @蔡华博 '})]
+       └ [MessageSegment(type='text', data={'text': '/装弹 2 2000 @蔡华博 '})]
+
+TypeError: '<' not supported between instances of 'Message' and 'int'
+[36mATRI[0m | 03-16 16:11:39 | ERROR nonebot >> Running matcher <Matcher from src.plugins.russian, type=message, priority=5, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/local/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7f5689847f70>
+           └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7f5689abfb20>
+         │    └ <function MultiCommand.invoke at 0x7f5689851040>
+         └ <ClickAliasedGroup main>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7f5689ab6130>
+           │               │       │       └ <function Command.invoke at 0x7f568984da60>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7f5689ab6130>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7f5689a68dc0>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7f5689ab6130>
+           │   │      │    └ <function run at 0x7f5686ab5160>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7f5689847820>
+           └ <click.core.Context object at 0x7f5689ab6130>
+
+  File "/usr/local/lib/python3.8/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7f5686a92b80>
+
+  File "/usr/local/lib/python3.8/dist-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7f5687cb6550>
+    └ <module 'nonebot' from '/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7f5687cb60d0>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7f5685ec5940>
+    └ <module 'uvicorn' from '/usr/local/lib/python3.8/dist-packages/uvicorn/__init__.py'>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7f5685ec5430>
+    └ <uvicorn.server.Server object at 0x7f5611a02460>
+
+  File "/usr/local/lib/python3.8/dist-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f5685ec54c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f5611a02460>
+           │       └ <function run at 0x7f5688b8bd30>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f5611a98b40>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _event_to_me at 0x7f5687cd6dc0>: <Task finished name='Task-1027821' coro=<_event_to_me() done, defined at /usr/loc...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7f560073ac40>
+          │            │        │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '!stock', 'command_arg': [MessageSegment(type='text', data={'text': 'sell ...
+          │            │        │    └ GroupMessageEvent(time=1647418294, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │            └ <Matcher from src.plugins.russian, type=message, priority=5, temp=False>
+          └ <function _run_matcher at 0x7f5686d45f70>
+
+> File "/usr/local/lib/python3.8/dist-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _event_to_me at 0x7f5687cd6dc0>: <Task finished name='Task-1027821' coro=<_event_to_me() done, defined at /usr/loc...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7f560073ac40>
+          │       │   │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '!stock', 'command_arg': [MessageSegment(type='text', data={'text': 'sell ...
+          │       │   │    └ GroupMessageEvent(time=1647418294, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │       └ <function Matcher.run at 0x7f5687cd6940>
+          └ <Matcher from src.plugins.russian, type=message, priority=5, temp=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _event_to_me at 0x7f5687cd6dc0>: <Task finished name='Task-1027821' coro=<_event_to_me() done, defined at /usr/loc...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7f560073ac40>
+          │    │          │    │      └ {'_prefix': {'command': ('stock',), 'raw_command': '!stock', 'command_arg': [MessageSegment(type='text', data={'text': 'sell ...
+          │    │          │    └ GroupMessageEvent(time=1647418294, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+          │    └ <function Matcher.simple_run at 0x7f5687cd68b0>
+          └ <Matcher from src.plugins.russian, type=message, priority=5, temp=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _ at 0x7f568225da60>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>, 'event': GroupMessageEvent(time=1647418294, self_id=5...
+                 │    └ <function _ at 0x7f568225da60>
+                 └ <Dependent call=<function _ at 0x7f568225da60>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "/root/Projects/Kori-Bot/Kori-bot/./src/plugins/russian/__init__.py", line 518, in _
+    await stock.finish(
+          │     └ <classmethod object at 0x7f5687ccdbe0>
+          └ <Matcher from src.plugins.russian, type=message, priority=5, temp=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 464, in finish
+    await cls.send(message, **kwargs)
+          │   │    │          └ {'at_sender': True}
+          │   │    └ '\n🧾 Successfully sold 1 shares earning 437.22 coins.\nYou have 78 shares left now.\n🟩 Current stock: 437.22 coins,  62.63%'
+          │   └ <classmethod object at 0x7f5687ccdb80>
+          └ <Matcher from src.plugins.russian, type=message, priority=5, temp=False>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/matcher.py", line 449, in send
+    return await bot.send(event=event, message=_message, **kwargs)
+                 │   │          │              │           └ {'at_sender': True}
+                 │   │          │              └ '\n🧾 Successfully sold 1 shares earning 437.22 coins.\nYou have 78 shares left now.\n🟩 Current stock: 437.22 coins,  62.63%'
+                 │   │          └ GroupMessageEvent(time=1647418294, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+                 │   └ <function Bot.send at 0x7f5686d764c0>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/bot.py", line 247, in send
+    return await self.__class__.send_handler(self, event, message, **kwargs)
+                 │    │                      │     │      │          └ {'at_sender': True}
+                 │    │                      │     │      └ '\n🧾 Successfully sold 1 shares earning 437.22 coins.\nYou have 78 shares left now.\n🟩 Current stock: 437.22 coins,  62.63%'
+                 │    │                      │     └ GroupMessageEvent(time=1647418294, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+                 │    │                      └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+                 │    └ <attribute '__class__' of 'object' objects>
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/bot.py", line 175, in send
+    return await bot.send_msg(**params)
+                 │              └ {'user_id': 2560359315, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                 └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/bot.py", line 208, in call_api
+    return await super().call_api(api, **data)
+                                  │      └ {'user_id': 2560359315, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                                  └ 'send_msg'
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/adapter/bot.py", line 117, in call_api
+    raise exception
+          └ <ActionFailed data=None, echo={'seq': 230}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/internal/adapter/bot.py", line 94, in call_api
+    result = await self.adapter._call_api(self, api, **data)
+                   │    │       │         │     │      └ {'user_id': 2560359315, 'group_id': 937760225, 'message_type': 'group', 'message': [MessageSegment(type='at', data={'qq': '25...
+                   │    │       │         │     └ 'send_msg'
+                   │    │       │         └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+                   │    │       └ <function Adapter._call_api at 0x7f5686d76790>
+                   │    └ <nonebot.adapters.onebot.v11.adapter.Adapter object at 0x7f5686c7f100>
+                   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7f566359f790>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/adapter.py", line 107, in _call_api
+    return _handle_api_result(
+           └ <function _handle_api_result at 0x7f5686c97d30>
+
+  File "/usr/local/lib/python3.8/dist-packages/nonebot/adapters/onebot/v11/utils.py", line 81, in _handle_api_result
+    raise ActionFailed(**result)
+          │              └ {'data': None, 'echo': {'seq': 230}, 'msg': 'SEND_MSG_API_ERROR', 'retcode': 100, 'status': 'failed', 'wording': '请参考 go-cqht...
+          └ <class 'nonebot.adapters.onebot.v11.exception.ActionFailed'>
+
+nonebot.adapters.onebot.v11.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 230}, msg=SEND_MSG_API_ERROR, retcode=100, status=failed, wording=请参考 go-cqhttp 端输出>

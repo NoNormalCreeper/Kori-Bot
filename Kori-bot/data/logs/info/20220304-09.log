@@ -1,0 +1,1190 @@
+[36mATRI[0m | 03-04 09:14:50 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:50 | SUCCESS plugin.manager >> Succeeded to import "chat"
+[36mATRI[0m | 03-04 09:14:50 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_chatrecorder"
+[36mATRI[0m | 03-04 09:14:51 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_petpet"
+[36mATRI[0m | 03-04 09:14:51 | SUCCESS plugin.manager >> Succeeded to import "help"
+[36mATRI[0m | 03-04 09:14:51 | WARNING nonebot >> Duplicated prefix rule "！lottery"
+[36mATRI[0m | 03-04 09:14:51 | WARNING nonebot >> Duplicated prefix rule "/lottery"
+[36mATRI[0m | 03-04 09:14:51 | WARNING nonebot >> Duplicated prefix rule "!lottery"
+[36mATRI[0m | 03-04 09:14:51 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:51 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_russian"
+[36mATRI[0m | 03-04 09:14:52 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_songpicker2"
+[36mATRI[0m | 03-04 09:14:52 | INFO src >> global_config:driver='~fastapi' host=IPv4Address('127.0.0.1') port=9165 log_level='INFO' api_timeout=30.0 superusers={'2560359315'} nickname={'Kori', 'bot', 'Kori Bot'} command_start={'！', '/', '!'} command_sep={'.', ' '} session_expire_timeout=datetime.timedelta(seconds=120) read_qq_groups=[277620613, 937760225, 958866763] caiyunai_apikey='62142754f02461188d58b88f' arknights_flag=True proxies_http='http://127.0.0.1:20171' einstein_flag=True genshin_flag=True dc4_flag=False qweather_apitype=0 liqingge_flag=True setu_cd=180 azure_flag=True groups_id=[] fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' environment='prod' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] sakura_flag=True onmyoji_flag=True debug='True' dir='~/Project/Kori-Bot/Kori-Bot' repeater_minlen=1 pretty_derby_flag=True statistical_black_priority=[] hoshizora_flag=True statistical_black_model=['nonebot_plugin_repeater'] server_status_only_superusers='False' touhou_flag=True read_qq_friends=[0, 0] pcr_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_path='data/statistical/' eating_limit=5 granblue_fantasy_flag=True touhou_old_flag=False sweet_illusion_flag=True vtuber_flag=True asoul_flag=True server_status_per_cpu='True' punishing_flag=True
+[36mATRI[0m | 03-04 09:14:52 | INFO src >> plugin_config:plugin_setting='default' read_qq_groups=[277620613, 937760225, 958866763] caiyunai_apikey='62142754f02461188d58b88f' arknights_flag=True proxies_http='http://127.0.0.1:20171' einstein_flag=True genshin_flag=True dc4_flag=False qweather_apitype=0 command_start={'！', '/', '!'} host=IPv4Address('127.0.0.1') liqingge_flag=True setu_cd=180 api_timeout=30.0 azure_flag=True groups_id=[] superusers={'2560359315'} fortune_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_fortune/resource/' what2eat_path='./src/plugins/nonebot_plugin_what2eat-2/resource/' driver='~fastapi' environment='prod' qweather_apikey='ae2434efa50048cdb5e92ecb9a1c6b14' read_inform_time=[{'HOUR': 7, 'MINUTE': 30}] nickname={'Kori', 'Kori Bot', 'bot'} sakura_flag=True onmyoji_flag=True debug='True' dir='~/Project/Kori-Bot/Kori-Bot' repeater_minlen=1 pretty_derby_flag=True statistical_black_priority=[] hoshizora_flag=True port=9165 log_level='INFO' statistical_black_model=['nonebot_plugin_repeater'] server_status_only_superusers='False' touhou_flag=True read_qq_friends=[0, 0] pcr_flag=True morning_path='/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_morning/resource/' statistical_path='data/statistical/' eating_limit=5 granblue_fantasy_flag=True touhou_old_flag=False sweet_illusion_flag=True command_sep={'.', ' '} vtuber_flag=True asoul_flag=True session_expire_timeout=datetime.timedelta(seconds=120) server_status_per_cpu='True' punishing_flag=True
+[36mATRI[0m | 03-04 09:14:52 | INFO src >> id:0,time:{'HOUR': 7, 'MINUTE': 30}
+[36mATRI[0m | 03-04 09:14:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:52 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_read_60s"
+[36mATRI[0m | 03-04 09:14:52 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_biliav"
+[36mATRI[0m | 03-04 09:14:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:52 | SUCCESS plugin.manager >> Succeeded to import "atri_plugin_status"
+[36mATRI[0m | 03-04 09:14:52 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_abbrreply"
+[36mATRI[0m | 03-04 09:14:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:52 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_what2eat-2"
+[36mATRI[0m | 03-04 09:14:52 | INFO apscheduler >> Adding job tentatively -- it will be properly scheduled when the scheduler starts
+[36mATRI[0m | 03-04 09:14:52 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_fortune"
+[36mATRI[0m | 03-04 09:14:58 | ERROR plugin.manager >> Failed to import "atri_setu"
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fbe226eb040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fbe22f713a0>
+         │    └ <function MultiCommand.invoke at 0x7fbe226ef0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fbe2a85e220>
+           │               │       │       └ <function Command.invoke at 0x7fbe226ebaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fbe2a85e220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fbe19617940>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fbe2a85e220>
+           │   │      │    └ <function run at 0x7fbe19742820>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fbe226e78b0>
+           └ <click.core.Context object at 0x7fbe2a85e220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fbe197325e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 19, in run_bot
+    module = importlib.import_module(module_name)
+             │         │             └ 'bot'
+             │         └ <function import_module at 0x7fbe2a89e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'bot'
+           │          └ <function _gcd_import at 0x7fbe2a9cd430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./bot.py", line 29, in <module>
+    nonebot.load_plugins("src/plugins")
+    │       └ <function load_plugins at 0x7fbe205ae700>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/load.py", line 39, in load_plugins
+    return manager.load_all_plugins()
+           │       └ <function PluginManager.load_all_plugins at 0x7fbe205a7280>
+           └ <nonebot.plugin.manager.PluginManager object at 0x7fbe18f257c0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 128, in load_all_plugins
+    return set(
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 129, in <genexpr>
+    filter(None, (self.load_plugin(name) for name in self.list_plugins()))
+                  │    │           │         │       │    └ <function PluginManager.list_plugins at 0x7fbe205a7160>
+                  │    │           │         │       └ <nonebot.plugin.manager.PluginManager object at 0x7fbe18f257c0>
+                  │    │           │         └ 'atri_setu'
+                  │    │           └ 'atri_setu'
+                  │    └ <function PluginManager.load_plugin at 0x7fbe205a71f0>
+                  └ <nonebot.plugin.manager.PluginManager object at 0x7fbe18f257c0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 106, in load_plugin
+    module = importlib.import_module(
+             │         └ <function import_module at 0x7fbe2a89e940>
+             └ <module 'importlib' from '/usr/local/python3/lib/python3.8/importlib/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'src.plugins.atri_setu'
+           │          └ <function _gcd_import at 0x7fbe2a9cd430>
+           └ <module 'importlib._bootstrap' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/plugin/manager.py", line 194, in exec_module
+    super().exec_module(module)
+                        └ <module 'src.plugins.atri_setu' from './src/plugins/atri_setu/__init__.py'>
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "./src/plugins/atri_setu/__init__.py", line 81, in <module>
+    setu_catcher = Setu().on_command("涩图嗅探", "涩图嗅探器", block=False)
+                   └ <class 'src.plugins.atri_setu.data_source.Setu'>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/ATRI/service.py", line 262, in on_command
+    return self.on_message(rule=command(*commands) & rule, block=True, **kwargs)
+           │    │               │        │           │                   └ {'block': False}
+           │    │               │        │           └ <nonebot.internal.rule.Rule object at 0x7fbe17c5dfa0>
+           │    │               │        └ {'涩图嗅探'}
+           │    │               └ <function command at 0x7fbe20596d30>
+           │    └ <function Service.on_message at 0x7fbdfc9439d0>
+           └ <src.plugins.atri_setu.data_source.Setu object at 0x7fbe17c5deb0>
+
+TypeError: on_message() got multiple values for keyword argument 'block'
+[36mATRI[0m | 03-04 09:14:58 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_heweather"
+[36mATRI[0m | 03-04 09:14:58 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_roll"
+[36mATRI[0m | 03-04 09:14:59 | SUCCESS plugin.manager >> Succeeded to import "test"
+[36mATRI[0m | 03-04 09:14:59 | SUCCESS plugin.manager >> Succeeded to import "wife"
+[36mATRI[0m | 03-04 09:14:59 | SUCCESS plugin.manager >> Succeeded to import "trigger_memes_from_feiyucans_space"
+[36mATRI[0m | 03-04 09:14:59 | SUCCESS plugin.manager >> Succeeded to import "wolfram"
+[36mATRI[0m | 03-04 09:14:59 | SUCCESS plugin.manager >> Succeeded to import "nonebot_plugin_localstore"
+[36mATRI[0m | 03-04 09:14:59 | SUCCESS nonebot >> Running NoneBot...
+[36mATRI[0m | 03-04 09:14:59 | INFO uvicorn >> Started server process [8118]
+[36mATRI[0m | 03-04 09:14:59 | INFO uvicorn >> Waiting for application startup.
+[36mATRI[0m | 03-04 09:14:59 | INFO src >> 数据库初始化完成
+[36mATRI[0m | 03-04 09:15:00 | INFO nonebot_plugin_htmlrender >> Browser Started.
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "weeklyEpic" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "memesfeiyu" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "whitenight" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "read60s" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "time_for_breakfast" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "time_for_lunch" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "time_for_snack" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "time_for_dinner" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "time_for_midnight" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Added job "_" to job store "default"
+[36mATRI[0m | 03-04 09:15:00 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-04 09:15:00 | INFO src >> Scheduler Started
+[36mATRI[0m | 03-04 09:15:00 | INFO nonebot_plugin_datastore >> 数据库初始化完成
+[36mATRI[0m | 03-04 09:15:01 | INFO src >> Browser Started.
+[36mATRI[0m | 03-04 09:15:01 | INFO apscheduler >> Added job "闲聊词库检查更新" to job store "default"
+[36mATRI[0m | 03-04 09:15:01 | INFO apscheduler >> Added job "状态检查" to job store "default"
+[36mATRI[0m | 03-04 09:15:01 | INFO apscheduler >> Scheduler started
+[36mATRI[0m | 03-04 09:15:01 | INFO ATRI >> Scheduler Started.
+[36mATRI[0m | 03-04 09:15:01 | INFO uvicorn >> Application startup complete.
+[36mATRI[0m | 03-04 09:15:01 | INFO uvicorn >> Uvicorn running on http://127.0.0.1:9165 (Press CTRL+C to quit)
+[36mATRI[0m | 03-04 09:15:02 | INFO uvicorn >> ('127.0.0.1', 57452) - "WebSocket /onebot/v11/ws/" [accepted]
+[36mATRI[0m | 03-04 09:15:02 | INFO nonebot >> OneBot V11 | Bot 507346814 connected
+[36mATRI[0m | 03-04 09:15:02 | INFO websockets >> connection open
+[36mATRI[0m | 03-04 09:15:03 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1963590195 from 2560359315@[群:277620613] "/深圳天气"
+[36mATRI[0m | 03-04 09:15:03 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:15:03 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_heweather, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:15:03 | INFO src >> 使用普通版API
+[36mATRI[0m | 03-04 09:15:04 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:04 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_heweather, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:04 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_heweather, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fbe226eb040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fbe22f713a0>
+         │    └ <function MultiCommand.invoke at 0x7fbe226ef0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fbe2a85e220>
+           │               │       │       └ <function Command.invoke at 0x7fbe226ebaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fbe2a85e220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fbe19617940>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fbe2a85e220>
+           │   │      │    └ <function run at 0x7fbe19742820>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fbe226e78b0>
+           └ <click.core.Context object at 0x7fbe2a85e220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fbe197325e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fbe1b81a8b0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fbe1b81a430>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fbe1953e5e0>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fbe1953e9d0>
+    └ <uvicorn.server.Server object at 0x7fbdae329cd0>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fbe1953ea60>
+           │       │   └ <uvicorn.server.Server object at 0x7fbdae329cd0>
+           │       └ <function run at 0x7fbe1ef783a0>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7fbdae2d3ac0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _command at 0x7fbe1b8580d0>: <Task finished name='Task-389' coro=<_command() done, defined at /usr/local/python3/l...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7fbdad0de790>
+          │            │        │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}, '_matched': '/深圳天气', '_matched_groups': ('/深圳',), '_...
+          │            │        │    └ GroupMessageEvent(time=1646356503, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fbdad07b4f0>
+          │            └ <Matcher from src.plugins.nonebot_plugin_heweather, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7fbe1965c5e0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _command at 0x7fbe1b8580d0>: <Task finished name='Task-389' coro=<_command() done, defined at /usr/local/python3/l...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7fbdad0de790>
+          │       │   │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}, '_matched': '/深圳天气', '_matched_groups': ('/深圳',), '_...
+          │       │   │    └ GroupMessageEvent(time=1646356503, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fbdad07b4f0>
+          │       └ <function Matcher.run at 0x7fbe1b856af0>
+          └ <Matcher from src.plugins.nonebot_plugin_heweather, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _command at 0x7fbe1b8580d0>: <Task finished name='Task-389' coro=<_command() done, defined at /usr/local/python3/l...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7fbdad0de790>
+          │    │          │    │      └ {'_prefix': {'command': None, 'raw_command': None, 'command_arg': None}, '_matched': '/深圳天气', '_matched_groups': ('/深圳',), '_...
+          │    │          │    └ GroupMessageEvent(time=1646356503, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fbdad07b4f0>
+          │    └ <function Matcher.simple_run at 0x7fbe1b856a60>
+          └ <Matcher from src.plugins.nonebot_plugin_heweather, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function _ at 0x7fbdae30bf70>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fbdad07b4f0>, 'event': GroupMessageEvent(time=1646356503, self_id=5...
+                 │    └ <function _ at 0x7fbdae30bf70>
+                 └ <Dependent call=<function _ at 0x7fbdae30bf70>, params=[ModelField(name='bot', type=Bot, required=True), ModelField(name='eve...
+
+  File "./src/plugins/nonebot_plugin_heweather/__init__.py", line 35, in _
+    img = await render(w_data)
+                │      └ <src.plugins.nonebot_plugin_heweather.weather_data.Weather object at 0x7fbdad056c40>
+                └ <function render at 0x7fbdae3b7c10>
+
+  File "./src/plugins/nonebot_plugin_heweather/render_pic.py", line 11, in render
+    return await template_to_pic(
+                 └ <function template_to_pic at 0x7fbe1606b820>
+
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_htmlrender/date_source.py", line 194, in template_to_pic
+    return await html_to_pic(
+                 └ <function html_to_pic at 0x7fbe1606b790>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot_plugin_htmlrender/date_source.py", line 159, in html_to_pic
+    await page.goto(template_path)
+          │    │    └ 'file://src/plugins/nonebot_plugin_heweather/templates'
+          │    └ <function Page.goto at 0x7fbe1634b9d0>
+          └ <Page url='about:blank'>
+  File "/usr/local/python3/lib/python3.8/site-packages/playwright/async_api/_generated.py", line 7516, in goto
+    await self._async(
+          │    └ <function AsyncBase._async at 0x7fbe1638c310>
+          └ <Page url='about:blank'>
+  File "/usr/local/python3/lib/python3.8/site-packages/playwright/_impl/_page.py", line 487, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+                 │    │           │      └ <function locals_to_params at 0x7fbe166dc1f0>
+                 │    │           └ <function Frame.goto at 0x7fbe163d1dc0>
+                 │    └ <Frame name= url='about:blank'>
+                 └ <Page url='about:blank'>
+  File "/usr/local/python3/lib/python3.8/site-packages/playwright/_impl/_frame.py", line 122, in goto
+    await self._channel.send("goto", locals_to_params(locals()))
+          │    │        │            └ <function locals_to_params at 0x7fbe166dc1f0>
+          │    │        └ <function Channel.send at 0x7fbe1645ee50>
+          │    └ <playwright._impl._connection.Channel object at 0x7fbdad056af0>
+          └ <Frame name= url='about:blank'>
+  File "/usr/local/python3/lib/python3.8/site-packages/playwright/_impl/_connection.py", line 39, in send
+    return await self.inner_send(method, params, False)
+                 │    │          │       └ {'url': 'file://src/plugins/nonebot_plugin_heweather/templates'}
+                 │    │          └ 'goto'
+                 │    └ <function Channel.inner_send at 0x7fbe1645ef70>
+                 └ <playwright._impl._connection.Channel object at 0x7fbdad056af0>
+  File "/usr/local/python3/lib/python3.8/site-packages/playwright/_impl/_connection.py", line 63, in inner_send
+    result = next(iter(done)).result()
+                       └ {<Future finished exception=Error('net::ERR_INVALID_URL at file://src/plugins/nonebot_plugin_heweather/templates\n===========...
+
+playwright._impl._api_types.Error: net::ERR_INVALID_URL at file://src/plugins/nonebot_plugin_heweather/templates
+=========================== logs ===========================
+navigating to "file://src/plugins/nonebot_plugin_heweather/templates", waiting until "load"
+============================================================
+[36mATRI[0m | 03-04 09:15:06 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1164179312 from 963046537@[群:937760225] "[CQ:at,qq=2560359315] 玩个欢乐的小游戏吧"
+[36mATRI[0m | 03-04 09:15:06 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:15:06 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:16 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -845465594 from 2560359315@[群:937760225] "什么"
+[36mATRI[0m | 03-04 09:15:16 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:15:16 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:16 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:15:16 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:23 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1418881468 from 963046537@[群:937760225] "我把100个金币藏在了三个红包里面"
+[36mATRI[0m | 03-04 09:15:23 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:15:23 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:27 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 596990250 from 963046537@[群:937760225] "A B C"
+[36mATRI[0m | 03-04 09:15:27 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:15:27 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:30 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1108226935 from 963046537@[群:937760225] "三选一"
+[36mATRI[0m | 03-04 09:15:30 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:15:30 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:39 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -889783265 from 2560359315@[群:937760225] "..."
+[36mATRI[0m | 03-04 09:15:39 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:15:39 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:39 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:15:39 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:48 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1409265061 from 963046537@[群:937760225] "来"
+[36mATRI[0m | 03-04 09:15:48 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:15:48 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:54 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1833816268 from 2560359315@[群:277620613] "/点歌 hop"
+[36mATRI[0m | 03-04 09:15:54 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:15:54 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:54 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:15:54 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:54 | ERROR nonebot >> Running matcher <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "/usr/bin/nb", line 8, in <module>
+    sys.exit(main())
+    │   │    └ <ClickAliasedGroup main>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x7fbe226eb040>
+           └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x7fbe22f713a0>
+         │    └ <function MultiCommand.invoke at 0x7fbe226ef0d0>
+         └ <ClickAliasedGroup main>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+           │               │       │       │      └ <click.core.Context object at 0x7fbe2a85e220>
+           │               │       │       └ <function Command.invoke at 0x7fbe226ebaf0>
+           │               │       └ <ClickAliasedCommand run>
+           │               └ <click.core.Context object at 0x7fbe2a85e220>
+           └ <function MultiCommand.invoke.<locals>._process_result at 0x7fbe19617940>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'file': 'bot.py', 'app': 'app'}
+           │   │      │    │           └ <click.core.Context object at 0x7fbe2a85e220>
+           │   │      │    └ <function run at 0x7fbe19742820>
+           │   │      └ <ClickAliasedCommand run>
+           │   └ <function Context.invoke at 0x7fbe226e78b0>
+           └ <click.core.Context object at 0x7fbe2a85e220>
+  File "/usr/local/python3/lib/python3.8/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'file': 'bot.py', 'app': 'app'}
+                       └ ()
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/commands/main.py", line 30, in run
+    run_bot(file, app)
+    │       │     └ 'app'
+    │       └ 'bot.py'
+    └ <function run_bot at 0x7fbe197325e0>
+  File "/usr/local/python3/lib/python3.8/site-packages/nb_cli/handlers/deploy.py", line 24, in run_bot
+    nonebot.run(app=f"{module_name}:{app}")
+    │       └ <function run at 0x7fbe1b81a8b0>
+    └ <module 'nonebot' from '/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/__init__.py", line 258, in run
+    get_driver().run(*args, **kwargs)
+    │                 │       └ {'app': 'bot:app'}
+    │                 └ ()
+    └ <function get_driver at 0x7fbe1b81a430>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/drivers/fastapi.py", line 168, in run
+    uvicorn.run(
+    │       └ <function run at 0x7fbe1953e5e0>
+    └ <module 'uvicorn' from '/usr/local/python3/lib/python3.8/site-packages/uvicorn/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/main.py", line 463, in run
+    server.run()
+    │      └ <function Server.run at 0x7fbe1953e9d0>
+    └ <uvicorn.server.Server object at 0x7fbdae329cd0>
+  File "/usr/local/python3/lib/python3.8/site-packages/uvicorn/server.py", line 60, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7fbe1953ea60>
+           │       │   └ <uvicorn.server.Server object at 0x7fbdae329cd0>
+           │       └ <function run at 0x7fbe1ef783a0>
+           └ <module 'asyncio' from '/usr/local/python3/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/local/python3/lib/python3.8/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7fbdae2d3ac0>
+           │    └ <method 'run_until_complete' of 'uvloop.loop.Loop' objects>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 153, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state, stack, dependency_cache)
+          │            │        │    │      │      │      └ {<function _command at 0x7fbe1b8580d0>: <Task finished name='Task-4565' coro=<_command() done, defined at /usr/local/python3/...
+          │            │        │    │      │      └ <contextlib.AsyncExitStack object at 0x7fbdac2b9e20>
+          │            │        │    │      └ {'_prefix': {'command': ('点歌',), 'raw_command': '/点歌', 'command_arg': [MessageSegment(type='text', data={'text': 'hop'})]}}
+          │            │        │    └ GroupMessageEvent(time=1646356554, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │            │        └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fbdad07b4f0>
+          │            └ <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x7fbe1965c5e0>
+> File "/usr/local/python3/lib/python3.8/site-packages/nonebot/message.py", line 202, in _run_matcher
+    await matcher.run(bot, event, state, stack, dependency_cache)
+          │       │   │    │      │      │      └ {<function _command at 0x7fbe1b8580d0>: <Task finished name='Task-4565' coro=<_command() done, defined at /usr/local/python3/...
+          │       │   │    │      │      └ <contextlib.AsyncExitStack object at 0x7fbdac2b9e20>
+          │       │   │    │      └ {'_prefix': {'command': ('点歌',), 'raw_command': '/点歌', 'command_arg': [MessageSegment(type='text', data={'text': 'hop'})]}}
+          │       │   │    └ GroupMessageEvent(time=1646356554, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │       │   └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fbdad07b4f0>
+          │       └ <function Matcher.run at 0x7fbe1b856af0>
+          └ <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 668, in run
+    await self.simple_run(bot, event, state, stack, dependency_cache)
+          │    │          │    │      │      │      └ {<function _command at 0x7fbe1b8580d0>: <Task finished name='Task-4565' coro=<_command() done, defined at /usr/local/python3/...
+          │    │          │    │      │      └ <contextlib.AsyncExitStack object at 0x7fbdac2b9e20>
+          │    │          │    │      └ {'_prefix': {'command': ('点歌',), 'raw_command': '/点歌', 'command_arg': [MessageSegment(type='text', data={'text': 'hop'})]}}
+          │    │          │    └ GroupMessageEvent(time=1646356554, self_id=507346814, post_type='message', sub_type='normal', user_id=2560359315, message_typ...
+          │    │          └ <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fbdad07b4f0>
+          │    └ <function Matcher.simple_run at 0x7fbe1b856a60>
+          └ <Matcher from src.plugins.nonebot_plugin_songpicker2, type=message, priority=1, temp=False>
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/internal/matcher.py", line 635, in simple_run
+    await handler(
+          └ <Dependent call=<function handle_songName at 0x7fbdfc7c50d0>, params=[ModelField(name='bot', type=Bot, required=True), ModelF...
+  File "/usr/local/python3/lib/python3.8/site-packages/nonebot/dependencies/__init__.py", line 92, in __call__
+    return await self.call(**values)
+                 │    │      └ {'bot': <nonebot.adapters.onebot.v11.bot.Bot object at 0x7fbdad07b4f0>, 'event': GroupMessageEvent(time=1646356554, self_id=5...
+                 │    └ <function handle_songName at 0x7fbdfc7c50d0>
+                 └ <Dependent call=<function handle_songName at 0x7fbdfc7c50d0>, params=[ModelField(name='bot', type=Bot, required=True), ModelF...
+
+  File "./src/plugins/nonebot_plugin_songpicker2/__init__.py", line 39, in handle_songName
+    songName = state["songName"]
+
+NameError: name 'state' is not defined
+[36mATRI[0m | 03-04 09:15:54 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:15:54 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:15:58 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 620272947 from 963046537@[群:937760225] "选"
+[36mATRI[0m | 03-04 09:15:58 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:15:58 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:09 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1270382430 from 2560359315@[群:937760225] "A"
+[36mATRI[0m | 03-04 09:16:09 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:16:09 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:09 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:09 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:13 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1019170764 from 963046537@[群:937760225] "好"
+[36mATRI[0m | 03-04 09:16:13 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:13 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:24 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1850647725 from 963046537@[群:937760225] "我现在告诉你B里面没有金币"
+[36mATRI[0m | 03-04 09:16:24 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:24 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:29 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -424252475 from 963046537@[群:937760225] "你换成C吗"
+[36mATRI[0m | 03-04 09:16:29 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:29 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:32 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2143238783 from 963046537@[群:937760225] "[CQ:image,file=4e994f1332634ebdd46b4a939fd704e3.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2248702321-4E994F1332634EBDD46B4A939FD704E3/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:16:32 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:32 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:36 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 146279145 from 2560359315@[群:937760225] "三门问题是吧"
+[36mATRI[0m | 03-04 09:16:36 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:16:36 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:36 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:36 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:42 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1763926198 from 963046537@[群:937760225] "啊对对对"
+[36mATRI[0m | 03-04 09:16:42 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:42 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:45 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -505696292 from 963046537@[群:937760225] "[CQ:image,file=4e994f1332634ebdd46b4a939fd704e3.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-3085207403-4E994F1332634EBDD46B4A939FD704E3/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:16:45 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:45 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:48 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2027093606 from 963046537@[群:937760225] "你换吗"
+[36mATRI[0m | 03-04 09:16:48 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:48 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:16:57 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 265670384 from 963046537@[群:937760225] "[CQ:image,file=4e994f1332634ebdd46b4a939fd704e3.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-3104562922-4E994F1332634EBDD46B4A939FD704E3/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:16:57 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:16:57 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:17:30 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1620389023 from 963046537@[群:937760225] "我已经写好了哪个有"
+[36mATRI[0m | 03-04 09:17:30 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:17:30 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:17:34 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -395451401 from 963046537@[群:937760225] "你选哪个"
+[36mATRI[0m | 03-04 09:17:34 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:17:34 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:17:34 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2002097646 from 2560359315@[群:937760225] "换"
+[36mATRI[0m | 03-04 09:17:34 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:17:34 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:17:34 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:17:34 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:17:39 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -5416316 from 963046537@[群:937760225] "。"
+[36mATRI[0m | 03-04 09:17:39 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:17:39 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:17:43 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1722026814 from 963046537@[群:937760225] "好"
+[36mATRI[0m | 03-04 09:17:43 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:17:43 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:17:50 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 295910312 from 2548226969@[群:937760225] "确实"
+[36mATRI[0m | 03-04 09:17:50 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:17:50 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:17:56 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1882739189 from 963046537@[群:937760225] "/装弹 6 100 [CQ:at,qq=2560359315]"
+[36mATRI[0m | 03-04 09:17:56 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 09:17:57 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 09:17:58 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1640615719 from 963046537@[群:937760225] "来"
+[36mATRI[0m | 03-04 09:17:58 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:17:58 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:00 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 382664625 from 963046537@[群:937760225] "打钱"
+[36mATRI[0m | 03-04 09:18:00 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:00 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:06 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2039356896 from 963046537@[群:937760225] "[CQ:image,file=acaa7956c4321ea46433772c57a98347.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2938669688-ACAA7956C4321EA46433772C57A98347/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:18:06 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:06 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:13 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -243871050 from 2560359315@[群:937760225] "/接受对决"
+[36mATRI[0m | 03-04 09:18:13 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:18:13 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:13 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 09:18:13 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:16 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2016757323 from 963046537@[群:937760225] "这个要是没打出去"
+[36mATRI[0m | 03-04 09:18:16 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:16 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:19 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -516155407 from 963046537@[群:937760225] "/咔"
+[36mATRI[0m | 03-04 09:18:19 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 09:18:19 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:21 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 140489412 from 963046537@[群:937760225] "就是"
+[36mATRI[0m | 03-04 09:18:21 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:21 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:23 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2136506962 from 963046537@[群:937760225] "草"
+[36mATRI[0m | 03-04 09:18:23 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:23 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:30 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -430844952 from 2548226969@[群:937760225] "不应该是50%吗[CQ:face,id=317]"
+[36mATRI[0m | 03-04 09:18:30 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:30 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:31 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1856576642 from 963046537@[群:937760225] "这个不怪我"
+[36mATRI[0m | 03-04 09:18:31 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:31 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:36 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 32112367 from 2560359315@[群:937760225] "你tm不能开6枪吗"
+[36mATRI[0m | 03-04 09:18:36 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:18:36 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:36 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:36 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:38 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1995361913 from 2560359315@[群:937760225] "/咔"
+[36mATRI[0m | 03-04 09:18:38 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:18:38 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:38 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 09:18:39 | INFO src >> 俄罗斯轮盘：胜者：蔡华博(土豪) - 败者：李铭远 - 金币：100
+[36mATRI[0m | 03-04 09:18:40 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:41 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1893722586 from 963046537@[群:937760225] "我的问题"
+[36mATRI[0m | 03-04 09:18:41 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:41 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:43 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 289702789 from 963046537@[群:937760225] "对不起"
+[36mATRI[0m | 03-04 09:18:43 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:43 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:47 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1715712787 from 963046537@[群:937760225] "[CQ:image,file=4e994f1332634ebdd46b4a939fd704e3.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2484371245-4E994F1332634EBDD46B4A939FD704E3/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:18:47 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:47 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:51 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -11869527 from 2560359315@[群:937760225] "换了是 2/3"
+[36mATRI[0m | 03-04 09:18:51 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:18:51 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:51 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:51 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:18:52 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2008165825 from 963046537@[群:937760225] "这钱"
+[36mATRI[0m | 03-04 09:18:52 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:18:52 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:19:03 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 418566062 from 963046537@[群:937760225] "我凭本事赢的"
+[36mATRI[0m | 03-04 09:19:03 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:19:03 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:19:10 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1878392632 from 2560359315@[群:937760225] "直接枚举所有可能性"
+[36mATRI[0m | 03-04 09:19:10 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:19:10 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:19:10 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:19:10 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:19:11 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -970352926 from 963046537@[群:937760225] "[CQ:image,file=acaa7956c4321ea46433772c57a98347.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2652281564-ACAA7956C4321EA46433772C57A98347/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:19:11 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:19:11 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:19:21 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1322342796 from 963046537@[群:937760225] "6种可能"
+[36mATRI[0m | 03-04 09:19:21 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:19:21 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:19:23 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 673707982 from 2560359315@[群:937760225] "快给我打200"
+[36mATRI[0m | 03-04 09:19:23 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:19:23 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:19:23 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:19:23 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:19:36 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1595983704 from 963046537@[群:937760225] "我凭本事赢的"
+[36mATRI[0m | 03-04 09:19:36 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:19:36 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:19:52 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1052486917 from 963046537@[群:937760225] "而且你也不一定就是那2/3"
+[36mATRI[0m | 03-04 09:19:52 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:19:52 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:01 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1237097875 from 2560359315@[群:937760225] "/addmoney 963046537 -199"
+[36mATRI[0m | 03-04 09:20:01 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:20:01 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:01 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 09:20:02 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:03 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1481442113 from 963046537@[群:937760225] "笑死"
+[36mATRI[0m | 03-04 09:20:03 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:03 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:06 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -923656496 from 963046537@[群:937760225] "草"
+[36mATRI[0m | 03-04 09:20:06 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:06 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:12 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1074450874 from 963046537@[群:937760225] "他动手了"
+[36mATRI[0m | 03-04 09:20:12 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:12 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:13 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -550328413 from 2560359315@[群:937760225] "但是概率大啊"
+[36mATRI[0m | 03-04 09:20:13 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:20:13 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:13 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:13 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:22 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1472882891 from 963046537@[群:937760225] "你又不是"
+[36mATRI[0m | 03-04 09:20:22 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:22 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:29 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 826066575 from 2560359315@[群:937760225] "/addmoney 2560359315 100"
+[36mATRI[0m | 03-04 09:20:29 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:20:29 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:29 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 09:20:29 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:32 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -664837190 from 963046537@[群:937760225] "我说我一开始写的是A你信吗"
+[36mATRI[0m | 03-04 09:20:32 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:32 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:37 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1353166036 from 963046537@[群:937760225] "[CQ:image,file=0379636bddb00222a599adaf2a4d74e3.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2307460940-0379636BDDB00222A599ADAF2A4D74E3/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:20:37 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:37 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:40 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 911278742 from 2560359315@[群:937760225] "我信"
+[36mATRI[0m | 03-04 09:20:40 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:20:40 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:40 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:40 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:40 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1096167936 from 963046537@[群:937760225] "麻了"
+[36mATRI[0m | 03-04 09:20:40 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:40 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:44 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -773247087 from 2560359315@[群:937760225] "我非常相信"
+[36mATRI[0m | 03-04 09:20:44 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:20:44 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:20:44 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:20:44 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:02 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1494343929 from 963046537@[群:937760225] "最好不要让我逮着你"
+[36mATRI[0m | 03-04 09:21:02 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:21:02 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:05 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -199232416 from 963046537@[群:937760225] "记下来"
+[36mATRI[0m | 03-04 09:21:05 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:21:05 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:10 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2095528714 from 963046537@[群:937760225] "600+200"
+[36mATRI[0m | 03-04 09:21:10 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:21:10 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:11 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 437359948 from 963046537@[群:937760225] "了"
+[36mATRI[0m | 03-04 09:21:11 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:21:11 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:37 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1830200794 from 2560359315@[群:937760225] "小人才斤斤计较"
+[36mATRI[0m | 03-04 09:21:37 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:21:37 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:37 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:21:37 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:40 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -210620295 from 963046537@[群:937760225] "换算一下"
+[36mATRI[0m | 03-04 09:21:40 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:21:40 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:46 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2072706833 from 2560359315@[群:937760225] "[CQ:image,file=29f8d56ae0889ca05b564b2c3cd3c9a4.image,url=https://gchat.qpic.cn/gchatpic_new/2560359315/937760225-3021237748-29F8D56AE0889CA05B564B2C3CD3C9A4/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:21:46 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:21:46 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:46 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:21:46 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:55 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 494686549 from 963046537@[群:937760225] "到时候欠多少我打他多少下"
+[36mATRI[0m | 03-04 09:21:55 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:21:55 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:21:58 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1786470851 from 963046537@[群:937760225] "[CQ:image,file=acaa7956c4321ea46433772c57a98347.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2461607547-ACAA7956C4321EA46433772C57A98347/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:21:58 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:21:58 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:22:13 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -87786414 from 2560359315@[群:937760225] "你打不过我"
+[36mATRI[0m | 03-04 09:22:13 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:22:13 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:22:13 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:22:13 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:22:19 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1916580668 from 963046537@[群:937760225] "欸"
+[36mATRI[0m | 03-04 09:22:19 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:22:19 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:22:21 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -318454495 from 963046537@[群:937760225] "那不一定"
+[36mATRI[0m | 03-04 09:22:21 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:22:21 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:22:37 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1711016521 from 2548226969@[群:937760225] "不是不换33%，换了50%?"
+[36mATRI[0m | 03-04 09:22:37 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:22:37 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:22:48 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 51029005 from 2560359315@[群:937760225] "[CQ:at,qq=2548226969] 换了 2/3"
+[36mATRI[0m | 03-04 09:22:48 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:22:48 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:22:48 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:22:48 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:22:50 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1947047067 from 963046537@[群:937760225] "我至少能把一个177的按在宿舍床上"
+[36mATRI[0m | 03-04 09:22:50 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:22:50 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:22:55 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -362217160 from 963046537@[群:937760225] "你估计不能"
+[36mATRI[0m | 03-04 09:22:55 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:22:55 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:00 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1653722706 from 963046537@[群:937760225] "[CQ:image,file=acaa7956c4321ea46433772c57a98347.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-3202108734-ACAA7956C4321EA46433772C57A98347/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:23:00 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:23:00 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:00 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 73883668 from 2560359315@[群:937760225] "逆向思维"
+[36mATRI[0m | 03-04 09:23:00 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:23:00 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:00 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:23:00 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:07 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1935691906 from 2560359315@[群:937760225] "假设你一定换"
+[36mATRI[0m | 03-04 09:23:07 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:23:07 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:07 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:23:07 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:21 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -471905005 from 963046537@[群:937760225] "[CQ:at,qq=2548226969] 有一个你知道他不是"
+[36mATRI[0m | 03-04 09:23:21 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:23:21 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:29 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1797751419 from 963046537@[群:937760225] "所以概率加起来一共是100%"
+[36mATRI[0m | 03-04 09:23:29 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:23:30 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:38 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1572514842 from 963046537@[群:937760225] "你不换他是33%"
+[36mATRI[0m | 03-04 09:23:38 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:23:38 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:40 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -717069456 from 2560359315@[群:937760225] "那么想要赢就必须首次抽到没有钱的，也就是2/3"
+[36mATRI[0m | 03-04 09:23:40 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:23:40 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:40 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:23:40 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:23:55 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1279996618 from 963046537@[群:937760225] "差不多这个意思"
+[36mATRI[0m | 03-04 09:23:55 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:23:55 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:24:01 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 994837084 from 2560359315@[群:937760225] "我这个解释很合理吧"
+[36mATRI[0m | 03-04 09:24:01 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:24:01 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:24:01 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:24:01 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:24:07 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1524066305 from 963046537@[群:937760225] "合理"
+[36mATRI[0m | 03-04 09:24:07 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:24:07 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:24:15 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -768628887 from 963046537@[群:937760225] "800块钱"
+[36mATRI[0m | 03-04 09:24:15 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:24:15 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:24:27 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1260844755 from 963046537@[群:937760225] "记下来了"
+[36mATRI[0m | 03-04 09:24:27 | SUCCESS nonebot >> ONEBOT V11 507346814 | [notice.group_card]: {'time': 1646357067, 'self_id': 507346814, 'post_type': 'notice', 'notice_type': 'group_card', 'card_new': '蔡华博(800)', 'user_id': 963046537, 'card_old': '蔡华博(土豪)', 'group_id': 937760225}
+[36mATRI[0m | 03-04 09:24:27 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:24:27 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:24:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 09:34:52 CST)" (scheduled at 2022-03-04 09:24:52.156672+08:00)
+[36mATRI[0m | 03-04 09:24:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 09:24:53 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 09:24:53 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 09:34:52 CST)" executed successfully
+[36mATRI[0m | 03-04 09:24:54 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1008846405 from 963046537@[群:937760225] "今天我就是当小人也要胖揍李铭远"
+[36mATRI[0m | 03-04 09:24:54 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:24:54 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:24:56 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1398875180 from 2560359315@[群:937760225] "害怕"
+[36mATRI[0m | 03-04 09:24:56 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:24:56 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:24:56 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:24:56 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:25:14 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -610669758 from 963046537@[群:937760225] "公报私仇"
+[36mATRI[0m | 03-04 09:25:14 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:25:14 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:25:19 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1151442265 from 963046537@[群:937760225] "大公无私"
+[36mATRI[0m | 03-04 09:25:19 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:25:19 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:25:22 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -866561487 from 963046537@[群:937760225] "诶"
+[36mATRI[0m | 03-04 09:25:22 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:25:22 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:25:45 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1431307147 from 963046537@[群:937760225] "/lottery"
+[36mATRI[0m | 03-04 09:25:45 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 09:25:45 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 09:25:45 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 09:25:46 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:09 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1137465666 from 2548226969@[群:937760225] "啊"
+[36mATRI[0m | 03-04 09:26:09 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:09 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:11 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -885746136 from 2548226969@[群:937760225] "yysy"
+[36mATRI[0m | 03-04 09:26:11 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:11 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:18 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1379780498 from 2548226969@[群:937760225] "不相信概率"
+[36mATRI[0m | 03-04 09:26:18 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:18 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:22 | SUCCESS nonebot >> ONEBOT V11 507346814 | [notice.group_recall]: {'time': 1646357178, 'self_id': 507346814, 'post_type': 'notice', 'notice_type': 'group_recall', 'user_id': 2548226969, 'group_id': 937760225, 'operator_id': 2548226969, 'message_id': 1379780498}
+[36mATRI[0m | 03-04 09:26:25 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 624621316 from 963046537@[群:937760225] "啊对对对"
+[36mATRI[0m | 03-04 09:26:25 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:25 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:30 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1249514859 from 2548226969@[群:937760225] "我不相信概率论"
+[36mATRI[0m | 03-04 09:26:30 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:30 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:31 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1031611901 from 963046537@[群:937760225] "yysy"
+[36mATRI[0m | 03-04 09:26:31 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:31 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:33 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1871498908 from 2548226969@[群:937760225] "确实"
+[36mATRI[0m | 03-04 09:26:33 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:33 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:35 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -411827726 from 2548226969@[群:937760225] "啊对对对"
+[36mATRI[0m | 03-04 09:26:35 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:35 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:40 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2122141768 from 963046537@[群:937760225] "我相信"
+[36mATRI[0m | 03-04 09:26:40 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:40 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:42 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 159015134 from 2548226969@[群:937760225] "[CQ:json,data={"app":"com.tencent.avgame"&#44;"config":{"ctime":1646357202&#44;"token":"0190b166c4279bd735d3cc199c4f73a8"}&#44;"desc":""&#44;"extra":{"app_type":1&#44;"appid":101881711&#44;"uin":2548226969}&#44;"meta":{"invite":{"extra":{"currentRoomStatus":"1"&#44;"h5_url":"https://ti.qq.com/vgame/r/Azyzu4lAEABiIWrS"&#44;"jump_url":"mqqapi://avgame/join_room?uin=2548226969&amp;room=439605435"&#44;"roomUins":&#91;"2548226969"&#93;&#44;"roomid":"439605435"&#44;"timestamp":"1646357202"}&#44;"type":"invite"}}&#44;"prompt":"邀请你加入派对"&#44;"ver":"1.0.0.1"&#44;"view":"invite"}]"
+[36mATRI[0m | 03-04 09:26:42 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:42 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:47 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1759578755 from 963046537@[群:937760225] "[CQ:image,file=4e994f1332634ebdd46b4a939fd704e3.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2972603277-4E994F1332634EBDD46B4A939FD704E3/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:26:47 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:47 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:26:56 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -535181845 from 2548226969@[群:937760225] "wtf"
+[36mATRI[0m | 03-04 09:26:56 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:26:56 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:27:00 | SUCCESS nonebot >> ONEBOT V11 507346814 | [notice.group_recall]: {'time': 1646357202, 'self_id': 507346814, 'post_type': 'notice', 'notice_type': 'group_recall', 'user_id': 2548226969, 'group_id': 937760225, 'operator_id': 2548226969, 'message_id': 159015134}
+[36mATRI[0m | 03-04 09:27:04 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2031129681 from 2560359315@[群:937760225] "az"
+[36mATRI[0m | 03-04 09:27:04 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:27:04 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:27:04 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:27:04 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:27:25 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1633109674 from 2560359315@[群:937760225] "[CQ:at,qq=2548226969] 只是比较反直觉罢了"
+[36mATRI[0m | 03-04 09:27:25 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:27:25 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:27:25 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:27:25 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:27:34 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -374371904 from 963046537@[群:937760225] "[CQ:image,file=0379636bddb00222a599adaf2a4d74e3.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2584547507-0379636BDDB00222A599ADAF2A4D74E3/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:27:34 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:27:34 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:27:41 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1989672923 from 963046537@[群:937760225] "每天讨债1/1"
+[36mATRI[0m | 03-04 09:27:41 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:27:41 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:28:04 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -26267469 from 2560359315@[群:937760225] "/addmoney 963046537 800"
+[36mATRI[0m | 03-04 09:28:04 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:28:04 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:28:04 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 09:28:04 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 09:28:12 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 274813343 from 2560359315@[群:937760225] "烦诶"
+[36mATRI[0m | 03-04 09:28:12 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:28:12 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:28:12 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:28:12 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:28:24 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1912224708 from 2560359315@[群:937760225] "/表情包制作"
+[36mATRI[0m | 03-04 09:28:24 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:28:24 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:28:24 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:28:24 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:28:24 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_memes, type=message, priority=12, temp=False>
+[36mATRI[0m | 03-04 09:28:25 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_memes, type=message, priority=12, temp=False> running complete
+[36mATRI[0m | 03-04 09:29:05 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1611375888 from 2560359315@[群:937760225] "/记仇 今天，蔡华博找我讨债"
+[36mATRI[0m | 03-04 09:29:05 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:29:05 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:29:05 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:29:05 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:29:05 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_memes, type=message, priority=13, temp=False>
+[36mATRI[0m | 03-04 09:29:05 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_memes, type=message, priority=13, temp=False> running complete
+[36mATRI[0m | 03-04 09:32:13 | SUCCESS nonebot >> ONEBOT V11 507346814 | [notice.group_card]: {'time': 1646357533, 'self_id': 507346814, 'post_type': 'notice', 'notice_type': 'group_card', 'card_new': '蔡华博(0)', 'user_id': 963046537, 'card_old': '蔡华博(800)', 'group_id': 937760225}
+[36mATRI[0m | 03-04 09:32:13 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2018277353 from 963046537@[群:937760225] "高危言论"
+[36mATRI[0m | 03-04 09:32:13 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:32:13 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:32:44 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -256591743 from 2548226969@[群:937760225] "从两个箱子中盲选一个，和三个箱子去掉一个空的在盲选一个"
+[36mATRI[0m | 03-04 09:32:44 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:32:44 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:32:48 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 250617066 from 2548226969@[群:937760225] "最后选择的过程没有任何区别"
+[36mATRI[0m | 03-04 09:32:48 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:32:48 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:32:58 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2046241916 from 2548226969@[群:937760225] "我是真的无法理解为什么概率会上升"
+[36mATRI[0m | 03-04 09:32:59 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:32:59 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:33:21 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -520192570 from 2548226969@[群:937760225] "或者说我不认可概率会上升"
+[36mATRI[0m | 03-04 09:33:21 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:33:21 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:33:33 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1745269424 from 2560359315@[群:937760225] "主持人为你提供了信息"
+[36mATRI[0m | 03-04 09:33:33 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:33:33 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:33:33 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:33:33 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:34:34 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 161339635 from 2548226969@[群:937760225] "但是最后的选择都是从两个箱子里面盲选啊"
+[36mATRI[0m | 03-04 09:34:34 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:34:34 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:34:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 09:44:52 CST)" (scheduled at 2022-03-04 09:34:52.156672+08:00)
+[36mATRI[0m | 03-04 09:34:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 09:34:53 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 09:34:53 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 09:44:52 CST)" executed successfully
+[36mATRI[0m | 03-04 09:35:02 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2124081253 from 2560359315@[群:937760225] "主持人的动作"
+[36mATRI[0m | 03-04 09:35:02 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:35:02 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:35:02 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:35:02 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:35:20 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -409749025 from 2560359315@[群:937760225] "其实就是你在换之前，为你排除一个错误选项"
+[36mATRI[0m | 03-04 09:35:20 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:35:20 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:35:20 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:35:20 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:35:32 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1869313719 from 963046537@[群:937760225] "笑死"
+[36mATRI[0m | 03-04 09:35:32 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:35:32 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:35:40 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2856152 from 963046537@[群:937760225] "我给你画个图"
+[36mATRI[0m | 03-04 09:35:40 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:35:40 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:36:05 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1999414350 from 2548226969@[群:937760225] "那个思路我当然能理解"
+[36mATRI[0m | 03-04 09:36:05 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:36:05 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:36:14 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 401288619 from 2548226969@[群:937760225] "but这个"
+[36mATRI[0m | 03-04 09:36:14 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:36:14 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:36:32 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1626086717 from 963046537@[群:937760225] "不一样哦"
+[36mATRI[0m | 03-04 09:36:32 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:36:32 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:36:37 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -102413177 from 963046537@[群:937760225] "不是盲选"
+[36mATRI[0m | 03-04 09:36:37 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:36:37 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:36:51 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1897759727 from 963046537@[群:937760225] "不用画图了"
+[36mATRI[0m | 03-04 09:36:51 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:36:51 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:36:52 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 277277106 from 2560359315@[群:937760225] "对啊"
+[36mATRI[0m | 03-04 09:36:52 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:36:52 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:36:52 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:36:52 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:36:59 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1736562980 from 963046537@[群:937760225] "你两个箱子"
+[36mATRI[0m | 03-04 09:36:59 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:36:59 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:37:09 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -24606562 from 963046537@[群:937760225] "你起初选择的那个箱子"
+[36mATRI[0m | 03-04 09:37:09 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:37:09 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:37:24 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1987069944 from 963046537@[群:937760225] "他是不是在3个中选出来的"
+[36mATRI[0m | 03-04 09:37:24 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:37:24 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:37:36 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 422618521 from 963046537@[群:937760225] "那他中奖概率一定是1/3吧"
+[36mATRI[0m | 03-04 09:37:36 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:37:36 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:37:48 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1849136399 from 963046537@[群:937760225] "因为我后面的操作不影响他的概率"
+[36mATRI[0m | 03-04 09:37:48 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:37:48 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:37:52 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -999348037 from 963046537@[群:937760225] "没有影响"
+[36mATRI[0m | 03-04 09:37:52 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:37:52 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:38:04 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1285023699 from 963046537@[群:937760225] "我怎么操作他中奖概率就是1/3"
+[36mATRI[0m | 03-04 09:38:04 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:38:04 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:38:19 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 711018903 from 963046537@[群:937760225] "现在就是拿走一个"
+[36mATRI[0m | 03-04 09:38:19 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:38:19 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:38:25 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1566996737 from 963046537@[群:937760225] "剩下两个箱子"
+[36mATRI[0m | 03-04 09:38:26 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:38:26 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:38:38 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1023218526 from 963046537@[群:937760225] "你开始选择的那个因为概率的保留"
+[36mATRI[0m | 03-04 09:38:38 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:38:38 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:38:38 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1274684364 from 2548226969@[群:937760225] "对啊"
+[36mATRI[0m | 03-04 09:38:38 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:38:38 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:38:41 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 755797390 from 963046537@[群:937760225] "他还是1/3"
+[36mATRI[0m | 03-04 09:38:41 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:38:41 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:38:45 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1510718744 from 2548226969@[群:937760225] "那你还是从两个箱子里面盲选"
+[36mATRI[0m | 03-04 09:38:45 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:38:45 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:38:49 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -894132087 from 2548226969@[群:937760225] "这一点没问题吧？"
+[36mATRI[0m | 03-04 09:38:49 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:38:49 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:38:54 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1112305633 from 963046537@[群:937760225] "因为中奖概率合肯定是1嘛"
+[36mATRI[0m | 03-04 09:38:54 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:38:54 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:39:01 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -579593734 from 963046537@[群:937760225] "所以你另外一个就是2/3"
+[36mATRI[0m | 03-04 09:39:01 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:39:01 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:39:05 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1435293332 from 963046537@[群:937760225] "[CQ:at,qq=2548226969] 不是噢"
+[36mATRI[0m | 03-04 09:39:05 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:39:05 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:39:10 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 863664342 from 2548226969@[群:937760225] "这个我能理解"
+[36mATRI[0m | 03-04 09:39:10 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:39:10 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:39:22 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1149061184 from 2548226969@[群:937760225] "三个箱子排除掉一个错误答案，那还是两个箱子，然后你在两个箱子里面选一个"
+[36mATRI[0m | 03-04 09:39:22 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:39:22 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:39:22 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -635839005 from 963046537@[群:937760225] "你认为的盲选"
+[36mATRI[0m | 03-04 09:39:22 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:39:22 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:39:26 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1390482059 from 2548226969@[群:937760225] "那就是在两个箱子里面选一个"
+[36mATRI[0m | 03-04 09:39:26 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:39:26 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:39:33 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 873970895 from 2548226969@[群:937760225] "两个箱子你也不知道哪个是对的"
+[36mATRI[0m | 03-04 09:39:33 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:39:33 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:39:34 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1125157977 from 963046537@[群:937760225] "实际上保留了概率"
+[36mATRI[0m | 03-04 09:39:34 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:39:34 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:39:43 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -743468600 from 963046537@[群:937760225] "你一开始不是选择了一个吗"
+[36mATRI[0m | 03-04 09:39:43 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:39:43 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:40:17 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1532452514 from 963046537@[群:937760225] "它因为我怎么操作概率都是1/3"
+[36mATRI[0m | 03-04 09:40:17 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:40:17 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:40:39 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -161920455 from 2548226969@[群:937760225] "那你觉得按照这个方法实验无数次，最后的结果是1比1还是多少"
+[36mATRI[0m | 03-04 09:40:39 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:40:39 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:40:51 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2124514641 from 2560359315@[群:937760225] "肯定是2:1"
+[36mATRI[0m | 03-04 09:40:51 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:40:52 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:40:52 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:40:52 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:41:05 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1867520899 from 2560359315@[群:937760225] "待会可以去实验个一千万次"
+[36mATRI[0m | 03-04 09:41:05 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:41:05 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:41:05 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:41:05 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:41:35 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -248213984 from 963046537@[群:937760225] "笑死"
+[36mATRI[0m | 03-04 09:41:35 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:41:35 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:41:41 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -2043429194 from 2560359315@[群:937760225] "你不要用自己的直觉来想这个问题"
+[36mATRI[0m | 03-04 09:41:41 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:41:41 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:41:41 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:41:41 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:41:47 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 523955980 from 2560359315@[群:937760225] "动笔算"
+[36mATRI[0m | 03-04 09:41:47 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:41:47 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:41:47 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:41:47 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:41:51 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1748885402 from 2560359315@[群:937760225] "[CQ:image,file=907817ad6a524200601145e70dbd3599.image,url=https://gchat.qpic.cn/gchatpic_new/2560359315/937760225-3087182230-907817AD6A524200601145E70DBD3599/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:41:51 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:41:51 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:41:51 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:41:51 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:42:10 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -125648373 from 2548226969@[群:937760225] "不是啊[CQ:face,id=173]"
+[36mATRI[0m | 03-04 09:42:10 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:42:10 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:42:18 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1887047011 from 2548226969@[群:937760225] "那个2/3的那个我能理解"
+[36mATRI[0m | 03-04 09:42:18 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:42:18 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:42:21 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -280855688 from 2548226969@[群:937760225] "但是我不相信"
+[36mATRI[0m | 03-04 09:42:21 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:42:21 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:42:42 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1740289042 from 963046537@[群:937760225] "写个程序算个1000w次"
+[36mATRI[0m | 03-04 09:42:42 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:42:42 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:42:46 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 21764692 from 963046537@[群:937760225] "不就好了"
+[36mATRI[0m | 03-04 09:42:46 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:42:46 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:42:54 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1984637634 from 2560359315@[群:937760225] "行，待会给你算一千万次"
+[36mATRI[0m | 03-04 09:42:54 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 09:42:54 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 09:42:54 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:42:54 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:43:37 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -399523999 from 2548226969@[群:937760225] "但是"
+[36mATRI[0m | 03-04 09:43:37 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:43:37 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:43:49 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1624731657 from 2548226969@[群:937760225] "程序分配哪个箱子和选哪个箱子"
+[36mATRI[0m | 03-04 09:43:49 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:43:49 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:43:52 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 102882893 from 2548226969@[群:937760225] "的概率"
+[36mATRI[0m | 03-04 09:43:52 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:43:52 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:43:59 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1898376923 from 963046537@[群:937760225] "一样的"
+[36mATRI[0m | 03-04 09:43:59 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:43:59 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:44:11 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -510004406 from 963046537@[群:937760225] "就算随机数嘛"
+[36mATRI[0m | 03-04 09:44:11 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:44:11 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:44:30 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1767980068 from 963046537@[群:937760225] "[CQ:at,qq=2560359315] 不要编号"
+[36mATRI[0m | 03-04 09:44:30 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:44:30 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:44:37 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1610355265 from 963046537@[群:937760225] "就随机打乱"
+[36mATRI[0m | 03-04 09:44:37 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:44:37 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:44:45 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -687547095 from 963046537@[群:937760225] "不行"
+[36mATRI[0m | 03-04 09:44:45 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:44:45 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:44:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 09:54:52 CST)" (scheduled at 2022-03-04 09:44:52.156672+08:00)
+[36mATRI[0m | 03-04 09:44:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 09:44:53 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 09:44:53 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 09:54:52 CST)" executed successfully
+[36mATRI[0m | 03-04 09:44:53 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1309510803 from 963046537@[群:937760225] "那就工程大了"
+[36mATRI[0m | 03-04 09:44:53 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:44:53 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:44:57 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 957004805 from 963046537@[群:937760225] "[CQ:image,file=4e994f1332634ebdd46b4a939fd704e3.image,url=https://gchat.qpic.cn/gchatpic_new/963046537/937760225-2269237636-4E994F1332634EBDD46B4A939FD704E3/0?term=3,subType=1]"
+[36mATRI[0m | 03-04 09:44:57 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:44:57 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:45:21 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1485952602 from 963046537@[群:937760225] "我画图吧"
+[36mATRI[0m | 03-04 09:45:21 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:45:21 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:49:16 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -798418640 from 963046537@[群:937760225] "[CQ:at,qq=2560359315] 写个程序算吧"
+[36mATRI[0m | 03-04 09:49:16 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:49:16 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:49:22 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1231046794 from 963046537@[群:937760225] "我觉得我写的算概率"
+[36mATRI[0m | 03-04 09:49:22 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 09:49:22 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 09:54:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:04:52 CST)" (scheduled at 2022-03-04 09:54:52.156672+08:00)
+[36mATRI[0m | 03-04 09:54:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 09:54:53 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 09:54:53 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:04:52 CST)" executed successfully
+[36mATRI[0m | 03-04 10:04:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:14:52 CST)" (scheduled at 2022-03-04 10:04:52.156672+08:00)
+[36mATRI[0m | 03-04 10:04:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 10:04:53 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 10:04:53 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:14:52 CST)" executed successfully
+[36mATRI[0m | 03-04 10:14:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:24:52 CST)" (scheduled at 2022-03-04 10:14:52.156672+08:00)
+[36mATRI[0m | 03-04 10:14:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 10:14:53 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 10:14:53 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:24:52 CST)" executed successfully
+[36mATRI[0m | 03-04 10:24:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:34:52 CST)" (scheduled at 2022-03-04 10:24:52.156672+08:00)
+[36mATRI[0m | 03-04 10:24:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 10:24:53 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 10:24:53 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:34:52 CST)" executed successfully
+[36mATRI[0m | 03-04 10:34:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:44:52 CST)" (scheduled at 2022-03-04 10:34:52.156672+08:00)
+[36mATRI[0m | 03-04 10:34:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 10:35:06 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 1046968348 from 2095652005@[群:937760225] "！poem"
+[36mATRI[0m | 03-04 10:35:06 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 10:35:07 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 10:35:13 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1189552898 from 2095652005@[群:937760225] "2"
+[36mATRI[0m | 03-04 10:35:13 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-04 10:35:14 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -836768664 from 963046537@[群:937760225] "。。"
+[36mATRI[0m | 03-04 10:35:14 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 10:35:14 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 10:35:14 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-04 10:35:17 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 538021188 from 963046537@[群:937760225] "属于是"
+[36mATRI[0m | 03-04 10:35:17 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 10:35:17 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 10:35:52 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1099622169 from 1935200918@[群:937760225] "！poem"
+[36mATRI[0m | 03-04 10:35:52 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False>
+[36mATRI[0m | 03-04 10:35:53 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=5, temp=False> running complete
+[36mATRI[0m | 03-04 10:36:20 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 662456669 from 1935200918@[群:937760225] "4"
+[36mATRI[0m | 03-04 10:36:20 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True>
+[36mATRI[0m | 03-04 10:36:20 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_russian, type=message, priority=0, temp=True> running complete
+[36mATRI[0m | 03-04 10:44:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 10:54:52 CST)" (scheduled at 2022-03-04 10:44:52.156672+08:00)
+[36mATRI[0m | 03-04 10:44:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 10:54:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 11:04:52 CST)" (scheduled at 2022-03-04 10:54:52.156672+08:00)
+[36mATRI[0m | 03-04 10:54:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 10:54:53 | INFO src >> 资源占用正常
+[36mATRI[0m | 03-04 10:54:53 | INFO apscheduler >> Job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 11:04:52 CST)" executed successfully
+[36mATRI[0m | 03-04 10:55:22 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -1060871078 from 2560359315@[群:937760225] "随机数，肯定一样的"
+[36mATRI[0m | 03-04 10:55:22 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 10:55:22 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 10:55:22 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 10:55:22 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 10:57:24 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message -449658965 from 963046537@[群:937760225] "去做吧"
+[36mATRI[0m | 03-04 10:57:24 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 10:57:24 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 10:57:53 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 2084302353 from 2560359315@[群:937760225] "上课"
+[36mATRI[0m | 03-04 10:57:53 | INFO nonebot >> Event will be handled by <Matcher from 老婆, type=message, priority=1, temp=False>
+[36mATRI[0m | 03-04 10:57:53 | INFO nonebot >> Matcher <Matcher from 老婆, type=message, priority=1, temp=False> running complete
+[36mATRI[0m | 03-04 10:57:53 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 10:57:53 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 10:59:00 | SUCCESS nonebot >> ONEBOT V11 507346814 | [message.group.normal]: Message 188538503 from 963046537@[群:937760225] "上完课做"
+[36mATRI[0m | 03-04 10:59:00 | INFO nonebot >> Event will be handled by <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False>
+[36mATRI[0m | 03-04 10:59:00 | INFO nonebot >> Matcher <Matcher from src.plugins.nonebot_plugin_repeater, type=message, priority=10, temp=False> running complete
+[36mATRI[0m | 03-04 11:00:00 | INFO apscheduler >> Running job "_ (trigger: cron[hour='6,11,17,22', minute='0'], next run at: 2022-03-04 17:00:00 CST)" (scheduled at 2022-03-04 11:00:00+08:00)
+[36mATRI[0m | 03-04 11:00:00 | INFO src >> 今天吃什么次数已刷新
+[36mATRI[0m | 03-04 11:00:00 | INFO apscheduler >> Job "_ (trigger: cron[hour='6,11,17,22', minute='0'], next run at: 2022-03-04 17:00:00 CST)" executed successfully
+[36mATRI[0m | 03-04 11:04:52 | INFO apscheduler >> Running job "状态检查 (trigger: interval[0:10:00], next run at: 2022-03-04 11:14:52 CST)" (scheduled at 2022-03-04 11:04:52.156672+08:00)
+[36mATRI[0m | 03-04 11:04:52 | INFO src >> 开始检查资源消耗...
+[36mATRI[0m | 03-04 11:05:56 | INFO uvicorn >> Shutting down
+[36mATRI[0m | 03-04 11:05:56 | WARNING nonebot >> OneBot V11 | WebSocket for Bot 507346814 closed by peer
+[36mATRI[0m | 03-04 11:05:56 | INFO websockets >> connection closed
+[36mATRI[0m | 03-04 11:05:56 | INFO uvicorn >> Waiting for application shutdown.
+[36mATRI[0m | 03-04 11:05:56 | INFO nonebot_plugin_htmlrender >> Browser Stoped.
+[36mATRI[0m | 03-04 11:05:56 | INFO src >> Browser Stoped.
+[36mATRI[0m | 03-04 11:05:56 | INFO uvicorn >> Application shutdown complete.
+[36mATRI[0m | 03-04 11:05:56 | INFO uvicorn >> Finished server process [8118]

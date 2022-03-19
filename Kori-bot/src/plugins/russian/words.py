@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 answer_path = "/root/Projects/Kori-Bot/Kori-bot/data/russian/word_answer.json"
-wordlist_path = "/root/Projects/Kori-Bot/Kori-bot/src/plugins/nonebot_plugin_russian/wordlist_CE.json"
+wordlist_path = "/root/Projects/Kori-Bot/Kori-bot/src/plugin/russian/wordlist_CE.json"
 
 
 def saveWordAnswer(answer, id):
