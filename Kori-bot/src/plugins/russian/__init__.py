@@ -10,9 +10,10 @@ from nonebot.adapters.onebot.v11 import (
 from nonebot.matcher import Matcher
 from nonebot.typing import T_State
 from nonebot.params import Depends, CommandArg, State, Arg, ArgPlainText
+from quart import got_websocket_exception
 from .utils import is_number, get_message_at
 from nonebot.log import logger
-from .data_source import russian_manager, max_bet_gold
+from .data_source import russian_manager, max_bet_gold, number_estimated_format, number_format
 from .fx import f
 from .poem import check, getQuestion
 # from .lottery import *
@@ -244,6 +245,10 @@ async def _(event: GroupMessageEvent, state: T_State = State()):
 @my_gold.handle()
 async def _(event: GroupMessageEvent):
     gold = russian_manager.get_user_data(event)["gold"]
+    if "rough" in event.raw_message:
+        gold = number_estimated_format(gold)
+    else:
+        gold = number_format(gold)
     await my_gold.send(f"你还有 {gold} 枚金币", at_sender=True)
 
 

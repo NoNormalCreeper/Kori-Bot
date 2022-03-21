@@ -6,6 +6,7 @@ import nonebot
 import asyncio
 import random
 import time
+import math
 import os
 from .config import Config
 # import json
@@ -77,6 +78,21 @@ def random_bullet(num: int) -> List[int]:
     for i in random.sample([0, 1, 2, 3, 4, 5, 6], num):
         bullet_lst[i] = 1
     return bullet_lst
+
+def number_format(num) -> str:
+    # auto add thousand delimiter
+    num = str(num)
+    if len(num) <= 3:
+        return num
+    else:
+        return number_format(num[:-3]) + "," + num[-3:]
+
+def number_estimated_format(num) -> str:
+    # https://stackoverflow.com/questions/579310/formatting-long-numbers-as-strings-in-python
+    units = ['', 'K', 'M', 'B', 'T', 'P']
+    k = 1000.0
+    magnitude = int(math.floor(math.log(num, k)))
+    return '%.2f%s' % (num / k**magnitude, units[magnitude])
 
 
 class RussianManager:
