@@ -1,4 +1,0 @@
-line01 abc
-line02 cde
-line03 helloline04 world
-line05 worldline06 miui
