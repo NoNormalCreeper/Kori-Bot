@@ -25,7 +25,7 @@ header = {
 # async def help(bot, event: CQEvent):
 #     await bot.send(event, help_txt)
 
-sv = on_command("是什么梗")
+sv = on_command("梗")
 
 @sv.handle()
 async def query(bot: Bot, event: Event, matcher: Matcher, message: Message):
