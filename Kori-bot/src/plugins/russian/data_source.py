@@ -82,17 +82,45 @@ def random_bullet(num: int) -> List[int]:
 def number_format(num) -> str:
     # auto add thousand delimiter
     num = str(num)
-    if len(num) <= 3:
-        return num
-    else:
-        return number_format(num[:-3]) + "," + num[-3:]
+    digit = ''
+    if '.' in num:
+        digit = num.split('.')[1]
+        num = num.split('.')[0]
+    def add_delimiter(num):
+        if len(num) > 3:
+            return add_delimiter(num[:-3]) + ',' + num[-3:]
+        else:
+            return num
+    num = add_delimiter(num)
+    if digit:
+        num = num + '.' + digit
+    return num
 
+units = ['', 'K', 'M', 'B', 'T', 'P']
 def number_estimated_format(num) -> str:
     # https://stackoverflow.com/questions/579310/formatting-long-numbers-as-strings-in-python
-    units = ['', 'K', 'M', 'B', 'T', 'P']
     k = 1000.0
     magnitude = int(math.floor(math.log(num, k)))
     return '%.2f%s' % (num / k**magnitude, units[magnitude])
+
+def resolve_formated_number(num) -> int:
+    num = str(num)
+    num = num.replace(' ', '')
+    try:
+        return int(num)
+    except ValueError:
+        if ',' in num:
+            num = num.replace(',', '')
+        else:
+            num = num.upper()
+            for unit in units[1:]:
+                if unit in num:
+                    num = num.replace(unit, '')
+                    num = float(num) * (1000**units.index(unit))
+                    return int(num)
+            # not found
+            return 0
+        return int(num)
 
 
 class RussianManager:
