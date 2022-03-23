@@ -506,7 +506,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
                 number = args[1]
             except:
                 number = 1
-            number = int(number)
+            number = resolve_formated_number(number)
             if number*money_per_stock <= russian_manager.get_user_data(event)["gold"]:
                 russian_manager._buy_stock_handle(user_id, group_id, number)
                 await stock.finish(
@@ -521,7 +521,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
                 number = args[1]
             except:
                 number = 1
-            number = int(number)
+            number = resolve_formated_number(number)
             if number <= russian_manager.get_user_data(event)["stock"]:
                 russian_manager._sell_stock_handle(user_id, group_id, number)
                 await stock.finish(
