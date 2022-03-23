@@ -1,4 +1,3 @@
-import imp
 from nonebot.adapters import Bot, Event, Message
 from nonebot.typing import T_State
 from nonebot.matcher import Matcher
@@ -29,7 +28,7 @@ sv = on_command("梗")
 
 @sv.handle()
 async def query(bot: Bot, event: Event, matcher: Matcher, message: Message):
-    keyword = event.message.replace("是什么梗", "")
+    keyword = event.message.replace("梗", "")
     for i in ['!','/','！',' ', '\n', '\r', '\t']:
         keyword = keyword.replace(i, '')
     if not keyword:
