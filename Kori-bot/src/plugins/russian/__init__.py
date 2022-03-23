@@ -511,9 +511,12 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
                 russian_manager._buy_stock_handle(user_id, group_id, number)
                 await stock.finish(
                     "\n🧾 Successfully bought {0} shares using {3} coins.\nYou have {4} shares now.\n{5} Current stock: {1} coins,  {2}".format(
-                    number_format(number), money_per_stock, percent, number_format(number*money_per_stock), number_format(russian_manager.get_user_data(event)["stock"]), color_block),
-                    at_sender=True
-                    )
+                        number_format(number), money_per_stock, percent, 
+                        number_format(number*money_per_stock), 
+                        number_format(russian_manager.get_user_data(event)["stock"]), 
+                        color_block
+                    ),at_sender=True
+                )
             else:
                 await stock.finish("\n😦 You don't have enough money!", at_sender=True)
         elif args[0] == "sell":
@@ -526,13 +529,18 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
                 russian_manager._sell_stock_handle(user_id, group_id, number)
                 await stock.finish(
                     "\n🧾 Successfully sold {0} shares earning {3} coins.\nYou have {4} shares left now.\n{5} Current stock: {1} coins,  {2}".format(
-                    number_format(number), money_per_stock, percent, number_format(number*money_per_stock), number_format(russian_manager.get_user_data(event)["stock"]), color_block),
-                    at_sender=True
-                    )
+                        number_format(number), money_per_stock, percent, 
+                        number_format(number*money_per_stock), 
+                        number_format(russian_manager.get_user_data(event)["stock"]), 
+                        color_block
+                    ),at_sender=True
+                )
             else:
                 await stock.finish("\n😦 You don't have enough shares!", at_sender=True)
         elif args[0] == "me":
-            await stock.finish("\nYou have {0} shares now.".format(number_format(russian_manager.get_user_data(event)["stock"])), at_sender=True)
+            await stock.finish("\nYou have {0} shares now.".format(
+                number_format(russian_manager.get_user_data(event)["stock"])), 
+                at_sender=True)
         elif args[0] == "price":
             await stock.finish("{2} Current stock: {0} coins,  {1}".format(
                     money_per_stock, percent, color_block),
