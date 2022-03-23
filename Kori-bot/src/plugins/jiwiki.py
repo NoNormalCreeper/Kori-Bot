@@ -1,7 +1,7 @@
 from nonebot.adapters import Bot, Event, Message
 from nonebot.typing import T_State
 from nonebot.matcher import Matcher
-from nonebot import on_suffix, logger, on_command
+from nonebot import logger, on_command
 import aiorequests
 
 # sv = Service('小鸡词典')
