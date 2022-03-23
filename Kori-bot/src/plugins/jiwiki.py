@@ -2,7 +2,7 @@ import imp
 from nonebot.adapters import Bot, Event, Message
 from nonebot.typing import T_State
 from nonebot.matcher import Matcher
-from nonebot import on_suffix, logger
+from nonebot import on_suffix, logger, on_command
 import aiorequests
 
 # sv = Service('小鸡词典')
@@ -25,11 +25,13 @@ header = {
 # async def help(bot, event: CQEvent):
 #     await bot.send(event, help_txt)
 
-sv = on_suffix('是什么梗')
+sv = on_command("是什么梗")
 
 @sv.handle()
 async def query(bot: Bot, event: Event, matcher: Matcher, message: Message):
-    keyword = event.message.replace("是什么梗", "").replace(" ", "")
+    keyword = event.message.replace("是什么梗", "")
+    for i in ['!','/','！',' ', '\n', '\r', '\t']:
+        keyword = keyword.replace(i, '')
     if not keyword:
         return
     request_data = {'page': 1, 'phrase': keyword, 'size': 60}
