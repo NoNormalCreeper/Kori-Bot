@@ -13,7 +13,10 @@ from nonebot.params import Depends, CommandArg, State, Arg, ArgPlainText
 from quart import got_websocket_exception
 from .utils import is_number, get_message_at
 from nonebot.log import logger
-from .data_source import russian_manager, max_bet_gold, number_estimated_format, number_format
+from .data_source import (
+    russian_manager, max_bet_gold, 
+    number_estimated_format, number_format, resolve_formated_number
+)
 from .fx import f
 from .poem import check, getQuestion
 # from .lottery import *
@@ -336,11 +339,11 @@ async def _(event: GroupMessageEvent, arg: Message = CommandArg(), state: T_Stat
             if random.randint(0, 100) < (1-((1-possibility)**arg))*100:
                 won_gold = (award_gold+spent_gold)*0.9
                 russian_manager._earn_data_handle(event.user_id, event.group_id, round(won_gold))
-                msg += "🎉 YOU WON!!!!! {0} coins had been transferred to your pocket.".format(won_gold)
+                msg += "🎉 YOU WON!!!!! {0} coins had been transferred to your pocket.".format(number_format(won_gold))
                 logger.info("{0} won {1} coins from lottery tickets.".format(event.user_id, won_gold))
                 f.write("0")
             else:
-                msg += "😐 But you were not lucky enough to win...\n💰 Current bonus pool: {0} coins".format(award_gold+spent_gold)
+                msg += "😐 But you were not lucky enough to win...\n💰 Current bonus pool: {0} coins".format(number_format(award_gold+spent_gold))
                 f.write(str(award_gold+spent_gold))
     else:
         msg = "You don't have enough coins!"
@@ -507,7 +510,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
                 russian_manager._buy_stock_handle(user_id, group_id, number)
                 await stock.finish(
                     "\n🧾 Successfully bought {0} shares using {3} coins.\nYou have {4} shares now.\n{5} Current stock: {1} coins,  {2}".format(
-                    number, money_per_stock, percent, number*money_per_stock, russian_manager.get_user_data(event)["stock"], ('🟥' if ('-' not in percent) else '🟩')),
+                    number_format(number), money_per_stock, percent, number_format(number*money_per_stock), number_format(russian_manager.get_user_data(event)["stock"]), ('🟥' if ('-' not in percent) else '🟩')),
                     at_sender=True
                     )
             else:
@@ -522,13 +525,13 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
                 russian_manager._sell_stock_handle(user_id, group_id, number)
                 await stock.finish(
                     "\n🧾 Successfully sold {0} shares earning {3} coins.\nYou have {4} shares left now.\n{5} Current stock: {1} coins,  {2}".format(
-                    number, money_per_stock, percent, number*money_per_stock, russian_manager.get_user_data(event)["stock"], ('🟥' if ('-' in percent) else '🟩')),
+                    number_format(number), money_per_stock, percent, number_format(number*money_per_stock), number_format(russian_manager.get_user_data(event)["stock"]), ('🟥' if ('-' in percent) else '🟩')),
                     at_sender=True
                     )
             else:
                 await stock.finish("\n😦 You don't have enough shares!", at_sender=True)
         elif args[0] == "me":
-            await stock.finish("\nYou have {0} shares now.".format(russian_manager.get_user_data(event)["stock"]), at_sender=True)
+            await stock.finish("\nYou have {0} shares now.".format(number_format(russian_manager.get_user_data(event)["stock"])), at_sender=True)
         elif args[0] == "price":
             await stock.finish("{2} Current stock: {0} coins,  {1}".format(
                     money_per_stock, percent, ('🟥' if ('-' not in percent) else '🟩')),
