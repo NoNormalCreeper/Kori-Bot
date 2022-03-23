@@ -165,6 +165,7 @@ async def _(
         else:
             money = msg[1].strip()
             msg = msg[0].strip()
+            money = resolve_formated_number(money)
             if is_number(msg) and not (int(msg) < 1 or int(msg) > 6):
                 state["bullet_num"] = int(msg)
             if is_number(money) and 0 < int(money) <= max_bet_gold:
