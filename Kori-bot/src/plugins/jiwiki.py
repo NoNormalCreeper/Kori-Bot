@@ -1,8 +1,10 @@
-from nonebot.adapters import Bot, Event, Message
+from nonebot.adapters import Bot, Event
 from nonebot.typing import T_State
 from nonebot.matcher import Matcher
 from nonebot import logger, on_command
-import aiorequests
+import requests, json
+from nonebot.adapters import Message
+from nonebot.params import Arg, CommandArg, ArgPlainText
 
 # sv = Service('小鸡词典')
 help_txt = """
@@ -27,17 +29,18 @@ header = {
 sv = on_command("梗")
 
 @sv.handle()
-async def query(bot: Bot, event: Event, matcher: Matcher, message: Message):
-    keyword = event.message.replace("梗", "")
-    for i in ['!','/','！',' ', '\n', '\r', '\t']:
-        keyword = keyword.replace(i, '')
+async def query(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
+    # keyword = event.message.replace("梗", "")
+    # for i in ['!','/','！',' ', '\n', '\r', '\t']:
+    #    keyword = keyword.replace(i, '')
+    keyword = args.extract_plain_text()
     if not keyword:
         return
     request_data = {'page': 1, 'phrase': keyword, 'size': 60}
     gid = event.group_id
     try:
-        resp = await aiorequests.post(host, headers=header, json=request_data, timeout=10)
-        res = await resp.json()
+        resp = requests.post(host, headers=header, json=request_data, timeout=10)
+        res = json.loads(resp.text)
     except Exception as ex:
         logger.exception(ex)
         await sv.finish('查询错误，请重试')
