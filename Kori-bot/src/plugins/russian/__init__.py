@@ -499,6 +499,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
     group_id = event.group_id
     money_per_stock = russian_manager._check_stock_handle()["money_per_stock"]
     percent = russian_manager._check_stock_handle()["percent"]
+    color_block = '🟥' if ('-' not in percent) else '🟩'
     if args:
         if args[0] == "buy":
             try:
@@ -510,7 +511,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
                 russian_manager._buy_stock_handle(user_id, group_id, number)
                 await stock.finish(
                     "\n🧾 Successfully bought {0} shares using {3} coins.\nYou have {4} shares now.\n{5} Current stock: {1} coins,  {2}".format(
-                    number_format(number), money_per_stock, percent, number_format(number*money_per_stock), number_format(russian_manager.get_user_data(event)["stock"]), ('🟥' if ('-' not in percent) else '🟩')),
+                    number_format(number), money_per_stock, percent, number_format(number*money_per_stock), number_format(russian_manager.get_user_data(event)["stock"]), color_block),
                     at_sender=True
                     )
             else:
@@ -525,7 +526,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
                 russian_manager._sell_stock_handle(user_id, group_id, number)
                 await stock.finish(
                     "\n🧾 Successfully sold {0} shares earning {3} coins.\nYou have {4} shares left now.\n{5} Current stock: {1} coins,  {2}".format(
-                    number_format(number), money_per_stock, percent, number_format(number*money_per_stock), number_format(russian_manager.get_user_data(event)["stock"]), ('🟥' if ('-' in percent) else '🟩')),
+                    number_format(number), money_per_stock, percent, number_format(number*money_per_stock), number_format(russian_manager.get_user_data(event)["stock"]), color_block),
                     at_sender=True
                     )
             else:
@@ -534,11 +535,11 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
             await stock.finish("\nYou have {0} shares now.".format(number_format(russian_manager.get_user_data(event)["stock"])), at_sender=True)
         elif args[0] == "price":
             await stock.finish("{2} Current stock: {0} coins,  {1}".format(
-                    money_per_stock, percent, ('🟥' if ('-' not in percent) else '🟩')),
+                    money_per_stock, percent, color_block),
                     )
     else:
         await stock.finish("{2} Current stock: {0} coins,  {1}".format(
-                    money_per_stock, percent, ('🟥' if ('-' not in percent) else '🟩')),
+                    money_per_stock, percent, color_block),
                     )
 
 @scheduler.scheduled_job(
