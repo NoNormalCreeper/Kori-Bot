@@ -20,17 +20,6 @@ supersuers = global_config.superusers
 port = global_config.http_port
 
 
-call_api = on_command("callapi", aliases={"api"})
-@call_api.handle()
-async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
-    args = args.extract_plain_text().strip()
-    args = args.strip()
-    if str(event.user_id) in supersuers:
-        await get_url(f"http://127.0.0.1:{port}/{args}", 300)
-    else:
-        await call_api.finish("😅 You are not superuser.")
-
-
 run = on_command("run", aliases={})
 @run.handle()
 async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):

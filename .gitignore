@@ -1,18 +1,13 @@
-go-cqhttp/*
-go-cqhttp-2/*
-go-cqhttp-3/*
+go-cqhttp/** !go-cqhttp
+go-cqhttp/* !go-cqhttp
+cu-gocq/*
 .vscode/*
 __pycache__/*
 reference/*
-Kori-Bot/data/*
-Kori-Bot/data/*/*
+**/data/**
 Kori-Bot/test001/*
 Kori-Bot/__pycache__/*
 Kori-Bot/src/disabled/*
-Kori-Bot/src/disabled/__pycache__/*
-Kori-Bot/src/plugins/__pycache__/*
-Kori-Bot/src/plugins/*/__pycache__/*
-*.pyc
-
-Kori-bot/data/russian/russian_data.json
-Kori-bot/data/russian/stock_price.txt
+**/__pycache__/**
+**.pyc
+**.log.*
