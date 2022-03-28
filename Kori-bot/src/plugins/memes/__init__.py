@@ -46,7 +46,7 @@ async def handle(matcher: Matcher, type: str, text: str):
     if len(texts) < arg_num:
         await matcher.finish(f'该表情包需要输入{arg_num}段文字')
     elif len(texts) > arg_num:
-        await matcher.finish(f'参数数量不符，需要输入{arg_num}段文字，若包含空格请加引号')
+        await matcher.finish(f'参数数量不符，需要输入{arg_num}段文字，若包含空格请加引号喔')
 
     try:
         msg = await make_meme(type, texts)

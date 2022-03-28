@@ -28,7 +28,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
     if str(event.user_id) in supersuers:
         await get_url(f"http://127.0.0.1:{port}/{args}", 300)
     else:
-        await call_api.finish("😅 You are not superuser.")
+        await call_api.finish("😅 您不是超级管理员哦")
 
 
 run = on_command("run", aliases={})
@@ -40,4 +40,4 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
         msg = os.popen(args).read()
         await run.finish(f"[Run] Done!\n{msg}")
     else:
-        await call_api.finish("😅 You are not superuser.")
+        await call_api.finish("😅 您不是超级管理员哦")
