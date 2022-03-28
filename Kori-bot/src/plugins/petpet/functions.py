@@ -166,19 +166,18 @@ async def rip(
     frame.paste(rip, mask=rip)
 
     if text:
-        fontname = DEFAULT_FONT
+        fontname = BOLD_FONT
         fontsize = await fit_font_size(text, rip.width - 50, 300, fontname, 150, 25)
         if not fontsize:
             return "文字太长了哦，改短点再试吧~"
         font = await load_font(fontname, fontsize)
         text_w = font.getsize(text)[0]
-        draw = ImageDraw.Draw(frame)
-        draw.text(
+        await draw_text(
+            frame,
             ((rip.width - text_w) / 2, 40),
             text,
             font=font,
             fill="#FF0000",
-            stroke_width=2,
         )
     return save_jpg(frame)
 
@@ -243,7 +242,7 @@ async def always(users: List[UserInfo], **kwargs) -> BytesIO:
     h2 = int(h / w * 60)
     height = h1 + h2 + 10
 
-    def make(img: IMG) -> IMG:
+    async def make(img: IMG) -> IMG:
         img = to_jpg(img)
         frame = Image.new("RGBA", (300, height), (255, 255, 255, 0))
         frame.paste(always, (0, h1 - 300 + int((h2 - 60) / 2)))
@@ -251,7 +250,7 @@ async def always(users: List[UserInfo], **kwargs) -> BytesIO:
         frame.paste(resize(img, (60, h2)), (165, h1 + 5))
         return frame
 
-    return make_jpg_or_gif(img, make)
+    return await make_jpg_or_gif(img, make)
 
 
 async def loading(users: List[UserInfo], **kwargs) -> BytesIO:
@@ -277,12 +276,12 @@ async def loading(users: List[UserInfo], **kwargs) -> BytesIO:
 
     frame = make_static(img)
 
-    def make(img: IMG) -> IMG:
+    async def make(img: IMG) -> IMG:
         new_img = frame.copy()
         new_img.paste(resize(img, (60, h2)), (60, h1 + 5))
         return new_img
 
-    return make_jpg_or_gif(img, make)
+    return await make_jpg_or_gif(img, make)
 
 
 async def turn(users: List[UserInfo], **kwargs) -> BytesIO:
@@ -308,19 +307,22 @@ async def littleangel(
 
     bg = Image.new("RGB", (600, img_h + 230), (255, 255, 255))
     bg.paste(img, (int(300 - img_w / 2), 110))
-    draw = ImageDraw.Draw(bg)
-    fontname = "SourceHanSansSC-Bold.otf"
+    fontname = BOLD_FONT
 
     font = await load_font(fontname, 48)
     text = "非常可爱！简直就是小天使"
     text_w, _ = font.getsize(text)
-    draw.text((300 - text_w / 2, img_h + 120), text, font=font, fill=(0, 0, 0))
+    await draw_text(
+        bg, (300 - text_w / 2, img_h + 120), text, font=font, fill=(0, 0, 0)
+    )
 
     font = await load_font(fontname, 26)
     ta = "他" if users[0].gender == "male" else "她"
     text = f"{ta}没失踪也没怎么样  我只是觉得你们都该看一下"
     text_w, _ = font.getsize(text)
-    draw.text((300 - text_w / 2, img_h + 180), text, font=font, fill=(0, 0, 0))
+    await draw_text(
+        bg, (300 - text_w / 2, img_h + 180), text, font=font, fill=(0, 0, 0)
+    )
 
     name = (args[0] if args else "") or users[0].name or ta
     text = f"请问你们看到{name}了吗?"
@@ -332,7 +334,7 @@ async def littleangel(
     text_w, text_h = font.getsize(text)
     x = 300 - text_w / 2
     y = 55 - text_h / 2
-    draw.text((x, y), text, font=font, fill=(0, 0, 0))
+    await draw_text(bg, (x, y), text, font=font, fill=(0, 0, 0))
     return save_jpg(bg)
 
 
@@ -382,7 +384,7 @@ async def play_game(
     font = await load_font(fontname, fontsize)
     text_w = font.getsize(text)[0]
 
-    def make(img: IMG) -> IMG:
+    async def make(img: IMG) -> IMG:
         img = to_jpg(img)
         frame = Image.new("RGBA", bg.size, (255, 255, 255, 0))
         points = [(0, 5), (227, 0), (216, 150), (0, 165)]
@@ -390,8 +392,8 @@ async def play_game(
         frame.paste(screen, (161, 117))
         frame.paste(bg, mask=bg)
 
-        draw = ImageDraw.Draw(frame)
-        draw.text(
+        await draw_text(
+            frame,
             (263 - text_w / 2, 430),
             text,
             font=font,
@@ -401,7 +403,7 @@ async def play_game(
         )
         return frame
 
-    return make_jpg_or_gif(img, make)
+    return await make_jpg_or_gif(img, make)
 
 
 async def worship(users: List[UserInfo], **kwargs) -> BytesIO:
@@ -497,20 +499,25 @@ async def ask(
     if not name:
         return "找不到名字，加上名字再试吧~"
 
-    font = await load_font("SourceHanSansSC-Bold.otf", 25)
-    draw = ImageDraw.Draw(img)
+    font = await load_font(BOLD_FONT, 25)
     start_h = img_h - mask_h
     start_w = 30
     text_w = font.getsize(name)[0]
     line_w = text_w + 200
-    draw.text(
-        (start_w + (line_w - text_w) / 2, start_h + 5), name, font=font, fill="orange"
+    await draw_text(
+        img,
+        (start_w + (line_w - text_w) / 2, start_h + 5),
+        name,
+        font=font,
+        fill="orange",
     )
+    draw = ImageDraw.Draw(img)
     draw.line(
         (start_w, start_h + 45, start_w + line_w, start_h + 45), fill="orange", width=2
     )
     text_w = font.getsize(f"{name}不知道哦")[0]
-    draw.text(
+    await draw_text(
+        img,
         (start_w + (line_w - text_w) / 2, start_h + 50),
         f"{name}不知道哦。",
         font=font,
@@ -520,12 +527,13 @@ async def ask(
     sep_w = 30
     sep_h = 80
     bg = Image.new("RGBA", (img_w + sep_w * 2, img_h + sep_h * 2), "white")
-    font = await load_font("SourceHanSansSC-Regular.otf", 35)
+    font = await load_font(DEFAULT_FONT, 35)
     if font.getsize(name)[0] > 600:
         return "名字太长了哦，改短点再试吧~"
-    draw = ImageDraw.Draw(bg)
-    draw.text((sep_w, 10), f"让{name}告诉你吧", font=font, fill="black")
-    draw.text((sep_w, sep_h + img_h + 10), f"啊这，{ta}说不知道", font=font, fill="black")
+    await draw_text(bg, (sep_w, 10), f"让{name}告诉你吧", font=font, fill="black")
+    await draw_text(
+        bg, (sep_w, sep_h + img_h + 10), f"啊这，{ta}说不知道", font=font, fill="black"
+    )
     bg.paste(img, (sep_w, sep_h))
     return save_jpg(bg)
 
@@ -534,7 +542,7 @@ async def prpr(users: List[UserInfo], **kwargs) -> BytesIO:
     img = users[0].img
     bg = await load_image("prpr/0.png")
 
-    def make(img: IMG) -> IMG:
+    async def make(img: IMG) -> IMG:
         img = to_jpg(img)
         frame = Image.new("RGBA", bg.size, (255, 255, 255, 0))
         points = [(0, 19), (236, 0), (287, 264), (66, 351)]
@@ -543,7 +551,7 @@ async def prpr(users: List[UserInfo], **kwargs) -> BytesIO:
         frame.paste(bg, mask=bg)
         return frame
 
-    return make_jpg_or_gif(img, make)
+    return await make_jpg_or_gif(img, make)
 
 
 async def twist(users: List[UserInfo], **kwargs) -> BytesIO:
@@ -569,14 +577,14 @@ async def wallpaper(users: List[UserInfo], **kwargs) -> BytesIO:
     img = users[0].img
     bg = await load_image("wallpaper/0.png")
 
-    def make(img: IMG) -> IMG:
+    async def make(img: IMG) -> IMG:
         img = to_jpg(img)
         frame = Image.new("RGBA", bg.size, (255, 255, 255, 0))
         frame.paste(fit_size(img, (775, 496)), (260, 580))
         frame.paste(bg, mask=bg)
         return frame
 
-    return make_jpg_or_gif(img, make, gif_zoom=0.5)
+    return await make_jpg_or_gif(img, make, gif_zoom=0.5)
 
 
 async def china_flag(users: List[UserInfo], **kwargs) -> BytesIO:
@@ -607,8 +615,7 @@ async def make_friend(
     if not name:
         return "找不到名字，加上名字再试吧~"
     text_frame = Image.new("RGBA", (500, 50))
-    draw = ImageDraw.Draw(text_frame)
-    draw.text((0, -10), name, font=font, fill="#FFFFFF")
+    await draw_text(text_frame, (0, -10), name, font=font, fill="#FFFFFF")
     text_frame = rotate(resize(text_frame, (250, 25)), 9)
     frame.paste(text_frame, (710, img_h - 340), mask=text_frame)
     return save_jpg(frame)
@@ -653,9 +660,10 @@ async def follow(
     frame = Image.new("RGBA", (300 + text_width + 50, 300), (255, 255, 255, 0))
     frame.paste(img, (50, 50), mask=img)
     text_frame = Image.new("RGBA", (text_width + 50, 300), (255, 255, 255, 0))
-    draw = ImageDraw.Draw(text_frame)
-    draw.text((0, 135 - text_name_h), text_name, font=font, fill="black")
-    draw.text((0, 145), text_follow, font=font, fill="grey")
+    await draw_text(
+        text_frame, (0, 135 - text_name_h), text_name, font=font, fill="black"
+    )
+    await draw_text(text_frame, (0, 145), text_follow, font=font, fill="grey")
     frame.paste(text_frame, (300, 0), mask=text_frame)
 
     return save_jpg(frame)
@@ -687,7 +695,7 @@ async def my_friend(
     label = await load_image("my_friend/2.png")
     img = resize(circle(img), (100, 100))
 
-    def make_dialog(text: str) -> IMG:
+    async def make_dialog(text: str) -> IMG:
         text = "\n".join(wrap_text(text, text_font, 700))
         text_w, text_h = text_font.getsize_multiline(text)
         box_w = max(text_w, name_w + 15) + 140
@@ -700,19 +708,23 @@ async def my_friend(
         box.paste(Image.new("RGBA", (text_w, box_h - 40), "#ffffff"), (70, 20))
         box.paste(Image.new("RGBA", (text_w + 88, box_h - 150), "#ffffff"), (27, 75))
 
-        draw = ImageDraw.Draw(box)
-        draw.multiline_text(
-            (70, 15 + (box_h - 40 - text_h) / 2), text, font=text_font, fill="#000000"
+        await draw_text(
+            box,
+            (70, 15 + (box_h - 40 - text_h) / 2),
+            text,
+            font=text_font,
+            fill="#000000",
         )
         dialog = Image.new("RGBA", (box.width + 130, box.height + 60), "#eaedf4")
         dialog.paste(img, (20, 20), mask=img)
         dialog.paste(box, (130, 60), mask=box)
         dialog.paste(label, (160, 25))
-        draw = ImageDraw.Draw(dialog)
-        draw.text((260, 22 + (35 - name_h) / 2), name, font=name_font, fill="#868894")
+        await draw_text(
+            dialog, (260, 22 + (35 - name_h) / 2), name, font=name_font, fill="#868894"
+        )
         return dialog
 
-    dialogs = [make_dialog(text) for text in texts]
+    dialogs = [await make_dialog(text) for text in texts]
     frame_w = max((dialog.width for dialog in dialogs))
     frame_h = sum((dialog.height for dialog in dialogs))
     frame = Image.new("RGBA", (frame_w, frame_h), "#eaedf4")
@@ -764,8 +776,8 @@ async def coupon(
     if text_w > text_img.width:
         return "文字太长了哦，改短点再试吧~"
 
-    draw = ImageDraw.Draw(text_img)
-    draw.multiline_text(
+    await draw_text(
+        text_img,
         ((text_img.width - text_w) / 2, 0),
         text,
         font=font,
@@ -818,17 +830,18 @@ async def dianzhongdian(
         font = await load_font(fontname, fontsize)
         text_w, text_h = font.getsize(text)
         frame = Image.new("RGB", (img_w, text_h + 5), "#000000")
-        draw = ImageDraw.Draw(frame)
-        draw.text(((img_w - text_w) / 2, 0), text, font=font, fill="white")
+        await draw_text(frame, ((img_w - text_w) / 2, 0), text, font=font, fill="white")
         frames.append(frame)
         return fontsize
 
     fontsize = await text_frame(args[0], 50, 10)
     if not fontsize:
         return "文字太长了哦，改短点再试吧~"
-    if len(args) > 1:
+
+    text = args[1] if len(args) > 1 else await translate(args[0])
+    if text:
         fontsize = max(int(fontsize / 2), 10)
-        fontsize = await text_frame(args[1], fontsize, 10)
+        fontsize = await text_frame(text, fontsize, 10)
         if not fontsize:
             return "文字太长了哦，改短点再试吧~"
 
@@ -952,8 +965,8 @@ async def safe_sense(
         return "文字太长了哦，改短点再试吧~"
     font = await load_font(fontname, fontsize)
     text_w, text_h = font.getsize_multiline(text)
-    draw = ImageDraw.Draw(frame)
-    draw.multiline_text(
+    await draw_text(
+        frame,
         ((frame.width - text_w) / 2, 30 + (45 - text_h) / 2),
         text,
         font=font,
@@ -971,7 +984,7 @@ async def always_like(
     if not name:
         return "找不到名字，加上名字再试吧~"
     text = "我永远喜欢" + name
-    fontname = "SourceHanSansSC-Bold.otf"
+    fontname = BOLD_FONT
     fontsize = await fit_font_size(text, 800, 100, fontname, 70, 30)
     if not fontsize:
         return "名字太长了哦，改短点再试吧~"
@@ -988,7 +1001,7 @@ async def always_like(
     draw = ImageDraw.Draw(frame)
     start_w = (frame.width - text_w) / 2
     start_h = 470 + (100 - text_h) / 2
-    draw.text((start_w, start_h), text, font=font, fill="black")
+    await draw_text(frame, (start_w, start_h), text, font=font, fill="black")
     if len(users) > 1:
         line_h = start_h + text_h / 5 * 3
         draw.line(
@@ -1018,7 +1031,7 @@ async def always_like(
         if current_h < 10:
             return "你喜欢的人太多啦"
         start_w = 400 + (430 - text_w) / 2
-        draw.text((start_w, current_h), name, font=font, fill="black")
+        await draw_text(frame, (start_w, current_h), name, font=font, fill="black")
         if len(users) > i + 1:
             line_h = current_h + text_h / 5 * 3
             draw.line(
@@ -1036,7 +1049,7 @@ async def interview(
         self_img = users[0].img
         user_img = users[1].img
     else:
-        self_img = await load_image("interview/huaji.png")
+        self_img = to_jpg(await load_image("interview/huaji.png"))
         user_img = users[0].img
     self_img = resize(self_img, (124, 124))
     user_img = resize(user_img, (124, 124))
@@ -1054,11 +1067,62 @@ async def interview(
         return "文字太长了哦，改短点再试吧~"
     font = await load_font(fontname, fontsize)
     text_w, text_h = font.getsize(text)
-    draw = ImageDraw.Draw(frame)
-    draw.text(
+    await draw_text(
+        frame,
         ((600 - text_w) / 2, 200 + (100 - text_h) / 2),
         text,
         font=font,
         fill="black",
     )
     return save_jpg(frame)
+
+
+async def punch(users: List[UserInfo], **kwargs) -> BytesIO:
+    img = users[0].img
+    img = to_jpg(img).convert("RGBA")
+    img = limit_size(img, (260, 230))
+    x = int((260 - img.width) / 2)
+    y = int((230 - img.height) / 2)
+    frames = []
+    # fmt: off
+    locs = [
+        (-50, 20), (-40, 10), (-30, 0), (-20, -10), (-10, -10), (0, 0),
+        (10, 10), (20, 20), (10, 10), (0, 0), (-10, -10), (10, 0), (-30, 10)
+    ]
+    # fmt: on
+    for i in range(13):
+        frame = Image.new("RGBA", (260, 230), (255, 255, 255, 0))
+        dx, dy = locs[i]
+        frame.paste(img, (x + dx, y + dy))
+        fist = await load_image(f"punch/{i}.png")
+        frame.paste(fist, mask=fist)
+        frames.append(frame)
+    return save_gif(frames, 0.03)
+
+
+async def cyan(users: List[UserInfo], **kwargs) -> BytesIO:
+    img = users[0].img
+    img = resize(img, (500, 500))
+    color = (78, 114, 184)
+    img = color_mask(img, color)
+    font = await load_font("SourceHanSansSC-Bold.otf", 80)
+    await draw_text(
+        img,
+        (400, 50),
+        "群\n青",
+        font=font,
+        fill="white",
+        stroke_width=2,
+        stroke_fill=color,
+    )
+    font = await load_font("SourceHanSansSC-Regular.otf", 40)
+    await draw_text(
+        img,
+        (310, 270),
+        "YOASOBI",
+        font=font,
+        fill="white",
+        stroke_width=2,
+        stroke_fill=color,
+    )
+    return save_jpg(img)
