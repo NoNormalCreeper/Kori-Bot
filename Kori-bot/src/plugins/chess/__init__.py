@@ -126,16 +126,16 @@ async def handle_chess(matcher: Matcher, event: GroupMessageEvent, argv: List[st
             or options.skip
             or options.repent
         ):
-            await send('没有正在进行的游戏')
+            await send('没有正在进行的游戏呢...')
 
         if options.size and (options.size < 2 or options.size > 20):
             await send('棋盘大小应该为不小于 2，不大于 20 的整数')
 
         if not options.rule:
-            await send('输入“五子棋”、“黑白棋”、“围棋”开始一局游戏。\n再输入“落子 字母+数字”下棋，如“落子 A1”')
+            await send('输入“五子棋”、“黑白棋”、“围棋”开始一局游戏。\n再输入“/落子 字母+数字”下棋，如“/落子 A1”')
 
         if options.rule not in rules:
-            await send('没有找到对应的规则')
+            await send('没有找到对应的规则！')
 
         rule = rules[options.rule]
         game = Game(rule, options.size)
@@ -167,7 +167,7 @@ async def handle_chess(matcher: Matcher, event: GroupMessageEvent, argv: List[st
 
     if options.skip:
         if game.next != player:
-            await send('当前不是你的回合')
+            await send('干什么呢！当前不是你的回合！')
         if not game.allow_skip:
             await send('当前规则不允许跳过回合')
         game.next = game.p2 if game.p1 == player else game.p1
@@ -190,7 +190,7 @@ async def handle_chess(matcher: Matcher, event: GroupMessageEvent, argv: List[st
 
     position = options.position
     if not position:
-        await send('请输入“落子 坐标”下棋，如“落子 A1”')
+        await send('请输入“落子 坐标”下棋，如“/落子 A1”')
 
     match_obj = re.match(r'^([a-z])(\d+)$', position, re.IGNORECASE)
     if not match_obj:
@@ -200,10 +200,10 @@ async def handle_chess(matcher: Matcher, event: GroupMessageEvent, argv: List[st
     y = int(match_obj.group(2)) - 1
 
     if x < 0 or x >= game.size or y < 0 or y >= game.size:
-        await send('落子超出边界')
+        await send('那里都不是棋盘了啊喂！')
 
     if game.get(x, y):
-        await send('此处已有落子')
+        await send('你以为这是飞行棋吗？还能下到其他的棋子上是吧')
 
     message = ''
     if game.next or player == game.p1:
@@ -221,7 +221,7 @@ async def handle_chess(matcher: Matcher, event: GroupMessageEvent, argv: List[st
 
     if result == MoveResult.ILLEGAL:
         game.next = player
-        await send('非法落子')
+        await send('非法落子！')
     elif result == MoveResult.SKIP:
         message += f'，下一手依然轮到 {player}'
     elif result == MoveResult.P1WIN:
