@@ -6,7 +6,7 @@ from nonebot.matcher import Matcher
 
 import sys
 sys.path.append("..")
-from tools.permission import checker, error
+from .tools.permission import checker, error
 
 from functools import reduce
 from nonebot.adapters.onebot.v11 import (

@@ -9,10 +9,10 @@ import json
 
 import sys
 sys.path.append("..")
-from tools.permission import checker, error
+from .tools.permission import checker, error
 import sys
 sys.path.append("..")
-from tools.http_ import get_url
+from .tools.http_ import get_url
 
 sign = on_command("sign",aliases={"公告"})
 

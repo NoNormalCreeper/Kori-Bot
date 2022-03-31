@@ -15,7 +15,7 @@ import json
 
 import sys
 sys.path.append("..")
-from tools.permission import checker, error
+from .tools.permission import checker, error
 
 help = on_command("help", aliases={"帮助"}, priority=1)
 css="""
