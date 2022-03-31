@@ -12,7 +12,7 @@ import json
 import sys
 from .marry import already_married
 sys.path.append("/root/Kori-Bot/Kori-bot/src/tools")
-from tools.permission import checker, error
+from .tools.permission import checker, error
 
 def checknumber(number):
     return number.isdecimal()
