@@ -4,8 +4,8 @@ from pathlib import Path
 
 
 answer_path = "/root/Projects/Kori-Bot/Kori-bot/data/russian/word_answer.json"
-wordlist_path = "/root/Projects/Kori-Bot/Kori-bot/src/plugin/russian/wordlist_CE.json"
-
+#wordlist_path = "/root/Projects/Kori-Bot/Kori-bot/src/plugin/russian/CET4.json"
+wordlist_path = Path(__file__).parent / "CET4.json"
 
 def saveWordAnswer(answer, id):
     answer = str(answer)
@@ -37,12 +37,14 @@ def getWordQuestion(id):
 
     length = len(wordlist)
     question_id = randint(0, length-1)
-    chinese = list(wordlist.keys())[question_id]
-    english = list(wordlist.values())[question_id]
+    #chinese = list(wordlist.keys())[question_id]
+    #english = list(wordlist.values())[question_id]
+    english = list(wordlist.keys())[question_id]
+    chinese = wordlist[english]["中释"]
 
     choice.append(english)
     for i in range(3):
-        choice.append(list(wordlist.values())[randint(0, length-1)])
+        choice.append(list(wordlist.keys())[randint(0, length-1)])
     shuffle(choice)
     answer = choice.index(english)
 

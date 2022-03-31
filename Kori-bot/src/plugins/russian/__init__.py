@@ -74,7 +74,7 @@ stock = on_command("stock", aliases={}, permission=GROUP, priority=5, block=True
 
 math = on_command("math", aliases={"口算"}, permission=GROUP, priority=5, block=True)
 
-word = on_command("word", aliases={}, permission=GROUP, priority=5, block=True)
+word = on_command("背单词", aliases={"recite"}, permission=GROUP, priority=5, block=True)
 
 russian_rank = on_command(
     "胜场排行",
