@@ -18,7 +18,7 @@ plugin_notes = f'''
 [抽签设置] 查看群抽签主题'''.strip()
 
 plugin_help = on_command("今日运势帮助", permission=GROUP, priority=8, block=True)
-divine = on_command("今日运势", aliases={"抽签", "运势"}, permission=GROUP, priority=8, block=True)
+divine = on_command("今日运势", aliases={"抽签", "运势", "签到"}, permission=GROUP, priority=8, block=True)
 limit_setting = on_regex(r"指定(.*?)签", permission=GROUP, priority=8, block=True)
 theme_setting = on_regex(r"设置(.*?)签", permission=SUPERUSER | GROUP_ADMIN | GROUP_OWNER, priority=8, block=True)
 reset = on_command("重置抽签", permission=SUPERUSER | GROUP_ADMIN | GROUP_OWNER, priority=8, block=True)

@@ -13,6 +13,6 @@ Kori-Bot/src/disabled/__pycache__/*
 Kori-Bot/src/plugins/__pycache__/*
 Kori-Bot/src/plugins/*/__pycache__/*
 *.pyc
-
+**/test.py
 Kori-bot/data/russian/russian_data.json
 Kori-bot/data/russian/stock_price.txt

@@ -286,7 +286,7 @@ async def _(bot: Bot, event: GroupMessageEvent):
         p_list = [0, 1, 3, 4, 7, 11, 14, 16, 17, 17.5]
         rand = random.randint(0, 175)
         times = -1
-        msg = "你扔出了一个金币，"
+        msg = "你扔出了一个硬币，"
         for i in range(1, 9):
             if (p_list[i-1]*10 <= rand) and (rand < p_list[i]*10):
                 times = i-1
@@ -294,15 +294,15 @@ async def _(bot: Bot, event: GroupMessageEvent):
         if times == -1:
             times = random.randint(8, 80)
             dist = calc_distance(times)
-            msg += "弹了 {0} 次！！最终沉在了你面前 {1} 米！！！".format(times,dist)
+            msg += "它居然弹了 {0} 次！！在距离你 {1} 米处才沉了下去！！！".format(times,dist)
         else:
             dist = calc_distance(times)
             if times == 0:
-                msg += f"在你面前 {dist} 米处直接沉下去了"
+                msg += f"它在你面前 {dist} 米处直接沉下去了"
             else:
-                msg += f"弹了 {times} 次，在你 面前 {dist} 米处沉下去了"
+                msg += f"它弹了 {times} 次，在你距离你 {dist} 米处沉了下去"
     else:
-        msg = " 你没有金币，不能扔金币！"
+        msg = "你没有金币，不能扔金币！"
     await dap.send(message=('\n'+msg), at_sender=True)
 
 
