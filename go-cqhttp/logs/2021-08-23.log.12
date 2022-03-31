@@ -1,3 +1,0 @@
-[2021-08-23 15:37:48] [WARNING]: 虚拟设备信息不存在, 将自动生成随机设备. 
-[2021-08-23 15:37:54] [ERROR]: Protocol -> exchange_emp error: 16 
-[2021-08-23 15:37:54] [WARNING]: 恢复会话失败: exchange_emp failed , 尝试使用正常流程登录. 
