@@ -13,7 +13,7 @@ from typing import Dict, List
 sys.path.append("/root/Kori-Bot/Kori-bot/src/tools")
 import sys
 sys.path.append("..")
-from .tools.permission import checker, error
+from tools.permission import checker, error
 
 ping = on_command("ping", aliases={"测试"})
 

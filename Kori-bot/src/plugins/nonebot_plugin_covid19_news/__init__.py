@@ -9,7 +9,7 @@ from nonebot.params import State, CommandArg
 from nonebot import require, logger
 import sys
 sys.path.append("..")
-from .tools.import NewsData
+from tools.import NewsData
 
 DL = DataLoader('data.json')
 NewsBot = NewsData()

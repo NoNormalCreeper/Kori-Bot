@@ -11,7 +11,7 @@ import json
 
 import sys
 sys.path.append("..")
-from .tools.permission import checker, error
+from tools.permission import checker, error
 
 wa = on_command("webhookadd",aliases={"wa"})
 
