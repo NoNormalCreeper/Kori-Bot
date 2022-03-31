@@ -8,9 +8,10 @@ from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, Event
 from aiocqhttp import MessageSegment as ms
 
 import json
+
 import sys
-sys.path.append("/root/Kori-Bot/Kori-bot/src/tools")
-from .tools.permission import checker, error
+sys.path.append("..")
+from tools.permission import checker, error
 
 wa = on_command("webhookadd",aliases={"wa"})
 

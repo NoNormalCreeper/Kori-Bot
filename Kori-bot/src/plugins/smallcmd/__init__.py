@@ -7,7 +7,9 @@ from nonebot.adapters import Message
 from nonebot import on_command
 import sys, os
 sys.path.append("/root/Kori-Bot/Kori-bot/src/tools")
-from .tools.permission import checker, error
+import sys
+sys.path.append("..")
+from tools.permission import checker, error
 
 edithelpimagesize = on_command("edithelpimagesize",aliases={"ehis"})
 

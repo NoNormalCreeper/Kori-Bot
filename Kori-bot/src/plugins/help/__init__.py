@@ -12,9 +12,10 @@ from .picture import main as pic
 import os
 import re
 import json
+
 import sys
-sys.path.append("/root/Kori-Bot/Kori-bot/src/tools")
-from .tools.permission import checker, error
+sys.path.append("..")
+from tools.permission import checker, error
 
 help = on_command("help", aliases={"帮助"}, priority=1)
 css="""
