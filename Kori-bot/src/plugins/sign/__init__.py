@@ -8,8 +8,8 @@ from aiocqhttp import MessageSegment as ms
 import json
 import sys
 sys.path.append("/root/Kori-Bot/Kori-bot/src/tools")
-from permission import checker, error
-from http_ import get_url
+from tools.permission import checker, error
+from tools.http_ import get_url
 
 sign = on_command("sign",aliases={"公告"})
 

@@ -29,4 +29,4 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
         msg = os.popen(args).read()
         await run.finish(f"[Run] Done!\n{msg}")
     else:
-        await call_api.finish("😅 你谁啊")
+        await run.finish("😅 你谁啊")
