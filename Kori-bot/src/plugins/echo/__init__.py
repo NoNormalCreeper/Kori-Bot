@@ -3,9 +3,10 @@ from nonebot.adapters.onebot.v11 import Event
 from nonebot.params import CommandArg
 from nonebot.plugin import on_command
 from nonebot.matcher import Matcher
+
 import sys
-sys.path.append("/root/Kori-Bot/Kori-bot/src/tools")
-from permission import checker, error
+sys.path.append("..")
+from tools.permission import checker, error
 
 from functools import reduce
 from nonebot.adapters.onebot.v11 import (

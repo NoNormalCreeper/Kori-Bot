@@ -6,10 +6,13 @@ from nonebot.params import Arg, CommandArg, ArgPlainText
 from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, Event
 from aiocqhttp import MessageSegment as ms
 import json
+
 import sys
-sys.path.append("/root/Kori-Bot/Kori-bot/src/tools")
-from permission import checker, error
-from http_ import get_url
+sys.path.append("..")
+from tools.permission import checker, error
+import sys
+sys.path.append("..")
+from tools.http_ import get_url
 
 sign = on_command("sign",aliases={"公告"})
 

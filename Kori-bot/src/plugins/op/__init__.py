@@ -9,7 +9,9 @@ import json
 import sys
 
 sys.path.append("/root/Kori-Bot/Kori-bot/src/tools")
-from permission import checker, error
+import sys
+sys.path.append("..")
+from tools.permission import checker, error
 
 op = on_command("op", aliases={"admin","setadmin"}, priority=1)
 
