@@ -23,7 +23,7 @@ class Repo(Service):
         Service.__init__(self, "反馈", "向维护者发送消息")
 
 
-reporter = Repo().on_command("来杯红茶", "向维护者发送消息", aliases={"反馈", "报告"})
+reporter = Repo().on_command("来杯红茶", "向维护者发送消息", aliases={"反馈", "报告", "report"})
 
 
 @reporter.handle([Cooldown(120, prompt=_repo_flmt_notice)])
