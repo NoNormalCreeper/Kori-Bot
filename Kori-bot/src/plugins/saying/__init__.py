@@ -5,10 +5,13 @@ from nonebot.matcher import Matcher
 from nonebot import on_command
 import requests
 import json
+import datetime
 
 saying = on_command("saying", aliases={'一言'})
 
 tih = on_command("tih")
+
+school = on_command("school")
 
 types = {'a':'动画',
           'b':'漫画',
@@ -21,6 +24,24 @@ types = {'a':'动画',
           'k':'哲学',           'l':'抖机灵'}
 
 # e.g. {"id":6491,"uuid":"2fcd691a-ebb0-4cf3-b189-b991de5ee36d","hitokoto":"遗忘，也是种解脱：当人们为之逝去，活下来的为之蒙恨的时候。","type":"c","from":"«最后的老兵»，TNO启示录事件","from_who":"The New Order:Last Days of Europe","creator":"Forevercontinent","creator_uid":7134,"reviewer":6844,"commit_from":"web","created_at":"1599385727","length":29}
+
+def caculate_school():
+    now = datetime.datetime.now()
+    start = datetime.datetime(2022,1,4,17,0,0)
+    end = datetime.datetime(2022,4,8,7,30,0)
+    delta = end - now
+    days = delta.days
+    hours = delta.seconds // 3600
+    minutes = delta.seconds // 60 % 60
+    seconds = delta.seconds % 60
+    total_milliseconds = delta.total_seconds() * 1000
+
+    # progress bar
+    maxn = 24
+    progress=int((now-start).total_seconds()/(end-start).total_seconds()*maxn)
+    bar = f"[{('█' * progress + '░' * (maxn-progress))}]"
+
+    return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', ('%.2f 秒'%total_milliseconds/1000), bar)
 
 @saying.handle()
 async def handle(bot: Bot, event: Event, matcher: Matcher):
@@ -58,3 +79,12 @@ async def _(bot: Bot, event: Event, matcher: Matcher):
     for i in c:
         msg += "{0}的今天, {1}\n".format(i['year'], i['title'])
     await tih.send(msg)
+
+@school.handle()
+async def _(bot: Bot, event: Event, matcher: Matcher):
+    result = '距离开学还有:\n'
+    result += caculate_school()[0]
+    result += '\n(共计: '
+    result += caculate_school()[1]
+    result += ' )'
+    await school.finish(result)
