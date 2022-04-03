@@ -40,8 +40,9 @@ def caculate_school():
     maxn = 24
     progress=int((now-start).total_seconds()/(end-start).total_seconds()*maxn)
     bar = f"[{('█' * progress + '░' * (maxn-progress))}]"
+    percent = progress/maxn*100
 
-    return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', ('%.2f 秒'%(total_milliseconds/1000)), bar)
+    return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', ('%.2f 秒'%(total_milliseconds/1000)), bar, '%.2f%%'%percent)
 
 @saying.handle()
 async def handle(bot: Bot, event: Event, matcher: Matcher):
@@ -88,5 +89,8 @@ async def _(bot: Bot, event: Event, matcher: Matcher):
     result += '\n(共计: '
     result += resp[1]
     result += ' )\n'
-    result += resp[2]
+    if 'bar' in str(event.message):
+        result += resp[2]
+    else:
+        result += resp[3]
     await school.finish(result)
