@@ -82,10 +82,11 @@ async def _(bot: Bot, event: Event, matcher: Matcher):
 
 @school.handle()
 async def _(bot: Bot, event: Event, matcher: Matcher):
+    resp = caculate_school()
     result = '距离开学还有:\n'
-    result += caculate_school()[0]
+    result += resp[0]
     result += '\n(共计: '
-    result += caculate_school()[1]
+    result += resp[1]
     result += ' )\n'
-    result += caculate_school()[2]
+    result += resp[2]
     await school.finish(result)
