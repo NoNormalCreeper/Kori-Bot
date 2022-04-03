@@ -41,7 +41,7 @@ def caculate_school():
     progress=int((now-start).total_seconds()/(end-start).total_seconds()*maxn)
     bar = f"[{('█' * progress + '░' * (maxn-progress))}]"
 
-    return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', ('%.2f 秒'%(total_milliseconds/1000), bar))
+    return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', ('%.2f 秒'%(total_milliseconds/1000)), bar)
 
 @saying.handle()
 async def handle(bot: Bot, event: Event, matcher: Matcher):
