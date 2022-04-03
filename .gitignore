@@ -17,3 +17,4 @@ Kori-bot/data/russian/stock_price.txt
 **/__pycache__/**
 **.pyc
 **.log.*
+**.dist-info/**
