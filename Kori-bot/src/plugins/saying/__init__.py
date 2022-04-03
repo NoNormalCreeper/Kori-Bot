@@ -86,5 +86,6 @@ async def _(bot: Bot, event: Event, matcher: Matcher):
     result += caculate_school()[0]
     result += '\n(共计: '
     result += caculate_school()[1]
-    result += ' )'
+    result += ' )\n'
+    result += caculate_school()[2]
     await school.finish(result)
