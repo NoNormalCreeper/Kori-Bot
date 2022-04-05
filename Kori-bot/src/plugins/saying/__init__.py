@@ -40,7 +40,7 @@ def caculate_school():
     maxn = 15
     progress=int((now-start).total_seconds()/(end-start).total_seconds()*maxn)
     bar = f"[{('█' * progress + '░' * (maxn-progress))}]"
-    percent = delta.total_seconds() / (end-start).total_seconds() * 100
+    percent = (now-start).total_seconds() / (end-start).total_seconds() * 100
 
     return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', ('%.3f 秒'%(total_milliseconds/1000)), bar, '%.3f%%'%percent)
 
