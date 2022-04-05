@@ -37,12 +37,12 @@ def caculate_school():
     total_milliseconds = delta.total_seconds() * 1000
 
     # progress bar
-    maxn = 24
+    maxn = 15
     progress=int((now-start).total_seconds()/(end-start).total_seconds()*maxn)
     bar = f"[{('█' * progress + '░' * (maxn-progress))}]"
-    percent = progress/maxn*100
+    percent = delta.total_seconds() / (end-start).total_seconds() * 100
 
-    return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', ('%.2f 秒'%(total_milliseconds/1000)), bar, '%.2f%%'%percent)
+    return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', ('%.3f 秒'%(total_milliseconds/1000)), bar, '%.3f%%'%percent)
 
 @saying.handle()
 async def handle(bot: Bot, event: Event, matcher: Matcher):
