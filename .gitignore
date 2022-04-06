@@ -7,6 +7,16 @@ reference/*
 **/data/**
 Kori-Bot/test001/*
 Kori-Bot/__pycache__/*
+Kori-Bot/src/disabled/**
+**/__pycache__/**
+**.pyc
+**.log.*
+Kori-Bot/src/disabled/__pycache__/*
+Kori-Bot/src/plugins/__pycache__/*
+Kori-Bot/src/plugins/*/__pycache__/*
+**/test.py
+Kori-bot/data/russian/russian_data.json
+Kori-bot/data/russian/stock_price.txt
 Kori-Bot/src/disabled/*
 Kori-Bot/src/disabled/__pycache__/*
 Kori-Bot/src/plugins/__pycache__/*
@@ -17,3 +27,4 @@ Kori-bot/data/russian/stock_price.txt
 **/__pycache__/**
 **.pyc
 **.log.*
+**.dist-info/**
