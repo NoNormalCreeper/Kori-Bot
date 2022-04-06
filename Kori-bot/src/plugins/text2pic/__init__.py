@@ -17,7 +17,7 @@ text2pic = on_command("text2pic",aliases={'t2p','ttp'})
 @text2pic.handle()
 async def _text2pic(bot: Bot, event: MessageEvent, args: Message = CommandArg()):
     # msg = str(event.get_message())
-    msg=args.extract_plain_text()
+    msg=args.extract_plain_text().strip()
 
     # css_path 可选
     # from pathlib import Path
@@ -91,7 +91,7 @@ async def _md2pic(bot: Bot, event: MessageEvent, args: Message = CommandArg()):
     # 如果是直接获取消息内容 需要 unescape
     from nonebot.adapters.onebot.v11 import unescape
 
-    msg = unescape(str(event.get_message())).replace('/md2pic','').replace('/mtp','').replace('m2p','')
+    msg = args.extract_plain_text().strip()
 
     # css_path 可选
     # pic = await md_to_pic(
