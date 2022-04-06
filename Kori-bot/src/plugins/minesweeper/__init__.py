@@ -5,6 +5,7 @@ from io import BytesIO
 from asyncio import TimerHandle
 from dataclasses import dataclass, field
 from typing import Dict, List, Tuple, Optional, NoReturn
+from click import option
 
 from nonebot.matcher import Matcher
 from nonebot.exception import ParserExit
@@ -169,17 +170,28 @@ async def handle_minesweeper(matcher: Matcher, event: MessageEvent, argv: List[s
         if options.open or options.mark or options.show or options.stop:
             await send("没有正在进行的游戏")
 
-        if options.row < 8 or options.row > 24:
-            await send("行数应在8~24之间")
+        if options.row:
+            if options.row < 8 or options.row > 24:
+                await send("行数应在8~24之间")
+        else:
+            options.row = 8
 
-        if options.col < 8 or options.col > 30:
-            await send("列数应在8~30之间")
+        if options.col:
+            if options.col < 8 or options.col > 30:
+                await send("列数应在8~30之间")
+        else:
+            options.col = 8
 
         if options.num < 10 or options.num > options.row * options.col:
             await send("地雷数应不少于10且不多于行数*列数")
+        else:
+            options.num = 10
 
-        if options.skin not in skin_list:
-            await send("支持的皮肤：" + ", ".join(skin_list))
+        if options.skin:
+            if options.skin not in skin_list:
+                await send("支持的皮肤：" + ", ".join(skin_list))
+        else:
+            options.skin = "winxp"
 
         game = MineSweeper(options.row, options.col, options.num, options.skin)
         games[cid] = game
