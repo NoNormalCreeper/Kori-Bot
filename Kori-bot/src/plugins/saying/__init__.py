@@ -26,15 +26,23 @@ types = {'a':'动画',
 # e.g. {"id":6491,"uuid":"2fcd691a-ebb0-4cf3-b189-b991de5ee36d","hitokoto":"遗忘，也是种解脱：当人们为之逝去，活下来的为之蒙恨的时候。","type":"c","from":"«最后的老兵»，TNO启示录事件","from_who":"The New Order:Last Days of Europe","creator":"Forevercontinent","creator_uid":7134,"reviewer":6844,"commit_from":"web","created_at":"1599385727","length":29}
 
 def caculate_school():
+    msg = ''
     now = datetime.datetime.now()
     start = datetime.datetime(2022,1,4,17,0,0)
     end = datetime.datetime(2022,4,8,7,30,0)
     delta = end - now
+    total_s = delta.total_seconds()
+    if total_s < 0:
+        total_s *= -1
+        delta = now - end
+        msg += '距离开学还有:\n'
+    else:
+        msg += '已经开学了:\n'
     days = delta.days
     hours = delta.seconds // 3600
     minutes = delta.seconds // 60 % 60
     seconds = delta.seconds % 60
-    total_milliseconds = delta.total_seconds() * 1000
+    total_milliseconds = total_s * 1000
 
     # progress bar
     maxn = 15
@@ -42,7 +50,12 @@ def caculate_school():
     bar = f"[{('█' * progress + '░' * (maxn-progress))}]"
     percent = (now-start).total_seconds() / (end-start).total_seconds() * 100
 
-    return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', ('%.3f 秒'%(total_milliseconds/1000)), bar, '%.3f%%'%percent)
+    return (f'{days} 天 {hours} 小时 {minutes} 分钟 {seconds} 秒', 
+            ('%.3f 秒'%(total_milliseconds/1000)), 
+            bar, 
+            '%.3f%%'%percent,
+            msg
+        )
 
 @saying.handle()
 async def handle(bot: Bot, event: Event, matcher: Matcher):
@@ -84,7 +97,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher):
 @school.handle()
 async def _(bot: Bot, event: Event, matcher: Matcher):
     resp = caculate_school()
-    result = '距离开学还有:\n'
+    result = resp[4]
     result += resp[0]
     result += '\n(共计: '
     result += resp[1]
