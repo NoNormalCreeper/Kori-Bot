@@ -35,9 +35,9 @@ def caculate_school():
     if total_s < 0:
         total_s *= -1
         delta = now - end
-        msg += '距离开学还有:\n'
-    else:
         msg += '已经开学了:\n'
+    else:
+        msg += '距离开学还有:\n'
     days = delta.days
     hours = delta.seconds // 3600
     minutes = delta.seconds // 60 % 60
