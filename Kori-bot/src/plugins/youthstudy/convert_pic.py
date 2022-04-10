@@ -4,11 +4,15 @@ import base64
 from os.path import dirname
 
 font_path = dirname(__file__) + '/resource/font/font.otf'
+bold_path = dirname(__file__) + '/resource/font/font-bold.otf'
 icon_path = dirname(__file__) + '/resource/bac/bac.png'
 
 
 def size(size: int) -> ImageFont:
     return ImageFont.truetype(font_path, size)
+
+def bold(size: int) -> ImageFont:
+    return ImageFont.truetype(bold_path, size)
 
 
 async def convert_pic(text):
@@ -26,9 +30,9 @@ async def convert_pic(text):
     draw.multiline_text((100, 80), period, fill='gold', font=size(50))
     j = 0
     for i in text["answer"]:
-        draw.multiline_text((200 + j * 150, 40 if j == 0 else 90), i, fill='gold', font=size(40))
+        draw.multiline_text((200 + j * 150, 40 if j == 0 else 90), i, fill='gold', font=bold(40))
         j += 1
-    draw.multiline_text((200, 700), text["end_time"], fill='gold', font=size(40))
+    draw.multiline_text((200, 700), text["end_time"], fill='gold', font=bold(40))
     buf = BytesIO()
     img.save(buf, format="PNG")
     base64_str = base64.b64encode(buf.getbuffer()).decode()
