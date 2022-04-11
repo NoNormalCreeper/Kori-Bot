@@ -19,7 +19,7 @@ async def _code_runner(
     matcher: Matcher, event: MessageEvent, args: Message = CommandArg()
 ):
     user_id = event.get_user_id()
-    msg = args.extract_plain_text()
+    msg = args.extract_plain_text().strip()
 
     if msg:
         matcher.set_arg("opt", args)
