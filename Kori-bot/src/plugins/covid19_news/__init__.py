@@ -7,9 +7,9 @@ from nonebot.adapters.onebot.v11.event import  MessageEvent
 from nonebot.typing import T_State
 from nonebot.params import State, CommandArg
 from nonebot import require, logger
-import sys
-sys.path.append("..")
-from tools import NewsData
+# import sys
+# sys.path.append("..")
+from .tools import NewsData
 
 DL = DataLoader('data.json')
 NewsBot = NewsData()
