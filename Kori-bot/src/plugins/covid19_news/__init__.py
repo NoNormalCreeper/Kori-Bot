@@ -38,7 +38,7 @@ async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city: Messa
         await follow.finish(message=f"添加失败")
 
 
-unfollow = on_command("取消疫情", priority=5, block=True, aliases={"取消关注疫情", "取消推送疫情",  "unfollow"})
+unfollow = on_command("取消疫情", aliases={"取消关注疫情", "取消推送疫情",  "unfollow"}, priority=5, block=True)
 @unfollow.handle()
 async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city: Message=CommandArg()):
     city = city.extract_plain_text()
