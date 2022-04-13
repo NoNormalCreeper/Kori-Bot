@@ -53,9 +53,10 @@ async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city: Messa
 
 city_news = on_command("疫情", aliases={"covid", "疫情"}, priority=5, block=True)
 @city_news.handle()
-async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city: Message=CommandArg()):
-    city = city.extract_plain_text()
-    if NewsBot.data.get(city):
+async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city_name: Message=CommandArg()):
+    city_name = city_name.extract_plain_text()
+    city = NewsBot.data.get(city_name)
+    if city:
         await city_news.finish(message=f"{NewsBot.time}\n{city.main_info}")
     else:
         await city_news.finish(message="查询的城市不存在或存在别名")
