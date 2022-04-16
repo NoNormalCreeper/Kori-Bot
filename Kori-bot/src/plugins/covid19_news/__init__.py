@@ -38,7 +38,7 @@ async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city: Messa
         await follow.finish(message=f"添加失败")
 
 
-unfollow = on_command("取消疫情", priority=5, block=True, aliases={"取消关注疫情", "取消推送疫情",  "unfollow"})
+unfollow = on_command("取消疫情", aliases={"取消关注疫情", "取消推送疫情",  "unfollow"}, priority=5, block=True)
 @unfollow.handle()
 async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city: Message=CommandArg()):
     city = city.extract_plain_text()
@@ -50,6 +50,16 @@ async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city: Messa
     else:
         await unfollow.finish(message=f"取消失败")
 
+
+city_news = on_command("疫情", aliases={"covid", "疫情"}, priority=5, block=True)
+@city_news.handle()
+async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city_name: Message=CommandArg()):
+    city_name = city_name.extract_plain_text()
+    city = NewsBot.data.get(city_name)
+    if city:
+        await city_news.finish(message=f"{NewsBot.time}\n{city.main_info}")
+    else:
+        await city_news.finish(message="查询的城市不存在或存在别名")
 
 
 city_news = on_regex(r'^(.{0,6})(疫情.{0,4})', block=True, priority=10)
