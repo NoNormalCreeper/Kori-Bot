@@ -20,7 +20,7 @@ __example__ = """
 __usage__ = f"{__des__}\nUsage:\n{__cmd__}\nExample:\n{__example__}"
 
 
-ddcheck = on_command("查成分", block=True, priority=12)
+ddcheck = on_command("查成分", block=True, priority=5)
 
 
 @ddcheck.handle()
