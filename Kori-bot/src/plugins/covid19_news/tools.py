@@ -60,7 +60,7 @@ class Area():
 
     @property
     def main_info(self):
-        return (f"{self.name}({self.grade})\n今日新增: {self.today['confirm']}\n目前确诊: {self.total['nowConfirm']}").replace("(点击查看详情)")
+        return (f"{self.name}({self.grade})\n今日新增: {self.today['confirm']}\n目前确诊: {self.total['nowConfirm']}").replace("(点击查看详情)", '')
 
 
 class AreaList(Dict):
