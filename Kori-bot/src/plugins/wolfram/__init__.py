@@ -78,8 +78,8 @@ calc = on_command("calc", aliases={'计算'})
 @calc.handle()
 async def calc_handle(bot: Bot, event: Event, matcher: Matcher, state: T_State = State()):
     arg = removeprefix((str(event.get_message()).strip())[1:], "calc")
-    result = get_calc(arg)
     try:
+        result = get_calc(arg)
         await calc.send(MessageSegment.image(result))
-    except:
-        await calc.send("Error!")
+    except Exception as e:
+        await calc.send(str(e))

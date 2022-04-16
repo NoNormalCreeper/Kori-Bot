@@ -12,6 +12,8 @@ API_key="X9H8TV-QKGR82YQUY"
 def calc(question: str):
     url=(url_calc.format(urllib.parse.quote(question), API_key))
     resp=re.get(url, stream=True)
+    if 'Wolfram|Alpha did not understand your input' in resp.text:
+        raise Exception(resp.text)
     # with open("answer.gif","wb") as pic:
     #     # try:
     #         # pic.write(url.content)
