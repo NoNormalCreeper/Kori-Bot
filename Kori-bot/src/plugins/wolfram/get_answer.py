@@ -10,8 +10,9 @@ url_tellme = "https://api.wolframalpha.com/v1/result?appid={1}&i={0}&units=metri
 def get_api_key():
     try:
         API_key = get_driver().config.wolfram_api_key
+        return API_key
     except Exception as e:
-        raise Exception("请先在配置文件中配置 WOLFRAM_API_KEY 哦~\n{str(e)}")
+        raise Exception(f"请先在配置文件中配置 WOLFRAM_API_KEY 哦~\n{str(e)}")
 
 def get_calc(question: str):
     API_key = get_api_key()
