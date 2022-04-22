@@ -1,10 +1,14 @@
 import requests as re
 import urllib
+import nonebot
 
 
 url_calc="http://api.wolframalpha.com/v1/simple?appid={1}&i={0}&units=metric"
 url_tellme="https://api.wolframalpha.com/v1/result?appid={1}&i={0}&units=metric"
-API_key="X9H8TV-QKGR82YQUY"
+try:
+    API_key=nonebot.config.WOLFRAM_API_KEY
+except Exception as e:
+    raise Exception("请先在配置文件中配置 WOLFRAM_API_KEY 哦~\n{str(e)}")
 
 
 def get_calc(question: str):
