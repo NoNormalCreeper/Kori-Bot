@@ -24,14 +24,14 @@ tietie_superuser = Wife().on_message(
 )
 
 
-@tietie_superuser.handle([Cooldown(600)])
-async def _tietie_superuser(event: MessageEvent):
-    if not _is_tietie:
-        await tietie_superuser.finish()
+# @tietie_superuser.handle([Cooldown(600)])
+# async def _tietie_superuser(event: MessageEvent):
+#     if not _is_tietie:
+#         await tietie_superuser.finish()
 
-    user_id = event.get_user_id()
-    result = Wife().to_superuser(user_id)
-    await tietie_superuser.finish(Message(result))
+#     user_id = event.get_user_id()
+#     result = Wife().to_superuser(user_id)
+#     await tietie_superuser.finish(Message(result))
 
 
 no_tietie = Wife().on_command("不可以贴", docs="拒绝贴贴", rule=Rule(), permission=SUPERUSER)
