@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-<meta language="zh_cn">  
-<meta charset="utf8">
+  <meta charset="utf8">
   <link rel="stylesheet" href="css/weather.css">
   <link rel="stylesheet" href="css/qweather-icons.css">
 </head>
@@ -60,6 +59,7 @@
     </div>
     {% endfor %}
 
+    {% if air %}
     <div class="air">
       <div class="air-box-top">
           <span class="air-tag" style="background-color:{{ air['tag_color'] }};">{{ air["aqi"] }} {{ air["category"] }}</span>
@@ -96,8 +96,8 @@
               <p class="des">SO<sub>2</sub></p>
           </div>
       </div>
-
   </div>
+  {% endif %}
 
     <div class="days-weather">
       {% for day in days %}
