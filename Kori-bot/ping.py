@@ -3,8 +3,8 @@ from nonebot.matcher import Matcher
 from nonebot.adapters import Bot, Event, Message
 import random
 
-ping = on_command("ping", priority=5)
-pong = on_command("pong", priority=5)
+ping = on_command("ping", priority=1)
+pong = on_command("pong", priority=1)
 
 pong_words = ["Sorry but I can't \"Ping!\"","Do you think I will \"Ping!\" ?","PONG!!!!!!","You are not allowed to \"Pong!\""]
 
