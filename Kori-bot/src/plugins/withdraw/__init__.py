@@ -9,7 +9,7 @@ try:
 except:
     master = []
 
-withdraw = on_command('撤回', aliases={'withdraw', 'recall'})
+withdraw = on_command('撤回', aliases={'withdraw', 'recall'}, priority=5)
 @withdraw.handle()
 async def _(bot: Bot, event: GroupMessageEvent):    
     if event.reply:        
