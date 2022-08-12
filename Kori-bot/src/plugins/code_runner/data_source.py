@@ -70,7 +70,7 @@ class CodeRunner(Service):
             return "请检查键入内容...需要帮助：/code help"
 
         lang = args[0].replace("\r", "")
-        if lang not in SUPPORTED_LANGUAGES:
+        if lang not in SUPPORTED_LANGUAGES and lang not in SUPPORTED_LANGUAGES.values()["ext"]:
             return "该语言暂不支持...或者可能格式错误？"
 
         del args[0]

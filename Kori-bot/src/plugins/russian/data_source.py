@@ -29,7 +29,7 @@ russian_path = russian_config.russian_path
 price_path = russian_path / "data" / "russian" / "stock_price.txt"
 
 russian_config = Config.parse_obj(nonebot.get_driver().config.dict())
-max_bet_gold = russian_config.max_bet_gold
+# max_bet_gold = russian_config.max_bet_gold
 # max_bet_gold = 100000
 
 async def rank(player_data: dict, group_id: int, type_: str) -> str:
@@ -43,7 +43,7 @@ async def rank(player_data: dict, group_id: int, type_: str) -> str:
     all_user = list(player_data[group_id].keys())
     if type_ == "gold_rank":
         rank_name = "\t金币排行榜\n"
-        all_user_data = [player_data[group_id][x]["gold"] for x in all_user]
+        all_user_data = [int(player_data[group_id][x]["gold"]) for x in all_user]
     elif type_ == "win_rank":
         rank_name = "\t胜场排行榜\n"
         all_user_data = [player_data[group_id][x]["win_count"] for x in all_user]
@@ -97,11 +97,19 @@ def number_format(num) -> str:
     return num
 
 units = ['', 'K', 'M', 'B', 'T', 'P']
+superscripts = {'0': '\u2070', '1': '\u00b9', '2': '\u00b2', '3': '\u00b3', '4': '\u2074', '5': '\u2075', '6': '\u2076', '7': '\u2077', '8': '\u2078', '9': '\u2079'}
 def number_estimated_format(num) -> str:
-    # https://stackoverflow.com/questions/579310/formatting-long-numbers-as-strings-in-python
-    k = 1000.0
-    magnitude = int(math.floor(math.log(num, k)))
-    return '%.2f%s' % (num / k**magnitude, units[magnitude])
+    num = int(num)
+    if num < 10e18:
+        # https://stackoverflow.com/questions/579310/formatting-long-numbers-as-strings-in-python
+        k = 1000.0
+        magnitude = int(math.floor(math.log(num, k)))
+        return '%.2f%s' % (num / k**magnitude, units[magnitude])
+    else:
+        b = math.floor(math.log10(num))
+        superscript = ''.join([superscripts[s] for s in str(b)])
+        a = f'{str(num)[0]}.{str(num)[1:3]}'
+        return f'{a}×10{superscript}'
 
 def resolve_formated_number(num) -> int:
     num = str(num)
@@ -147,7 +155,7 @@ class RussianManager:
         if self._player_data[str(event.group_id)][str(event.user_id)]["is_sign"]:
             return "贪心的人是不会有好运的...", -1
         gold = random.randint(sign_gold[0], sign_gold[1])
-        self._player_data[str(event.group_id)][str(event.user_id)]["gold"] += gold
+        self._earn_data_handle(event.user_id, event.group_id, gold)
         self._player_data[str(event.group_id)][str(event.user_id)]["make_gold"] += gold
         self._player_data[str(event.group_id)][str(event.user_id)]["is_sign"] = True
         self.save()
@@ -190,7 +198,7 @@ class RussianManager:
             self._current_player[event.group_id] = {}
             return "这场对决邀请已经过时了，请重新发起决斗..."
 
-        user_money = self._player_data[str(event.group_id)][str(event.user_id)]["gold"]
+        user_money = int(self._player_data[str(event.group_id)][str(event.user_id)]["gold"])
         if user_money < self._current_player[event.group_id]["money"]:
             if (
                 self._current_player[event.group_id]["at"] != 0
@@ -552,28 +560,30 @@ class RussianManager:
                 "user_id": user_id,
                 "group_id": group_id,
                 "nickname": nickname,
-                "gold": 0,
+                "gold": "0",
                 "make_gold": 0,
                 "lose_gold": 0,
                 "win_count": 0,
                 "lose_count": 0,
                 "is_sign": False,
-                "stock": 0
+                "stock": "0",
+                "level": 0
             }
         try:
-            self._player_data[group_id][user_id]["stock"] += 0
+            tmp = self._player_data[group_id][user_id]["stock"]
         except:     # to init the "stock" data
             self._player_data[group_id][user_id] = {
                 "user_id": self._player_data[group_id][user_id]["user_id"],
                 "group_id": self._player_data[group_id][user_id]["group_id"],
                 "nickname": self._player_data[group_id][user_id]["nickname"],
-                "gold": self._player_data[group_id][user_id]["gold"],
+                "gold": str(self._player_data[group_id][user_id]["gold"]),
                 "make_gold": self._player_data[group_id][user_id]["make_gold"],
                 "lose_gold": self._player_data[group_id][user_id]["lose_gold"],
                 "win_count": self._player_data[group_id][user_id]["win_count"],
                 "lose_count": self._player_data[group_id][user_id]["lose_count"],
                 "is_sign": self._player_data[group_id][user_id]["is_sign"],
-                "stock": 0 
+                "stock": "0",
+                "level": 0
             }
 
 
@@ -647,11 +657,11 @@ class RussianManager:
         win_user_id = str(win_user_id)
         lose_user_id = str(lose_user_id)
         group_id = str(group_id)
-        self._player_data[group_id][win_user_id]["gold"] += gold - fee
+        self._earn_data_handle(win_user_id, group_id, gold - fee)
         self._player_data[group_id][win_user_id]["make_gold"] += gold - fee
         self._player_data[group_id][win_user_id]["win_count"] += 1
 
-        self._player_data[group_id][lose_user_id]["gold"] -= gold
+        self._waste_data_handle(lose_user_id, group_id, gold)
         self._player_data[group_id][lose_user_id]["lose_gold"] += gold
         self._player_data[group_id][lose_user_id]["lose_count"] += 1
 
@@ -665,7 +675,8 @@ class RussianManager:
     ):
         user_id = str(user_id)
         group_id = str(group_id)
-        self._player_data[group_id][user_id]["gold"] -= money
+        gold = int(self._player_data[group_id][user_id]["gold"])
+        self._player_data[group_id][user_id]["gold"] = str(gold - money)
         self.save()
 
     def _earn_data_handle(
@@ -676,7 +687,8 @@ class RussianManager:
     ):
         user_id = str(user_id)
         group_id = str(group_id)
-        self._player_data[group_id][user_id]["gold"] += money
+        gold = int(self._player_data[group_id][user_id]["gold"])
+        self._player_data[group_id][user_id]["gold"] = str(gold + money)
         self.save()
 
     def _start_stock_handle(self):
@@ -727,7 +739,8 @@ class RussianManager:
         group_id = str(group_id)
         money_per_stock = self._check_stock_handle()["money_per_stock"]
         self._waste_data_handle(user_id, group_id, round(number * money_per_stock))
-        self._player_data[group_id][user_id]["stock"] += number
+        stock = int(self._player_data[group_id][user_id]["stock"])
+        self._player_data[group_id][user_id]["stock"] = str(stock + number)
         self.save()
 
     def _sell_stock_handle(
@@ -740,7 +753,8 @@ class RussianManager:
         group_id = str(group_id)
         money_per_stock = self._check_stock_handle()["money_per_stock"]
         self._earn_data_handle(user_id, group_id, round(number * money_per_stock))
-        self._player_data[group_id][user_id]["stock"] -= number
+        stock = int(self._player_data[group_id][user_id]["stock"])
+        self._player_data[group_id][user_id]["stock"] = str(stock - number)
         self.save()
 
 
