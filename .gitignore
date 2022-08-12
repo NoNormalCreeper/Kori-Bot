@@ -41,3 +41,4 @@ Kori-bot/.env
 Kori-bot/config.yml
 Kori-bot/text2pic.png
 Kori-bot/md2pic.png
+Kori-bot/src/plugins/fortune/resource/fortune_setting.json
