@@ -75,7 +75,7 @@ class Service:
         permission: Optional[Permission] = None,
         handlers: Optional[List[T_Handler]] = None,
         temp: bool = False,
-        priority: int = 1,
+        priority: int = 5,
         state: Optional[T_State] = None,
     ):
         self.service = service
