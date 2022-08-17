@@ -1,4 +1,5 @@
 # Kori-Bot
-All the source code are in the `main` branch.
 
-~~**Because of Tencent's new restrictions to QQ Bot, this project may stop updating...**~~
+## <center>🚧</center>
+
+**This project is in develpoment and currently work in progress. It doesn't support deployment by yourself yet.**

@@ -1,6 +1,7 @@
 import imp
 import requests as re
 import urllib
+import aiohttp
 from nonebot import get_driver
 
 
@@ -14,17 +15,17 @@ def get_api_key():
     except Exception as e:
         raise Exception(f"请先在配置文件中配置 WOLFRAM_API_KEY 哦~\n{str(e)}")
 
-def get_calc(question: str):
+async def get_calc(question: str):
     API_key = get_api_key()
     url=(url_calc.format(urllib.parse.quote(question), API_key))
-    resp=re.get(url, stream=True, timeout=10)
-    if 'Wolfram|Alpha did not understand your input' in resp.text:
-        raise Exception(resp.text)
-    return resp.content
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as resp:
+            return await resp.content.read()
 
 
-def get_tellme(question: str):
+async def get_tellme(question: str):
     API_key = get_api_key()
     url=(url_tellme.format(urllib.parse.quote(question), API_key))
-    resp=re.get(url, timeout=10)
-    return resp.text
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as resp:
+            return await resp.text()

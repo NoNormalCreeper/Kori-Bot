@@ -19,9 +19,10 @@ async def _(bot: Bot, event: Event, matcher: Matcher, arg: Message = CommandArg(
         if '-img' in ip:
             ip = ip.replace('-img', '')
             ip = ip.strip()
-            result = get_status_image(ip)
+            result = await get_status_image(ip)
             if result is None:
                 await mcserver.finish('获取信息失败...')
             else:
                 await mcserver.finish(MessageSegment.image(result))
-    await mcserver.finish(get_server_status(ip))
+    result = await get_server_status(ip)
+    await mcserver.finish(result)

@@ -25,6 +25,7 @@ driver.register_adapter(ONEBOT_V11Adapter)
 # nonebot.load_from_toml("pyproject.toml")
 try:
 	nonebot.load_plugins("src/plugins")
+	# nonebot.load_plugin('nonebot_plugin_petpet')
 except:
 	pass
 
