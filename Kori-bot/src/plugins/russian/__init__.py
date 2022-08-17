@@ -472,17 +472,21 @@ async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answ
 
 @dictation_.handle()
 async def _(bot: Bot, matcher: Matcher, event: GroupMessageEvent, arg: Message = CommandArg(), state: T_State = State()):
-    audio = await dictation.getAudio(event.user_id)
-    args = arg.extract_plain_text()
-    if args:    
-        matcher.set_arg("answer", args)     # never run
-    await dictation_.send(MessageSegment.record(audio))
+    try:
+        audio = await dictation.getAudio(event.user_id)
+        args = arg.extract_plain_text()
+        if args:        
+            matcher.set_arg("answer", args)     # never run
+        await dictation_.send('', at_sender=True)
+        await dictation_.send(MessageSegment.record(audio))
+    except:
+        await dictation_.finish("❌ 语音获取失败！")
 
-@dictation_.got("ans", prompt="Please type the sentence you heard...")
+@dictation_.got("ans")
 async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answer: str = ArgPlainText("ans")):
     answer = answer.strip()
     if answer.lower()[0] not in 'abcdefghijklmnopqrstuvwxyz':
-        await dictation_.reject("Please type the sentence you heard...")
+        await dictation_.reject("Please type the sentence you heard!!!")
     checked_anwer = dictation.checkAnswer(event.user_id, answer)
     similarity = checked_anwer["similarity"]
     cn_answer = checked_anwer["cn"]
