@@ -3,7 +3,8 @@ from random import randint
 from pathlib import Path
 # from .data_source import russian_path
 
-answer_path = "/root/Projects/Kori-Bot/Kori-bot/data/russian/math_answer.json"
+# answer_path = "/root/Projects/Kori-Bot/Kori-bot/data/russian/math_answer.json"
+answer_path = Path() / "data" / "russian" / "math_answer.json"
 range1 = 10
 range2 = 3000
 # max_gold = 60
