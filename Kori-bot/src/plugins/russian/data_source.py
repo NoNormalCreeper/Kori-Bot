@@ -119,6 +119,8 @@ def resolve_formated_number(num) -> int:
     except ValueError:
         if ',' in num:
             num = num.replace(',', '')
+        elif 'e' in num:    # scientific notation
+            num = int(num.split('e')[0]) * (10**int(num.split('e')[1]))
         else:
             num = num.upper()
             for unit in units[1:]:
