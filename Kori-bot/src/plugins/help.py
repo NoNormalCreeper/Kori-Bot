@@ -4,7 +4,7 @@ from nonebot.matcher import Matcher
 from nonebot import on_command
 
 
-help = on_command("help", aliases={'帮助'})
+help = on_command("help", aliases={'帮助', 'menu', '菜单'})
 
 
 @help.handle()
