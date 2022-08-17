@@ -149,7 +149,7 @@ def play(img: BuildImage = UserImg(), arg=NoArg()):
         (182, 59, 98, 92), (183, 71, 90, 96), (180, 131, 92, 101)
     ]
     # fmt: on
-    raw_frames: List[BuildImage] = [load_image(f"play/{i}.png") for i in range(23)]
+    raw_frames: List[BuildImage] = [load_image(f"play/{i}.png") for i in range(38)]
     img_frames: List[BuildImage] = []
     for i in range(len(locs)):
         frame = raw_frames[i]
@@ -161,7 +161,7 @@ def play(img: BuildImage = UserImg(), arg=NoArg()):
         + img_frames[0:12]
         + img_frames[0:8]
         + img_frames[12:18]
-        + raw_frames[18:23]
+        + raw_frames[18:38]
     )
     frames = [frame.image for frame in frames]
     return save_gif(frames, 0.06)
@@ -1375,12 +1375,33 @@ def mywife(
 
 
 def walnutpad(img: BuildImage = UserImg(), arg=NoArg()):
+    frame = load_image("walnutpad/0.png")
+
     def make(img: BuildImage) -> BuildImage:
-        avatar = img.convert("RGBA").resize((540, 360), keep_ratio=True)
-        bg = load_image("walnutpad/0.png")
-        frame = BuildImage.new("RGBA", bg.size, "white")
-        frame.paste(avatar, (368, int(248 - avatar.height / 2)), alpha=True)
-        frame.paste(bg, alpha=True)
-        return frame
+        return frame.copy().paste(
+            img.resize((540, 360), keep_ratio=True), (368, 65), below=True
+        )
+
+    return make_jpg_or_gif(img, make)
+
+
+def teach(img: BuildImage = UserImg(), arg: str = Arg()):
+    frame = load_image("teach/0.png").resize_width(960).convert("RGBA")
+    try:
+        frame.draw_text(
+            (10, frame.height - 80, frame.width - 10, frame.height - 5),
+            arg,
+            max_fontsize=45,
+            fill="white",
+            stroke_fill="black",
+            stroke_ratio=0.06,
+        )
+    except ValueError:
+        return TEXT_TOO_LONG
+
+    def make(img: BuildImage) -> BuildImage:
+        return frame.copy().paste(
+            img.resize((550, 395), keep_ratio=True), (313, 60), below=True
+        )
 
     return make_jpg_or_gif(img, make)
