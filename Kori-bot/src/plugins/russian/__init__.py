@@ -1,3 +1,4 @@
+from email.mime import audio
 from urllib import response
 from nonebot import on_command, require
 from nonebot.adapters.onebot.v11 import (
@@ -24,6 +25,7 @@ from .poem import check, getQuestion
 import random
 from .math_question import *
 from .words import *
+from . import dictation
 
 
 __zx_plugin_name__ = "俄罗斯轮盘"
@@ -96,6 +98,9 @@ poem = on_command("poem", aliases={}, permission=GROUP, priority=5, block=True)
 
 box = on_command("box", aliases={}, permission=GROUP, priority=5, block=True)
 # answer = on_regex("[0-4]+", permission=GROUP, priority=5)
+
+dictation_ = on_command("dictation", aliases={'tingxie', 'tx'}, permission=GROUP, priority=5, block=True)
+
 
 @sign.handle()
 async def _(event: GroupMessageEvent):
@@ -464,6 +469,38 @@ async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answ
         msg = f"\n❌ 扣掉你 {award} 金币"
     await poem.send(msg, at_sender=True)
 
+
+@dictation_.handle()
+async def _(bot: Bot, matcher: Matcher, event: GroupMessageEvent, arg: Message = CommandArg(), state: T_State = State()):
+    audio = await dictation.getAudio(event.user_id)
+    args = arg.extract_plain_text()
+    if args:    
+        matcher.set_arg("answer", args)     # never run
+    await dictation_.send(MessageSegment.record(audio))
+
+@dictation_.got("ans", prompt="Please type the sentence you heard...")
+async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answer: str = ArgPlainText("ans")):
+    answer = answer.strip()
+    if answer.lower()[0] not in 'abcdefghijklmnopqrstuvwxyz':
+        await dictation_.reject("Please type the sentence you heard...")
+    checked_anwer = dictation.checkAnswer(event.user_id, answer)
+    similarity = checked_anwer["similarity"]
+    cn_answer = checked_anwer["cn"]
+    en_answer = checked_anwer["en"]
+    award = int(120 * similarity)
+    msg = f"\nSimilarity: {'%.3f%%' % (100*similarity)}\nAnswer: {en_answer}  {cn_answer}\n----------\n"
+    if similarity == 1:
+        msg += f"✔ 你赢得了 {award} 金币！"
+    elif similarity >= 0.3:
+        msg += f"你赢得了 {award} 金币."
+    else:
+        punishment = int(120 * (0.7 - similarity))
+        msg += f"❌ 扣掉你 {punishment} 金币"
+    if similarity >= 0.3:
+        russian_manager._earn_data_handle(event.user_id, event.group_id, award)
+    else:
+        russian_manager._waste_data_handle(event.user_id, event.group_id, punishment)
+    await dictation_.send(msg, at_sender=True)
 
 @math.handle()
 async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
