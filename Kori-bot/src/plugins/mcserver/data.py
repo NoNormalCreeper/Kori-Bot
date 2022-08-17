@@ -1,4 +1,5 @@
 import requests
+import aiohttp
 import json
 
 url = "https://api.imlazy.ink/mcapi/"
@@ -19,28 +20,30 @@ def generate_result(data: dict) -> str:
     )
 
 
-def get_server_status(ip: str) -> str:
+async def get_server_status(ip: str) -> str:
     params = {
         "host": ip,
         "type": 'json'
     }
     try:
-        response = requests.get(url=url, params=params, timeout=10)
-        data = json.loads(response.text)
-        return generate_result(data)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url=url, params=params) as response:
+                data = await response.text()
+                return generate_result(json.loads(data))
     except:
         return None
 
 
-def get_status_image(ip: str) -> str:
+async def get_status_image(ip: str) -> str:
     params = {
         "host": ip,
         "type": 'image',
         "getbg" : '8.jpg'
     }
     try:
-        response = requests.get(url=url, params=params, stream=True, timeout=10)
-        return response.content
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url=url, params=params) as response:
+                return await response.read()
     except:
         return None
 
