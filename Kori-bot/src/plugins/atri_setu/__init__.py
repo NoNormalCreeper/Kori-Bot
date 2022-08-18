@@ -18,21 +18,21 @@ random_setu = Setu().on_command("来张涩图", "来张随机涩图，冷却2分
 
 @random_setu.handle([Cooldown(120)])
 async def _random_setu(bot: Bot, event: MessageEvent):
-	try:
-		loop = asyncio.get_running_loop()
+    try:
+        loop = asyncio.get_running_loop()
 
-    	repo, setu = await Setu().random_setu()
-    	await bot.send(event, repo)
+        repo, setu = await Setu().random_setu()
+        await bot.send(event, repo)
 
-    	try:
-        	msg_1 = await bot.send(event, Message(setu))
-    	except Exception:
-        	await random_setu.finish("hso（发不出")
+        try:
+            msg_1 = await bot.send(event, Message(setu))
+        except Exception:
+            await random_setu.finish("hso（发不出")
 
-    	event_id = msg_1["message_id"]
-    	loop.create_task(Setu().async_recall(bot, event_id))
-	except Exception as e:
-		await random_setu.finish(str(e))
+        event_id = msg_1["message_id"]
+        loop.create_task(Setu().async_recall(bot, event_id))
+    except Exception as e:
+        await random_setu.finish(str(e))
 
 @random_setu.got("r_rush_after_think", prompt="看完不来点感想么-w-")
 async def _(think: str = ArgPlainText("r_rush_after_think")):
