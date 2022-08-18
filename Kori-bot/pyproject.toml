@@ -13,7 +13,7 @@ nonebot2 = "^2.0.0-beta.1"
 nb-cli = "^0.6.0"
 
 [tool.nonebot]
-plugins = ["nonebot_plugin_status","nonebot_plugin_heweather", "nonebot_plugin_epicfree", "nonebot_plugin_withdraw", "nonebot_plugin_petpet", "nonebot_plugin_code", "nonebot_plugin_memes", "nonebot_plugin_repeater", "nonebot_plugin_logo", "nonebot_plugin_roll", "nonebot_plugin_emojimix", "nonebot_plugin_fortune", "nonebot_plugin_caiyunai", "nonebot_plugin_remake", "nonebot_plugin_morning", "nonebot_plugin_read_60s", "random_cat_gif", "nonebot_plugin_htmlrender", "nonebot_plugin_wordcloud", "nonebot_plugin_chatrecorder", "nonebot_plugin_chess", "nonebot_plugin_abbrreply", "nonebot_plugin_analysis_bilibili", "nonebot_plugin_russian", "nonebot_plugin_setu-2", "nonebot_plugin_mcstatus"]
+plugins = ["nonebot_plugin_status","nonebot_plugin_heweather", "nonebot_plugin_epicfree", "nonebot_plugin_withdraw", "nonebot_plugin_petpet", "nonebot_plugin_code", "nonebot_plugin_memes", "nonebot_plugin_repeater", "nonebot_plugin_logo", "nonebot_plugin_roll", "nonebot_plugin_emojimix", "nonebot_plugin_fortune", "nonebot_plugin_caiyunai", "nonebot_plugin_remake", "nonebot_plugin_morning", "nonebot_plugin_read_60s", "random_cat_gif", "nonebot_plugin_htmlrender", "nonebot_plugin_wordcloud", "nonebot_plugin_chatrecorder", "nonebot_plugin_chess", "nonebot_plugin_abbrreply", "nonebot_plugin_analysis_bilibili", "nonebot_plugin_russian", "nonebot_plugin_setu-2", "nonebot_plugin_mcstatus", "nonebot_plugin_apscheduler"]
 plugin_dirs = ["src/plugins"]
 
 [build-system]
