@@ -6,7 +6,7 @@ import json
 POLICY_ID = {}
 def set_pid():
     url_city_list = 'https://r.inews.qq.com/api/trackmap/citylist?'
-    resp = requests.get(url_city_list)
+    resp = requests.get(url_city_list, verify=False)
     res = resp.json()
 
     for province in res['result']:
@@ -21,7 +21,7 @@ set_pid()
 
 def citypolicy_info(id):
     url_get_policy = f"https://r.inews.qq.com/api/trackmap/citypolicy?&city_id={id}"
-    resp = requests.get(url_get_policy)
+    resp = requests.get(url_get_policy, verify=False)
     res_ = resp.json()
     assert res_['message'] == 'success'
     return (res_['result']['data'][0])
@@ -76,7 +76,7 @@ class NewsData:
 
     def update_data(self):
         url = "https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5"
-        res = requests.get(url).json()
+        res = requests.get(url, verify=False).json()
 
         assert res['ret'] == 0
         data = json.loads(res['data'])
