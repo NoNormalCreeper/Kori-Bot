@@ -54,10 +54,7 @@ class Othello(Rule):
         return False
 
     def total(self, length: int, board: int) -> int:
-        count = 0
-        for i in range(length):
-            count += 1 if board & 1 << i else 0
-        return count
+        return sum(1 if board & 1 << i else 0 for i in range(length))
 
     def check(self) -> MoveResult:
         game = self.game
@@ -78,6 +75,4 @@ class Othello(Rule):
         if game.is_full():
             return MoveResult(self.check())
         if not self.has_legal_move(-value):
-            if not self.has_legal_move(value):
-                return self.check()
-            return MoveResult.SKIP
+            return MoveResult.SKIP if self.has_legal_move(value) else self.check()

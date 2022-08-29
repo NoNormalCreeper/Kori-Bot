@@ -19,12 +19,10 @@ async def _code_runner(
     matcher: Matcher, event: MessageEvent, args: Message = CommandArg()
 ):
     user_id = event.get_user_id()
-    msg = args.extract_plain_text().strip()
-
-    if msg:
+    if msg := args.extract_plain_text().strip():
         matcher.set_arg("opt", args)
     else:
-        content = f"> {MessageSegment.at(user_id)}\n" + "请键入 /code help 以获取帮助~！"
+        content = f"> {MessageSegment.at(user_id)}\n请键入 /code help 以获取帮助~！"
         await code_runner.finish(Message(content))
 
 

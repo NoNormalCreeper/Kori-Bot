@@ -5,7 +5,7 @@ import json
 class DataLoader:
     def __init__(self, path_name: str):
 
-        self.path = dirname(__file__)+ '/' + path_name        
+        self.path = f'{dirname(__file__)}/{path_name}'
         try:
             with open(self.path) as f:
                 data = json.load(f)

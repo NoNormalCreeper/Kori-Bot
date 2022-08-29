@@ -167,13 +167,13 @@ async def _(
         msg = msg.split()
         if len(msg) == 1:
             msg = msg[0]
-            if is_number(msg) and not (int(msg) < 1 or int(msg) > 6):
+            if is_number(msg) and int(msg) >= 1 and int(msg) <= 6:
                 state["bullet_num"] = int(msg)
         else:
             money = msg[1].strip()
             msg = msg[0].strip()
             money = resolve_formated_number(money)
-            if is_number(msg) and not (int(msg) < 1 or int(msg) > 6):
+            if is_number(msg) and int(msg) >= 1 and int(msg) <= 6:
                 state["bullet_num"] = int(msg)
             if is_number(money) and 0 < int(money) <= max_bet_gold:
                 state["money"] = int(money)
@@ -202,11 +202,7 @@ async def _(
         at_player_name = await bot.get_group_member_info(
             group_id=event.group_id, user_id=int(at_)
         )
-        at_player_name = (
-            at_player_name["card"]
-            if at_player_name["card"]
-            else at_player_name["nickname"]
-        )
+        at_player_name = at_player_name["card"] or at_player_name["nickname"]
         msg = (
             f"{player1_name} 向 {MessageSegment.at(at_)} 发起了决斗！请 {at_player_name} 在30秒内回"
             f"复‘接受对决’ or ‘拒绝对决’，超时此次决斗作废！"
@@ -280,9 +276,7 @@ async def _(event: GroupMessageEvent):
 #         at_sender=True)
 
 def calc_distance(times: int):
-    dist = 0
-    for i in range(times+1):
-        dist += random.randint(300, 1500) / 1000
+    dist = sum(random.randint(300, 1500) / 1000 for _ in range(times+1))
     return round(dist, 2)
 
 @dap.handle()
@@ -295,7 +289,7 @@ async def _(bot: Bot, event: GroupMessageEvent):
         times = -1
         msg = "你扔出了一个硬币，"
         for i in range(1, 9):
-            if (p_list[i-1]*10 <= rand) and (rand < p_list[i]*10):
+            if p_list[i - 1] * 10 <= rand < p_list[i] * 10:
                 times = i-1
                 # break
         if times == -1:
@@ -318,28 +312,25 @@ async def _(event: GroupMessageEvent, arg: Message = CommandArg(), state: T_Stat
     ban_groups = ["277620613"]
     if str(event.group_id) in ban_groups:
         await lottery.finish("😓 此功能已被管理员禁用")
-    
-    possibility = 0.03
+
     msg = ""
     gold_per_ticket = 50
     user_gold = int(russian_manager.get_user_data(event)["gold"])
     arg = arg.extract_plain_text()
     award_path = data_source.russian_path / "data" / "russian" / "award.txt"
-    if arg:
-        arg = int(arg)
-    else:
-        arg = 1
+    arg = int(arg) if arg else 1
     spent_gold = arg*gold_per_ticket
     if arg > 8:
         await lottery.finish("\n买那么多干嘛 >_<", at_sender=True)
+    with open(award_path) as f:
+        # award_sheet = json.load(f)
+        try:
+            award_gold = int(f.read().strip())
+        except:
+            award_gold = 0
     if user_gold >= spent_gold:
         msg += "\n💸 你花 {1} 金币购买了 {0} 张彩票 \n".format(arg, spent_gold)
-        with open(award_path) as f:
-            # award_sheet = json.load(f)
-            try:
-                award_gold = int(f.read().strip())
-            except:
-                award_gold = 0
+        possibility = 0.03
         with open(award_path, 'w') as f:
             russian_manager._waste_data_handle(event.user_id, event.group_id, spent_gold)
             if random.randint(0, 100) < (1-((1-possibility)**arg))*100:
@@ -352,11 +343,6 @@ async def _(event: GroupMessageEvent, arg: Message = CommandArg(), state: T_Stat
                 msg += f"😐 很可惜，没有中奖呢...\n💰 当前奖池： {number_format(award_gold+spent_gold)} 金币"
                 f.write(str(award_gold+spent_gold))
     else:
-        with open(award_path) as f:
-            try:
-                award_gold = int(f.read().strip())
-            except:
-                award_gold = 0
         msg = f'你买不起彩票！\n💰 当前奖池: {number_format(award_gold)} 金币'
     await lottery.send(message=msg, at_sender=True)
 
@@ -364,7 +350,7 @@ async def _(event: GroupMessageEvent, arg: Message = CommandArg(), state: T_Stat
 @box.handle()
 async def _(event: GroupMessageEvent, arg: Message = CommandArg(), state: T_State = State()):
     arg = arg.extract_plain_text().strip()
-    arg = arg if arg else 200
+    arg = arg or 200
     arg = resolve_formated_number(arg)
     if arg <= 0:
         await box.finish("请输入合法的赌资！")
@@ -396,11 +382,7 @@ async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), sta
     at_player_name = await bot.get_group_member_info(
             group_id=event.group_id, user_id=int(at_)
         )
-    at_player_name = (
-            at_player_name["card"]
-            if at_player_name["card"]
-            else at_player_name["nickname"]
-        )
+    at_player_name = at_player_name["card"] or at_player_name["nickname"]
     if int(russian_manager.get_user_data(event)["gold"]) > transfer_money:
         russian_manager._waste_data_handle(sender, group_id, transfer_money)
         russian_manager._earn_data_handle(receiver, group_id, transfer_money)
@@ -410,7 +392,7 @@ async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), sta
 
 @addmoney.handle()
 async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), state: T_State = State()):
-    if str(event.user_id) in ["2560359315"]:
+    if str(event.user_id) in {"2560359315"}:
         args = arg.extract_plain_text().split(' ')
         russian_manager._earn_data_handle(int(args[0]), int(event.group_id), int(args[1]))
         await addmoney.send(f"成功向用户 {args[1]} 添加了 {args[0]} 金币")
@@ -442,8 +424,7 @@ async def _(bot: Bot, event: GroupMessageEvent, arg: Message = CommandArg(), sta
 async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
     question = getQuestion(event.user_id)
     msg = '\n'+question
-    args = args.extract_plain_text()
-    if args:    
+    if args := args.extract_plain_text():
         matcher.set_arg("answer", args)     # never run
     await poem.send(msg, at_sender=True)
 
@@ -474,8 +455,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answ
 async def _(bot: Bot, matcher: Matcher, event: GroupMessageEvent, arg: Message = CommandArg(), state: T_State = State()):
     try:
         audio = await dictation.getAudio(event.user_id)
-        args = arg.extract_plain_text()
-        if args:        
+        if args := arg.extract_plain_text():
             matcher.set_arg("answer", args)     # never run
         await dictation_.send('', at_sender=True)
         await dictation_.send(MessageSegment.record(audio))
@@ -510,8 +490,7 @@ async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answ
 async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
     question = getMathQuestion(event.user_id)
     msg = '\n'+question
-    args = args.extract_plain_text()
-    if args:    
+    if args := args.extract_plain_text():
         matcher.set_arg("answer", args)     # never run
     await math.send(msg, at_sender=True)
 
@@ -525,21 +504,19 @@ async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answ
     except:
         await math.reject("请输入一个数字而不是其他东西！")
     award = random.randint(2,60)
-    responce = checkMathAnswer(event.user_id, answer)
-    if not responce:
-        russian_manager._earn_data_handle(event.user_id, event.group_id, award)
-        msg = f"\n✔ 你赢得了 {award} 金币！"
-    else:
+    if responce := checkMathAnswer(event.user_id, answer):
         russian_manager._waste_data_handle(event.user_id, event.group_id, award)
         msg = f"\n❌ 扣掉你 {award} 金币，正确答案是 {response}"
+    else:
+        russian_manager._earn_data_handle(event.user_id, event.group_id, award)
+        msg = f"\n✔ 你赢得了 {award} 金币！"
     await math.send(msg, at_sender=True)
 
 @word.handle()
 async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg()):
     question = getWordQuestion(event.user_id)
     msg = '\n'+question
-    args = args.extract_plain_text()
-    if args:    
+    if args := args.extract_plain_text():
         matcher.set_arg("answer", args)     # never run
     await word.send(msg, at_sender=True)
 
@@ -550,13 +527,12 @@ async def _(bot: Bot, event: Event, matcher: Matcher, ans: Message = Arg(), answ
     if answer.upper() not in ['A','B','C','D']:
         await word.reject("Please input a right letter!")
     award = random.randint(1,15)
-    responce = checkWordAnswer(event.user_id, answer)
-    if not responce:
-        russian_manager._earn_data_handle(event.user_id, event.group_id, award)
-        msg = f"\n✔ 你赢得了 {award} 金币！"
-    else:
+    if responce := checkWordAnswer(event.user_id, answer):
         russian_manager._waste_data_handle(event.user_id, event.group_id, award)
         msg = f"\n❌ 扣掉你 {award} 金币，正确答案是 {response}"
+    else:
+        russian_manager._earn_data_handle(event.user_id, event.group_id, award)
+        msg = f"\n✔ 你赢得了 {award} 金币！"
     await word.send(msg, at_sender=True)
 
 
@@ -569,59 +545,54 @@ async def _(bot: Bot, event: Event, matcher: Matcher, args: Message = CommandArg
     money_per_stock = russian_manager._check_stock_handle()["money_per_stock"]
     percent = russian_manager._check_stock_handle()["percent"]
     color_block = '🟥' if ('-' not in percent) else '🟩'
-    if args:
-        if args[0] == "buy":
-            try:
-                number = args[1]
-            except:
-                number = 1
-            number = resolve_formated_number(number)
-            if number*money_per_stock <= int(russian_manager.get_user_data(event)["gold"]):
-                if number < 0:
-                    await stock.finish("干什么呢！想让我给你把钱吐出来是吧！")
-                russian_manager._buy_stock_handle(user_id, group_id, number)
-                await stock.finish(
-                    "\n🧾 成功买入 {0} 股！花费：{3} 金币\n你现在有 {4} 股\n{5}当前行情： {1} 金币, {2}".format(
-                        number_format(number), money_per_stock, percent, 
-                        number_format(number*money_per_stock), 
-                        number_format(int(russian_manager.get_user_data(event)["stock"])), 
-                        color_block
-                    ),at_sender=True
-                )
-            else:
-                await stock.finish("\n😦 你买不起这么多！", at_sender=True)
-        elif args[0] == "sell":
-            try:
-                number = args[1]
-            except:
-                number = 1
-            number = resolve_formated_number(number)
-            if number <= int(russian_manager.get_user_data(event)["stock"]):
-                russian_manager._sell_stock_handle(user_id, group_id, number)
-                if number < 0:
-                    await stock.finish("干什么呢！想让我吞你钱是吧！")
-                await stock.finish(
-                    "\n🧾 成功售出 {0} 股！获得：{3} 金币\n你现在还剩 {4} 股\n{5} 当前行情：{1} 金币, {2}".format(
-                        number_format(number), money_per_stock, percent, 
-                        number_format(number*money_per_stock), 
-                        number_format(int(russian_manager.get_user_data(event)["stock"])), 
-                        color_block
-                    ),at_sender=True
-                )
-            else:
-                await stock.finish("\n😦 你没有那么多股！", at_sender=True)
-        elif args[0] == "me":
-            await stock.finish("\n你现在持有 {0} 股".format(
-                number_format(int(russian_manager.get_user_data(event)["stock"]))), 
-                at_sender=True)
-        elif args[0] == "price":
-            await stock.finish("{2} 当前行情： {0} 金币, {1}".format(
-                    money_per_stock, percent, color_block),
-                    )
-    else:
+    if args and args[0] == "buy":
+        try:
+            number = args[1]
+        except:
+            number = 1
+        number = resolve_formated_number(number)
+        if number*money_per_stock <= int(russian_manager.get_user_data(event)["gold"]):
+            if number < 0:
+                await stock.finish("干什么呢！想让我给你把钱吐出来是吧！")
+            russian_manager._buy_stock_handle(user_id, group_id, number)
+            await stock.finish(
+                "\n🧾 成功买入 {0} 股！花费：{3} 金币\n你现在有 {4} 股\n{5}当前行情： {1} 金币, {2}".format(
+                    number_format(number), money_per_stock, percent, 
+                    number_format(number*money_per_stock), 
+                    number_format(int(russian_manager.get_user_data(event)["stock"])), 
+                    color_block
+                ),at_sender=True
+            )
+        else:
+            await stock.finish("\n😦 你买不起这么多！", at_sender=True)
+    elif args and args[0] == "sell":
+        try:
+            number = args[1]
+        except:
+            number = 1
+        number = resolve_formated_number(number)
+        if number <= int(russian_manager.get_user_data(event)["stock"]):
+            russian_manager._sell_stock_handle(user_id, group_id, number)
+            if number < 0:
+                await stock.finish("干什么呢！想让我吞你钱是吧！")
+            await stock.finish(
+                "\n🧾 成功售出 {0} 股！获得：{3} 金币\n你现在还剩 {4} 股\n{5} 当前行情：{1} 金币, {2}".format(
+                    number_format(number), money_per_stock, percent, 
+                    number_format(number*money_per_stock), 
+                    number_format(int(russian_manager.get_user_data(event)["stock"])), 
+                    color_block
+                ),at_sender=True
+            )
+        else:
+            await stock.finish("\n😦 你没有那么多股！", at_sender=True)
+    elif args and args[0] == "me":
+        await stock.finish("\n你现在持有 {0} 股".format(
+            number_format(int(russian_manager.get_user_data(event)["stock"]))), 
+            at_sender=True)
+    elif args and args[0] == "price" or not args:
         await stock.finish("{2} 当前行情： {0} 金币, {1}".format(
-                    money_per_stock, percent, color_block),
-                    )
+                money_per_stock, percent, color_block),
+                )
 
 @scheduler.scheduled_job(
     "cron",

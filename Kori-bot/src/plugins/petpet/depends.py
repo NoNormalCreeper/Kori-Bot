@@ -141,11 +141,11 @@ async def get_user_info(bot: Bot, user: UserInfo):
             group_id=int(user.group), user_id=int(user.qq)
         )
         user.name = info.get("card", "") or info.get("nickname", "")
-        user.gender = info.get("sex", "")
     else:
         info = await bot.get_stranger_info(user_id=int(user.qq))
         user.name = info.get("nickname", "")
-        user.gender = info.get("sex", "")
+
+    user.gender = info.get("sex", "")
 
 
 async def download_image(user: UserInfo):

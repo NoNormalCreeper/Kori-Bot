@@ -12,11 +12,11 @@ except ModuleNotFoundError:
 
 driver: Driver = nonebot.get_driver()
 
-DATA_PATH = driver.config.statistical_path if driver.config.statistical_path else 'data/statistical/'
-BLACK_LIST = driver.config.statistical_black_model if driver.config.statistical_black_model else []
-BLACK_PRIORITY = driver.config.statistical_black_priority if driver.config.statistical_black_priority else []
+DATA_PATH = driver.config.statistical_path or 'data/statistical/'
+BLACK_LIST = driver.config.statistical_black_model or []
+BLACK_PRIORITY = driver.config.statistical_black_priority or []
 
-DATA_PATH = str(Path(DATA_PATH).absolute()) + '/'
+DATA_PATH = f'{str(Path(DATA_PATH).absolute())}/'
 # print(DATA_PATH)
 
 statistics_group_file = Path(f'{DATA_PATH}/_prefix_group_count.json')
@@ -81,12 +81,11 @@ def check_cmd_exists(cmd: str = None):
     _cmd_list = []
     for _plugin in plugin2cmd:
         if _plugin != 'white_list':
-            if cmd:
-                for _cmd in plugin2cmd[_plugin]['cmd']:
+            for _cmd in plugin2cmd[_plugin]['cmd']:
+                if cmd:
                     if cmd == _cmd:
                         raise ValueError(f'别名 {_cmd} 有重复，请修改文件后重新启动....')
-            else:
-                for _cmd in plugin2cmd[_plugin]['cmd']:
+                else:
                     if str(_cmd) in _cmd_list:
                         print(_cmd)
                         raise ValueError(f'别名 {_cmd} 有重复，请修改文件后重新启动....')
@@ -105,24 +104,29 @@ def _replace_key():
                 if itype in ['total_statistics', 'day_statistics'] or key == 'total':
                     for plugin_name in list(data[itype][key].keys()):
                         for plugin in list(plugin2cmd.keys()):
-                            if plugin != 'white_list':
-                                if plugin_name in plugin2cmd[plugin]['cmd']:
-                                    if plugin_name != plugin2cmd[plugin]['cmd'][0]:
-                                        data[itype][key][plugin2cmd[plugin]['cmd'][0]] = \
-                                            data[itype][key][plugin_name]
-                                        del data[itype][key][plugin_name]
-                                    break
+                            if (
+                                plugin != 'white_list'
+                                and plugin_name in plugin2cmd[plugin]['cmd']
+                            ):
+                                if plugin_name != plugin2cmd[plugin]['cmd'][0]:
+                                    data[itype][key][plugin2cmd[plugin]['cmd'][0]] = \
+                                        data[itype][key][plugin_name]
+                                    del data[itype][key][plugin_name]
+                                break
                 else:
                     for day in list(data[itype][key].keys()):
                         for plugin_name in list(data[itype][key][day].keys()):
                             for plugin in list(plugin2cmd.keys()):
-                                if plugin != 'white_list':
-                                    if plugin_name in plugin2cmd[plugin]['cmd']:
-                                        if plugin_name != plugin2cmd[plugin]['cmd'][0]:
-                                            data[itype][key][day][plugin2cmd[plugin]['cmd'][0]] = \
-                                                data[itype][key][day][plugin_name]
-                                            del data[itype][key][day][plugin_name]
-                                        break
+                                if (
+                                    plugin != 'white_list'
+                                    and plugin_name
+                                    in plugin2cmd[plugin]['cmd']
+                                ):
+                                    if plugin_name != plugin2cmd[plugin]['cmd'][0]:
+                                        data[itype][key][day][plugin2cmd[plugin]['cmd'][0]] = \
+                                            data[itype][key][day][plugin_name]
+                                        del data[itype][key][day][plugin_name]
+                                    break
 
 
 # 重新加载数据...
@@ -216,87 +220,84 @@ def get_white_cmd():
     tmp = []
     for model in list(plugin2cmd.keys()):
         if model in plugin2cmd['white_list']:
-            for cmd in plugin2cmd[model]['cmd']:
-                tmp.append(cmd)
+            tmp.extend(iter(plugin2cmd[model]['cmd']))
     return tmp
 
 
 def _del_cmd(cmd: str):
     global plugin2cmd
     for model in plugin2cmd:
-        if model != 'white_list':
-            if cmd in plugin2cmd[model]['cmd']:
-                if cmd == plugin2cmd[model]['cmd'][0]:
-                    if len(plugin2cmd[model]['cmd']) < 2:
-                        return False
-                    tmp = plugin2cmd[model]['cmd'][1]
-                    plugin2cmd[model]['cmd'][1] = plugin2cmd[model]['cmd'][0]
-                    plugin2cmd[model]['cmd'][0] = tmp
-                    _replace_key()
-                    # await reload_data(True)
-                plugin2cmd[model]['cmd'].remove(cmd)
-                save_data(plugin2cmd, _prefix_group_count_dict, _prefix_user_count_dict)
-                return True
+        if model != 'white_list' and cmd in plugin2cmd[model]['cmd']:
+            if cmd == plugin2cmd[model]['cmd'][0]:
+                if len(plugin2cmd[model]['cmd']) < 2:
+                    return False
+                tmp = plugin2cmd[model]['cmd'][1]
+                plugin2cmd[model]['cmd'][1] = plugin2cmd[model]['cmd'][0]
+                plugin2cmd[model]['cmd'][0] = tmp
+                _replace_key()
+                # await reload_data(True)
+            plugin2cmd[model]['cmd'].remove(cmd)
+            save_data(plugin2cmd, _prefix_group_count_dict, _prefix_user_count_dict)
+            return True
     return False
 
 
 def _add_cmd(cmd: str, new_cmd: str):
     global plugin2cmd
     for model in plugin2cmd:
-        if model != 'white_list':
-            if cmd in plugin2cmd[model]['cmd']:
-                check_cmd_exists(new_cmd)
-                plugin2cmd[model]['cmd'].append(new_cmd)
-                save_data(plugin2cmd, None, None)
-                return True
+        if model != 'white_list' and cmd in plugin2cmd[model]['cmd']:
+            check_cmd_exists(new_cmd)
+            plugin2cmd[model]['cmd'].append(new_cmd)
+            save_data(plugin2cmd, None, None)
+            return True
     return False
 
 
 def _query_cmd(cmd: str):
-    for model in plugin2cmd:
-        if model != 'white_list':
-            if cmd in plugin2cmd[model]['cmd']:
-                return plugin2cmd[model]['cmd']
-    return []
+    return next(
+        (
+            plugin2cmd[model]['cmd']
+            for model in plugin2cmd
+            if model != 'white_list' and cmd in plugin2cmd[model]['cmd']
+        ),
+        [],
+    )
 
 
 def _update_cmd_priority(cmd: str):
     for model in plugin2cmd:
-        if model != 'white_list':
-            if cmd in plugin2cmd[model]['cmd']:
-                if cmd == plugin2cmd[model]['cmd'][0]:
-                    return True
-                index = plugin2cmd[model]['cmd'].index(cmd)
-                tmp = plugin2cmd[model]['cmd'][index]
-                plugin2cmd[model]['cmd'][index] = plugin2cmd[model]['cmd'][0]
-                plugin2cmd[model]['cmd'][0] = tmp
-                # print(plugin2cmd)
-                _replace_key()
-                save_data(plugin2cmd, _prefix_group_count_dict, _prefix_user_count_dict)
+        if model != 'white_list' and cmd in plugin2cmd[model]['cmd']:
+            if cmd == plugin2cmd[model]['cmd'][0]:
                 return True
+            index = plugin2cmd[model]['cmd'].index(cmd)
+            tmp = plugin2cmd[model]['cmd'][index]
+            plugin2cmd[model]['cmd'][index] = plugin2cmd[model]['cmd'][0]
+            plugin2cmd[model]['cmd'][0] = tmp
+            # print(plugin2cmd)
+            _replace_key()
+            save_data(plugin2cmd, _prefix_group_count_dict, _prefix_user_count_dict)
+            return True
     return False
 
 
 def _add_white(cmd: str):
     for model in plugin2cmd:
-        if model != 'white_list':
-            if cmd in plugin2cmd[model]['cmd']:
-                if model not in plugin2cmd['white_list']:
-                    plugin2cmd['white_list'].append(model)
-                    save_data(plugin2cmd, None, None)
-                return True
+        if model != 'white_list' and cmd in plugin2cmd[model]['cmd']:
+            if model not in plugin2cmd['white_list']:
+                plugin2cmd['white_list'].append(model)
+                save_data(plugin2cmd, None, None)
+            return True
     return False
 
 
 def _del_white(cmd: str):
     for model in plugin2cmd:
-        if model != 'white_list':
-            if cmd in plugin2cmd[model]['cmd']:
-                if model in plugin2cmd['white_list']:
-                    plugin2cmd['white_list'].remove(model)
-                    print(plugin2cmd['white_list'])
-                    save_data(plugin2cmd, None, None)
-                return True
+        if model != 'white_list' and cmd in plugin2cmd[model]['cmd']:
+            if model in plugin2cmd['white_list']:
+                plugin2cmd['white_list'].remove(model)
+                print(plugin2cmd['white_list'])
+                save_data(plugin2cmd, None, None)
+            return True
     return False
 
 

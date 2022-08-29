@@ -35,7 +35,7 @@ class BroadCast(Service):
 
     @staticmethod
     def load_rej_list() -> list:
-        data = list()
+        data = []
         path = BC_PATH / "rej_list.json"
         if not path.is_file():
             with open(path, "w", encoding="utf-8") as w:
@@ -61,8 +61,7 @@ caster = BroadCast().on_command(
 
 @caster.handle()
 async def _(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("bc_msg", args)
 
 
@@ -74,8 +73,8 @@ async def _(bot: Bot, event: MessageEvent, s_msg: str = ArgPlainText("bc_msg")):
 
     w_msg = f" 来自维护者的信息：\n{s_msg}"
 
-    su_g = list()
-    fl_g = list()
+    su_g = []
+    fl_g = []
     for i in w_group:
         group_id = i["group_id"]
         try:

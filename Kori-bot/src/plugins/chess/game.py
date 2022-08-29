@@ -55,7 +55,7 @@ class Game:
 
         self.b_board: int = 0
         self.w_board: int = 0
-        self.area: int = size * size
+        self.area: int = size**2
         self.history: List[int] = []
         self.full: int = (1 << self.area) - 1
 
@@ -95,9 +95,7 @@ class Game:
         p = 1 << (x * self.size + y)
         if p & self.b_board:
             return 1
-        if p & self.w_board:
-            return -1
-        return 0
+        return -1 if p & self.w_board else 0
 
     def set(self, x: int, y: int, value: int) -> int:
         chess = self.bit(x, y)
@@ -184,13 +182,12 @@ class Game:
                 if placement == 'cross':
                     mask_group.rect(j + 1.48, i + 1.48, j + 2.52, i + 2.52)
                     offset = 2
-                white_mark = 0.08
-                black_mark = 0.12
                 cx = j + offset
                 cy = i + offset
                 if value == 1:
                     black_group.circle(cx, cy, 0.36)
                     if x == i and y == j:
+                        black_mark = 0.12
                         black_group.rect(
                             cx - black_mark,
                             cy - black_mark,
@@ -201,6 +198,7 @@ class Game:
                 else:
                     white_group.circle(cx, cy, 0.32)
                     if x == i and y == j:
+                        white_mark = 0.08
                         white_group.rect(
                             cx - white_mark,
                             cy - white_mark,

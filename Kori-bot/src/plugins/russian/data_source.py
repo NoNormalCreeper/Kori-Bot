@@ -44,21 +44,21 @@ async def rank(player_data: dict, group_id: int, type_: str) -> str:
     if type_ == "gold_rank":
         rank_name = "\t金币排行榜\n"
         all_user_data = [int(player_data[group_id][x]["gold"]) for x in all_user]
-    elif type_ == "win_rank":
-        rank_name = "\t胜场排行榜\n"
-        all_user_data = [player_data[group_id][x]["win_count"] for x in all_user]
     elif type_ == "lose_rank":
         rank_name = "\t败场排行榜\n"
         all_user_data = [player_data[group_id][x]["lose_count"] for x in all_user]
     elif type_ == "make_gold":
         rank_name = "\t赢取金币排行榜\n"
         all_user_data = [player_data[group_id][x]["make_gold"] for x in all_user]
+    elif type_ == "win_rank":
+        rank_name = "\t胜场排行榜\n"
+        all_user_data = [player_data[group_id][x]["win_count"] for x in all_user]
     else:
         rank_name = "\t输掉金币排行榜\n"
         all_user_data = [player_data[group_id][x]["lose_gold"] for x in all_user]
     rst = ""
     if all_user:
-        for _ in range(len(all_user) if len(all_user) < 10 else 10):
+        for _ in range(min(len(all_user), 10)):
             _max = max(all_user_data)
             _max_id = all_user[all_user_data.index(_max)]
             name = player_data[group_id][_max_id]["nickname"]
@@ -87,13 +87,11 @@ def number_format(num) -> str:
         digit = num.split('.')[1]
         num = num.split('.')[0]
     def add_delimiter(num):
-        if len(num) > 3:
-            return add_delimiter(num[:-3]) + ',' + num[-3:]
-        else:
-            return num
+        return f'{add_delimiter(num[:-3])},{num[-3:]}' if len(num) > 3 else num
+
     num = add_delimiter(num)
     if digit:
-        num = num + '.' + digit
+        num = f'{num}.{digit}'
     return num
 
 units = ['', 'K', 'M', 'B', 'T', 'P']
@@ -162,7 +160,7 @@ class RussianManager:
         self._player_data[str(event.group_id)][str(event.user_id)]["is_sign"] = True
         self.save()
         return (
-            random.choice([f"这是今天的钱，祝你好运...", "今天可别输光光了."]) + f"\n你获得了 {gold} 金币",
+            random.choice(["这是今天的钱，祝你好运...", "今天可别输光光了."]) + f"\n你获得了 {gold} 金币",
             gold,
         )
     
@@ -184,15 +182,12 @@ class RussianManager:
                 self._current_player[event.group_id][1] == event.user_id
                 or self._current_player[event.group_id][2] == event.user_id
             ):
-                return f"你已经身处决斗之中了啊，给我认真一点啊！"
+                return "你已经身处决斗之中了啊，给我认真一点啊！"
             else:
                 return "已经有人接受对决了，你还是乖乖等待下一场吧！"
         if self._current_player[event.group_id][1] == event.user_id:
             return "请不要自己枪毙自己！换人来接受对决..."
-        if (
-            self._current_player[event.group_id]["at"] != 0
-            and self._current_player[event.group_id]["at"] != event.user_id
-        ):
+        if self._current_player[event.group_id]["at"] not in [0, event.user_id]:
             return Message(
                 f'这场对决是邀请 {MessageSegment.at(self._current_player[event.group_id]["at"])}的，不要捣乱！'
             )
@@ -203,15 +198,14 @@ class RussianManager:
         user_money = int(self._player_data[str(event.group_id)][str(event.user_id)]["gold"])
         if user_money < self._current_player[event.group_id]["money"]:
             if (
-                self._current_player[event.group_id]["at"] != 0
-                and self._current_player[event.group_id]["at"] == event.user_id
+                self._current_player[event.group_id]["at"] == 0
+                or self._current_player[event.group_id]["at"] != event.user_id
             ):
-                self._current_player[event.group_id] = {}
-                return "你的金币不足以接受这场对决！对决还未开始便结束了，请重新装弹！"
-            else:
                 return "你的金币不足以接受这场对决！"
 
-        player2_name = event.sender.card if event.sender.card else event.sender.nickname
+            self._current_player[event.group_id] = {}
+            return "你的金币不足以接受这场对决！对决还未开始便结束了，请重新装弹！"
+        player2_name = event.sender.card or event.sender.nickname
 
         self._current_player[event.group_id][2] = event.user_id
         self._current_player[event.group_id]["player2"] = player2_name
@@ -238,11 +232,7 @@ class RussianManager:
             at_player_name = await bot.get_group_member_info(
                 group_id=event.group_id, user_id=event.user_id
             )
-            at_player_name = (
-                at_player_name["card"]
-                if at_player_name["card"]
-                else at_player_name["nickname"]
-            )
+            at_player_name = at_player_name["card"] or at_player_name["nickname"]
             self._current_player[event.group_id] = {}
             return Message(
                 f"{MessageSegment.at(self._current_player[event.group_id][1])}\n"
@@ -261,10 +251,10 @@ class RussianManager:
             or self._current_player[event.group_id][2] == 0
         ):
             return "比赛并没有开始...无法结算..."
-        if (
-            event.user_id != self._current_player[event.group_id][1]
-            and event.user_id != self._current_player[event.group_id][2]
-        ):
+        if event.user_id not in [
+            self._current_player[event.group_id][1],
+            self._current_player[event.group_id][2],
+        ]:
             return "吃瓜群众不要捣乱！黄牌警告！"
         if time.time() - self._current_player[event.group_id]["time"] <= 30:
             return (
@@ -372,10 +362,7 @@ class RussianManager:
         _tmp = self._current_player[event.group_id]["bullet"][
             current_index : current_index + count
         ]
-        if 1 in _tmp:
-            flag = _tmp.index(1) + 1
-        else:
-            flag = -1
+        flag = _tmp.index(1) + 1 if 1 in _tmp else -1
         if flag == -1:
             next_user = MessageSegment.at(
                 self._current_player[event.group_id][1]
@@ -468,13 +455,11 @@ class RussianManager:
         player1_name = self._current_player[event.group_id]["player1"]
         player2_name = self._current_player[event.group_id]["player2"]
         if self._current_player[event.group_id]["next"] != event.user_id:
-            if (
-                event.user_id != self._current_player[event.group_id][1]
-                and event.user_id != self._current_player[event.group_id][2]
-            ):
-                nickname = (
-                    event.sender.card if event.sender.card else event.sender.nickname
-                )
+            if event.user_id not in [
+                self._current_player[event.group_id][1],
+                self._current_player[event.group_id][2],
+            ]:
+                nickname = event.sender.card or event.sender.nickname
                 return random.choice(
                     [
                         f"不要打扰 {player1_name} 和 {player2_name} 的决斗啊！",
@@ -513,11 +498,11 @@ class RussianManager:
         :param msg: 排行榜类型
         :param group_id: 群号
         """
-        if msg in ["金币排行"]:
+        if msg in {"金币排行"}:
             return await rank(self._player_data, group_id, "gold_rank")
-        if msg in ["胜场排行", "胜利排行"]:
+        if msg in {"胜场排行", "胜利排行"}:
             return await rank(self._player_data, group_id, "win_rank")
-        if msg in ["败场排行", "失败排行"]:
+        if msg in {"败场排行", "失败排行"}:
             return await rank(self._player_data, group_id, "lose_rank")
         if msg == "欧洲人排行":
             return await rank(self._player_data, group_id, "make_gold")
@@ -554,7 +539,7 @@ class RussianManager:
         """
         user_id = str(event.user_id)
         group_id = str(event.group_id)
-        nickname = event.sender.card if event.sender.card else event.sender.nickname
+        nickname = event.sender.card or event.sender.nickname
         if group_id not in self._player_data.keys():
             self._player_data[group_id] = {}
         if user_id not in self._player_data[group_id].keys():
@@ -618,9 +603,11 @@ class RussianManager:
         self._end_data_handle(win_user_id, lose_user_id, event.group_id, gold, fee)
         win_user = self._player_data[str(event.group_id)][str(win_user_id)]
         lose_user = self._player_data[str(event.group_id)][str(lose_user_id)]
-        bullet_str = ""
-        for x in self._current_player[event.group_id]["bullet"]:
-            bullet_str += "__ " if x == 0 else "| "
+        bullet_str = "".join(
+            "__ " if x == 0 else "| "
+            for x in self._current_player[event.group_id]["bullet"]
+        )
+
         logger.info(f"俄罗斯轮盘：胜者：{win_name} - 败者：{lose_name} - 金币：{gold}")
         self._current_player[event.group_id] = {}
         await bot.send(
@@ -716,7 +703,7 @@ class RussianManager:
         percent = (money_per_stock - float(history_money_per_stock[0])) / float(history_money_per_stock[0]) * 100
         percent = round(percent * 100)
         percent /= 100
-        percent = str(percent) + '%'
+        percent = f'{percent}%'
         return {
             "money_per_stock": money_per_stock,
             "percent": percent

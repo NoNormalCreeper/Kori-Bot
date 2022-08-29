@@ -24,13 +24,15 @@ class SaouceNao(Service):
     ):
         Service.__init__(self, "以图搜图", __doc__, rule=is_in_service("以图搜图"))
 
-        params = dict()
-        params["api_key"] = api_key
-        params["output_type"] = output_type
-        params["testmode"] = testmode
-        params["dbmaski"] = dbmaski
-        params["db"] = db
-        params["numres"] = numres
+        params = {
+            "api_key": api_key,
+            "output_type": output_type,
+            "testmode": testmode,
+            "dbmaski": dbmaski,
+            "db": db,
+            "numres": numres,
+        }
+
         self.params = params
 
     async def _request(self, url: str):
@@ -39,8 +41,7 @@ class SaouceNao(Service):
             res = await request.get(URL, params=self.params)
         except RequestError:
             raise RequestError("Request failed!")
-        data = res.json()
-        return data
+        return res.json()
 
     async def search(self, url: str) -> str:
         data = await self._request(url)
@@ -49,16 +50,18 @@ class SaouceNao(Service):
         except:
             return "没有相似的结果呢..."
 
-        r = list()
+        r = []
         for i in range(3):
             data = res[i]
 
             sim = data["header"]["similarity"]
             if float(sim) >= 70:
-                _result = dict()
-                _result["similarity"] = sim
-                _result["index_name"] = data["header"]["index_name"]
-                _result["url"] = choice(data["data"].get("ext_urls", ["None"]))
+                _result = {
+                    "similarity": sim,
+                    "index_name": data["header"]["index_name"],
+                    "url": choice(data["data"].get("ext_urls", ["None"])),
+                }
+
                 r.append(_result)
 
         if not r:

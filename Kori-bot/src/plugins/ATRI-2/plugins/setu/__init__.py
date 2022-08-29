@@ -34,11 +34,10 @@ async def _random_setu(bot: Bot, event: MessageEvent):
 
 @random_setu.got("r_rush_after_think", prompt="看完不来点感想么-w-")
 async def _(think: str = ArgPlainText("r_rush_after_think")):
-    is_repo = will_think(think)
-    if not is_repo:
-        await random_setu.finish()
-    else:
+    if is_repo := will_think(think):
         await random_setu.finish(is_repo)
+    else:
+        await random_setu.finish()
 
 
 tag_setu = Setu().on_regex(r"来[张点丶份](.*?)的[涩色🐍]图", "根据提供的tag查找涩图，冷却2分钟")
@@ -68,11 +67,10 @@ async def _tag_setu(bot: Bot, event: MessageEvent):
 
 @tag_setu.got("t_rush_after_think", prompt="看完不来点感想么-w-")
 async def _(think: str = ArgPlainText("t_rush_after_think")):
-    is_repo = will_think(think)
-    if not is_repo:
-        await random_setu.finish()
-    else:
+    if is_repo := will_think(think):
         await random_setu.finish(is_repo)
+    else:
+        await random_setu.finish()
 
 
 _catcher_max_file_size = 128
@@ -83,41 +81,37 @@ setu_catcher = Setu().on_message("涩图嗅探", "涩图嗅探器", block=False)
 
 @setu_catcher.handle()
 async def _setu_catcher(bot: Bot, event: MessageEvent):
-    args = extract_image_urls(event.message)
-    if not args:
+    if not (args := extract_image_urls(event.message)):
         return
-    else:
-        hso = list()
-        for i in args:
-            try:
-                data = await Setu().detecter(i, _catcher_max_file_size)
-            except Exception:
-                return
-            if data[1] > 0.7:
-                hso.append(data[1])
-
-        hso.sort(reverse=True)
-
-        if not hso:
+    hso = []
+    for i in args:
+        try:
+            data = await Setu().detecter(i, _catcher_max_file_size)
+        except Exception:
             return
-        elif len(hso) == 1:
-            u_repo = f"hso! 涩值：{'{:.2%}'.format(hso[0])}\n不行我要发给别人看"
-            s_repo = (
-                f"涩图来咧！\n{MessageSegment.image(args[0])}\n涩值：{'{:.2%}'.format(hso[0])}"
-            )
+        if data[1] > 0.7:
+            hso.append(data[1])
 
-        else:
-            u_repo = f"hso! 最涩的达到：{'{:.2%}'.format(hso[0])}\n不行我一定要发给别人看"
+    hso.sort(reverse=True)
 
-            ss = list()
-            for s in args:
-                ss.append(MessageSegment.image(s))
-            ss = "\n".join(map(str, ss))
-            s_repo = f"多张涩图来咧！\n{ss}\n最涩的达到：{'{:.2%}'.format(hso[0])}"
+    if not hso:
+        return
+    elif len(hso) == 1:
+        u_repo = f"hso! 涩值：{'{:.2%}'.format(hso[0])}\n不行我要发给别人看"
+        s_repo = (
+            f"涩图来咧！\n{MessageSegment.image(args[0])}\n涩值：{'{:.2%}'.format(hso[0])}"
+        )
 
-        await bot.send(event, u_repo)
-        for superuser in BotSelfConfig.superusers:
-            await bot.send_private_msg(user_id=superuser, message=s_repo)
+    else:
+        u_repo = f"hso! 最涩的达到：{'{:.2%}'.format(hso[0])}\n不行我一定要发给别人看"
+
+        ss = [MessageSegment.image(s) for s in args]
+        ss = "\n".join(map(str, ss))
+        s_repo = f"多张涩图来咧！\n{ss}\n最涩的达到：{'{:.2%}'.format(hso[0])}"
+
+    await bot.send(event, u_repo)
+    for superuser in BotSelfConfig.superusers:
+        await bot.send_private_msg(user_id=superuser, message=s_repo)
 
 
 nsfw_checker = Setu().on_command("/nsfw", "涩值检测")
@@ -154,8 +148,7 @@ catcher_setting = Setu().on_command("嗅探设置", "涩图检测图片文件大
 
 @catcher_setting.handle()
 async def _catcher_setting(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("catcher_set", args)
 
 
@@ -208,8 +201,7 @@ def will_think(msg: str) -> str:
     if msg in _ag_l:
         return str()
 
-    ag_jud = re.findall(_ag_patt, msg)
-    if ag_jud:
+    if ag_jud := re.findall(_ag_patt, msg):
         return str()
 
     nice_jud = re.findall(_nice_patt, msg)

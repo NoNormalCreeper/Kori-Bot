@@ -178,21 +178,17 @@ class PluginData(metaclass=Singleton):
     @property
     def cache_dir(self) -> Path:
         """缓存目录"""
-        path = plugin_config.datastore_cache_dir / self._name
-        return path
+        return plugin_config.datastore_cache_dir / self._name
 
     @property
     def config_dir(self) -> Path:
         """配置目录"""
-        # 配置都放置在统一的目录下
-        path = plugin_config.datastore_config_dir
-        return path
+        return plugin_config.datastore_config_dir
 
     @property
     def data_dir(self) -> Path:
         """数据目录"""
-        path = plugin_config.datastore_data_dir / self._name
-        return path
+        return plugin_config.datastore_data_dir / self._name
 
     @property
     def config(self) -> Config:
@@ -223,18 +219,12 @@ class PluginData(metaclass=Singleton):
 
     def open(self, filename: str, mode: str = "r", cache: bool = False, **kwargs) -> IO:
         """打开文件，默认打开数据文件夹下的文件"""
-        if cache:
-            path = self.cache_dir / filename
-        else:
-            path = self.data_dir / filename
+        path = self.cache_dir / filename if cache else self.data_dir / filename
         return open(path, mode, **kwargs)
 
     def exists(self, filename: str, cache: bool = False) -> bool:
         """判断文件是否存在，默认判断数据文件夹下的文件"""
-        if cache:
-            path = self.cache_dir / filename
-        else:
-            path = self.data_dir / filename
+        path = self.cache_dir / filename if cache else self.data_dir / filename
         return path.exists()
 
     def network_file(

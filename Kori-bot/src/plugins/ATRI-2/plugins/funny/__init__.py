@@ -39,8 +39,7 @@ fake_msg = Funny().on_command(
 
 @fake_msg.handle([Cooldown(3600, prompt=_fake_flmt_notice)])
 async def _ready_fake(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("content", args)
 
 

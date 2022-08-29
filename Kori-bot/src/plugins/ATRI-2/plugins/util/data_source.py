@@ -20,7 +20,6 @@ class Utils(Service):
     @staticmethod
     def roll_dice(par: str) -> str:
         result = 0
-        proc = ""
         proc_list = []
         p = par.split("+")
 
@@ -32,19 +31,16 @@ class Utils(Service):
             if int(args[0]) >= 5000 or int(args[2]) >= 5000:
                 return "阿...好大......"
 
-            for a in range(1, int(args[0]) + 1):
+            for _ in range(1, int(args[0]) + 1):
                 rd = randint(1, int(args[2]))
                 result = result + rd
 
                 if len(proc_list) <= 10:
                     proc_list.append(rd)
 
-        if len(proc_list) <= 10:
-            proc += "+".join(map(str, proc_list))
-        elif len(proc_list) > 10:
-            proc += "太长了不展示了就酱w"
-        else:
-            proc += str(result)
+        proc = "" + (
+            "+".join(map(str, proc_list)) if len(proc_list) <= 10 else "太长了不展示了就酱w"
+        )
 
         result = f"{par}=({proc})={result}"
         return result
@@ -99,10 +95,7 @@ class Encrypt(Utils):
         ]
         char = [self.cr[char[0]], self.cc[char[1]], self.cn[char[2]], self.cb[char[3]]]
 
-        if reverse:
-            return char[2] + char[3] + char[0] + char[1]
-
-        return "".join(char)
+        return char[2] + char[3] + char[0] + char[1] if reverse else "".join(char)
 
     def _decodeByte(self, c) -> int:
         nb = False
@@ -120,20 +113,21 @@ class Encrypt(Utils):
 
     def _decodeShort(self, c) -> int:
         reverse = c[0] not in self.cr
-        if not reverse:
-            idx = [
-                self.cr.index(c[0]),
-                self.cc.index(c[1]),
-                self.cn.index(c[2]),
-                self.cb.index(c[3]),
-            ]
-        else:
-            idx = [
+        idx = (
+            [
                 self.cr.index(c[2]),
                 self.cc.index(c[3]),
                 self.cn.index(c[0]),
                 self.cb.index(c[1]),
             ]
+            if reverse
+            else [
+                self.cr.index(c[0]),
+                self.cc.index(c[1]),
+                self.cn.index(c[2]),
+                self.cb.index(c[3]),
+            ]
+        )
 
         if idx[0] < 0 or idx[1] < 0 or idx[2] < 0 or idx[3] < 0:
             raise ValueError("ERROR! not atri")
@@ -146,9 +140,10 @@ class Encrypt(Utils):
         return result
 
     def _encodeBytes(self, b) -> str:
-        result = []
-        for i in range(0, (len(b) >> 1)):
-            result.append(self._encodeShort((b[i * 2] << 8 | b[i * 2 + 1])))
+        result = [
+            self._encodeShort((b[i * 2] << 8 | b[i * 2 + 1]))
+            for i in range(len(b) >> 1)
+        ]
 
         if len(b) & 1 == 1:
             result.append(self._encodeByte(b[-1]))
@@ -169,9 +164,13 @@ class Encrypt(Utils):
             raise ValueError("ERROR length")
 
         result = []
-        for i in range(0, (len(s) >> 2)):
-            result.append(bytes([self._decodeShort(s[i * 4 : i * 4 + 4]) >> 8]))
-            result.append(bytes([self._decodeShort(s[i * 4 : i * 4 + 4]) & 0xFF]))
+        for i in range(len(s) >> 2):
+            result.extend(
+                (
+                    bytes([self._decodeShort(s[i * 4 : i * 4 + 4]) >> 8]),
+                    bytes([self._decodeShort(s[i * 4 : i * 4 + 4]) & 0xFF]),
+                )
+            )
 
         if (len(s) & 2) == 2:
             result.append(bytes([self._decodeByte(s[-2:])]))
@@ -208,10 +207,9 @@ class Yinglish(Utils):
                     ]
                 )
             )
-        else:
-            if y == "n" and random() < 0.5:
-                x = "〇" * len(x)
-            return str(choice([f"...{x}", f"....{x}", f".....{x}", f"......{x}"]))
+        if y == "n" and random() < 0.5:
+            x = "〇" * len(x)
+        return str(choice([f"...{x}", f"....{x}", f".....{x}", f"......{x}"]))
 
     @classmethod
     def deal(cls, text, ying: Optional[float] = 0.5) -> str:

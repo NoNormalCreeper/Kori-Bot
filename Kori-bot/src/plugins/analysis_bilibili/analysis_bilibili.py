@@ -49,7 +49,7 @@ async def bili_keyword(group_id, text):
         if last_vurl == vurl:
             return
     except Exception as e:
-        msg = "bili_keyword Error: {}".format(type(e))
+        msg = f"bili_keyword Error: {type(e)}"
     return msg
 
 
@@ -120,9 +120,7 @@ async def search_bili_by_title(title: str):
     for i in result:
         if i.get("result_type") != "video":
             continue
-        # 只返回第一个结果
-        url = i["data"][0].get("arcurl")
-        return url
+        return i["data"][0].get("arcurl")
 
 
 async def video_detail(url, page):
@@ -147,17 +145,14 @@ async def video_detail(url, page):
         stat += f"点赞：{res['stat']['like']} | 硬币：{res['stat']['coin']} | 评论：{res['stat']['reply']}\n"
         desc = f"简介：{res['desc']}"
         desc_list = desc.split("\n")
-        desc = ""
-        for i in desc_list:
-            if i:
-                desc += i + "\n"
+        desc = "".join(i + "\n" for i in desc_list if i)
         desc_list = desc.split("\n")
         if len(desc_list) > 4:
             desc = desc_list[0] + "\n" + desc_list[1] + "\n" + desc_list[2] + "……"
-        msg = str(vurl) + str(title) + str(tname) + str(stat) + str(desc)
+        msg = str(vurl) + str(title) + str(tname) + str(stat) + desc
         return msg, vurl
     except Exception as e:
-        msg = "视频解析出错--Error: {}".format(type(e))
+        msg = f"视频解析出错--Error: {type(e)}"
         return msg, None
 
 
@@ -171,9 +166,7 @@ async def bangumi_detail(url):
         title = f"番剧：{res['title']}\n"
         desc = f"{res['newest_ep']['desc']}\n"
         index_title = ""
-        style = ""
-        for i in res["style"]:
-            style += i + ","
+        style = "".join(f"{i}," for i in res["style"])
         style = f"类型：{style[:-1]}\n"
         evaluate = f"简介：{res['evaluate']}\n"
         if "season_id" in url:
@@ -197,7 +190,7 @@ async def bangumi_detail(url):
         )
         return msg, vurl
     except Exception as e:
-        msg = "番剧解析出错--Error: {}".format(type(e))
+        msg = f"番剧解析出错--Error: {type(e)}"
         msg += f"\n{url}"
         return msg, None
 
@@ -208,7 +201,7 @@ async def live_detail(url):
             "GET", url, timeout=aiohttp.client.ClientTimeout(10)
         ) as resp:
             res = await resp.json()
-        if res["code"] == -400 or res["code"] == 19002000:
+        if res["code"] in [-400, 19002000]:
             msg = "直播间不存在"
             return msg, None
         uname = res["data"]["anchor_info"]["base_info"]["uname"]
@@ -241,7 +234,7 @@ async def live_detail(url):
         msg = str(vurl) + str(title) + str(up) + str(tags) + str(player)
         return msg, vurl
     except Exception as e:
-        msg = "直播间解析出错--Error: {}".format(type(e))
+        msg = f"直播间解析出错--Error: {type(e)}"
         return msg, None
 
 
@@ -265,7 +258,7 @@ async def article_detail(url, cvid):
         msg = str(vurl) + str(title) + str(up) + str(desc)
         return msg, vurl
     except Exception as e:
-        msg = "专栏解析出错--Error: {}".format(type(e))
+        msg = f"专栏解析出错--Error: {type(e)}"
         return msg, None
 
 
@@ -287,20 +280,17 @@ async def dynamic_detail(url):
             content = item.get("content")
         content = content.replace("\r", "\n")
         if len(content) > 250:
-            content = content[:250] + "......"
-        pics = item.get("pictures_count")
-        if pics:
+            content = f"{content[:250]}......"
+        if pics := item.get("pictures_count"):
             content += f"\nPS：动态中包含{pics}张图片"
-        origin = card.get("origin")
-        if origin:
+        if origin := card.get("origin"):
             jorigin = json.loads(origin)
-            short_link = jorigin.get("short_link")
-            if short_link:
+            if short_link := jorigin.get("short_link"):
                 content += f"\n动态包含转发视频{short_link}"
             else:
                 content += f"\n动态包含转发其他动态"
         msg = str(vurl) + str(content)
         return msg, vurl
     except Exception as e:
-        msg = "动态解析出错--Error: {}".format(type(e))
+        msg = f"动态解析出错--Error: {type(e)}"
         return msg, None

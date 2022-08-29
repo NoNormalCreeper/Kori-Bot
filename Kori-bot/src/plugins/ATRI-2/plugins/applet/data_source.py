@@ -8,9 +8,7 @@ from ATRI.rule import is_in_service
 URL = "https://api.kyomotoi.moe/api/bilibili/v3/video_info?aid="
 
 table = "fZodR9XQDSUm21yCkr6zBqiveYah8bt4xsWpHnJE7jL5VG3guMTKNPAwcF"
-tr = dict()
-for i in range(58):
-    tr[table[i]] = i
+tr = {table[i]: i for i in range(58)}
 s = [11, 10, 3, 8, 4, 6]
 xor = 177451812
 add = 8728348608
@@ -24,9 +22,7 @@ class Applet(Service):
 
     @staticmethod
     def _bv_dec(x) -> str:
-        r = 0
-        for i in range(6):
-            r += tr[x[s[i]]] * 58 ** i
+        r = sum(tr[x[s[i]]] * 58 ** i for i in range(6))
         return str((r - add) ^ xor)
 
     @staticmethod
@@ -60,10 +56,7 @@ class Applet(Service):
 
             rep = await cls.bili_request(u)
             bv = cls.bili_video_code_catcher(rep)
-            av = cls._bv_dec(bv)
-
-        else:
-            av = cls._bv_dec(bv)
+        av = cls._bv_dec(bv)
 
         url = URL + av
         req = await request.get(url)

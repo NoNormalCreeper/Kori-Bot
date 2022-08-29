@@ -41,9 +41,7 @@ class Helper(Service):
 
     @staticmethod
     def about() -> str:
-        temp_list = list()
-        for i in BotSelfConfig.nickname:
-            temp_list.append(i)
+        temp_list = list(BotSelfConfig.nickname)
         nickname = "、".join(map(str, temp_list))
         return (
             "唔...是来认识咱的么\n"
@@ -57,7 +55,7 @@ class Helper(Service):
     @staticmethod
     def service_list() -> str:
         files = os.listdir(SERVICES_DIR)
-        services = list()
+        services = []
         for f in files:
             prefix = f.replace(".json", "")
             f = os.path.join(SERVICES_DIR, f)
@@ -76,8 +74,7 @@ class Helper(Service):
             tablefmt="plain",
             showindex=True,
         )
-        repo = f"咱搭载了以下服务~\n{table}\n@bot 帮助 [服务] -以查看对应服务帮助"
-        return repo
+        return f"咱搭载了以下服务~\n{table}\n@bot 帮助 [服务] -以查看对应服务帮助"
 
     @staticmethod
     def service_info(service: str) -> str:
@@ -93,13 +90,12 @@ class Helper(Service):
         _service_cmd_list = list(data.get("cmd_list", {"error"}))
         service_cmd_list = "、".join(map(str, _service_cmd_list))
 
-        repo = SERVICE_INFO_FORMAT.format(
+        return SERVICE_INFO_FORMAT.format(
             service=service_name,
             docs=service_docs,
             cmd_list=service_cmd_list,
             enabled=service_enabled,
         )
-        return repo
 
     @staticmethod
     def cmd_info(service: str, cmd: str) -> str:
@@ -109,14 +105,13 @@ class Helper(Service):
             return "请检查是否输入错误..."
 
         cmd_list: dict = data["cmd_list"]
-        cmd_info = cmd_list.get(cmd, dict())
+        cmd_info = cmd_list.get(cmd, {})
         if not cmd_info:
             return "请检查命令是否输入错误..."
         cmd_type = cmd_info.get("type", "ignore")
         docs = cmd_info.get("docs", "ignore")
         aliases = cmd_info.get("aliases", "ignore")
 
-        repo = COMMAND_INFO_FORMAT.format(
+        return COMMAND_INFO_FORMAT.format(
             cmd=cmd, cmd_type=cmd_type, docs=docs, aliases=aliases
         )
-        return repo

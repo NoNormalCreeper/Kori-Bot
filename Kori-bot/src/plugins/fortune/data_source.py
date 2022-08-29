@@ -11,7 +11,10 @@ except ModuleNotFoundError:
     import json
 
 _FORTUNE_PATH = nonebot.get_driver().config.fortune_path
-FORTUNE_PATH = os.path.join(os.path.dirname(__file__), "resource") if not _FORTUNE_PATH else _FORTUNE_PATH
+FORTUNE_PATH = _FORTUNE_PATH or os.path.join(
+    os.path.dirname(__file__), "resource"
+)
+
 
 from .utils import drawing, MainThemeList, MainThemeEnable
 
@@ -30,18 +33,18 @@ class FortuneManager:
         self.setting_file = setting_file
         if not data_file.exists():
             with open(data_file, "w", encoding="utf-8") as f:
-                f.write(json.dumps(dict()))
+                f.write(json.dumps({}))
                 f.close()
 
         if data_file.exists():
             with open(data_file, "r", encoding="utf-8") as f:
                 self.user_data = json.load(f)
-        
+
         if not setting_file.exists():
             with open(setting_file, "w", encoding="utf-8") as f:
-                f.write(json.dumps(dict()))
+                f.write(json.dumps({}))
                 f.close()
-        
+
         if setting_file.exists():
             with open(setting_file, "r", encoding="utf-8") as f:
                 self.setting = json.load(f)
@@ -60,13 +63,16 @@ class FortuneManager:
         '''
         if not self.setting["specific_rule"].get(limit):
             return False
-        
+
         spec_path = random.choice(self.setting["specific_rule"][limit])
-        for theme in MainThemeList.keys():
-            if theme in spec_path:
-                return spec_path if MainThemeEnable[theme] else False
-        
-        return False
+        return next(
+            (
+                spec_path if MainThemeEnable[theme] else False
+                for theme in MainThemeList.keys()
+                if theme in spec_path
+            ),
+            False,
+        )
 
     def divine(self, spec_path: Optional[str], event: GroupMessageEvent) -> Tuple[str, bool]:
         '''
@@ -114,8 +120,8 @@ class FortuneManager:
         '''
         user_id = str(event.user_id)
         group_id = str(event.group_id)
-        nickname = event.sender.card if event.sender.card else event.sender.nickname
-        
+        nickname = event.sender.card or event.sender.nickname
+
         if "group_rule" not in self.setting.keys():
             self.setting["group_rule"] = {}
         if "specific_rule" not in self.setting.keys():
@@ -164,7 +170,7 @@ class FortuneManager:
             分群管理抽签设置
         '''
         group_id = str(event.group_id)
-        
+
         if theme == "random" or MainThemeEnable[theme] is True:
             self.setting["group_rule"][group_id] = theme
             self.save_setting()

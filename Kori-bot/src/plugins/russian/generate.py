@@ -17,7 +17,7 @@ for i in wordlist_list:
     try:
         chinese_pos = re.search(type_rule, i).start()
         chinese = i[chinese_pos:].strip()
-        english = i[0:chinese_pos].strip()
+        english = i[:chinese_pos].strip()
         result[english] = chinese
     except:  # 还是匹配不上
         print("Ignored:", i)

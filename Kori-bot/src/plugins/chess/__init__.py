@@ -196,8 +196,8 @@ async def handle_chess(matcher: Matcher, event: GroupMessageEvent, argv: List[st
     if not match_obj:
         await send('请输入由字母+数字构成的坐标')
 
-    x = (ord(match_obj.group(1).lower()) - ord('a')) % 32
-    y = int(match_obj.group(2)) - 1
+    x = (ord(match_obj[1].lower()) - ord('a')) % 32
+    y = int(match_obj[2]) - 1
 
     if x < 0 or x >= game.size or y < 0 or y >= game.size:
         await send('那里都不是棋盘了啊喂！')
@@ -232,7 +232,7 @@ async def handle_chess(matcher: Matcher, event: GroupMessageEvent, argv: List[st
         message += f'，恭喜 {game.p2} 获胜！'
     elif result == MoveResult.DRAW:
         games.pop(cid)
-        message + f'，本局游戏平局'
+        f'{message}，本局游戏平局'
     elif isinstance(result, str):
         game.next = player
         await send(f'非法落子（{result}）')

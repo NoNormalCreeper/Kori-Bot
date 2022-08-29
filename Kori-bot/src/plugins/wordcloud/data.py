@@ -48,7 +48,7 @@ def count_words(words: List[str]) -> Counter:
 
 def get_wordcloud(messages: List[str]) -> Optional[Image]:
     # 过滤掉命令
-    command_start = tuple([i for i in global_config.command_start if i])
+    command_start = tuple(i for i in global_config.command_start if i)
     message = " ".join([m for m in messages if not m.startswith(command_start)])
     # 预处理
     message = pre_precess(message)
@@ -63,7 +63,6 @@ def get_wordcloud(messages: List[str]) -> Optional[Image]:
             height=plugin_config.wordcloud_height,
             background_color=plugin_config.wordcloud_background_color,
         )
-        image = wordcloud.generate_from_frequencies(frequency).to_image()
-        return image
+        return wordcloud.generate_from_frequencies(frequency).to_image()
     except ValueError as e:
         logger.error(e)

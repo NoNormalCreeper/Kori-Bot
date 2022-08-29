@@ -29,8 +29,7 @@ novel = on_command('续写', aliases={'彩云小梦'},
 
 @novel.handle()
 async def _(matcher: Matcher, msg: Message = CommandArg()):
-    content = msg.extract_plain_text().strip()
-    if content:
+    if content := msg.extract_plain_text().strip():
         matcher.set_arg('content', msg)
 
 
@@ -48,10 +47,8 @@ async def _(bot: Bot, event: GroupMessageEvent,
 
     match_continue = re.match(r'续写\s*(\S+.*)', reply, re.S)
     match_select = re.match(r'选择分支\s*(\d+)', reply)
-    match_model = re.match(r'切换模型\s*(\S+)', reply)
-
-    if match_model:
-        model = match_model.group(1).strip()
+    if match_model := re.match(r'切换模型\s*(\S+)', reply):
+        model = match_model[1].strip()
         if model not in model_list:
             model_help = f"支持的模型：{'、'.join(list(model_list))}\n发送“切换模型 名称”切换模型"
             await novel.reject(model_help)
@@ -59,10 +56,10 @@ async def _(bot: Bot, event: GroupMessageEvent,
             caiyunai.model = model
             await novel.reject(f'模型已切换为：{model}')
     elif match_continue:
-        content = match_continue.group(1)
+        content = match_continue[1]
         caiyunai.content = content
     elif match_select:
-        num = int(match_select.group(1))
+        num = int(match_select[1])
         if num < 1 or num > len(caiyunai.contents):
             await novel.reject('请发送正确的编号')
         caiyunai.select(num - 1)
@@ -74,14 +71,18 @@ async def _(bot: Bot, event: GroupMessageEvent,
     if err_msg:
         await novel.finish(f"出错了：{err_msg}")
 
-    msgs = []
     nickname = model_list[caiyunai.model]['name']
-    help_msg = '发送“选择分支 编号”选择分支\n发送“续写 内容”手动添加内容\n发送“切换模型 名称”切换模型'
-    msgs.append(help_msg)
     result = await text_to_pic(caiyunai.result)
-    msgs.append(MessageSegment.image(result))
-    for i, content in enumerate(caiyunai.contents, start=1):
-        msgs.append(f'{i}、\n{content}')
+    msgs = [
+        '发送“选择分支 编号”选择分支\n发送“续写 内容”手动添加内容\n发送“切换模型 名称”切换模型',
+        MessageSegment.image(result),
+    ]
+
+    msgs.extend(
+        f'{i}、\n{content}'
+        for i, content in enumerate(caiyunai.contents, start=1)
+    )
+
     try:
         await send_forward_msg(bot, event, nickname, bot.self_id, msgs)
     except:

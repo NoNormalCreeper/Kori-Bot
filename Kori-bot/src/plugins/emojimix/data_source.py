@@ -23,10 +23,7 @@ def create_url(emoji1: EmojiData, emoji2: EmojiData) -> str:
 
 def find_emoji(emoji_code: str) -> Optional[EmojiData]:
     emoji_num = ord(emoji_code)
-    for e in emojis:
-        if emoji_num in e[0]:
-            return e
-    return None
+    return next((e for e in emojis if emoji_num in e[0]), None)
 
 
 async def mix_emoji(emoji_code1: str, emoji_code2: str) -> Union[str, bytes]:
@@ -43,15 +40,13 @@ async def mix_emoji(emoji_code1: str, emoji_code2: str) -> Union[str, bytes]:
     logger.info(url2)
     try:
         async with httpx.AsyncClient(
-            proxies=emoji_config.http_proxy, timeout=10
-        ) as client:
+                    proxies=emoji_config.http_proxy, timeout=10
+                ) as client:
             resp = await client.get(url1)
             if resp.status_code == 200:
                 return resp.content
             resp = await client.get(url2)
-            if resp.status_code == 200:
-                return resp.content
-            return "出错了，可能不支持该emoji组合"
+            return resp.content if resp.status_code == 200 else "出错了，可能不支持该emoji组合"
     except:
         logger.warning(traceback.format_exc())
         return "下载出错，请稍后再试"

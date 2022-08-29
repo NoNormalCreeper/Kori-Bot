@@ -571,11 +571,7 @@ def getMinDiv(num: int):
 def demolish(num_str: str):
     if(not re.sub('[-.]', '', num_str).isdigit()):  # 如果输入的不是数字
         return ''
-    if('.' in num_str):
-        num = float(num_str)
-    else:
-        num = int(num_str)
-
+    num = float(num_str) if ('.' in num_str) else int(num_str)
     if(not math.isfinite(num)):  # 若输入的不是 无穷 或 不是数字
         return f'这么臭的{num}有必要论证吗'
 

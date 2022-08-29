@@ -56,29 +56,28 @@ def make_jpg_or_gif(
     image = img.image
     if not getattr(image, "is_animated", False):
         return func(img.convert("RGBA")).save_jpg()
-    else:
-        index = range(image.n_frames)
-        ratio = image.n_frames / gif_max_frames
-        duration = image.info["duration"] / 1000
-        if ratio > 1:
-            index = (int(i * ratio) for i in range(gif_max_frames))
-            duration *= ratio
+    index = range(image.n_frames)
+    ratio = image.n_frames / gif_max_frames
+    duration = image.info["duration"] / 1000
+    if ratio > 1:
+        index = (int(i * ratio) for i in range(gif_max_frames))
+        duration *= ratio
 
-        frames: List[IMG] = []
-        for i in index:
-            image.seek(i)
-            new_img = func(BuildImage(image).convert("RGBA"))
-            new_img = new_img.resize(
-                (int(new_img.width * gif_zoom), int(new_img.height * gif_zoom))
-            )
-            bg = BuildImage.new("RGBA", new_img.size, "white")
-            bg.paste(new_img, alpha=True)
-            frames.append(bg.image)
-        return save_gif(frames, duration)
+    frames: List[IMG] = []
+    for i in index:
+        image.seek(i)
+        new_img = func(BuildImage(image).convert("RGBA"))
+        new_img = new_img.resize(
+            (int(new_img.width * gif_zoom), int(new_img.height * gif_zoom))
+        )
+        bg = BuildImage.new("RGBA", new_img.size, "white")
+        bg.paste(new_img, alpha=True)
+        frames.append(bg.image)
+    return save_gif(frames, duration)
 
 
 async def translate(text: str) -> str:
-    url = f"http://fanyi.youdao.com/translate"
+    url = "http://fanyi.youdao.com/translate"
     params = {"type": "ZH_CN2JA", "i": text, "doctype": "json"}
     try:
         async with httpx.AsyncClient() as client:

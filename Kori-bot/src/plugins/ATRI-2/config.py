@@ -14,6 +14,8 @@ CONFIG_PATH = Path(".") / "config.yml"
 config = load_yml(CONFIG_PATH)
 
 
+
+
 class BotSelfConfig:
     config: dict = config["BotSelfConfig"]
 
@@ -27,7 +29,8 @@ class BotSelfConfig:
     session_expire_timeout: timedelta = timedelta(
         seconds=config.get("session_expire_timeout", 60)
     )
-    proxy: str = config.get("proxy", None)
+    proxy: str = config.get("proxy")
+
 
 
 class InlineGoCQHTTP:

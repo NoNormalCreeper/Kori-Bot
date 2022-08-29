@@ -98,12 +98,13 @@ class Service:
         data = ServiceInfo(
             service=service,
             docs=docs,
-            cmd_list=dict(),
+            cmd_list={},
             enabled=True,
             only_admin=self.only_admin,
-            disable_user=list(),
-            disable_group=list(),
+            disable_user=[],
+            disable_group=[],
         )
+
         try:
             with open(path, "w", encoding="utf-8") as w:
                 w.write(json.dumps(data.dict(), indent=4))
@@ -141,7 +142,7 @@ class Service:
     def _save_cmds(self, cmds: dict) -> None:
         data = self.load_service(self.service)
         temp_data: dict = data["cmd_list"]
-        temp_data.update(cmds)
+        temp_data |= cmds
         self.save_service(data)
 
     def _load_cmds(self) -> dict:
@@ -177,14 +178,12 @@ class Service:
         if name:
             cmd_list = self._load_cmds()
 
-            name = name + "-onmsg"
+            name += "-onmsg"
 
-            cmd_list[name] = CommandInfo(
-                type="message", docs=docs, aliases=list()
-            ).dict()
+            cmd_list[name] = CommandInfo(type="message", docs=docs, aliases=[]).dict()
             self._save_cmds(cmd_list)
 
-        matcher = Matcher.new(
+        return Matcher.new(
             "message",
             Rule() & rule,
             Permission() | permission,
@@ -195,17 +194,16 @@ class Service:
             handlers=handlers,
             default_state=state,
         )
-        return matcher
 
     def on_notice(self, name: str, docs: str, block: bool = True) -> Type[Matcher]:
         cmd_list = self._load_cmds()
 
-        name = name + "-onntc"
+        name += "-onntc"
 
-        cmd_list[name] = CommandInfo(type="notice", docs=docs, aliases=list()).dict()
+        cmd_list[name] = CommandInfo(type="notice", docs=docs, aliases=[]).dict()
         self._save_cmds(cmd_list)
 
-        matcher = Matcher.new(
+        return Matcher.new(
             "notice",
             Rule() & self.rule,
             Permission(),
@@ -216,17 +214,16 @@ class Service:
             handlers=self.handlers,
             default_state=self.state,
         )
-        return matcher
 
     def on_request(self, name: str, docs: str, block: bool = True) -> Type[Matcher]:
         cmd_list = self._load_cmds()
 
-        name = name + "-onreq"
+        name += "-onreq"
 
-        cmd_list[name] = CommandInfo(type="request", docs=docs, aliases=list()).dict()
+        cmd_list[name] = CommandInfo(type="request", docs=docs, aliases=[]).dict()
         self._save_cmds(cmd_list)
 
-        matcher = Matcher.new(
+        return Matcher.new(
             "request",
             Rule() & self.rule,
             Permission(),
@@ -237,7 +234,6 @@ class Service:
             handlers=self.handlers,
             default_state=self.state,
         )
-        return matcher
 
     def on_command(
         self,
@@ -258,7 +254,7 @@ class Service:
         ).dict()
         self._save_cmds(cmd_list)
 
-        commands = set([cmd]) | (aliases or set())
+        commands = {cmd} | ((aliases or set()))
         return self.on_message(rule=command(*commands) & rule, block=True, **kwargs)
 
     def on_keyword(
@@ -271,7 +267,7 @@ class Service:
         if not rule:
             rule = self.rule
 
-        name = list(keywords)[0] + "-onkw"
+        name = f"{list(keywords)[0]}-onkw"
 
         cmd_list = self._load_cmds()
 
@@ -292,7 +288,7 @@ class Service:
             rule = self.rule
 
         cmd_list = self._load_cmds()
-        cmd_list[pattern] = CommandInfo(type="regex", docs=docs, aliases=list()).dict()
+        cmd_list[pattern] = CommandInfo(type="regex", docs=docs, aliases=[]).dict()
         self._save_cmds(cmd_list)
 
         return self.on_message(rule=regex(pattern, flags) & rule, **kwargs)
@@ -331,20 +327,10 @@ class ServiceTools(object):
         data = cls.load_service(service)
 
         auth_global = data.get("enabled", True)
-        auth_user = data.get("disable_user", list())
-        auth_group = data.get("disable_group", list())
+        auth_user = data.get("disable_user", [])
+        auth_group = data.get("disable_group", [])
 
-        if user_id:
-            if user_id in auth_user:
-                return False
-
-        if group_id:
-            if group_id in auth_group:
-                return False
-            else:
-                return True
-
-        if not auth_global:
+        if user_id and user_id in auth_user:
             return False
-        else:
-            return True
+
+        return group_id not in auth_group if group_id else bool(auth_global)

@@ -16,24 +16,24 @@ from .data_source import FORTUNE_PATH
     各主题抽签开关，仅在random抽签中生效
     请确保不全是False
 '''
-ARKNIGHTS_FLAG = False if not nonebot.get_driver().config.arknights_flag else True
-ASOUL_FLAG = False if not nonebot.get_driver().config.asoul_flag else True
-AZURE_FLAG = False if not nonebot.get_driver().config.azure_flag else True
-GENSHIN_FLAG = False if not nonebot.get_driver().config.genshin_flag else True
-ONMYOJI_FLAG = False if not nonebot.get_driver().config.onmyoji_flag else True
-PCR_FLAG = False if not nonebot.get_driver().config.pcr_flag else True
-TOUHOU_FLAG = False if not nonebot.get_driver().config.touhou_flag else True
-TOUHOU_OLD_FLAG = False if not nonebot.get_driver().config.touhou_old_flag else True
-VTUBER_FLAG = False if not nonebot.get_driver().config.vtuber_flag else True
-GRANBLUE_FANTASY_FLAG = False if not nonebot.get_driver().config.granblue_fantasy_flag else True
-PUNISHING_FLAG = False if not nonebot.get_driver().config.punishing_flag else True
-PRETTY_DERBY_FLAG = False if not nonebot.get_driver().config.pretty_derby_flag else True
-DC4_FLAG = False if not nonebot.get_driver().config.dc4_flag else True
-EINSTEIN_FLAG = False if not nonebot.get_driver().config.einstein_flag else True
-SWEET_ILLUSION_FLAG = False if not nonebot.get_driver().config.sweet_illusion_flag else True
-LIQINGGE_FLAG = False if not nonebot.get_driver().config.liqingge_flag else True
-HOSHIZORA_FLAG = False if not nonebot.get_driver().config.hoshizora_flag else True
-SAKURA_FLAG = False if not nonebot.get_driver().config.sakura_flag else True
+ARKNIGHTS_FLAG = bool(nonebot.get_driver().config.arknights_flag)
+ASOUL_FLAG = bool(nonebot.get_driver().config.asoul_flag)
+AZURE_FLAG = bool(nonebot.get_driver().config.azure_flag)
+GENSHIN_FLAG = bool(nonebot.get_driver().config.genshin_flag)
+ONMYOJI_FLAG = bool(nonebot.get_driver().config.onmyoji_flag)
+PCR_FLAG = bool(nonebot.get_driver().config.pcr_flag)
+TOUHOU_FLAG = bool(nonebot.get_driver().config.touhou_flag)
+TOUHOU_OLD_FLAG = bool(nonebot.get_driver().config.touhou_old_flag)
+VTUBER_FLAG = bool(nonebot.get_driver().config.vtuber_flag)
+GRANBLUE_FANTASY_FLAG = bool(nonebot.get_driver().config.granblue_fantasy_flag)
+PUNISHING_FLAG = bool(nonebot.get_driver().config.punishing_flag)
+PRETTY_DERBY_FLAG = bool(nonebot.get_driver().config.pretty_derby_flag)
+DC4_FLAG = bool(nonebot.get_driver().config.dc4_flag)
+EINSTEIN_FLAG = bool(nonebot.get_driver().config.einstein_flag)
+SWEET_ILLUSION_FLAG = bool(nonebot.get_driver().config.sweet_illusion_flag)
+LIQINGGE_FLAG = bool(nonebot.get_driver().config.liqingge_flag)
+HOSHIZORA_FLAG = bool(nonebot.get_driver().config.hoshizora_flag)
+SAKURA_FLAG = bool(nonebot.get_driver().config.sakura_flag)
 
 '''
     抽签主题开关，当随机抽签时判断某主题是否开启
@@ -116,8 +116,7 @@ def randomBasemap(theme: str, spec_path: Optional[str]) -> str:
     try_time = 0
     if spec_path:
         _p = f"{FORTUNE_PATH}/img"
-        p = os.path.join(_p, spec_path)
-        return p
+        return os.path.join(_p, spec_path)
     else:
         if theme == "random":
             __p = f"{FORTUNE_PATH}/img"
@@ -132,12 +131,9 @@ def randomBasemap(theme: str, spec_path: Optional[str]) -> str:
                     break
 
             _p = os.path.join(__p, picked_theme)
-            p = os.path.join(_p, random.choice(os.listdir(_p)))
         else:
             _p = os.path.join(f"{FORTUNE_PATH}/img", theme)
-            p = os.path.join(_p, random.choice(os.listdir(_p)))
-        
-        return p
+        return os.path.join(_p, random.choice(os.listdir(_p)))
 
 def drawing(theme: str, spec_path: Optional[str], user_id: str, group_id: str) -> Path:
     fontPath = {
@@ -174,7 +170,7 @@ def drawing(theme: str, spec_path: Optional[str], user_id: str, group_id: str) -
     if not result[0]:
         return
     textVertical = []
-    for i in range(0, result[0]):
+    for i in range(result[0]):
         font_height = len(result[i + 1]) * (font_size + 4)
         textVertical = vertical(result[i + 1])
         x = int(
@@ -195,12 +191,14 @@ def exportFilePath(originalFilePath: str, user_id: str, group_id: str) -> Path:
     if not os.path.exists(dirPath):
         os.makedirs(dirPath)
 
-    outPath = Path(originalFilePath).parent.parent.parent / "out" / f"{user_id}_{group_id}.png" 
-    return outPath
+    return (
+        Path(originalFilePath).parent.parent.parent
+        / "out"
+        / f"{user_id}_{group_id}.png"
+    )
 
 def decrement(text):
     length = len(text)
-    result = []
     cardinality = 9
     if length > 4 * cardinality:
         return [False]
@@ -208,19 +206,20 @@ def decrement(text):
     while length > cardinality:
         numberOfSlices += 1
         length -= cardinality
-    result.append(numberOfSlices)
-    # Optimize for two columns
-    space = " "
+    result = [numberOfSlices]
     length = len(text)
     if numberOfSlices == 2:
+        # Optimize for two columns
+        space = " "
         if length % 2 == 0:
             # even
             fillIn = space * int(9 - length / 2)
             return [
                 numberOfSlices,
-                text[: int(length / 2)] + fillIn,
-                fillIn + text[int(length / 2) :],
+                text[: length // 2] + fillIn,
+                fillIn + text[length // 2 :],
             ]
+
         else:
             # odd number
             fillIn = space * int(9 - (length + 1) / 2)
@@ -229,7 +228,7 @@ def decrement(text):
                 text[: int((length + 1) / 2)] + fillIn,
                 fillIn + space + text[int((length + 1) / 2) :],
             ]
-    for i in range(0, numberOfSlices):
+    for i in range(numberOfSlices):
         if i == numberOfSlices - 1 or numberOfSlices == 1:
             result.append(text[i * cardinality :])
         else:
@@ -238,7 +237,5 @@ def decrement(text):
 
 
 def vertical(str):
-    list = []
-    for s in str:
-        list.append(s)
+    list = list(str)
     return "\n".join(list)

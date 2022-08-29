@@ -158,11 +158,10 @@ async def _(bot: Bot, event: MessageEvent, state: T_State, arg: Message = Comman
         model = None
         # print(plugin2cmd)
         for x in plugin2cmd.keys():
-            if x != 'white_list':
-                if msg in plugin2cmd[x]['cmd']:
-                    model = x
-                    plugin = plugin2cmd[x]['cmd'][0]
-                    break
+            if x != 'white_list' and msg in plugin2cmd[x]['cmd']:
+                model = x
+                plugin = plugin2cmd[x]['cmd'][0]
+                break
         else:
             if arg not in ['day_statistics', 'total_statistics']:
                 await statistics.finish('未找到此功能的调用..或请尝试此功能常用命令来查找...', at_sender=True)
@@ -192,9 +191,9 @@ async def _(bot: Bot, event: MessageEvent, state: T_State, arg: Message = Comman
                     del data[day][x]
     if itype == 'group':
         name = (await bot.get_group_info(group_id=event.group_id))['group_name']
-        name = name if name else str(event.group_id)
+        name = name or str(event.group_id)
     else:
-        name = event.sender.card if event.sender.card else event.sender.nickname
+        name = event.sender.card or event.sender.nickname
     img = generate_statistics_img(data, arg, name, plugin, day_index)
     await statistics.send(MessageSegment.image(img))
     plt.cla()
@@ -203,40 +202,11 @@ async def _(bot: Bot, event: MessageEvent, state: T_State, arg: Message = Comman
 def generate_statistics_img(data: dict, arg: str, name: str, plugin: str, day_index: int):
     if arg == 'day_statistics':
         init_bar_graph(data, f'{name} 日功能调用统计')
-    elif arg == 'week_statistics':
-        if plugin:
-            current_week = day_index % 7
-            week_lst = []
-            if current_week == 0:
-                week_lst = [1, 2, 3, 4, 5, 6, 7]
-            else:
-                for i in range(current_week + 1, 7):
-                    week_lst.append(str(i))
-                for i in range(current_week + 1):
-                    week_lst.append(str(i))
-            count = []
-            for i in range(7):
-                if int(week_lst[i]) == 7:
-                    x = '0'
-                else:
-                    x = str(week_lst[i])
-                try:
-                    count.append(data[x][plugin])
-                except KeyError:
-                    count.append(0)
-            week_lst = ['7' if i == '0' else i for i in week_lst]
-            plt.plot(week_lst, count)
-            plt.title(f'{name} 周 {plugin} 功能调用统计【为7天统计】')
-        else:
-            init_bar_graph(update_data(data), f'{name} 周功能调用统计【为7天统计】')
     elif arg == 'month_statistics':
         if plugin:
-            day_index = day_index % 30
-            day_lst = []
-            for i in range(day_index + 1, 30):
-                day_lst.append(i)
-            for i in range(day_index + 1):
-                day_lst.append(i)
+            day_index %= 30
+            day_lst = list(range(day_index + 1, 30))
+            day_lst.extend(iter(range(day_index + 1)))
             try:
                 count = [data[str(day_lst[i])][plugin] for i in range(30)]
             except KeyError:
@@ -249,6 +219,27 @@ def generate_statistics_img(data: dict, arg: str, name: str, plugin: str, day_in
     elif arg == 'total_statistics':
         init_bar_graph(data, f'{name} 功能调用统计')
 
+    elif arg == 'week_statistics':
+        if plugin:
+            current_week = day_index % 7
+            week_lst = []
+            if current_week == 0:
+                week_lst = [1, 2, 3, 4, 5, 6, 7]
+            else:
+                week_lst.extend(str(i) for i in range(current_week + 1, 7))
+                week_lst.extend(str(i) for i in range(current_week + 1))
+            count = []
+            for i in range(7):
+                x = '0' if int(week_lst[i]) == 7 else str(week_lst[i])
+                try:
+                    count.append(data[x][plugin])
+                except KeyError:
+                    count.append(0)
+            week_lst = ['7' if i == '0' else i for i in week_lst]
+            plt.plot(week_lst, count)
+            plt.title(f'{name} 周 {plugin} 功能调用统计【为7天统计】')
+        else:
+            init_bar_graph(update_data(data), f'{name} 周功能调用统计【为7天统计】')
     return fig2b64(plt)
 
 
@@ -266,7 +257,7 @@ def init_bar_graph(data: dict, title: str, ha: str = 'left', va: str = 'center')
 
 def update_data(data: dict):
     tmp_dict = {}
-    for day in data.keys():
+    for day in data:
         for plugin_name in data[day].keys():
             # print(f'{day}：{plugin_name} = {data[day][plugin_name]}')
             if data[day][plugin_name] is not None:
@@ -281,4 +272,4 @@ def fig2b64(plt: plt) -> str:
     buf = BytesIO()
     plt.savefig(buf, format='PNG', dpi=100)
     base64_str = base64.b64encode(buf.getvalue()).decode()
-    return 'base64://' + base64_str
+    return f'base64://{base64_str}'

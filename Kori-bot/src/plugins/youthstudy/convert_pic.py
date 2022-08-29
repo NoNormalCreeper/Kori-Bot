@@ -3,9 +3,9 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 from os.path import dirname
 
-font_path = dirname(__file__) + '/resource/font/font.otf'
-bold_path = dirname(__file__) + '/resource/font/font-bold.otf'
-icon_path = dirname(__file__) + '/resource/bac/bac.png'
+font_path = f'{dirname(__file__)}/resource/font/font.otf'
+bold_path = f'{dirname(__file__)}/resource/font/font-bold.otf'
+icon_path = f'{dirname(__file__)}/resource/bac/bac.png'
 
 
 def size(size: int) -> ImageFont:
@@ -20,20 +20,14 @@ async def convert_pic(text):
     icon = Image.open(icon_path)
     img.paste(icon, (0, 0))
     draw = ImageDraw.Draw(img)
-    title = ""
-    period = ""
-    for i in text["title"]:
-        title += i + f"\n"
-    for i in text["period"]:
-        period += i + f"\n"
+    title = "".join(f"{i}\n" for i in text["title"])
+    period = "".join(f"{i}\n" for i in text["period"])
     draw.multiline_text((10, 10), title, fill='gold', font=size(55))
     draw.multiline_text((100, 80), period, fill='gold', font=size(50))
-    j = 0
-    for i in text["answer"]:
+    for j, i in enumerate(text["answer"]):
         draw.multiline_text((200 + j * 150, 40 if j == 0 else 90), i, fill='gold', font=bold(40))
-        j += 1
     draw.multiline_text((200, 700), text["end_time"], fill='gold', font=bold(40))
     buf = BytesIO()
     img.save(buf, format="PNG")
     base64_str = base64.b64encode(buf.getbuffer()).decode()
-    return "base64://" + base64_str
+    return f"base64://{base64_str}"

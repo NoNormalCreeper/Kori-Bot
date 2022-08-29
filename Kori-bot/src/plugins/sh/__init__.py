@@ -10,7 +10,7 @@ bash = on_command("bash")
 
 @bash.handle()
 async def bash_(matcher: Matcher, event: Event, args: Message = CommandArg()):
-    if str(event.user_id) == "3349104868" or str(event.user_id) == "1445957253" or str(event.user_id) == "2560359315": 
+    if str(event.user_id) in {"3349104868", "1445957253", "2560359315"}: 
         os.system(args.extract_plain_text())
         await bash.finish("执行完毕！")
         return
@@ -21,7 +21,7 @@ screen = on_command("screen")
 
 @screen.handle()
 async def screen_(matcher: Matcher, event: Event, args: Message = CommandArg()):
-    if str(event.user_id) == "3349104868" or str(event.user_id) == "1445957253" or str(event.user_id) == "2560359315": 
+    if str(event.user_id) in {"3349104868", "1445957253", "2560359315"}: 
         msg = os.popen(args.extract_plain_text()).read()
         await screen.finish(f"{msg}")
     else:

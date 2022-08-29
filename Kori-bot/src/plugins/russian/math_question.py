@@ -19,15 +19,12 @@ def saveMathAnswer(answer, id):
     with open(answer_path, 'w', encoding="utf8") as f:
         f.write(json.dumps(data))
 
-def checkMathAnswer(id, answer):    # Answer is right -> return False
+def checkMathAnswer(id, answer):# Answer is right -> return False
     answer = str(answer)
     id = str(id)
     with open(answer_path, "r", encoding="utf-8") as f:
         answers = json.loads(f.read())
-    if answer == answers[id]:
-        return False
-    else:
-        return answers[id]
+    return False if answer == answers[id] else answers[id]
 
 def getMathQuestion(id):
     question_type = randint(0, 1)
@@ -39,7 +36,7 @@ def getMathQuestion(id):
     elif question_type == 1:
         a = randint(2, 100)
         b = randint(2, 100)
-        question = str(a) + '*' + str(b)
+        question = f'{str(a)}*{str(b)}'
     answer = eval(question)
     saveMathAnswer(answer, id)
-    return (question+"=?").replace('*','×')
+    return f"{question}=?".replace('*', '×')

@@ -35,7 +35,7 @@ async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city: Messa
         DL.save()
         await follow.finish(message=f"已添加{city}疫情推送")
     else:
-        await follow.finish(message=f"添加失败")
+        await follow.finish(message="添加失败")
 
 
 unfollow = on_command("取消疫情", aliases={"取消关注疫情", "取消推送疫情",  "unfollow"}, priority=5, block=True)
@@ -48,15 +48,14 @@ async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city: Messa
         DL.save()
         await unfollow.finish(message=f"已取消{city}疫情推送")
     else:
-        await unfollow.finish(message=f"取消失败")
+        await unfollow.finish(message="取消失败")
 
 
 city_news = on_command("疫情", aliases={"covid", "疫情"}, priority=5, block=True)
 @city_news.handle()
 async def _(bot: Bot, event: MessageEvent, state: T_State = State(), city_name: Message=CommandArg()):
     city_name = city_name.extract_plain_text()
-    city = NewsBot.data.get(city_name)
-    if city:
+    if city := NewsBot.data.get(city_name):
         await city_news.finish(message=f"{NewsBot.time}\n{city.main_info}")
     else:
         await city_news.finish(message="查询的城市不存在或存在别名")
@@ -83,8 +82,7 @@ city_news = on_regex(r'^(.{0,6})(风险地区)', block=True, priority=10)
 @city_news.handle()
 async def _(bot: Bot, event: MessageEvent, state: T_State = State()):
     city_name, _ = state['_matched_groups']
-    city = NewsBot.data.get(city_name)
-    if city:
+    if city := NewsBot.data.get(city_name):
         await city_news.finish(message=city.poi_list)
 
 '''
@@ -104,22 +102,23 @@ scheduler = require('nonebot_plugin_apscheduler').scheduler
 @scheduler.scheduled_job('cron', hour='*/1', minute='0', second='0', misfire_grace_time=60) # = UTC+8 1445
 async def update():
 
-    if NewsBot.update_data():
-        logger.info(f"[疫情数据更新]{NewsBot.time}")
+    if not NewsBot.update_data():
+        return
+    logger.info(f"[疫情数据更新]{NewsBot.time}")
 
-        for gid in FOCUS.keys():
-            for c in FOCUS.get(gid):
-                city = NewsBot.data.get(c)
+    for gid in FOCUS.keys():
+        for c in FOCUS.get(gid):
+            city = NewsBot.data.get(c)
 
-                # 判定是否为更新后信息
-                if city.today['isUpdated']:
-                    # 判定是否未推送
-                    
-                    if PUSH.get((gid, c), True):
-                        PUSH[(gid, c)] = False
-                        await get_bot().send_group_msg(group_id = int(gid), message= '关注城市疫情变化\n' + city.main_info)
-                
-                else:
-                    PUSH[(gid, c)] = True
+            # 判定是否为更新后信息
+            if city.today['isUpdated']:
+                # 判定是否未推送
+
+                if PUSH.get((gid, c), True):
+                    PUSH[(gid, c)] = False
+                    await get_bot().send_group_msg(group_id = int(gid), message= '关注城市疫情变化\n' + city.main_info)
+
+            else:
+                PUSH[(gid, c)] = True
 
 

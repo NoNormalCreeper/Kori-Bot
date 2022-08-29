@@ -142,9 +142,7 @@ def site_config_dirs(appname):
     elif sys.platform == "darwin":
         pathlist = [os.path.join("/Library/Application Support", appname)]
     else:
-        # try looking in $XDG_CONFIG_DIRS
-        xdg_config_dirs = os.getenv("XDG_CONFIG_DIRS", "/etc/xdg")
-        if xdg_config_dirs:
+        if xdg_config_dirs := os.getenv("XDG_CONFIG_DIRS", "/etc/xdg"):
             pathlist = [
                 os.path.join(expanduser(x), appname)
                 for x in xdg_config_dirs.split(os.pathsep)
@@ -193,13 +191,7 @@ def _get_win_folder_with_ctypes(csidl_name):
     buf = ctypes.create_unicode_buffer(1024)
     ctypes.windll.shell32.SHGetFolderPathW(None, csidl_const, None, 0, buf)
 
-    # Downgrade to short path name if have highbit chars. See
-    # <http://bugs.activestate.com/show_bug.cgi?id=85099>.
-    has_high_char = False
-    for c in buf:
-        if ord(c) > 255:
-            has_high_char = True
-            break
+    has_high_char = any(ord(c) > 255 for c in buf)
     if has_high_char:
         buf2 = ctypes.create_unicode_buffer(1024)
         if ctypes.windll.kernel32.GetShortPathNameW(buf.value, buf2, 1024):

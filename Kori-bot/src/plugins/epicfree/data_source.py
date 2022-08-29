@@ -28,7 +28,7 @@ async def subscribeHelper(method="r", subType="", subject=""):
     with open(cache, "w", encoding="UTF-8") as f:
       json.dump(statusDict, f, ensure_ascii=False, indent=2)
   except Exception as e:
-    logger.error("获取 Epic 订阅 JSON 错误：" + str(sys.exc_info()[0]) + "\n" + str(e))
+    logger.error(f"获取 Epic 订阅 JSON 错误：{str(sys.exc_info()[0])}" + "\n" + str(e))
   # 读取时，返回订阅状态字典
   if method != "w":
     return statusDict
@@ -42,7 +42,7 @@ async def subscribeHelper(method="r", subType="", subject=""):
       f.close()
     return f"{subType}订阅 Epic 限免游戏资讯成功！"
   except Exception as e:
-    logger.error("获取 Epic 订阅 JSON 错误：" + str(sys.exc_info()[0]) + "\n" + str(e))
+    logger.error(f"获取 Epic 订阅 JSON 错误：{str(sys.exc_info()[0])}" + "\n" + str(e))
     return f"{subType}订阅 Epic 限免游戏资讯失败惹.."
 
 
@@ -74,10 +74,9 @@ async def getEpicGame():
     try:
       res = await client.post(epic_url, headers=headers, json=data, timeout=10.0)
       resJson = res.json()
-      games = resJson["data"]["Catalog"]["searchStore"]["elements"]
-      return games
+      return resJson["data"]["Catalog"]["searchStore"]["elements"]
     except Exception as e:
-      logger.error("请求 Epic Store API 错误：" + str(sys.exc_info()[0]) + "\n" + str(e))
+      logger.error(f"请求 Epic Store API 错误：{str(sys.exc_info()[0])}" + "\n" + str(e))
       return None
 
 
@@ -88,34 +87,32 @@ async def getEpicFree():
   games = await getEpicGame()
   if not games:
     return "Epic 可能又抽风啦，请稍后再试（"
-  else:
-    for game in games:
-      try:
-        game_name = game["title"]
-        game_corp = game["seller"]["name"]
-        game_price = game["price"]["totalPrice"]["fmtPrice"]["originalPrice"]
-        game_promotions = game["promotions"]["promotionalOffers"]
-        upcoming_promotions = game["promotions"]["upcomingPromotionalOffers"]
-        if not game_promotions and upcoming_promotions:
-          continue    # 促销即将上线，跳过
-        else:
-          for image in game["keyImages"]:
-            game_thumbnail = image["url"] if image["type"] == "Thumbnail" else None
-          for pair in game["customAttributes"]:
-            game_dev = pair["value"] if pair["key"] == "developerName" else game_corp
-            game_pub = pair["value"] if pair["key"] == "publisherName" else game_corp
-          game_desp = game["description"]
-          end_date_iso = game["promotions"]["promotionalOffers"][0]["promotionalOffers"][0]["endDate"][:-1]
-          end_date = datetime.fromisoformat(end_date_iso).strftime("%b.%d %H:%M")
-          # API 返回不包含游戏商店 URL，此处自行拼接，可能出现少数游戏 404 请反馈
-          game_url = f"https://www.epicgames.com/store/zh-CN/p/{game['productSlug'].replace('/home', '')}"
-          msg = f"[CQ:image,file={game_thumbnail}]\n\n" if game_thumbnail else ""
-          msg += f"FREE now :: {game_name} ({game_price})\n\n{game_desp}\n\n"
-          msg += f"游戏由 {game_pub} 发售，" if game_dev == game_pub else f"游戏由 {game_dev} 开发、{game_pub} 出版，"
-          msg += f"将在 UTC 时间 {end_date} 结束免费游玩，戳链接领取吧~\n{game_url}"
-      except (TypeError, IndexError):
-        pass
-      except Exception as e:
-        logger.error("组织 Epic 订阅消息错误：" + str(sys.exc_info()[0]) + "\n" + str(e))
-    # 返回整理为 CQ 码的消息字符串
-    return msg
+  for game in games:
+    try:
+      game_name = game["title"]
+      game_corp = game["seller"]["name"]
+      game_price = game["price"]["totalPrice"]["fmtPrice"]["originalPrice"]
+      game_promotions = game["promotions"]["promotionalOffers"]
+      upcoming_promotions = game["promotions"]["upcomingPromotionalOffers"]
+      if not game_promotions and upcoming_promotions:
+        continue    # 促销即将上线，跳过
+      for image in game["keyImages"]:
+        game_thumbnail = image["url"] if image["type"] == "Thumbnail" else None
+      for pair in game["customAttributes"]:
+        game_dev = pair["value"] if pair["key"] == "developerName" else game_corp
+        game_pub = pair["value"] if pair["key"] == "publisherName" else game_corp
+      game_desp = game["description"]
+      end_date_iso = game["promotions"]["promotionalOffers"][0]["promotionalOffers"][0]["endDate"][:-1]
+      end_date = datetime.fromisoformat(end_date_iso).strftime("%b.%d %H:%M")
+      # API 返回不包含游戏商店 URL，此处自行拼接，可能出现少数游戏 404 请反馈
+      game_url = f"https://www.epicgames.com/store/zh-CN/p/{game['productSlug'].replace('/home', '')}"
+      msg = f"[CQ:image,file={game_thumbnail}]\n\n" if game_thumbnail else ""
+      msg += f"FREE now :: {game_name} ({game_price})\n\n{game_desp}\n\n"
+      msg += f"游戏由 {game_pub} 发售，" if game_dev == game_pub else f"游戏由 {game_dev} 开发、{game_pub} 出版，"
+      msg += f"将在 UTC 时间 {end_date} 结束免费游玩，戳链接领取吧~\n{game_url}"
+    except (TypeError, IndexError):
+      pass
+    except Exception as e:
+      logger.error(f"组织 Epic 订阅消息错误：{str(sys.exc_info()[0])}" + "\n" + str(e))
+  # 返回整理为 CQ 码的消息字符串
+  return msg

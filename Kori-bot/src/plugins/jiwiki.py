@@ -56,22 +56,20 @@ async def query(bot: Bot, event: Event, matcher: Matcher, args: Message = Comman
     if len(data) == 0:
         await sv.finish(f'没有查询到关于{keyword}的结果')
 
-    result_txt = ''
     definitions = {}
     for el in data:
         if el['category'] != 'definition':
             continue
         if len(el['definitions']) == 0:
             continue
-        definitions.update(el['definitions'][0])
+        definitions |= el['definitions'][0]
         break
 
-    if len(definitions) == 0:
+    if not definitions:
         await sv.finish(f'没有查询到关于{keyword}的结果')
 
     term = definitions['term']
     title = term['title']
-    if title != keyword:
-        result_txt = f'没有找到{keyword}，我猜你可能在找{title}\n'
+    result_txt = f'没有找到{keyword}，我猜你可能在找{title}\n' if title != keyword else ''
     result_txt += definitions['plaintext']
     await sv.finish(result_txt)

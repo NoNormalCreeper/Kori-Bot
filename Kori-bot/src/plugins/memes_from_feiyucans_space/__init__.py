@@ -10,9 +10,9 @@ import datetime
 
 
 global_config = nonebot.get_driver().config
-nonebot.logger.info("global_config:{}".format(global_config))
+nonebot.logger.info(f"global_config:{global_config}")
 plugin_config = Config(**global_config.dict())
-nonebot.logger.info("plugin_config:{}".format(plugin_config))
+nonebot.logger.info(f"plugin_config:{plugin_config}")
 scheduler = require("nonebot_plugin_apscheduler").scheduler  # type:AsyncIOScheduler
 
 def remove_upprintable_chars(s):
@@ -51,33 +51,30 @@ async def suijitu():
     cards = data["cards"]
 
 
-    for count in range (0,len(cards)) :
+    for count in range(len(cards)):
         #逐个筛选出标签符合条件的动态
         target = cards[count]
         desc = target['desc']
         timestamp = desc['timestamp']
-        if timestamp < now_timeStamp :
+        if timestamp < now_timeStamp:
             #判断动态是否为最新动态 若不是 则终止操作
             break
-        else :
-            timeArray = timeplugin.localtime(timestamp)
-            posttime = timeplugin.strftime("%Y-%m-%d %H:%M:%S", timeArray)
-            card = json.loads(target['card'])
-            item = card["item"]
-            description = item["description"]
-            if '#鲱鱼 昨日最佳#' in description :
-                #判断标签是否符合条件
-                pictures_array = item['pictures']
-                pictures_count = len(pictures_array)
-                initext = description+ "\n"+posttime+ "\nfrom bilibili:鲱鱼罐头app\n"
-                for n in range (0,pictures_count) :
-                    pic = pictures_array[n]
-                    initext = initext+'[CQ:image,file='+pic['img_src']+']'
-                pic_ti = f"{initext}"
-                return pic_ti
-                break
+        timeArray = timeplugin.localtime(timestamp)
+        posttime = timeplugin.strftime("%Y-%m-%d %H:%M:%S", timeArray)
+        card = json.loads(target['card'])
+        item = card["item"]
+        description = item["description"]
+        if '#鲱鱼 昨日最佳#' in description:
+            #判断标签是否符合条件
+            pictures_array = item['pictures']
+            pictures_count = len(pictures_array)
+            initext = description+ "\n"+posttime+ "\nfrom bilibili:鲱鱼罐头app\n"
+            for n in range(pictures_count):
+                pic = pictures_array[n]
+                initext = f'{initext}[CQ:image,file=' + pic['img_src'] + ']'
+            return f"{initext}"
     
 
 for index, time in enumerate(plugin_config.read_inform_time):
-    nonebot.logger.info("id:{},time:{}".format(index, time))
+    nonebot.logger.info(f"id:{index},time:{time}")
     scheduler.add_job(memesfeiyu, "cron", hour=17, minute=20, id=str(12745))

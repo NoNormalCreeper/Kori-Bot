@@ -10,8 +10,7 @@ def set_pid():
     res = resp.json()
 
     for province in res['result']:
-        citys = province.get('list')
-        if citys:
+        if citys := province.get('list'):
             for city in citys:
                 id = city['id']
                 name = city['name']
@@ -28,11 +27,8 @@ def citypolicy_info(id):
 
 def get_policy(id):
 
-    data = citypolicy_info(id)    
-    msg = f"出行({data['leave_policy_date']})\n{data['leave_policy']}\n\
-------\n\
-进入({data['back_policy_date']})\n{data['back_policy']}"
-    return (msg)
+    data = citypolicy_info(id)
+    return f"出行({data['leave_policy_date']})\n{data['leave_policy']}\n\\n    #------\n\\n    #进入({data['back_policy_date']})\n{data['back_policy']}"
 
 def get_city_poi_list(id):
 

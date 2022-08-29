@@ -8,12 +8,9 @@ right_response = "恭喜你，回答正确"
 def check(answer: str, id):
     resp = re.get(url.format(answer, id))
     resp_text = resp.text
-    if right_response in resp_text:
-        return True
-    else:
-        return False
+    return right_response in resp_text
 
 def getQuestion(id):
     resp = re.get(url.format("下一题", id))
     resp_text = resp.text
-    return resp_text if resp_text else "Failed to get data!"
+    return resp_text or "Failed to get data!"
