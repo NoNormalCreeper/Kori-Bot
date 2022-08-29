@@ -37,9 +37,6 @@ async def subHandle(bot: Bot, event: MessageEvent, state: T_State):
       # 普通群员只会启用私聊订阅
       # state["targetId"] = event.get_user_id()
       state["subType"] = "私聊"
-    else:
-      # 管理员用户询问需要私聊订阅还是群聊订阅
-      pass
   else:
     state["subType"] = "私聊"
 
@@ -70,4 +67,4 @@ async def weeklyEpic():
   except FinishedException:
     pass
   except Exception as e:
-    logger.error("Epic 限免游戏资讯定时任务出错：" + str(sys.exc_info()[0]) + "\n" + str(e))
+    logger.error(f"Epic 限免游戏资讯定时任务出错：{str(sys.exc_info()[0])}" + "\n" + str(e))

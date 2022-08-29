@@ -28,7 +28,7 @@ class Funny(Service):
 
     @staticmethod
     async def idk_laugh(name: str) -> str:
-        laugh_list = list()
+        laugh_list = []
 
         file_name = "laugh.txt"
         path = FUNNY_DIR / file_name
@@ -44,12 +44,9 @@ class Funny(Service):
             logger.warning("完成")
 
         with open(path, "r", encoding="utf-8") as r:
-            for line in r:
-                laugh_list.append(line.strip("\n"))
-
+            laugh_list.extend(line.strip("\n") for line in r)
         rd: str = choice(laugh_list)
-        result = rd.replace("%name", name)
-        return result
+        return rd.replace("%name", name)
 
     @staticmethod
     def me_re_you(msg: str) -> tuple:
@@ -61,7 +58,7 @@ class Funny(Service):
     @staticmethod
     def fake_msg(text: str) -> list:
         arg = text.split(" ")
-        node = list()
+        node = []
 
         for i in arg:
             args = i.split("-")
@@ -91,7 +88,7 @@ class Funny(Service):
                 raise RequestError("Request failed!")
 
             text = Translate(data["text"]).to_simple().replace("今天", day)
-            get_a = re.search(r"非常(.*?)的", text).group(0)  # type: ignore
+            get_a = re.search(r"非常(.*?)的", text)[0]
             result = text.replace(get_a, "")
 
         elif arg == "晚上":
@@ -120,7 +117,7 @@ class Funny(Service):
                     raise RequestError("Request failed!")
 
                 text = Translate(data["text"]).to_simple().replace("今天", day)
-                get_a = re.match(r"(.*?)的智商", text).group(0)  # type: ignore
+                get_a = re.match(r"(.*?)的智商", text)[0]
                 result = text.replace(get_a, f"{name}的智商")
 
         return result

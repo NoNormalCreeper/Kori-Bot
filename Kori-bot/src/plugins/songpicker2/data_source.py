@@ -14,11 +14,12 @@ class dataApi():
         '''
         async with httpx.AsyncClient() as client:
             r = await client.post(
-                f"http://music.163.com/api/search/get/",
+                "http://music.163.com/api/search/get/",
                 data={"s": songName, "limit": 5, "type": 1, "offset": 0},
                 headers=self.headers,
-                cookies=self.cookies
+                cookies=self.cookies,
             )
+
         jsonified_r = r.json()
         if "result" not in jsonified_r:
             raise APINotWorkingException(r.text)
@@ -69,37 +70,30 @@ class dataGet(dataApi):
         '''
         根据用户输入的songName 获取候选songId列表 [默认songId数量：5]
         '''
-        songIds = list()
         r = await self.api.search(songName=songName)
-        idRange = amount if amount < len(
-            r["result"]["songs"]) else len(r["result"]["songs"])
-        for i in range(idRange):
-            songIds.append(r["result"]["songs"][i]["id"])
-        return songIds
+        idRange = min(amount, len(r["result"]["songs"]))
+
+        return [r["result"]["songs"][i]["id"] for i in range(idRange)]
 
     async def songComments(self, songId: int, amount=3) -> dict:
         '''
         根据传递的单一songId，获取songComments dict [默认评论数量上限：3]
         '''
-        songComments = dict()
         r = await self.api.getHotComments(songId)
-        commentsRange = amount if amount < len(
-            r['hotComments']) else len(r['hotComments'])
-        for i in range(commentsRange):
-            songComments[r['hotComments'][i]['user']
-                         ['nickname']] = r['hotComments'][i]['content']
-        return songComments
+        commentsRange = min(amount, len(r['hotComments']))
+
+        return {
+            r['hotComments'][i]['user']['nickname']: r['hotComments'][i]['content']
+            for i in range(commentsRange)
+        }
 
     async def songInfo(self, songId: int) -> dict:
         '''
         根据传递的songId，获取歌曲名、歌手、专辑等信息，作为dict返回
         '''
-        songInfo = dict()
         r = await self.api.getSongInfo(songId)
-        songInfo["songName"] = r["songs"][0]["name"]
-        songArtists = list()
-        for ars in r["songs"][0]["artists"]:
-            songArtists.append(ars["name"])
+        songInfo = {"songName": r["songs"][0]["name"]}
+        songArtists = [ars["name"] for ars in r["songs"][0]["artists"]]
         songArtistsStr = "、".join(songArtists)
         songInfo["songArtists"] = songArtistsStr
 
@@ -120,8 +114,7 @@ class dataProcess():
         传递进的歌曲信息list含有多个歌曲信息dict
         '''
         songInfoMessage = "请输入欲点播歌曲的序号：\n"
-        numId = 0
-        for songInfo in songInfos:
+        for numId, songInfo in enumerate(songInfos):
             songInfoMessage += f"{numId}："
             songInfoMessage += songInfo["songName"]
             songInfoMessage += "-"
@@ -129,14 +122,11 @@ class dataProcess():
             songInfoMessage += " 专辑："
             songInfoMessage += songInfo["songAlbum"]
             songInfoMessage += "\n"
-            numId += 1
         return songInfoMessage
 
     @staticmethod
     async def mergeSongComments(songComments: dict) -> str:
-        songCommentsMessage = '\n'.join(
-            ['%s： %s' % (key, value) for (key, value) in songComments.items()])
-        return songCommentsMessage
+        return '\n'.join([f'{key}： {value}' for (key, value) in songComments.items()])
 
 
 class APINotWorkingException(Exception):

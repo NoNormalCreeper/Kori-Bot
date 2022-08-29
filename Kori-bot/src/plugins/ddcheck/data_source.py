@@ -38,7 +38,7 @@ async def update_vtb_list():
                 if not result:
                     continue
                 vtb_list += result
-                uid_list = list(set((info["mid"] for info in vtb_list)))
+                uid_list = list({info["mid"] for info in vtb_list})
                 vtb_list = list(filter(lambda info: info["mid"] in uid_list, vtb_list))
                 break
             except httpx.TimeoutException:
@@ -90,10 +90,15 @@ async def get_uid_by_name(name: str) -> int:
         async with httpx.AsyncClient() as client:
             resp = await client.get(url, params=params, timeout=10)
             result = resp.json()
-        for user in result["data"]["result"]:
-            if user["uname"] == name:
-                return user["mid"]
-        return 0
+        return next(
+            (
+                user["mid"]
+                for user in result["data"]["result"]
+                if user["uname"] == name
+            ),
+            0,
+        )
+
     except (KeyError, IndexError, httpx.TimeoutException) as e:
         logger.warning(f"Error in get_uid_by_name({name}): {e}")
         return 0
@@ -147,10 +152,7 @@ def format_vtb_info(info: dict, medal_dict: dict) -> dict:
 
 
 async def get_reply(name: str) -> Union[str, bytes]:
-    if name.isdigit():
-        uid = int(name)
-    else:
-        uid = await get_uid_by_name(name)
+    uid = int(name) if name.isdigit() else await get_uid_by_name(name)
     user_info = await get_user_info(uid)
     if not user_info:
         return "获取用户信息失败，请检查名称或稍后再试"

@@ -101,13 +101,9 @@ class MemeManager:
     def check(self, user_id: str, meme: Meme) -> bool:
         config = self.__meme_list[meme.name]
         if config.mode == MemeMode.BLACK:
-            if user_id in config.black_list:
-                return False
-            return True
+            return user_id not in config.black_list
         elif config.mode == MemeMode.WHITE:
-            if user_id in config.white_list:
-                return True
-            return False
+            return user_id in config.white_list
         return False
 
     def __load(self):
@@ -125,8 +121,7 @@ class MemeManager:
         except:
             meme_list = {}
             logger.warning("表情列表解析失败，将重新生成")
-        self.__meme_list = {meme.name: MemeConfig() for meme in memes}
-        self.__meme_list.update(meme_list)
+        self.__meme_list = {meme.name: MemeConfig() for meme in memes} | meme_list
 
     def __dump(self):
         self.__path.parent.mkdir(parents=True, exist_ok=True)

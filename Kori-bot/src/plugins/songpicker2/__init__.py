@@ -8,18 +8,14 @@ from nonebot.matcher import Matcher
 
 
 def removeprefix(string, prefix):
-    if not (isinstance(string, str) and isinstance(prefix, str)):
+    if not isinstance(string, str) or not isinstance(prefix, str):
         raise TypeError('Param value type error')
-    if string.startswith(prefix):
-        return string[len(prefix):]
-    return string
+    return string[len(prefix):] if string.startswith(prefix) else string
 
 def removesuffix(string, suffix):
-    if not (isinstance(string, str) and isinstance(suffix, str)):
+    if not isinstance(string, str) or not isinstance(suffix, str):
         raise TypeError('Param value type error')
-    if string.endswith(suffix):
-        return string[:-len(suffix)]
-    return string
+    return string[:-len(suffix)] if string.endswith(suffix) else string
 
 
 dataget = dataGet()
@@ -29,8 +25,7 @@ songpicker = on_command("点歌",aliases={'song'})
 
 @songpicker.handle()
 async def handle_first_receive( matcher: Matcher, bot: Bot, event: Event, args: Message = CommandArg()):
-    args = args.extract_plain_text()  # 首次发送命令时跟随的参数，例：/天气 上海，则args为上海
-    if args:
+    if args := args.extract_plain_text():
         matcher.set_arg("songName", args)  # 如果用户发送了参数则直接赋值
 
 
@@ -40,7 +35,7 @@ async def handle_songName(bot: Bot, event: Event, args: Message = CommandArg()):
     songIdList = await dataget.songIds(songName=songName)
     if songIdList is None:
         await songpicker.reject("没有找到这首歌，请发送其它歌名！")
-    songInfoList = list()
+    songInfoList = []
     for songId in songIdList:
         songInfoDict = await dataget.songInfo(songId)
         songInfoList.append(songInfoDict)
@@ -57,7 +52,7 @@ async def handle_songNum(bot: Bot, event: Event):
     if songNum >= len(songIdList):
         await songpicker.reject("数字序号错误，请重选")
 
-    selectedSongId = songIdList[int(songNum)]
+    selectedSongId = songIdList[songNum]
 
     await songpicker.send(MessageSegment.music("163", int(selectedSongId)))
 

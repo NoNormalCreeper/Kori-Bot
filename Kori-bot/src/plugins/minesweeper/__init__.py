@@ -25,7 +25,7 @@ from .utils import skin_list
 
 __help__plugin_name__ = "minesweeper"
 __des__ = "扫雷游戏"
-__cmd__ = f"""
+__cmd__ = """
 @我 + 扫雷 开始游戏；
 @我 + 扫雷初级 / 扫雷中级 / 扫雷高级 可开始不同难度的游戏；
 可使用 -r/--row ROW 、-c/--col COL 、-n/--num NUM 自定义行列数和雷数；
@@ -36,6 +36,7 @@ __cmd__ = f"""
 发送 查看游戏 查看当前游戏状态；
 发送 结束 结束游戏；
 """.strip()
+
 __short_cmd__ = "@我 扫雷"
 __example__ = """
 @小Q 扫雷
@@ -95,9 +96,7 @@ def game_running(event: MessageEvent) -> bool:
 
 def set_default(arg, default):
     # 若参数为空，则设置默认值
-    if arg is None:
-        return default
-    return arg
+    return default if arg is None else arg
 
 
 # 命令前缀为空是需要to_me，否则不需要
@@ -224,8 +223,8 @@ async def handle_minesweeper(matcher: Matcher, event: MessageEvent, argv: List[s
     def check_position(position: str) -> Optional[Tuple[int, int]]:
         match_obj = re.match(r"^([a-z])(\d+)$", position, re.IGNORECASE)
         if match_obj:
-            x = (ord(match_obj.group(1).lower()) - ord("a")) % 32
-            y = int(match_obj.group(2)) - 1
+            x = (ord(match_obj[1].lower()) - ord("a")) % 32
+            y = int(match_obj[2]) - 1
             return x, y
 
     msgs = []

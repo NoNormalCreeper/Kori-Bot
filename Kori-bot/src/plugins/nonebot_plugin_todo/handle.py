@@ -68,7 +68,7 @@ def handle_scheduler(args: Namespace = Namespace()) -> Namespace:
         if crontab == "*":
             return default
         elif "," in crontab:
-            return list(int(i) for i in crontab.split(","))
+            return [int(i) for i in crontab.split(",")]
         elif "-" in crontab:
             return list(
                 range(int(crontab.split("-")[0]), int(crontab.split("-")[0]) + 1)
@@ -89,17 +89,16 @@ def handle_scheduler(args: Namespace = Namespace()) -> Namespace:
         month = format_crontab(cron[3], list(range(1, 13)))
         day_of_week = format_crontab(cron[4], list(range(7)))
 
-        if (
-            job["enable"]
-            and localtime.tm_min in minute
-            and localtime.tm_hour in hour
-            and localtime.tm_mday in day
-            and localtime.tm_mon in month
-            and localtime.tm_wday in day_of_week
-        ):
-            return True
-        else:
-            return False
+        return bool(
+            (
+                job["enable"]
+                and localtime.tm_min in minute
+                and localtime.tm_hour in hour
+                and localtime.tm_mday in day
+                and localtime.tm_mon in month
+                and localtime.tm_wday in day_of_week
+            )
+        )
 
     todo_list = get_todo_list()
 

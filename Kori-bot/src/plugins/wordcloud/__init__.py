@@ -73,7 +73,7 @@ async def handle_first_receive(
     args: Message = CommandArg(),
 ):
     command = commands[0]
-    await wordcloud_cmd.send('Generating...') 
+    await wordcloud_cmd.send('Generating...')
     if command == "今日词云":
         dt = get_datetime_now_with_timezone()
         state["year"] = dt.year
@@ -87,11 +87,10 @@ async def handle_first_receive(
         state["day"] = dt.day
     elif command == "历史词云":
         plaintext = args.extract_plain_text().strip()
-        match = re.match(r"^(\d+)(?:\-(\d+)(?:\-(\d+))?)?$", plaintext)
-        if match:
-            year = match.group(1)
-            month = match.group(2)
-            day = match.group(3)
+        if match := re.match(r"^(\d+)(?:\-(\d+)(?:\-(\d+))?)?$", plaintext):
+            year = match[1]
+            month = match[2]
+            day = match[3]
             if year:
                 state["year"] = int(year)
             if month:
@@ -139,8 +138,7 @@ async def handle_message(
         time_stop=(dt + timedelta(days=1)).astimezone(ZoneInfo("UTC")),
         plain_text=True,
     )
-    image = get_wordcloud(messages)
-    if image:
+    if image := get_wordcloud(messages):
         image_bytes = BytesIO()
         image.save(image_bytes, format="PNG")
         await wordcloud_cmd.finish(MessageSegment.image(image_bytes))

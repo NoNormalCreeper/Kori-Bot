@@ -36,10 +36,7 @@ async def _(matcher: Matcher, exception: Optional[Exception], bot: Bot, event: G
                 plugin2cmd[model]['cmd'].append(model)
         else:
             if not plugin2cmd.get(model):
-                if current_cmd:
-                    plugin2cmd[model] = {'cmd': [current_cmd]}
-                else:
-                    plugin2cmd[model] = {'cmd': [model]}
+                plugin2cmd[model] = {'cmd': [current_cmd]} if current_cmd else {'cmd': [model]}
             if current_cmd not in plugin2cmd[model]['cmd']:
                 if current_cmd:
                     plugin2cmd[model]['cmd'].append(current_cmd)
@@ -60,10 +57,7 @@ async def _(matcher: Matcher, exception: Optional[Exception], bot: Bot, event: G
         # print(_prefix_count_dict)
         if group_id != 'total':
             for data in [_prefix_group_count_dict, _prefix_user_count_dict]:
-                if data == _prefix_group_count_dict:
-                    key = group_id
-                else:
-                    key = user_id
+                key = group_id if data == _prefix_group_count_dict else user_id
                 day_index = data['day_index']
                 data['total_statistics'][key][plugin_name] += 1
                 data['day_statistics'][key][plugin_name] += 1
@@ -76,10 +70,7 @@ def check_exists_key(group_id: str, user_id: str, plugin_name: str):
     _prefix_group_count_dict = get_prefix_group_count_dict()
     _prefix_user_count_dict = get_prefix_user_count_dict()
     for data in [_prefix_group_count_dict, _prefix_user_count_dict]:
-        if data == _prefix_group_count_dict:
-            key = group_id
-        else:
-            key = user_id
+        key = group_id if data == _prefix_group_count_dict else user_id
         if not data['total_statistics']['total'].get(plugin_name):
             data['total_statistics']['total'][plugin_name] = 0
         if not data['day_statistics']['total'].get(plugin_name):

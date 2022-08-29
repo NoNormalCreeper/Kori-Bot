@@ -33,7 +33,7 @@ class Setu(Service):
         """
         res = await request.get(LOLICON_URL)
         data: dict = res.json()
-        temp_data: dict = data.get("data", list())
+        temp_data: dict = data.get("data", [])
         if not temp_data:
             return "涩批爬", None
 
@@ -51,11 +51,11 @@ class Setu(Service):
         """
         指定tag涩图.
         """
-        url = LOLICON_URL + f"?tag={tag}"
+        url = f"{LOLICON_URL}?tag={tag}"
         res = await request.get(url)
         data: dict = res.json()
 
-        temp_data: dict = data.get("data", list())
+        temp_data: dict = data.get("data", [])
         if not temp_data:
             return f"没有 {tag} 的涩图呢...", None
 
@@ -88,7 +88,7 @@ class Setu(Service):
         """
         res = await request.get(LOLICON_URL)
         data: dict = res.json()
-        temp_data: dict = data.get("data", list())
+        temp_data: dict = data.get("data", [])
         if not temp_data:
             return ""
 
@@ -99,8 +99,7 @@ class Setu(Service):
             cls._use_proxy(DEFAULT_SETU),
         )
         setu = MessageSegment.image(url, timeout=114514)
-        repo = f"是{tag}哦~❤\n{setu}"
-        return repo
+        return f"是{tag}哦~❤\n{setu}"
 
     @staticmethod
     async def async_recall(bot: Bot, event_id):

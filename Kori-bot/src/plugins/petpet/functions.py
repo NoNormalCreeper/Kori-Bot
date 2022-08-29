@@ -157,12 +157,10 @@ def play(img: BuildImage = UserImg(), arg=NoArg()):
         frame.paste(img.resize((w, h)), (x, y), below=True)
         img_frames.append(frame)
     frames = (
-        img_frames[0:12]
-        + img_frames[0:12]
-        + img_frames[0:8]
+        ((img_frames[:12] + img_frames[:12]) + img_frames[:8])
         + img_frames[12:18]
-        + raw_frames[18:38]
-    )
+    ) + raw_frames[18:38]
+
     frames = [frame.image for frame in frames]
     return save_gif(frames, 0.06)
 
@@ -684,13 +682,13 @@ def paint(img: BuildImage = UserImg(), arg=NoArg()):
 
 def shock(img: BuildImage = UserImg(), arg=NoArg()):
     img = img.convert("RGBA").resize((300, 300))
-    frames: List[IMG] = []
-    for i in range(30):
-        frames.append(
-            img.motion_blur(random.randint(-90, 90), random.randint(0, 50))
-            .rotate(random.randint(-20, 20))
-            .image
-        )
+    frames: List[IMG] = [
+        img.motion_blur(random.randint(-90, 90), random.randint(0, 50))
+        .rotate(random.randint(-20, 20))
+        .image
+        for _ in range(30)
+    ]
+
     return save_gif(frames, 0.01)
 
 
@@ -718,13 +716,13 @@ def coupon(user: UserInfo = User(), arg: str = Arg()):
 def listen_music(img: BuildImage = UserImg(), arg=NoArg()):
     img = img.convert("RGBA")
     frame = load_image("listen_music/0.png")
-    frames: List[IMG] = []
-    for i in range(0, 360, 10):
-        frames.append(
-            frame.copy()
-            .paste(img.rotate(-i).resize((215, 215)), (100, 100), below=True)
-            .image
-        )
+    frames: List[IMG] = [
+        frame.copy()
+        .paste(img.rotate(-i).resize((215, 215)), (100, 100), below=True)
+        .image
+        for i in range(0, 360, 10)
+    ]
+
     return save_gif(frames, 0.05)
 
 
@@ -847,7 +845,7 @@ def symmetric(img: BuildImage = UserImg(), arg: str = Arg(["上", "下", "左", 
 
 def safe_sense(user: UserInfo = User(), arg: str = Arg()):
     img = user.img.convert("RGBA").resize((215, 343), keep_ratio=True)
-    frame = load_image(f"safe_sense/0.png")
+    frame = load_image("safe_sense/0.png")
     frame.paste(img, (215, 135))
 
     ta = "他" if user.gender == "male" else "她"
@@ -872,7 +870,7 @@ def always_like(users: List[UserInfo] = Users(1, 6), args: List[str] = Args(0, 6
         return REQUIRE_NAME
     text = f"我永远喜欢{name}"
 
-    frame = load_image(f"always_like/0.png")
+    frame = load_image("always_like/0.png")
     frame.paste(
         img.resize((350, 400), keep_ratio=True, inside=True), (25, 35), alpha=True
     )

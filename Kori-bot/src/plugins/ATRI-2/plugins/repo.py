@@ -28,8 +28,7 @@ reporter = Repo().on_command("来杯红茶", "向维护者发送消息", aliases
 
 @reporter.handle([Cooldown(120, prompt=_repo_flmt_notice)])
 async def _ready_repo(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("repo", args)
 
 

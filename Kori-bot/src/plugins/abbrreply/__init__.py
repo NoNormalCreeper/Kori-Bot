@@ -20,7 +20,7 @@ async def get_sx(word):
     async with aiohttp.ClientSession() as session:
         async with session.post(url=url, headers=headers, data=data) as resp:
             msg = await resp.json()
-            return msg if msg else []
+            return msg or []
 
 
 # sx = on_regex(pattern="^sx\ |^缩写\ (.*)")
@@ -49,5 +49,5 @@ async def _(bot: Bot,event: Event, state:T_State=State()):
             await sx.finish(message=name + "可能解释为：\n" + result)
         await sx.finish(message=f"没有找到缩写 {msg} 的可能释义")
     except KeyError:
-        await sx.finish(message=f"出错啦")
+        await sx.finish(message="出错啦")
 

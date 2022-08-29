@@ -19,18 +19,18 @@ sign = on_command("sign",aliases={"公告"})
 @sign.handle()
 async def _(bot: Bot, event: Event, args: Message = CommandArg()):
     cmd = args.extract_plain_text()
-    if str(event.user_id) == "3349104868" or str(event.user_id) == "2560359315":
+    if str(event.user_id) in {"3349104868", "2560359315"}:
         groups = await bot.call_api("get_group_list")
         for i in groups:
             await bot.call_api("send_group_msg",group_id=i["group_id"],message=f"[开发者全域公告]{cmd}")
     else:
-        await sign.finish(f"啊咧，权限不够哦，这个命令只能由Owner(3349104868、2560359315)执行哦~")
+        await sign.finish("啊咧，权限不够哦，这个命令只能由Owner(3349104868、2560359315)执行哦~")
         
 call_api = on_command("call_api",aliases={"api"})
 @call_api.handle()
 async def _(bot: Bot, event: Event, args: Message = CommandArg()):
     cmd = args.extract_plain_text()
-    if str(event.user_id) == "3349104868" or str(event.user_id) == "2560359315":
+    if str(event.user_id) in {"3349104868", "2560359315"}:
         await get_url(f"http://127.0.0.1:2334/{cmd}",300)
     else:
-        await sign.finish(f"啊咧，权限不够哦，这个命令只能由Owner(3349104868、2560359315)执行哦~")
+        await sign.finish("啊咧，权限不够哦，这个命令只能由Owner(3349104868、2560359315)执行哦~")

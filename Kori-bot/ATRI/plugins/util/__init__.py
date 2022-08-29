@@ -14,8 +14,7 @@ roll = Utils().on_command("/roll", "骰子~用法：1d10 或 2d10+2d10+more")
 
 @roll.handle()
 async def _ready_roll(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("roll", args)
 
 
@@ -35,8 +34,7 @@ encrypt_en = Utils().on_command("加密", "我们之间的秘密❤")
 
 @encrypt_en.handle()
 async def _ready_en(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("encr_en_text", args)
 
 
@@ -55,8 +53,7 @@ encrypt_de = Utils().on_command("解密", "解开我们的秘密❤")
 
 @encrypt_de.handle()
 async def _ready_de(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("encr_de_text", args)
 
 
@@ -75,8 +72,7 @@ _sepi_flmt_notice = choice(["涩批爬", "✌🥵✌"])
 
 @sepi.handle([Cooldown(3, prompt=_sepi_flmt_notice)])
 async def _ready_sepi(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("sepi_text", args)
 
 

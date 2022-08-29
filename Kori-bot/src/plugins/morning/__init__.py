@@ -96,8 +96,8 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     args = args.extract_plain_text().strip().split()
     if not args:
         await morning_setting.finish("还没输入参数呢~")
-    elif args and len(args) > 3:
-        await morning_on.finish(f"参数太多啦~")
+    elif len(args) > 3:
+        await morning_on.finish("参数太多啦~")
 
     msg = morning_manager.morning_config(args)
     await morning_setting.finish(message=msg, at_sender=False)
@@ -107,10 +107,10 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     args = args.extract_plain_text().strip().split()
     if not args:
         await morning_on.finish("还没输入参数呢~")
-    elif args and len(args) == 1:
+    elif len(args) == 1:
         msg = morning_manager.morning_switch(args[0], True)
     else:
-        await morning_on.finish(f"参数太多啦~")
+        await morning_on.finish("参数太多啦~")
 
     await morning_on.finish(message=msg, at_sender=False)
 
@@ -119,10 +119,10 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     args = args.extract_plain_text().strip().split()
     if not args:
         await morning_off.finish("还没输入参数呢~")
-    elif args and len(args) == 1:    
+    elif len(args) == 1:    
         msg = morning_manager.morning_switch(args[0], False)
     else:
-        await morning_off.finish(f"参数太多啦~")
+        await morning_off.finish("参数太多啦~")
 
     await morning_off.finish(message=msg, at_sender=False)
 
@@ -131,9 +131,9 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     args = args.extract_plain_text().strip().split()
     if not args:
         await night_setting.finish("还没输入参数呢~")
-    elif args and len(args) > 3:
-        await morning_on.finish(f"参数太多啦~")
-    
+    elif len(args) > 3:
+        await morning_on.finish("参数太多啦~")
+
     msg = morning_manager.night_config(args)
     await night_setting.finish(message=msg, at_sender=False)
 
@@ -142,10 +142,10 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     args = args.extract_plain_text().strip().split()
     if not args:
         await night_on.finish("还没输入参数呢~")
-    elif args and len(args) == 1:    
+    elif len(args) == 1:    
         msg = morning_manager.night_switch(args[0], True)
     else:
-        await night_on.finish(f"参数太多啦~")
+        await night_on.finish("参数太多啦~")
 
     await night_on.finish(message=msg, at_sender=False)
 
@@ -154,10 +154,10 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     args = args.extract_plain_text().strip().split()
     if not args:
         await night_off.finish("还没输入参数呢~")
-    elif args and len(args) == 1:    
+    elif len(args) == 1:    
         msg = morning_manager.night_switch(args[0], False)
     else:
-        await night_off.finish(f"参数太多啦~")
+        await night_off.finish("参数太多啦~")
 
     await night_off.finish(message=msg, at_sender=False)
 

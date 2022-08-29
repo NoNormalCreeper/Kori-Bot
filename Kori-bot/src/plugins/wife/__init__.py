@@ -156,8 +156,7 @@ async def _discard_wife(
     if user_id not in data:
         await discard_wife.finish("你还没对象呐...")
 
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("is_disc", args)
 
 

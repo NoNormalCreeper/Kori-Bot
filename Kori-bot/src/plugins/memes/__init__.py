@@ -41,7 +41,7 @@ async def handle(matcher: Matcher, type: str, text: str):
         try:
             texts = shlex.split(text)
         except:
-            await matcher.finish(f'参数解析错误，若包含特殊符号请转义或加引号')
+            await matcher.finish('参数解析错误，若包含特殊符号请转义或加引号')
 
     if len(texts) < arg_num:
         await matcher.finish(f'该表情包需要输入{arg_num}段文字')

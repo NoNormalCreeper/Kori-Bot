@@ -35,12 +35,12 @@ class Event:
         self.exclude = (
             parse_condition(data["exclude"]) if "exclude" in data else lambda _: False
         )
-        self.effect: Dict[str, int] = data["effect"] if "effect" in data else {}
+        self.effect: Dict[str, int] = data.get("effect", {})
         self.branch: List[Branch] = (
             [Branch(x) for x in data["branch"]] if "branch" in data else []
         )
         self.no_random = "NoRandom" in data and data["NoRandom"]
-        self.post_event = data["postEvent"] if "postEvent" in data else None
+        self.post_event = data.get("postEvent")
 
     def check_condition(self, prop: Property) -> bool:
         return not self.no_random and self.include(prop) and not self.exclude(prop)
@@ -50,8 +50,7 @@ class Event:
             if b.condition(prop):
                 prop.apply(self.effect)
                 yield self.name
-                for text in runner(b.event_id):
-                    yield text
+                yield from runner(b.event_id)
                 return
         prop.apply(self.effect)
         prop.EVT.add(self.id)

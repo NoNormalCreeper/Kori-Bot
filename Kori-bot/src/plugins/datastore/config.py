@@ -30,10 +30,7 @@ class Config(BaseModel, extra=Extra.ignore):
         database_url = values.get("datastore_database_url")
         data_dir = values.get("datastore_data_dir")
         if database_url is None:
-            if data_dir is None:
-                data_dir = BASE_DATA_DIR
-            else:
-                data_dir = Path(data_dir)
+            data_dir = BASE_DATA_DIR if data_dir is None else Path(data_dir)
             values[
                 "datastore_database_url"
             ] = f"sqlite+aiosqlite:///{data_dir / 'data.db'}"

@@ -26,7 +26,7 @@ async def handle(bot: Bot, event: Event, matcher: Matcher):
     cards = data["cards"]
 
 
-    for count in range (0,len(cards)) :
+    for count in range(len(cards)):
         #逐个筛选出标签符合条件的动态
         target = cards[count]
         desc = target['desc']
@@ -36,13 +36,13 @@ async def handle(bot: Bot, event: Event, matcher: Matcher):
         card = json.loads(target['card'])
         item = card["item"]
         description = item["description"]
-        if '#鲱鱼 昨日最佳#' in description :
+        if '#鲱鱼 昨日最佳#' in description:
             #判断标签是否符合条件
             pictures_array = item['pictures']
             pictures_count = len(pictures_array)
             initext = description+ "\n"+posttime+ "\nfrom bilibili:鲱鱼罐头app\n"
-            for n in range (0,pictures_count) :
+            for n in range(pictures_count):
                 pic = pictures_array[n]
-                initext = initext+'[CQ:image,file='+pic['img_src']+']'
+                initext = f'{initext}[CQ:image,file=' + pic['img_src'] + ']'
             pic_ti = f"{initext}"
             await feiyucan.finish(message=Message(pic_ti))

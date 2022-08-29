@@ -55,13 +55,13 @@ async def _(bot: Bot, event: GroupMessageEvent):
     else:
         logger.info(f"User {event.user_id} | Group {event.group_id} 占卜了今日运势")
         msg = MessageSegment.text("✨今日运势✨\n") + MessageSegment.image(image_file)
-    
+
     await divine.finish(message=msg, at_sender=True)        
 
 @theme_setting.handle()
 async def _(bot: Bot, event: GroupMessageEvent):
     is_theme = re.search(r"设置(.*?)签", event.get_plaintext())
-    setting_theme = is_theme.group(0)[2:-1] if is_theme is not None else None
+    setting_theme = is_theme[0][2:-1] if is_theme is not None else None
 
     if setting_theme is None:
         await theme_setting.finish("指定抽签主题参数错误~")
@@ -72,7 +72,7 @@ async def _(bot: Bot, event: GroupMessageEvent):
                     await theme_setting.finish("该抽签主题未启用~")
                 else:
                     await theme_setting.finish("已设置当前群抽签主题~")
-    
+
         await theme_setting.finish("还没有这种抽签主题哦~")
 
 @reset.handle()
@@ -83,26 +83,24 @@ async def _(bot: Bot, event: GroupMessageEvent):
 @limit_setting.handle()
 async def _(bot: Bot, event: GroupMessageEvent):
     is_specific_type = re.search(r'指定(.*?)签', event.get_plaintext())
-    limit = is_specific_type.group(0)[2:-1] if is_specific_type is not None else None
+    limit = is_specific_type[0][2:-1] if is_specific_type is not None else None
 
     if limit is None:
         await limit_setting.finish("指定签底参数错误~")
 
     if limit == "随机":
         image_file, status = fortune_manager.divine(spec_path=None, event=event)
+    elif spec_path := fortune_manager.limit_setting_check(limit):
+        image_file, status = fortune_manager.divine(spec_path=limit, event=event)
+
     else:
-        spec_path = fortune_manager.limit_setting_check(limit)
-        if not spec_path:
-            await limit_setting.finish("还不可以指定这种签哦，请确认该签底对应主题开启或图片路径存在~")
-        else:
-            image_file, status = fortune_manager.divine(spec_path=limit, event=event)
-        
+        await limit_setting.finish("还不可以指定这种签哦，请确认该签底对应主题开启或图片路径存在~")
     if not status:
         msg = MessageSegment.text("你今天抽过签了，再给你看一次哦🤗\n") + MessageSegment.image(image_file)
     else:
         logger.info(f"User {event.user_id} | Group {event.group_id} 占卜了今日运势")
         msg = MessageSegment.text("✨今日运势✨\n") + MessageSegment.image(image_file)
-    
+
     await limit_setting.finish(message=msg, at_sender=True)
 
 @refresh.handle()

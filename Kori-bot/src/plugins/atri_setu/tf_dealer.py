@@ -93,8 +93,7 @@ async def detect_image(url: str, file_size: int) -> list:
     interpreter.invoke()
     output_data = interpreter.get_tensor(output_details[0]["index"])
 
-    result = np.squeeze(output_data).tolist()
-    return result
+    return np.squeeze(output_data).tolist()
 
 
 async def init_module():

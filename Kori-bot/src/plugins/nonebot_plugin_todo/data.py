@@ -14,15 +14,13 @@ def get_todo_list(
     if user_id:
         if user_id not in todo_list["user"]:
             todo_list["user"][user_id] = {}
-        tmp_todo_list = todo_list["user"][user_id]
+        return todo_list["user"][user_id]
     elif group_id:
         if group_id not in todo_list["group"]:
             todo_list["group"][group_id] = {}
-        tmp_todo_list = todo_list["group"][group_id]
+        return todo_list["group"][group_id]
     else:
-        tmp_todo_list = todo_list
-
-    return tmp_todo_list
+        return todo_list
 
 
 def add_todo_list(

@@ -14,8 +14,7 @@ block_user = Manage().on_command("封禁用户", "对目标用户进行封禁", 
 
 @block_user.handle()
 async def _ready_block_user(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("block_user", args)
 
 
@@ -37,8 +36,7 @@ unblock_user = Manage().on_command("解封用户", "对目标用户进行解封"
 
 @unblock_user.handle()
 async def _ready_unblock_user(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("unblock_user", args)
 
 
@@ -60,8 +58,7 @@ block_group = Manage().on_command("封禁群", "对目标群进行封禁", permi
 
 @block_group.handle()
 async def _ready_block_group(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("block_group", args)
 
 
@@ -83,8 +80,7 @@ unblock_group = Manage().on_command("解封群", "对目标群进行解封", per
 
 @unblock_group.handle()
 async def _ready_unblock_group(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("unblock_group", args)
 
 
@@ -106,8 +102,7 @@ global_block_service = Manage().on_command("全局禁用", "全局禁用某服�
 
 @global_block_service.handle()
 async def _ready_block_service(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("global_block_service", args)
 
 
@@ -133,8 +128,7 @@ global_unblock_service = Manage().on_command("全局启用", "全局启用某服
 async def _ready_unblock_service(
     matcher: Matcher, event: MessageEvent, args: Message = CommandArg()
 ):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("global_unblock_service", args)
 
 
@@ -229,8 +223,7 @@ group_unblock_service = Manage().on_command(
 async def _ready_group_unblock_service(
     matcher: Matcher, event: GroupMessageEvent, args: Message = CommandArg()
 ):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("group_unblock_service", args)
 
 
@@ -255,7 +248,7 @@ get_friend_add_list = Manage().on_command("获取好友申请", "获取好友申
 @get_friend_add_list.handle()
 async def _get_friend_add_list():
     data = Manage().load_friend_apply_list()
-    temp_list = list()
+    temp_list = []
     for i in data:
         apply_code = i
         apply_user = data[i]["user_id"]
@@ -275,8 +268,7 @@ approve_friend_add = Manage().on_command("同意好友", "同意好友申请", p
 async def _ready_approve_friend_add(
     matcher: Matcher, event: MessageEvent, args: Message = CommandArg()
 ):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("approve_friend_add", args)
 
 
@@ -305,8 +297,7 @@ refuse_friend_add = Manage().on_command("拒绝好友", "拒绝好友申请", pe
 async def _ready_refuse_friend_add(
     matcher: Matcher, event: MessageEvent, args: Message = CommandArg()
 ):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("refuse_friend_add", args)
 
 
@@ -334,7 +325,7 @@ get_group_invite_list = Manage().on_command("获取邀请列表", "获取群邀�
 @get_group_invite_list.handle()
 async def _get_group_invite_list():
     data = Manage().load_invite_apply_list()
-    temp_list = list()
+    temp_list = []
     for i in data:
         apply_code = i
         apply_user = data[i]["user_id"]
@@ -354,8 +345,7 @@ approve_group_invite = Manage().on_command("同意邀请", "同意群聊邀请",
 async def _ready_approve_group_invite(
     matcher: Matcher, event: MessageEvent, args: Message = CommandArg()
 ):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("approve_group_invite", args)
 
 
@@ -386,8 +376,7 @@ refuse_group_invite = Manage().on_command("拒绝邀请", "拒绝群聊邀请", 
 async def _ready_refuse_group_invite(
     matcher: Matcher, event: MessageEvent, args: Message = CommandArg()
 ):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("refuse_group_invite", args)
 
 
@@ -416,8 +405,7 @@ track_error = Manage().on_command("追踪", "获取报错信息，传入追踪�
 
 @track_error.handle()
 async def _track_error(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("track_code", args)
 
 

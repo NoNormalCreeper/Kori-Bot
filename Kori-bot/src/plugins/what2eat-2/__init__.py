@@ -43,11 +43,11 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     args = args.extract_plain_text().strip().split()
     if not args:
         await add_group.finish("还没输入你要添加的菜品呢~")
-    elif args and len(args) == 1:
+    elif len(args) == 1:
         new_food = args[0]
     else:
         await add_group.finish("添加菜品参数错误~")
-    
+
     user_id = str(event.user_id)
     logger.info(f"User {user_id} 添加了 {new_food} 至菜单")
     msg = eating_manager.add_group_food(new_food, event)
@@ -59,11 +59,11 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     args = args.extract_plain_text().strip().split()
     if not args:
         await add_basic.finish("还没输入你要添加的菜品呢~")
-    elif args and len(args) == 1:
+    elif len(args) == 1:
         new_food = args[0]
     else:
         await add_basic.finish("添加菜品参数错误~")
-    
+
     user_id = str(event.user_id)
     logger.info(f"Superuser {user_id} 添加了 {new_food} 至基础菜单")
     msg = eating_manager.add_basic_food(new_food)
@@ -75,11 +75,11 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     args = args.extract_plain_text().strip().split()
     if not args:
         await remove_food.finish("还没输入你要移除的菜品呢~")
-    elif args and len(args) == 1:
+    elif len(args) == 1:
         food_to_remove = args[0]
     else:
         await remove_food.finish("移除菜品参数错误~")
-    
+
     user_id = str(event.user_id)
     logger.info(f"User {user_id} 从菜单移除了 {food_to_remove}")
     msg = eating_manager.remove_food(food_to_remove, event)
@@ -101,10 +101,10 @@ async def _(bot: Bot, event: GroupMessageEvent):
     args = event.get_plaintext()
     if args[:2] == "开启":
         greating_helper.resume()
-        msg = f"已开启按时吃饭小助手~"
+        msg = "已开启按时吃饭小助手~"
     elif args[:2] == "关闭":
         greating_helper.pause()
-        msg = f"已关闭按时吃饭小助手~"
+        msg = "已关闭按时吃饭小助手~"
 
     await switch_greating.finish(msg)
 
@@ -124,8 +124,8 @@ async def time_for_breakfast():
     elif msg:
         for group_id in GROUPS_ID:
             await bot.send_group_msg(group_id=int(group_id), message=msg)
-        
-        logger.info(f"已群发早餐提醒")
+
+        logger.info("已群发早餐提醒")
 
 # 午餐提醒
 @greating_helper.scheduled_job("cron", hour=12, minute=0)
@@ -137,8 +137,8 @@ async def time_for_lunch():
     elif msg:
         for group_id in GROUPS_ID:
             await bot.send_group_msg(group_id=int(group_id), message=msg)
-        
-        logger.info(f"已群发午餐提醒")
+
+        logger.info("已群发午餐提醒")
 
 # 下午茶/摸鱼提醒
 @greating_helper.scheduled_job("cron", hour=15, minute=0)
@@ -150,8 +150,8 @@ async def time_for_snack():
     elif msg:
         for group_id in GROUPS_ID:
             await bot.send_group_msg(group_id=int(group_id), message=msg)
-        
-        logger.info(f"已群发摸鱼提醒")
+
+        logger.info("已群发摸鱼提醒")
 
 # 晚餐提醒
 @greating_helper.scheduled_job("cron", hour=18, minute=0)
@@ -163,8 +163,8 @@ async def time_for_dinner():
     elif msg:
         for group_id in GROUPS_ID:
             await bot.send_group_msg(group_id=int(group_id), message=msg)
-        
-        logger.info(f"已群发晚餐提醒")
+
+        logger.info("已群发晚餐提醒")
 
 # 夜宵提醒
 @greating_helper.scheduled_job("cron", hour=22, minute=0)
@@ -176,5 +176,5 @@ async def time_for_midnight():
     elif msg:
         for group_id in GROUPS_ID:
             await bot.send_group_msg(group_id=int(group_id), message=msg)
-        
-        logger.info(f"已群发夜宵提醒")
+
+        logger.info("已群发夜宵提醒")

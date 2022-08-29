@@ -106,8 +106,9 @@ async def _(
     talents: List[Talent] = state["talents_selected"]
     total_prop = life_.total_property()
 
-    match = re.fullmatch(r"\s*(\d{1,2})\s+(\d{1,2})\s+(\d{1,2})\s+(\d{1,2})\s*", reply)
-    if match:
+    if match := re.fullmatch(
+        r"\s*(\d{1,2})\s+(\d{1,2})\s+(\d{1,2})\s+(\d{1,2})\s*", reply
+    ):
         nums = list(match.groups())
         nums = [int(n) for n in nums]
         if sum(nums) != total_prop:
@@ -136,9 +137,7 @@ async def _(
         "已设置如下属性：\n" + f"颜值{nums[0]} 智力{nums[1]} 体质{nums[2]} 家境{nums[3]}",
     ]
     try:
-        life_msgs = []
-        for s in life_.run():
-            life_msgs.append("\n".join(s))
+        life_msgs = ["\n".join(s) for s in life_.run()]
         n = 5
         life_msgs = [
             "\n\n".join(life_msgs[i : i + n]) for i in range(0, len(life_msgs), n)

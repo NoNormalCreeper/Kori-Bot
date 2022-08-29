@@ -109,7 +109,7 @@ async def _track_error(
         prompt = Error.prompt or Error.__class__.__name__
         track_id = Error.track_id
     except Exception as Error:
-        prompt = "Unknown ERROR->" + Error.__class__.__name__
+        prompt = f"Unknown ERROR->{Error.__class__.__name__}"
         track_id = _save_error(prompt, format_exc())
 
     logger.debug(f"A bug has been cumming!!! Track ID: {track_id}")

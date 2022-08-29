@@ -146,10 +146,8 @@ class CaiyunAi:
             raise AccountError('账号已被封禁，请更换apikey！')
         elif result['status'] == -5:
             raise ContentError(
-                "存在不和谐内容，类型：{}，剩余血量：{}".format(
-                    result['data']['label'],
-                    result['data']['total_count']-result['data']['shut_count']
-                )
+                f"存在不和谐内容，类型：{result['data']['label']}，剩余血量：{result['data']['total_count'] - result['data']['shut_count']}"
             )
+
         else:
             raise CaiyunError(result['msg'])

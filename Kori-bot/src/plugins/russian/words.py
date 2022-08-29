@@ -16,21 +16,17 @@ def saveWordAnswer(answer, id):
     with open(answer_path, 'w', encoding="utf8") as f:
         f.write(json.dumps(data))
 
-def checkWordAnswer(id, answer):    # Answer is right -> return False
+def checkWordAnswer(id, answer):# Answer is right -> return False
     answer = str(answer)
     answer = answer.upper()
     id = str(id)
     with open(answer_path, "r", encoding="utf-8") as f:
         answers = json.loads(f.read())
-    if answer == answers[id]:
-        return False
-    else:
-        return answers[id]
+    return False if answer == answers[id] else answers[id]
 
 def getWordQuestion(id):
     id = str(id)
     question = ""
-    choice = []
     with open(wordlist_path, 'r') as f:
         wordlist = f.read()
     wordlist = json.loads(wordlist)
@@ -42,9 +38,8 @@ def getWordQuestion(id):
     english = list(wordlist.keys())[question_id]
     chinese = wordlist[english]["中释"]
 
-    choice.append(english)
-    for i in range(3):
-        choice.append(list(wordlist.keys())[randint(0, length-1)])
+    choice = [english]
+    choice.extend(list(wordlist.keys())[randint(0, length-1)] for _ in range(3))
     shuffle(choice)
     answer = choice.index(english)
 
@@ -52,6 +47,6 @@ def getWordQuestion(id):
     question += chinese
     for i in range(4):
         question += "\n[{0}] {1}".format(letter[i], choice[i])
-    
+
     saveWordAnswer(letter[answer], id)
     return question

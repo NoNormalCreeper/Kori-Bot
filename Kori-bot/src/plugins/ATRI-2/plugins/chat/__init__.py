@@ -31,8 +31,7 @@ my_name_is = Chat().on_command("叫我", "更改闲聊（文爱）时的称呼",
 
 @my_name_is.handle([Cooldown(3, prompt=_chat_flmt_notice)])
 async def _name(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("name", args)
 
 
@@ -56,8 +55,7 @@ say = Chat().on_command("说", "别人让我说啥就说啥（", priority=1)
 
 @say.handle([Cooldown(3, prompt=_chat_flmt_notice)])
 async def _ready_say(matcher: Matcher, args: Message = CommandArg()):
-    msg = args.extract_plain_text()
-    if msg:
+    if msg := args.extract_plain_text():
         matcher.set_arg("say", args)
 
 

@@ -8,9 +8,9 @@ from nonebot.adapters.onebot.v11 import Message
 
 
 global_config = nonebot.get_driver().config
-nonebot.logger.info("global_config:{}".format(global_config))
+nonebot.logger.info(f"global_config:{global_config}")
 plugin_config = Config(**global_config.dict())
-nonebot.logger.info("plugin_config:{}".format(plugin_config))
+nonebot.logger.info(f"plugin_config:{plugin_config}")
 scheduler = require("nonebot_plugin_apscheduler").scheduler  # type:AsyncIOScheduler
 
 def remove_upprintable_chars(s):
@@ -36,8 +36,7 @@ async def suijitu():
         resp = remove_upprintable_chars(resp)
         retdata = json.loads(resp)
         lst = retdata['imageUrl']
-        pic_ti = f"今日60S读世界已送达\n[CQ:image,file={lst}]"
-        return pic_ti
+        return f"今日60S读世界已送达\n[CQ:image,file={lst}]"
     except:
         url = "https://api.2xb.cn/zaob"#备用网址
         resp = requests.get(url)
@@ -45,9 +44,8 @@ async def suijitu():
         resp = remove_upprintable_chars(resp)
         retdata = json.loads(resp)
         lst = retdata['imageUrl']
-        pic_ti1 = f"今日60S读世界已送达\n[CQ:image,file={lst}]"
-        return pic_ti1
+        return f"今日60S读世界已送达\n[CQ:image,file={lst}]"
 
 for index, time in enumerate(plugin_config.read_inform_time):
-    nonebot.logger.info("id:{},time:{}".format(index, time))
+    nonebot.logger.info(f"id:{index},time:{time}")
     scheduler.add_job(read60s, "cron", hour=7, minute=30, id=str(index))

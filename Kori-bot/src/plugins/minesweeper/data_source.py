@@ -115,8 +115,7 @@ class MineSweeper:
 
     def all_tiles(self) -> Iterator[Tile]:
         for row in self.tiles:
-            for tile in row:
-                yield tile
+            yield from row
 
     def draw_counts(self, bg: IMG):
         mark_num = len([tile for tile in self.all_tiles() if tile.marked])
@@ -124,18 +123,18 @@ class MineSweeper:
         nums = f"{mine_left:03d}"[:3]
         to_digit = lambda s: self.skin.digits[10 if s == "-" else int(s)]
         digits = [to_digit(s) for s in nums]
+        y = 17
         for i in range(3):
             x = 18 + i * (digits[i].width + 2)
-            y = 17
             bg.paste(digits[i], (x, y))
 
     def draw_time(self, bg: IMG):
         time_passed = int(time.time() - self.start_time)
         nums = f"{time_passed:03d}"[-3:]
         digits = [self.skin.digits[int(s)] for s in nums]
+        y = 17
         for i in range(3):
             x = bg.width - 16 - (i + 1) * (digits[i].width + 2)
-            y = 17
             bg.paste(digits[2 - i], (x, y))
 
     def draw_tiles(self, bg: IMG):
@@ -146,13 +145,11 @@ class MineSweeper:
                     if tile.is_mine:
                         num = 5 if tile.boom else 2
                         img = self.skin.icons[num]
+                    elif tile.marked:
+                        img = self.skin.icons[4]
                     else:
-                        if tile.marked:
-                            num = 4
-                            img = self.skin.icons[num]
-                        else:
-                            num = tile.count
-                            img = self.skin.numbers[num]
+                        num = tile.count
+                        img = self.skin.numbers[num]
                 else:
                     num = 3 if tile.marked else 0
                     img = self.skin.icons[num]
@@ -210,11 +207,13 @@ class MineSweeper:
         return ((-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1))
 
     def count_around(self, x: int, y: int) -> int:
-        count = 0
-        for dx, dy in self.neighbors():
-            if self.is_valid(x + dx, y + dy) and self.tiles[x + dx][y + dy].is_mine:
-                count += 1
-        return count
+        return sum(
+            bool(
+                self.is_valid(x + dx, y + dy)
+                and self.tiles[x + dx][y + dy].is_mine
+            )
+            for dx, dy in self.neighbors()
+        )
 
     def spread_around(self, x: int, y: int):
         if not self.is_valid(x, y):

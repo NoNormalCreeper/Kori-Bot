@@ -15,8 +15,7 @@ def saveAnswer(answer, cn, id) -> None:
     id = str(id)
     with open(answer_path, "r", encoding="utf8") as f:
         data = json.loads(f.read())
-    data[id] = {}
-    data[id]["en"] = answer
+    data[id] = {"en": answer}
     data[id]["cn"] = cn
     with open(answer_path, 'w', encoding="utf8") as f:
         f.write(json.dumps(data))

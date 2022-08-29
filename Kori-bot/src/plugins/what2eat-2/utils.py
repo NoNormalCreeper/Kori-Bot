@@ -13,38 +13,43 @@ except ModuleNotFoundError:
     import json
 
 global_config = nonebot.get_driver().config
-if not hasattr(global_config, "use_preset_menu"):
-    USE_PRESET_MENU = False
-else:
-    USE_PRESET_MENU = nonebot.get_driver().config.use_preset_menu
+USE_PRESET_MENU = (
+    nonebot.get_driver().config.use_preset_menu
+    if hasattr(global_config, "use_preset_menu")
+    else False
+)
 
-if not hasattr(global_config, "use_preset_greating"):
-    USE_PRESET_GREATING = False
-else:
-    USE_PRESET_GREATING = nonebot.get_driver().config.use_preset_greating
+USE_PRESET_GREATING = (
+    nonebot.get_driver().config.use_preset_greating
+    if hasattr(global_config, "use_preset_greating")
+    else False
+)
 
 if not hasattr(global_config, "superusers"):
     raise Exception("Superusers should not be null!")
 else:
     SUPERUSERS = nonebot.get_driver().config.superusers
 
-if not hasattr(global_config, "what2eat_path"):
-    WHAT2EAT_PATH = os.path.join(os.path.dirname(__file__), "resource")
-else:
-    WHAT2EAT_PATH = nonebot.get_driver().config.what2eat_path
+WHAT2EAT_PATH = (
+    nonebot.get_driver().config.what2eat_path
+    if hasattr(global_config, "what2eat_path")
+    else os.path.join(os.path.dirname(__file__), "resource")
+)
 
-if not hasattr(global_config, "eating_limit"):
-    EATING_LIMIT = nonebot.get_driver().config.eating_limit
-else:
-    EATING_LIMIT = 5
+EATING_LIMIT = (
+    5
+    if hasattr(global_config, "eating_limit")
+    else nonebot.get_driver().config.eating_limit
+)
 
 '''
     需要群发问候的群组列表
 '''
-if not hasattr(global_config, "groups_id"):
-    GROUPS_ID = nonebot.get_driver().config.groups_id
-else:
-    GROUPS_ID = []
+GROUPS_ID = (
+    []
+    if hasattr(global_config, "groups_id")
+    else nonebot.get_driver().config.groups_id
+)
 
 class Meals(Enum):
     BREAKFAST   = "breakfast"
@@ -65,7 +70,7 @@ class EatingManager:
         else:
             data_file = path / "data.json"
             greating_file = path / "greating.json"
-        
+
         self.data_file = data_file
         self.greating_file = greating_file
         if not data_file.exists():
@@ -74,13 +79,13 @@ class EatingManager:
                 get_preset(data_file, "MENU")
             else:
                 with open(data_file, "w", encoding="utf-8") as f:
-                    f.write(json.dumps(dict()))
+                    f.write(json.dumps({}))
                     f.close()
 
         if data_file.exists():
             with open(data_file, "r", encoding="utf-8") as f:
                 self._data = json.load(f)
-        
+
         if not greating_file.exists():
             if USE_PRESET_GREATING:
                 logger.info("Downloading preset what2eat greating resource...")
@@ -136,20 +141,19 @@ class EatingManager:
                     "再吃肚子就要爆炸咯~"
                 ]
             )
-        else:
-            # 菜单全为空，建议避免["basic_food"]为空
-            if len(self._data["basic_food"]) == 0 and len(self._data["group_food"][group_id]) == 0:
-                return "还没有菜单呢，就先饿着肚子吧，请[添加 菜名]🤤"
-            
-            food_list = self._data["basic_food"].copy()
-            if len(self._data["group_food"][group_id]) > 0:
-                food_list.extend(self._data["group_food"][group_id])
+        # 菜单全为空，建议避免["basic_food"]为空
+        if len(self._data["basic_food"]) == 0 and len(self._data["group_food"][group_id]) == 0:
+            return "还没有菜单呢，就先饿着肚子吧，请[添加 菜名]🤤"
 
-            msg = "建议" + random.choice(food_list)
-            self._data["eating"][group_id][user_id] += 1
-            self.save()
+        food_list = self._data["basic_food"].copy()
+        if len(self._data["group_food"][group_id]) > 0:
+            food_list.extend(self._data["group_food"][group_id])
 
-            return msg
+        msg = f"建议{random.choice(food_list)}"
+        self._data["eating"][group_id][user_id] += 1
+        self.save()
+
+        return msg
     
     '''
         检查菜品是否存在
@@ -175,7 +179,7 @@ class EatingManager:
     def eating_check(self, event: GroupMessageEvent) -> bool:
         user_id = str(event.user_id)
         group_id = str(event.group_id)
-        return False if self._data["eating"][group_id][user_id] >= EATING_LIMIT else True
+        return self._data["eating"][group_id][user_id] < EATING_LIMIT
 
     '''
         添加至群菜单中 GROUP_ADMIN | GROUP_OWNER 权限
@@ -216,7 +220,7 @@ class EatingManager:
     def remove_food(self, food_to_remove: str, event: GroupMessageEvent) -> str:
         user_id = str(event.user_id)
         group_id = str(event.group_id)
-        
+
         self._init_data(group_id, user_id)
         status = self.food_exists(food_to_remove)
         if not status:
@@ -227,14 +231,12 @@ class EatingManager:
             self._data["group_food"][group_id].remove(food_to_remove)
             self.save()
             return f"{food_to_remove} 已从群菜单中删除~"
-        # 在基础菜单
         else:
             if user_id not in SUPERUSERS:
                 return f"{food_to_remove} 在基础菜单中，非超管不可操作哦~"
-            else:
-                self._data["basic_food"].remove(food_to_remove)
-                self.save()
-                return f"{food_to_remove} 已从基础菜单中删除~"    
+            self._data["basic_food"].remove(food_to_remove)
+            self.save()
+            return f"{food_to_remove} 已从基础菜单中删除~"    
 
     def reset_eating(self) -> None:
         '''
@@ -260,13 +262,13 @@ class EatingManager:
         user_id = str(event.user_id)
         group_id = str(event.group_id)
         msg = []
-        
+
         self._init_data(group_id, user_id)
         if len(self._data["group_food"][group_id]) > 0:
             msg += MessageSegment.text("---群特色菜单---\n")
             for food in self._data["group_food"][group_id]:
                 msg += MessageSegment.text(f"{food}\n")
-        
+
         return msg if len(msg) > 0 else "还没有群特色菜单呢，请[添加 菜名]~"
 
     def show_basic_menu(self) -> str:

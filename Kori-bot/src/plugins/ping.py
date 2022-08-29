@@ -11,7 +11,7 @@ pong_words = ["Sorry but I can't \"Ping!\"","Do you think I will \"Ping!\" ?","P
 @ping.handle()
 async def ping_handle(bot: Bot, event: Event, matcher: Matcher):
 	delay=random.randint(10,800)
-	result=(f"Pong!   ({str(delay)} ms)")
+	result = f"Pong!   ({delay} ms)"
 	await ping.send(result)
 
 @pong.handle()

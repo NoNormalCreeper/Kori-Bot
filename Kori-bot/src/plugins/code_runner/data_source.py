@@ -54,9 +54,7 @@ class CodeRunner(Service):
 
     @staticmethod
     def list_supp_lang() -> str:
-        msg0 = "咱现在支持的语言如下：\n"
-        msg0 += ", ".join(map(str, SUPPORTED_LANGUAGES.keys()))
-        return msg0
+        return "咱现在支持的语言如下：\n" + ", ".join(map(str, SUPPORTED_LANGUAGES.keys()))
 
     @staticmethod
     async def runner(msg: str):

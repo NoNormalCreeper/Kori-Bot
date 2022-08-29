@@ -102,8 +102,5 @@ async def _(bot: Bot, event: Event, matcher: Matcher):
     result += '\n(共计: '
     result += resp[1]
     result += ' )\n'
-    if 'bar' in str(event.message):
-        result += resp[2]
-    else:
-        result += resp[3]
+    result += resp[2] if 'bar' in str(event.message) else resp[3]
     await school.finish(result)

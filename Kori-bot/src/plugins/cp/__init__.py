@@ -56,9 +56,7 @@ async def _(bot: Bot, event: Event, state: T_State):
     msg = event.get_message()
     msg_text = event.get_plaintext().replace('/cp','').replace('!cp','').replace('！cp','').strip()
     name_list = [f"{event.user_id}"]
-    for msg_seg in msg:
-        if msg_seg.type == "at":
-            name_list.append(msg_seg.data["qq"])
+    name_list.extend(msg_seg.data["qq"] for msg_seg in msg if msg_seg.type == "at")
     num = len(name_list)
     if num > 1:
         if num > 2:
@@ -67,13 +65,10 @@ async def _(bot: Bot, event: Event, state: T_State):
             user_name = await bot.get_group_member_info(
                 group_id=event.group_id, user_id=name_list[i]
             )
-            user_name = (
-                user_name["card"] if user_name["card"] else user_name["nickname"]
-            )
+            user_name = user_name["card"] or user_name["nickname"]
             name_list[i] = user_name
     else:
         del name_list[0]
         msg_text = msg_text.split()
-        for name in msg_text:
-            name_list.append(name)
+        name_list.extend(iter(msg_text))
     await cp.send('\n'+getMessage(name_list), at_sender=True)
